@@ -39,7 +39,7 @@ export default function Hero3D() {
         />
         {/* Dark overlay for text readability */}
         <div
-          className="absolute inset-0 bg-gradient-to-r from-[#1a2421]/95 via-[#1a2421]/60 to-transparent"
+          className="absolute inset-0 bg-gradient-to-r from-forest-mid/95 via-forest-mid/60 to-transparent"
           aria-hidden
         />
       </div>
@@ -52,10 +52,9 @@ export default function Hero3D() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="mb-6 inline-block p-3 rounded-lg border"
-            style={{ borderColor: "rgba(233, 196, 106, 0.3)" }}
+            className="mb-6 inline-block p-3 rounded-lg border border-warm-gold-border"
           >
-            <span className="material-symbols-outlined text-[#e9c46a] text-4xl">filter_vintage</span>
+            <span className="material-symbols-outlined text-warm-gold text-4xl">filter_vintage</span>
           </motion.div>
 
           <motion.h1
@@ -65,7 +64,7 @@ export default function Hero3D() {
             className="text-5xl md:text-7xl font-display font-bold text-white leading-[1.1] mb-6 tracking-tight"
           >
             {headline}{" "}
-            <span className="text-[#e9c46a] italic font-display">{headlineItalic}</span>
+            <span className="text-warm-gold italic font-display">{headlineItalic}</span>
           </motion.h1>
 
           <motion.p
@@ -105,12 +104,7 @@ export default function Hero3D() {
               href={listingConfig.airbnbUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 font-bold rounded-lg text-center transition-all duration-300 hover:opacity-90 shadow-lg"
-              style={{
-                backgroundColor: "#e9c46a",
-                color: "#141E19",
-                boxShadow: "0 10px 15px -3px rgba(233, 196, 106, 0.2)",
-              }}
+              className="w-full sm:w-auto px-8 py-4 font-bold rounded-lg text-center transition-all duration-300 hover:opacity-90 shadow-lg bg-warm-gold text-forest-dark"
             >
               Book on Airbnb
             </a>
@@ -132,11 +126,8 @@ export default function Hero3D() {
           data-purpose="hero-visual"
         >
           <div
-            className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 aspect-[4/5] p-8"
-            style={{
-              background: "rgba(26, 38, 32, 0.8)",
-              backdropFilter: "blur(12px)",
-            }}
+            className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 aspect-[4/5] p-8 backdrop-blur-md"
+            style={{ background: "var(--color-hero-visual-bg)" }}
           >
             <div className="w-full h-full flex flex-col items-center justify-center relative">
               {/* Abstract graphic layer */}
@@ -150,10 +141,7 @@ export default function Hero3D() {
               </div>
               {/* Text highlight */}
               <div className="mt-auto text-center relative z-10">
-                <span
-                  className="block font-display text-3xl italic mb-2"
-                  style={{ color: "#e9c46a" }}
-                >
+                <span className="block font-display text-3xl italic mb-2 text-warm-gold">
                   {tagline}
                 </span>
                 <span className="text-white/60 text-sm tracking-[0.2em] uppercase">

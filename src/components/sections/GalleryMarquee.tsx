@@ -51,12 +51,12 @@ export default function GalleryMarquee() {
   const heroPhoto = listingConfig.photos.find((p) => p.category === "exterior" || p.category === "pool") ?? listingConfig.photos[0];
 
   return (
-    <section id="gallery" className="section-padding" style={{ backgroundColor: "#141E19" }}>
+    <section id="gallery" className="section-padding bg-forest-dark">
       <div className="max-w-[1200px] mx-auto w-full px-4 md:px-10">
         {/* Hero Gallery Highlight */}
         {heroPhoto && (
           <div className="group relative overflow-hidden rounded-xl aspect-[21/9] mb-8 shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1A2620] via-transparent to-transparent opacity-60 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-forest-mid via-transparent to-transparent opacity-60 z-10" />
             <Image
               src={heroPhoto.src}
               alt={heroPhoto.alt}
@@ -66,7 +66,7 @@ export default function GalleryMarquee() {
               priority={false}
             />
             <div className="absolute bottom-6 left-8 z-20">
-              <span className="inline-block px-3 py-1 font-bold text-xs uppercase tracking-widest rounded mb-2" style={{ backgroundColor: "#d4af37", color: "#1A2620" }}>
+              <span className="inline-block px-3 py-1 font-bold text-xs uppercase tracking-widest rounded mb-2 bg-accent-gold text-forest-mid">
                 {t("exclusive")}
               </span>
               <h1 className="font-display text-4xl text-white">{t("panoramicView")}</h1>
@@ -79,8 +79,7 @@ export default function GalleryMarquee() {
           <h2 className="font-display text-2xl md:text-3xl font-bold text-white">{t("title")}</h2>
           <Link
             href="/listing-info"
-            className="flex items-center gap-2 text-sm font-semibold hover:underline transition-colors"
-            style={{ color: "#d4af37" }}
+            className="flex items-center gap-2 text-sm font-semibold hover:underline transition-colors text-accent-gold"
           >
             {t("viewAll")}
             <span className="material-symbols-outlined text-sm">arrow_forward</span>

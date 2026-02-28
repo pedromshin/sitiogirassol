@@ -14,8 +14,7 @@ export default function StatsFooterBar() {
 
   return (
     <section
-      className="border-t border-white/5 py-20"
-      style={{ backgroundColor: "var(--color-bg-layer-1)" }}
+      className="border-t border-white/5 py-20 bg-forest-dark"
       data-purpose="quick-info"
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -25,10 +24,7 @@ export default function StatsFooterBar() {
               key={stat.labelKey}
               className={`text-center ${i > 0 ? "border-l border-white/10" : ""}`}
             >
-              <div
-                className="font-display text-3xl mb-1"
-                style={{ color: "#e9c46a" }}
-              >
+              <div className="font-display text-3xl mb-1 text-warm-gold">
                 {stat.value}
               </div>
               <div className="text-white/40 text-xs uppercase tracking-widest">

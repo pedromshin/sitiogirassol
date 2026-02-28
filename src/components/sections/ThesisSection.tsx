@@ -32,14 +32,10 @@ export default function ThesisSection() {
   return (
     <>
       <section
-        className="py-20 lg:py-32 px-6 lg:px-20"
-        style={{ backgroundColor: "#141E19" }}
+        className="py-20 lg:py-32 px-6 lg:px-20 bg-forest-dark"
       >
         <div className="max-w-5xl mx-auto text-center">
-          <span
-            className="uppercase tracking-[0.4em] text-[10px] font-black mb-4 block"
-            style={{ color: "#d4af37" }}
-          >
+          <span className="uppercase tracking-caps text-xs-caps font-black mb-4 block text-accent-gold">
             {t("essenceSubtitle")}
           </span>
           <motion.h1
@@ -57,8 +53,7 @@ export default function ThesisSection() {
       </section>
 
       <section
-        className="pb-32 px-6 lg:px-20"
-        style={{ backgroundColor: "#141E19" }}
+        className="pb-32 px-6 lg:px-20 bg-forest-dark"
       >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
@@ -69,18 +64,14 @@ export default function ThesisSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group flex flex-col items-center text-center p-8 rounded-2xl border border-white/10 transition-all hover:bg-[#202d26] hover:border-[#d4af37]/30 shadow-xl"
-                style={{ backgroundColor: "#1A2620" }}
+                className="group flex flex-col items-center text-center p-8 rounded-2xl border border-white/10 transition-all hover:bg-forest-hover hover:border-accent-gold-border-hover shadow-xl bg-forest-mid"
               >
-                <div className="w-20 h-20 flex items-center justify-center rounded-full border mb-8 group-hover:scale-110 transition-transform duration-500" style={{ backgroundColor: "#141E19", borderColor: "rgba(212, 175, 55, 0.3)" }}>
-                  <span
-                    className="material-symbols-outlined text-4xl"
-                    style={{ color: "#d4af37" }}
-                  >
+                <div className="w-20 h-20 flex items-center justify-center rounded-full border border-accent-gold-border-hover mb-8 group-hover:scale-110 transition-transform duration-500 bg-forest-dark">
+                  <span className="material-symbols-outlined text-4xl text-accent-gold">
                     {pillar.icon}
                   </span>
                 </div>
-                <h2 className="text-2xl font-display mb-4 tracking-wide text-white group-hover:text-[#d4af37] transition-colors">
+                <h2 className="text-2xl font-display mb-4 tracking-wide text-white group-hover:text-accent-gold transition-colors">
                   {t(`${pillar.id}Title`)}
                 </h2>
                 <p className="text-white/80 leading-relaxed font-light mb-10 text-sm">
@@ -105,16 +96,12 @@ export default function ThesisSection() {
       </section>
 
       {/* CTA Section */}
-      <section
-        className="py-32 px-6 text-center"
-        style={{ backgroundColor: "#d4af37" }}
-      >
+      <section className="py-32 px-6 text-center bg-accent-gold">
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-display mb-12 tracking-tight"
-          style={{ color: "#1a2e26" }}
+          className="text-4xl md:text-5xl font-display mb-12 tracking-tight text-forest-dark-btn"
         >
           {t("ctaTitle")}
         </motion.h3>
@@ -122,12 +109,7 @@ export default function ThesisSection() {
           href={listingConfig.airbnbUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-14 py-6 rounded-full font-bold text-sm uppercase tracking-widest transition-all shadow-2xl hover:-translate-y-1"
-          style={{
-            backgroundColor: "#1a2e26",
-            color: "white",
-            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-          }}
+          className="inline-block px-14 py-6 rounded-full font-bold text-sm uppercase tracking-widest transition-all shadow-elevated hover:-translate-y-1 bg-forest-dark-btn text-white"
         >
           {t("ctaButton")}
         </a>

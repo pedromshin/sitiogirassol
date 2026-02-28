@@ -11,6 +11,23 @@ const config: Config = {
     extend: {
       colors: {
         ...colors,
+        /* Forest theme - semantic tokens (single source in globals.css) */
+        forest: {
+          dark: "var(--color-forest-dark)",
+          mid: "var(--color-forest-mid)",
+          hover: "var(--color-forest-hover)",
+          "dark-btn": "var(--color-forest-dark-btn)",
+        },
+        accent: {
+          gold: "var(--color-accent-gold)",
+          "gold-muted": "rgba(212, 175, 55, 0.1)",
+          "gold-border": "rgba(212, 175, 55, 0.2)",
+          "gold-border-hover": "rgba(212, 175, 55, 0.3)",
+        },
+        warm: {
+          gold: "var(--color-warm-gold)",
+          "gold-border": "rgba(233, 196, 106, 0.3)",
+        },
         "bg-layer": {
           1: "var(--color-bg-layer-1)",
           2: "var(--color-bg-layer-2)",
@@ -24,6 +41,27 @@ const config: Config = {
           "border-hover": "var(--color-card-border-hover)",
           "featured-stripe": "var(--color-card-featured-stripe)",
         },
+        scene: {
+          roof: "var(--color-scene-roof)",
+          body: "var(--color-scene-body)",
+          ground: "var(--color-scene-ground)",
+        },
+        "gradient-accent": "var(--color-gradient-accent)",
+        "gradient-primary": "var(--color-gradient-primary)",
+      },
+      boxShadow: {
+        "accent-gold": "var(--shadow-accent-gold)",
+        elevated: "var(--shadow-elevated)",
+      },
+      fontSize: {
+        "xs-caps": ["var(--text-xs-caps)", { lineHeight: "1.2" }],
+      },
+      letterSpacing: {
+        caps: "var(--tracking-caps)",
+        "caps-tight": "var(--tracking-caps-tight)",
+      },
+      borderRadius: {
+        section: "2rem",
       },
       fontFamily: {
         display: ["var(--font-playfair)", "Playfair Display", "Georgia", "serif"],

@@ -37,7 +37,7 @@ export default function AmenitiesSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl font-display font-bold text-neutral-50 mb-8 text-center"
+          className="text-3xl font-display font-bold text-white mb-8 text-center"
         >
           {t("title")}
         </motion.h2>
@@ -67,8 +67,8 @@ export default function AmenitiesSection() {
                   className="w-full p-6 flex items-center justify-between text-left"
                   onClick={() => setOpenCategory(isOpen ? null : amenity.category)}
                 >
-                  <h3 className="text-xl font-display font-semibold text-neutral-50">{label}</h3>
-                  <span className="text-2xl" style={{ color: "var(--color-yellow)" }}>{isOpen ? "−" : "+"}</span>
+                  <h3 className="text-xl font-display font-semibold text-white">{label}</h3>
+                  <span className="text-2xl text-accent-gold">{isOpen ? "−" : "+"}</span>
                 </button>
                 <motion.div
                   initial={false}
@@ -80,11 +80,7 @@ export default function AmenitiesSection() {
                       {amenity.items.map((item) => (
                         <span
                           key={item}
-                          className="inline-block px-3 py-1 rounded-full text-sm font-medium"
-                          style={{
-                            backgroundColor: "rgba(229, 190, 72, 0.25)",
-                            color: "var(--color-yellow)",
-                          }}
+                          className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-accent-gold-muted text-accent-gold"
                         >
                           {item}
                         </span>

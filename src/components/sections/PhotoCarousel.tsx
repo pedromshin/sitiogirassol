@@ -47,14 +47,14 @@ export default function PhotoCarousel() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
-      className="py-16 px-4"
+      className="py-16 px-4 bg-forest-dark"
     >
       <div className="container mx-auto max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-primary mb-8 text-center"
+          className="text-3xl font-bold text-white mb-8 text-center"
         >
           Gallery
         </motion.h2>
@@ -66,8 +66,8 @@ export default function PhotoCarousel() {
             whileTap={{ scale: 0.98 }}
             className={`px-4 py-2 rounded-lg font-medium transition ${
               activeFilter === "all"
-                ? "bg-primary text-white"
-                : "bg-accent-light/50 text-primary hover:bg-accent-light"
+                ? "bg-accent-gold text-forest-dark"
+                : "bg-accent-gold-muted text-accent-gold hover:bg-accent-gold/30"
             }`}
           >
             {t("all")}
@@ -80,8 +80,8 @@ export default function PhotoCarousel() {
               whileTap={{ scale: 0.98 }}
               className={`px-4 py-2 rounded-lg font-medium transition ${
                 activeFilter === cat
-                  ? "bg-primary text-white"
-                  : "bg-accent-light/50 text-primary hover:bg-accent-light"
+                  ? "bg-accent-gold text-forest-dark"
+                  : "bg-accent-gold-muted text-accent-gold hover:bg-accent-gold/30"
               }`}
             >
               {t(CATEGORY_LABELS[cat])}
@@ -89,7 +89,7 @@ export default function PhotoCarousel() {
           ))}
         </div>
 
-        <div className="rounded-2xl overflow-hidden bg-primary-mid/10">
+        <div className="rounded-2xl overflow-hidden bg-forest-mid/30">
           <Swiper
             modules={[Navigation, Autoplay]}
             spaceBetween={0}
@@ -101,7 +101,7 @@ export default function PhotoCarousel() {
             {filteredPhotos.length > 0 ? (
               filteredPhotos.map((photo, i) => (
                 <SwiperSlide key={`${photo.category}-${i}`}>
-                  <div className="relative w-full aspect-video bg-primary-mid/20">
+                    <div className="relative w-full aspect-video bg-forest-mid/20">
                     <Image
                       src={photo.src}
                       alt={photo.alt}
@@ -114,7 +114,7 @@ export default function PhotoCarousel() {
               ))
             ) : (
               <SwiperSlide>
-                <div className="w-full aspect-video bg-primary-mid/20 flex items-center justify-center text-text-muted">
+                <div className="w-full aspect-video bg-forest-mid/20 flex items-center justify-center text-slate-400">
                   No photos in this category
                 </div>
               </SwiperSlide>

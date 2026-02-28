@@ -6,8 +6,7 @@ import { listingConfig } from "@/data/listing.config";
 
 const CheckIcon = () => (
   <svg
-    className="h-8 w-8 inline-block"
-    style={{ color: "#d4af37" }}
+    className="h-8 w-8 inline-block text-accent-gold"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -63,8 +62,7 @@ export default function MetricsSection() {
 
   return (
     <section
-      className="py-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto"
-      style={{ backgroundColor: "#141E19" }}
+      className="py-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto bg-forest-dark"
       data-purpose="property-summary"
     >
       {/* Section Header */}
@@ -76,14 +74,14 @@ export default function MetricsSection() {
           className="text-4xl md:text-5xl font-display mb-6"
         >
           {t("title")}
-          <span className="font-serif-italic" style={{ color: "#d4af37" }}>
+          <span className="font-serif-italic text-accent-gold">
             {t("titleHighlight")}
           </span>
         </motion.h2>
-        <p className="text-gray-500 uppercase tracking-[0.2em] text-[10px] md:text-xs font-semibold">
+        <p className="text-gray-500 uppercase tracking-caps-tight text-xs-caps md:text-xs font-semibold">
           {t("subtitle")}
         </p>
-        <div className="w-24 h-px bg-[#d4af37] mx-auto mt-6 opacity-50" />
+        <div className="w-24 h-px bg-accent-gold mx-auto mt-6 opacity-50" />
       </div>
 
       {/* Stats Grid */}
@@ -107,10 +105,7 @@ export default function MetricsSection() {
               <span className="text-gray-400 text-xs uppercase tracking-wider mb-2">
                 {t(key)}
               </span>
-              <div
-                className="text-3xl font-display mb-1"
-                style={{ color: "#d4af37" }}
-              >
+              <div className="text-3xl font-display mb-1 text-accent-gold">
                 {value === "check" ? <CheckIcon /> : value}
               </div>
               <p className="text-sm text-gray-300">{t(descKey)}</p>
@@ -128,7 +123,7 @@ export default function MetricsSection() {
           className="text-5xl md:text-7xl font-display leading-tight"
         >
           {t("taglinePart1")}
-          <span className="font-serif-italic" style={{ color: "#d4af37" }}>
+          <span className="font-serif-italic text-accent-gold">
             {t("taglineHighlight")}
           </span>
         </motion.h3>

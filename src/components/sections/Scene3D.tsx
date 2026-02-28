@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useRef } from "react";
 import * as THREE from "three";
+import { SCENE_COLORS } from "@/lib/design-system/forest-tokens";
 
 function HouseModel() {
   const group = useRef<THREE.Group>(null);
@@ -13,17 +14,17 @@ function HouseModel() {
       {/* Simple house shape - roof */}
       <mesh position={[0, 1.5, 0]} castShadow receiveShadow>
         <coneGeometry args={[1.2, 1, 4]} />
-        <meshStandardMaterial color="#5e7b5b" />
+        <meshStandardMaterial color={SCENE_COLORS.roof} />
       </mesh>
       {/* House body */}
       <mesh position={[0, 0.5, 0]} castShadow receiveShadow>
         <boxGeometry args={[1.5, 1, 1.2]} />
-        <meshStandardMaterial color="#8ebea8" />
+        <meshStandardMaterial color={SCENE_COLORS.body} />
       </mesh>
       {/* Base/ground */}
       <mesh position={[0, -0.1, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
         <planeGeometry args={[3, 3]} />
-        <meshStandardMaterial color="#3a5a4c" />
+        <meshStandardMaterial color={SCENE_COLORS.ground} />
       </mesh>
     </group>
   );

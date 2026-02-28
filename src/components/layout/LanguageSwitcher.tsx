@@ -21,7 +21,7 @@ export default function LanguageSwitcher() {
           key={code}
           onClick={() => router.replace(pathname, { locale: code })}
           className={`text-xs font-medium transition ${
-            locale === code ? "text-[#e9c46a] font-bold" : "text-white/50 hover:text-white"
+            locale === code ? "text-warm-gold font-bold" : "text-white/50 hover:text-white"
           }`}
         >
           {label}

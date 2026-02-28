@@ -9,8 +9,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="py-24 px-6 md:px-20 border-t border-white/5 mt-20"
-      style={{ backgroundColor: "#141E19" }}
+      className="py-24 px-6 md:px-20 border-t border-white/5 mt-20 bg-forest-dark"
       role="contentinfo"
     >
       <div className="max-w-7xl mx-auto">
@@ -18,10 +17,7 @@ export default function Footer() {
           {/* Column 1: Brand + Description + Social */}
           <div className="space-y-8">
             <div className="flex items-center gap-3">
-              <span
-                className="material-symbols-outlined text-3xl"
-                style={{ color: "#d4af37" }}
-              >
+              <span className="material-symbols-outlined text-3xl text-accent-gold">
                 filter_vintage
               </span>
               <h2 className="text-2xl font-display font-bold text-white tracking-tight">
@@ -34,21 +30,21 @@ export default function Footer() {
             <div className="flex items-center gap-5">
               <a
                 href="#"
-                className="w-5 h-5 text-white/30 hover:text-[#d4af37] transition-colors"
+                className="w-5 h-5 text-white/30 hover:text-accent-gold transition-colors"
                 aria-label="Website"
               >
                 <span className="material-symbols-outlined text-xl">public</span>
               </a>
               <a
                 href="#"
-                className="w-5 h-5 text-white/30 hover:text-[#d4af37] transition-colors"
+                className="w-5 h-5 text-white/30 hover:text-accent-gold transition-colors"
                 aria-label="Share"
               >
                 <span className="material-symbols-outlined text-xl">share</span>
               </a>
               <a
                 href="mailto:contato@girassol.example.com"
-                className="w-5 h-5 text-white/30 hover:text-[#d4af37] transition-colors"
+                className="w-5 h-5 text-white/30 hover:text-accent-gold transition-colors"
                 aria-label="Email"
               >
                 <span className="material-symbols-outlined text-xl">alternate_email</span>
@@ -58,10 +54,7 @@ export default function Footer() {
 
           {/* Column 2: Navegação */}
           <div className="space-y-8">
-            <h4
-              className="text-[10px] font-black uppercase tracking-widest"
-              style={{ color: "#d4af37" }}
-            >
+            <h4 className="text-xs-caps font-black uppercase tracking-widest text-accent-gold">
               {t("navigation")}
             </h4>
             <ul className="space-y-4 text-sm font-medium text-white/50">
@@ -95,10 +88,7 @@ export default function Footer() {
 
           {/* Column 3: Suporte */}
           <div className="space-y-8">
-            <h4
-              className="text-[10px] font-black uppercase tracking-widest"
-              style={{ color: "#d4af37" }}
-            >
+            <h4 className="text-xs-caps font-black uppercase tracking-widest text-accent-gold">
               {t("support")}
             </h4>
             <ul className="space-y-4 text-sm font-medium text-white/50">
@@ -127,10 +117,7 @@ export default function Footer() {
 
           {/* Column 4: Newsletter */}
           <div className="space-y-8">
-            <h4
-              className="text-[10px] font-black uppercase tracking-widest"
-              style={{ color: "#d4af37" }}
-            >
+            <h4 className="text-xs-caps font-black uppercase tracking-widest text-accent-gold">
               {t("newsletter")}
             </h4>
             <p className="text-white/40 text-sm font-light">
@@ -140,12 +127,11 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder={t("emailPlaceholder")}
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#d4af37]/50 text-white placeholder-white/20"
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-accent-gold/50 text-white placeholder-white/20"
               />
               <button
                 type="button"
-                className="absolute right-2 top-2 p-1 hover:opacity-80 transition-opacity"
-                style={{ color: "#d4af37" }}
+                className="absolute right-2 top-2 p-1 hover:opacity-80 transition-opacity text-accent-gold"
                 aria-label="Subscribe"
               >
                 <span className="material-symbols-outlined">send</span>
@@ -155,7 +141,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-[10px] uppercase tracking-[0.2em] font-bold text-white/20">
+        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-xs-caps uppercase tracking-caps-tight font-bold text-white/20">
           <p>{t("allRightsReserved")}</p>
           <div className="flex items-center gap-10">
             <div className="flex items-center gap-2">

@@ -58,10 +58,7 @@ export default function InfoPageClient({ locale }: Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: i * 0.08 }}
-            className="relative section-padding"
-            style={{
-              backgroundColor: isEven ? "#141E19" : "#1A2620",
-            }}
+            className={`relative section-padding ${isEven ? "bg-forest-dark" : "bg-forest-mid"}`}
           >
             {!isEven && <GradientOverlay variant="light" />}
             <div className="content-container-narrow relative z-10">
@@ -73,13 +70,13 @@ export default function InfoPageClient({ locale }: Props) {
                 {/* Left: number + icon + title */}
                 <div className="flex-shrink-0 w-full md:w-72">
                   <div className="flex items-center gap-4">
-                    <div className="card-badge w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg" style={{ backgroundColor: "#d4af37", color: "#141E19" }}>
+                    <div className="card-badge w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg bg-accent-gold text-forest-dark">
                       {String(i + 1).padStart(2, "0")}
                     </div>
                     <div className="flex-1">
                       <h2 className="text-2xl md:text-3xl font-display font-bold text-white">{title}</h2>
                       {icon && (
-                        <div className="mt-2" style={{ color: "#d4af37" }}>{icon}</div>
+                        <div className="mt-2 text-accent-gold">{icon}</div>
                       )}
                     </div>
                   </div>
@@ -97,7 +94,7 @@ export default function InfoPageClient({ locale }: Props) {
       })}
 
       {/* Nearby places - gradient section */}
-      <section className="gradient-section py-20 px-4 text-white relative overflow-hidden" style={{ backgroundColor: "#1A2620" }}>
+      <section className="gradient-section py-20 px-4 text-white relative overflow-hidden bg-forest-mid">
         <GradientOverlay variant="dark" />
         <div className="gradient-content relative z-10 container mx-auto max-w-5xl">
           <motion.h2
@@ -131,7 +128,7 @@ export default function InfoPageClient({ locale }: Props) {
                   </svg>
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="font-semibold text-white truncate group-hover:text-[#d4af37] transition-colors">
+                  <p className="font-semibold text-white truncate group-hover:text-accent-gold transition-colors">
                     {place.name}
                   </p>
                   {place.distance && (
@@ -148,17 +145,13 @@ export default function InfoPageClient({ locale }: Props) {
       </section>
 
       {/* CTA section */}
-      <section className="py-20 px-4" style={{ backgroundColor: "#141E19" }}>
+      <section className="py-20 px-4 bg-forest-dark">
         <div className="container mx-auto max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-3xl border-2 p-8 md:p-12"
-            style={{
-              borderColor: "rgba(255,255,255,0.1)",
-              backgroundColor: "#1A2620",
-            }}
+            className="rounded-3xl border-2 border-white/10 p-8 md:p-12 bg-forest-mid"
           >
             <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">
               {tCta("title")}
@@ -167,11 +160,7 @@ export default function InfoPageClient({ locale }: Props) {
               href={listingConfig.airbnbUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full px-8 py-4 text-lg font-semibold transition-colors shadow-lg hover:shadow-xl"
-              style={{
-                backgroundColor: "#d4af37",
-                color: "#141E19",
-              }}
+              className="inline-flex items-center justify-center rounded-full px-8 py-4 text-lg font-semibold transition-colors shadow-lg hover:shadow-xl bg-accent-gold text-forest-dark"
             >
               {tCta("button")} →
             </a>

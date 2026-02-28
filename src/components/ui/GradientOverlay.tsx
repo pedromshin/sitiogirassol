@@ -21,8 +21,8 @@ export default function GradientOverlay({ variant = "light" }: { variant?: "ligh
       >
         <defs>
           <linearGradient id={gradId} x1="218" y1="0.5" x2="218" y2="448" gradientUnits="userSpaceOnUse">
-            <stop stopColor={variant === "dark" ? "#8ebea8" : "#1c3b33"} stopOpacity={variant === "dark" ? "0.15" : "0.4"} />
-            <stop offset="1" stopColor={variant === "dark" ? "#8ebea8" : "#1c3b33"} stopOpacity="0" />
+            <stop stopColor={variant === "dark" ? "var(--color-gradient-accent)" : "var(--color-gradient-primary)"} stopOpacity={variant === "dark" ? "0.15" : "0.4"} />
+            <stop offset="1" stopColor={variant === "dark" ? "var(--color-gradient-accent)" : "var(--color-gradient-primary)"} stopOpacity="0" />
           </linearGradient>
         </defs>
         <path

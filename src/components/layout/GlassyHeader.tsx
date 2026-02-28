@@ -14,7 +14,7 @@ export default function GlassyHeader() {
     <>
       <Link
         href="/"
-        className="text-white hover:text-[#e9c46a] transition font-medium text-sm uppercase tracking-wide"
+        className="text-white hover:text-warm-gold transition font-medium text-sm uppercase tracking-wide"
         onClick={() => setMobileMenuOpen(false)}
       >
         {t("home")}
@@ -33,12 +33,7 @@ export default function GlassyHeader() {
         href={listingConfig.airbnbUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden sm:block px-6 py-2.5 rounded-lg text-sm font-bold transition shadow-md hover:opacity-90"
-        style={{
-          backgroundColor: "#e9c46a",
-          color: "#141E19",
-          boxShadow: "0 4px 6px -1px rgba(233, 196, 106, 0.1)",
-        }}
+        className="hidden sm:block px-6 py-2.5 rounded-lg text-sm bg-warm-gold text-forest-dark font-bold transition shadow-md hover:opacity-90"
       >
         {t("bookOnAirbnb")}
       </a>
@@ -46,17 +41,14 @@ export default function GlassyHeader() {
   );
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-md border-b border-white/10"
-      style={{ backgroundColor: "rgba(20, 30, 25, 0.95)" }}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-md border-b border-white/10 bg-[var(--color-header-bg)]">
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link
           href="/"
           className="flex items-center gap-3"
           data-purpose="brand-identity"
         >
-          <div className="w-10 h-10 flex items-center justify-center text-[#e9c46a]">
+          <div className="w-10 h-10 flex items-center justify-center text-warm-gold">
             <span className="material-symbols-outlined text-3xl">filter_vintage</span>
           </div>
           <span className="font-display text-xl font-bold tracking-tight text-white">
@@ -69,8 +61,7 @@ export default function GlassyHeader() {
             href={listingConfig.airbnbUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded-lg text-sm font-bold"
-            style={{ backgroundColor: "#e9c46a", color: "#141E19" }}
+            className="px-4 py-2 rounded-lg text-sm font-bold bg-warm-gold text-forest-dark"
           >
             {t("bookOnAirbnb")}
           </a>
@@ -91,10 +82,7 @@ export default function GlassyHeader() {
         </div>
       </nav>
       {mobileMenuOpen && (
-        <div
-          className="md:hidden px-6 py-4 flex flex-col gap-4 border-t border-white/10"
-          style={{ backgroundColor: "#141E19" }}
-        >
+        <div className="md:hidden px-6 py-4 flex flex-col gap-4 border-t border-white/10 bg-forest-dark">
           <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-white font-medium">
             {t("home")}
           </Link>

@@ -6,25 +6,51 @@
 
 /* Semantic tokens - dark forest luxury theme (forest-dark #141E19, forest-mid #1A2620, accent-gold #d4af37) */
 :root {
-  /* Background layers - forest theme */
-  --color-bg-layer-1: #141E19;
-  --color-bg-layer-2: #1A2620;
-  --color-bg-layer-3: #222d26;
+  /* Forest theme - single source of truth */
+  --color-forest-dark: #141E19;
+  --color-forest-mid: #1A2620;
+  --color-forest-hover: #222d26;
+  --color-accent-gold: #d4af37;
+  --color-warm-gold: #e9c46a;
+  --color-forest-dark-btn: #1a2e26;
+  --color-body-text: #f3f4f6;
+  /* Background layers - map to forest theme */
+  --color-bg-layer-1: var(--color-forest-dark);
+  --color-bg-layer-2: var(--color-forest-mid);
+  --color-bg-layer-3: var(--color-forest-hover);
   --color-bg-layer-4: #2a352e;
   --color-bg-layer-5: #353d38;
   /* Card semantic */
-  --color-card-bg: #1A2620;
+  --color-card-bg: var(--color-forest-mid);
   --color-card-border: rgba(255, 255, 255, 0.1);
   --color-card-border-hover: rgba(212, 175, 55, 0.3);
-  --color-card-featured-stripe: #d4af37;
+  --color-card-featured-stripe: var(--color-accent-gold);
   /* Header frosted glass */
   --color-header-bg: rgba(20, 30, 25, 0.95);
   --color-header-border: rgba(255, 255, 255, 0.1);
   /* Button semantic */
-  --color-btn-primary-bg: #1A2620;
-  --color-btn-primary-text: #141E19;
-  --color-btn-cta-bg: #d4af37;
-  --color-btn-secondary-border: #d4af37;
+  --color-btn-primary-bg: var(--color-forest-mid);
+  --color-btn-primary-text: var(--color-forest-dark);
+  --color-btn-cta-bg: var(--color-accent-gold);
+  --color-btn-cta-warm: var(--color-warm-gold);
+  --color-btn-secondary-border: var(--color-accent-gold);
+  /* Hero visual overlay */
+  --color-hero-visual-bg: rgba(26, 38, 32, 0.8);
+  /* Calendar section backdrop */
+  --color-calendar-backdrop: rgba(26, 38, 32, 0.5);
+  /* Typography - small caps labels */
+  --text-xs-caps: 0.625rem; /* 10px */
+  --tracking-caps: 0.4em;
+  --tracking-caps-tight: 0.2em;
+  /* 3D / gradient accents - forest-adjacent greens */
+  --color-scene-roof: #5e7b5b;
+  --color-scene-body: #8ebea8;
+  --color-scene-ground: #3a5a4c;
+  --color-gradient-accent: #8ebea8;
+  --color-gradient-primary: #1c3b33;
+  /* Shadow tokens */
+  --shadow-accent-gold: 0 10px 15px -3px rgba(212, 175, 55, 0.2);
+  --shadow-elevated: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   /* Section spacing - consistent vertical rhythm */
   --section-padding-y: 4rem; /* 64px mobile */
   --section-padding-y-md: 5rem; /* 80px tablet */
@@ -46,8 +72,8 @@
   }
   body {
     @apply antialiased min-h-screen overflow-x-hidden;
-    color: #f3f4f6;
-    background-color: #141E19;
+    color: var(--color-body-text);
+    background-color: var(--color-forest-dark);
   }
 }
 
@@ -146,15 +172,15 @@
 .stat-card {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(212, 175, 55, 0.05);
-  background-color: #1A2620;
+  background-color: var(--color-forest-mid);
 }
 .stat-card:hover {
   border-color: rgba(212, 175, 55, 0.2);
-  background-color: #222d26;
+  background-color: var(--color-forest-hover);
   transform: translateY(-4px);
 }
 
 /* react-date-range theme override */
 .rdrCalendarWrapper {
-  --rdr-primary-color: #d4af37 !important;
+  --rdr-primary-color: var(--color-accent-gold) !important;
 }
