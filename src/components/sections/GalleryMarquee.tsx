@@ -64,6 +64,7 @@ export default function GalleryMarquee() {
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="100vw"
               priority={false}
+              unoptimized
             />
             <div className="absolute bottom-6 left-8 z-20">
               <span className="inline-block px-3 py-1 font-bold text-xs uppercase tracking-widest rounded mb-2 bg-accent-gold text-forest-mid">
@@ -107,6 +108,7 @@ export default function GalleryMarquee() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 768px) 320px, 400px"
+                    unoptimized
                   />
                 </div>
                 <h3 className="text-white font-display text-lg">{label}</h3>
