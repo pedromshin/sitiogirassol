@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1c3b33;
+  --color-primary-mid: #3a5a4c;
+  --color-primary-light: #5e7b5b;
+  --color-accent: #8ebea8;
+  --color-accent-light: #c5e2dc;
+  --color-surface: #f8faf8;
+  --color-text: #1a2f28;
+  --color-muted: #5a7a6e;
+}
+
+@layer base {
+  body {
+    @apply text-text bg-surface antialiased;
+  }
+}
+
+@layer components {
+  .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+/* react-date-range theme override */
+.rdrCalendarWrapper {
+  --rdr-primary-color: #1c3b33 !important;
+}

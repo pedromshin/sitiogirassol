@@ -1,0 +1,56 @@
+{
+  "Header": {
+    "home": "Home",
+    "info": "Info",
+    "bookOnAirbnb": "Book on Airbnb",
+    "language": "Language"
+  },
+  "Hero": {
+    "headline": "Nature refuge, comfort and tranquility",
+    "subheadline": "Authentic Brazilian Sitio - Offroad, Nature, BBQ"
+  },
+  "Footer": {
+    "nearbyPlaces": "Nearby places",
+    "directions": "Directions",
+    "allRightsReserved": "All rights reserved"
+  },
+  "PhotoCarousel": {
+    "all": "All",
+    "livingRoom": "Living room",
+    "diningArea": "Dining area",
+    "bedroom": "Bedroom",
+    "bathroom": "Bathroom",
+    "exterior": "Exterior",
+    "pool": "Pool",
+    "additional": "Additional"
+  },
+  "Amenities": {
+    "title": "What this place offers",
+    "bathroom": "Bathroom",
+    "bedroomAndLaundry": "Bedroom and laundry",
+    "entertainment": "Entertainment",
+    "family": "Family",
+    "heatingAndCooling": "Heating and cooling",
+    "internetAndOffice": "Internet and office",
+    "kitchenAndDining": "Kitchen and dining",
+    "locationFeatures": "Location features",
+    "parkingAndFacilities": "Parking and facilities",
+    "services": "Services"
+  },
+  "Calendar": {
+    "title": "Check availability",
+    "nights": "nights",
+    "total": "Total",
+    "bookNow": "Book on Airbnb",
+    "weeklyDiscount": "33% weekly discount",
+    "monthlyDiscount": "50% monthly discount"
+  },
+  "InfoPage": {
+    "title": "Listing information",
+    "houseRules": "House rules",
+    "poolRules": "Swimming pool rules",
+    "poolSchedule": "Pool cleaning schedule",
+    "directions": "How to get there",
+    "shopping": "Shopping and nearby"
+  }
+}

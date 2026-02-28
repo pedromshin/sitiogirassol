@@ -1,0 +1,56 @@
+{
+  "Header": {
+    "home": "Inicio",
+    "info": "Información",
+    "bookOnAirbnb": "Reservar en Airbnb",
+    "language": "Idioma"
+  },
+  "Hero": {
+    "headline": "Refugio de naturaleza, confort y tranquilidad",
+    "subheadline": "Sitio a 1,5 h SP offroad, senderos, piscina asador"
+  },
+  "Footer": {
+    "nearbyPlaces": "Lugares cercanos",
+    "directions": "Cómo llegar",
+    "allRightsReserved": "Todos los derechos reservados"
+  },
+  "PhotoCarousel": {
+    "all": "Todos",
+    "livingRoom": "Sala de estar",
+    "diningArea": "Área de comedor",
+    "bedroom": "Dormitorio",
+    "bathroom": "Baño",
+    "exterior": "Exterior",
+    "pool": "Piscina",
+    "additional": "Adicional"
+  },
+  "Amenities": {
+    "title": "Lo que ofrece este lugar",
+    "bathroom": "Baño",
+    "bedroomAndLaundry": "Dormitorio y lavandería",
+    "entertainment": "Entretenimiento",
+    "family": "Familia",
+    "heatingAndCooling": "Calefacción y refrigeración",
+    "internetAndOffice": "Internet y oficina",
+    "kitchenAndDining": "Cocina y comedor",
+    "locationFeatures": "Características de la ubicación",
+    "parkingAndFacilities": "Estacionamiento e instalaciones",
+    "services": "Servicios"
+  },
+  "Calendar": {
+    "title": "Verificar disponibilidad",
+    "nights": "noches",
+    "total": "Total",
+    "bookNow": "Reservar en Airbnb",
+    "weeklyDiscount": "33% de descuento semanal",
+    "monthlyDiscount": "50% de descuento mensual"
+  },
+  "InfoPage": {
+    "title": "Información de la propiedad",
+    "houseRules": "Reglas de la casa",
+    "poolRules": "Reglas de la piscina",
+    "poolSchedule": "Horario de limpieza de la piscina",
+    "directions": "Cómo llegar",
+    "shopping": "Compras y cercanías"
+  }
+}

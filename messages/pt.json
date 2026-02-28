@@ -1,0 +1,56 @@
+{
+  "Header": {
+    "home": "Início",
+    "info": "Informações",
+    "bookOnAirbnb": "Reservar no Airbnb",
+    "language": "Idioma"
+  },
+  "Hero": {
+    "headline": "Refúgio de natureza, conforto e tranquilidade",
+    "subheadline": "Remoto, natureza, privativo, completo, tranquilo"
+  },
+  "Footer": {
+    "nearbyPlaces": "Lugares próximos",
+    "directions": "Como chegar",
+    "allRightsReserved": "Todos os direitos reservados"
+  },
+  "PhotoCarousel": {
+    "all": "Todos",
+    "livingRoom": "Sala de estar",
+    "diningArea": "Área de jantar",
+    "bedroom": "Quarto",
+    "bathroom": "Banheiro",
+    "exterior": "Exterior",
+    "pool": "Piscina",
+    "additional": "Adicional"
+  },
+  "Amenities": {
+    "title": "O que este lugar oferece",
+    "bathroom": "Banheiro",
+    "bedroomAndLaundry": "Quarto e lavanderia",
+    "entertainment": "Entretenimento",
+    "family": "Família",
+    "heatingAndCooling": "Aquecimento e refrigeração",
+    "internetAndOffice": "Internet e escritório",
+    "kitchenAndDining": "Cozinha e jantar",
+    "locationFeatures": "Recursos da localização",
+    "parkingAndFacilities": "Estacionamento e instalações",
+    "services": "Serviços"
+  },
+  "Calendar": {
+    "title": "Verificar disponibilidade",
+    "nights": "noites",
+    "total": "Total",
+    "bookNow": "Reservar no Airbnb",
+    "weeklyDiscount": "33% de desconto semanal",
+    "monthlyDiscount": "50% de desconto mensal"
+  },
+  "InfoPage": {
+    "title": "Informações da propriedade",
+    "houseRules": "Regras da casa",
+    "poolRules": "Regras da piscina",
+    "poolSchedule": "Horário de limpeza da piscina",
+    "directions": "Como chegar",
+    "shopping": "Compras e proximidades"
+  }
+}

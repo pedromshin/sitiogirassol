@@ -1,0 +1,54 @@
+"use client";
+
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { useRef } from "react";
+import * as THREE from "three";
+
+function HouseModel() {
+  const group = useRef<THREE.Group>(null);
+
+  return (
+    <group ref={group}>
+      {/* Simple house shape - roof */}
+      <mesh position={[0, 1.5, 0]} castShadow receiveShadow>
+        <coneGeometry args={[1.2, 1, 4]} />
+        <meshStandardMaterial color="#5e7b5b" />
+      </mesh>
+      {/* House body */}
+      <mesh position={[0, 0.5, 0]} castShadow receiveShadow>
+        <boxGeometry args={[1.5, 1, 1.2]} />
+        <meshStandardMaterial color="#8ebea8" />
+      </mesh>
+      {/* Base/ground */}
+      <mesh position={[0, -0.1, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+        <planeGeometry args={[3, 3]} />
+        <meshStandardMaterial color="#3a5a4c" />
+      </mesh>
+    </group>
+  );
+}
+
+export default function Scene3D() {
+  return (
+    <div className="w-full h-full min-h-[300px] rounded-2xl overflow-hidden bg-primary-mid/10 border border-primary-light/20">
+      <Canvas
+        camera={{ position: [3, 2, 3], fov: 50 }}
+        gl={{ antialias: true, alpha: true }}
+      >
+        <ambientLight intensity={0.6} />
+        <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
+        <directionalLight position={[-3, 2, -2]} intensity={0.3} />
+        <HouseModel />
+        <OrbitControls
+          enableZoom={true}
+          enablePan={false}
+          minDistance={2}
+          maxDistance={8}
+          autoRotate
+          autoRotateSpeed={0.5}
+        />
+      </Canvas>
+    </div>
+  );
+}
