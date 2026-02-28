@@ -45,6 +45,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       className={`${playfair.variable} ${inter.variable}`}
     >
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
           rel="stylesheet"

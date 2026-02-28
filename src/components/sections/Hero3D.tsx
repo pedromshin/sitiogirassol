@@ -5,13 +5,38 @@ import { useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { listingConfig } from "@/data/listing.config";
+import { useState, useEffect } from "react";
 
-const HERO_BG_IMAGE =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuB4zAf0IKyYUKzXfNAZSg9oOqtUMWwxfS8aoPPuy6OFIWngT2qfi-m38I-2kbplAIrl3l1SUWyc-_2cL2rPEmfMGjoOAxR18rsfKWhCnc0YPCcyeIpmg5sZ1mpds9tBIQkDr9d0_dZ7zeKvM2UDclneP72Zj8zm6tgulpTV5bLZYKSFwbRgLZGVE9dB_HPkytM0U3VEKHmPfwHnYs5Kt8EJ18Vy-1oq8prm-VTAz8L0VxpjqkqAntjOmKkvQK_0vA4GXmapniwdbIU";
+const HERO_BG_IMAGES = [
+  "/bg/DSC_0559.JPG",
+  "/bg/DSC_0573.JPG",
+  "/bg/DSC_0581.JPG",
+  "/bg/DSC_0586.JPG",
+  "/bg/DSC_0589.JPG",
+  "/bg/DSC_0599.JPG",
+  "/bg/DSC_0757.JPG",
+  "/bg/DSC_0697.JPG",
+  "/bg/DSC_0702.JPG",
+  "/bg/DSC_0704.JPG",
+  "/bg/DSC_0705.JPG",
+  "/bg/DSC_0712.JPG",
+  "/bg/DSC_0798.JPG",
+];
+
+const ROTATE_INTERVAL_MS = 3000;
+
 const HERO_VISUAL_IMAGE =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuCSEcDblUGWj1jciBOYkDm7BhVRw3EsNd_GVrKZxmUv7_lU6apBiKzfbP0IAdjc6UjCFEZNvUvQGe2Z8aSWiZuwkncuaEHfLARnEWbFvsChMNnJ45rcbH6oyXY8YSUk-O_YOCxozENFi5aEaZV5V-hFXEWTupM4NTaApAw-7vSkJyebnwUKBDtqddOqn29tFIu_4KsMejwrQM_YcJeZyUMehGb5gvujVxgtgtujRVPC93lpT41afWTM4iEofHV-iXlXbcnGjydpC7Q";
 
 export default function Hero3D() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrentIndex((i) => (i + 1) % HERO_BG_IMAGES.length);
+    }, ROTATE_INTERVAL_MS);
+    return () => clearInterval(id);
+  }, []);
   const locale = (useLocale() || "pt") as "en" | "pt" | "es";
   const hero = listingConfig.hero;
   const headline = hero.headline[locale] ?? hero.headline.en;
@@ -21,27 +46,71 @@ export default function Hero3D() {
   const tagline = hero.visual.tagline[locale] ?? hero.visual.tagline.en;
   const taglineUppercase = hero.visual.taglineUppercase[locale] ?? hero.visual.taglineUppercase.en;
 
+  const goNext = () => setCurrentIndex((i) => (i + 1) % HERO_BG_IMAGES.length);
+  const goPrev = () =>
+    setCurrentIndex((i) => (i - 1 + HERO_BG_IMAGES.length) % HERO_BG_IMAGES.length);
+
   return (
     <main
       className="relative min-h-screen flex items-center pt-20"
       data-purpose="hero-banner"
       style={{ backgroundColor: "var(--color-bg-layer-1)" }}
     >
-      {/* Background Image Layer */}
+      {/* Background Image Layer - rotating carousel (click to advance) */}
       <div className="absolute inset-0 z-0">
-        <Image
-          alt="Beautiful tranquil forest with mountain view"
-          src={HERO_BG_IMAGE}
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
+        {HERO_BG_IMAGES.map((src, i) => (
+          <div
+            key={src}
+            className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+            style={{
+              opacity: i === currentIndex ? 1 : 0,
+              zIndex: i === currentIndex ? 1 : 0,
+            }}
+          >
+            <Image
+              alt="Property view"
+              src={src}
+              fill
+              className="object-cover"
+              priority={i === 0}
+              sizes="100vw"
+            />
+          </div>
+        ))}
         {/* Dark overlay for text readability */}
         <div
-          className="absolute inset-0 bg-gradient-to-r from-forest-mid/95 via-forest-mid/60 to-transparent"
+          className="absolute inset-0 bg-gradient-to-r from-forest-mid/95 via-forest-mid/60 to-transparent z-[2]"
           aria-hidden
         />
+      </div>
+
+      {/* Carousel controls */}
+      <div className="absolute bottom-8 right-8 md:right-16 z-20 flex items-center gap-3">
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            goPrev();
+          }}
+          className="p-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
+          aria-label="Previous image"
+        >
+          <span className="material-symbols-outlined text-white text-2xl">chevron_left</span>
+        </button>
+        <span className="text-white/80 text-sm tabular-nums min-w-[3ch]">
+          {currentIndex + 1} / {HERO_BG_IMAGES.length}
+        </span>
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            goNext();
+          }}
+          className="p-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
+          aria-label="Next image"
+        >
+          <span className="material-symbols-outlined text-white text-2xl">chevron_right</span>
+        </button>
       </div>
 
       <div className="relative z-10 content-container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16 lg:py-24">
@@ -104,12 +173,14 @@ export default function Hero3D() {
               href={listingConfig.airbnbUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
               className="w-full sm:w-auto px-8 py-4 font-bold rounded-lg text-center transition-all duration-300 hover:opacity-90 shadow-lg bg-warm-gold text-forest-dark"
             >
               Book on Airbnb
             </a>
             <Link
               href="/listing-info"
+              onClick={(e) => e.stopPropagation()}
               className="w-full sm:w-auto px-8 py-4 border border-white/20 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300 text-center"
             >
               View Info

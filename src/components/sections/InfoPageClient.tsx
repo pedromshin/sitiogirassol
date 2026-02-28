@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { listingConfig } from "@/data/listing.config";
+import LinkPreview from "@/components/ui/LinkPreview";
 
 type Props = { locale: "en" | "pt" | "es" };
 
@@ -188,6 +189,17 @@ export default function InfoPageClient({ locale }: Props) {
                 </span>
               </a>
             ))}
+          </div>
+
+          {/* Link preview - paste a URL to see rich preview */}
+          <div className="mt-16 max-w-xl mx-auto">
+            <h3 className="font-display text-2xl mb-2 text-white text-center">
+              {t("linkPreviewTitle")}
+            </h3>
+            <p className="text-white/60 text-sm text-center mb-6">
+              {t("linkPreviewSubtitle")}
+            </p>
+            <LinkPreview />
           </div>
         </div>
       </section>

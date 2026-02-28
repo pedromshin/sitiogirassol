@@ -103,7 +103,9 @@
     "directions": "How to get there",
     "shopping": "Shopping and nearby",
     "nearbyPlaces": "Nearby places",
-    "bookCta": "Book your stay"
+    "bookCta": "Book your stay",
+    "linkPreviewTitle": "Preview any link",
+    "linkPreviewSubtitle": "Paste a URL to see a rich preview"
   },
   "Metrics": {
     "title": "Property at a ",
