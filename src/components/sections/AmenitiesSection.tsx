@@ -109,7 +109,6 @@ export default function AmenitiesSection() {
                 fill
                 className="object-cover hover:scale-105 transition duration-300"
                 sizes="(max-width: 640px) 50vw, 25vw"
-                unoptimized
               />
             </motion.div>
           ))}

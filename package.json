@@ -9,11 +9,14 @@
     "lint": "next lint",
     "theme:css": "tsx scripts/generate-theme-css.ts",
     "icons": "tsx scripts/generate-icons.ts",
-    "prebuild": "npm run theme:css"
+    "optimize:images": "tsx scripts/optimize-hero-images.ts",
+    "prebuild": "npm run theme:css && npm run optimize:images"
   },
   "dependencies": {
     "@react-three/drei": "^9.92.7",
     "@react-three/fiber": "^8.15.12",
+    "@vercel/analytics": "^1.6.1",
+    "@vercel/speed-insights": "^1.3.1",
     "date-fns": "^3.3.1",
     "framer-motion": "^11.3.28",
     "gsap": "^3.12.5",

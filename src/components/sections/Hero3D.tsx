@@ -106,7 +106,6 @@ export default function Hero3D() {
               className="object-cover"
               priority={i === 0}
               sizes="100vw"
-              unoptimized
             />
           </div>
         ))}
