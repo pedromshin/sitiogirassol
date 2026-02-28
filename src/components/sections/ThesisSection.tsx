@@ -1,74 +1,137 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { listingConfig } from "@/data/listing.config";
 
-const CARDS = [
+const PILLARS = [
   {
     id: "nature",
-    icon: (
-      <svg className="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0h.5a2.5 2.5 0 002.5-2.5V8m0-4.065V4a2 2 0 012-2h2.945M12 12v2.945M12 12V9.055M12 12H9.055M12 12H14.945M3.055 11V9.055M3.055 11H5.945M21 12v2.945M21 12H18.055M21 12H21.945M12 21v-2.945M12 21H9.055M12 21h2.945M3 21V18.055M3 21H5.945M3 21H3.055" />
-      </svg>
-    ),
+    icon: "eco",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDC3AyP5-1wsmkHPDLOCKBCkL4nAj3InA7ZhkE2EWwJw95WB5cVFfSM4KYQS_9dAe9oN141_nfYMaAORmKahow1MO1TAJj1yPfGaExPv-_iAoojCVa9aCzsyvel6PX4eJakttGthggBHFUr9U_sdasiwp7UKvZ4uNhsixwmBnjWyhArfqvkaGNufsAQLP_AdscsbbXx3dSacCAS5NinZAv0dAGWn-Dh4WbDJMhpb4riBAJ3OOM7GFO_dlqN3QlQmRE1zwKk77A4vMc",
   },
   {
     id: "comfort",
-    icon: (
-      <svg className="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
+    icon: "bed",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAIN1YpQhRzaZEAMLYYjWviSTJ6rKt_nkLk_p0-CmkzEAMVXRq91C6yCMUvKruPZqNmeM8vQ4BsAwXxyf_Act3AqZqm9oU9wCLvrRGBu-Ck6WNh92ZLQNh2nHYDgxPzinP3Me-d5mLWkz3qRxJ9BUlT-opcprY8iUQL2njLqLp034poTNejeRJc3GzNv2FfiTw0ZfHzpEgjuQ5SxBdB9upfpUa2UqYhEss2KfhTf64ax_DX5-DpKj38munXzDkMu_fN-gw9y7Eck6A",
   },
   {
     id: "experience",
-    icon: (
-      <svg className="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    icon: "explore",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBZRQeX3rEnPA-fTg_V6rAeJjXEBugBt8jrtNdrgjKLhSeN0-hHb-AN5o7aC9efaKm6X_oQiad5nb0l-ehJOfc9wHVZc6IMg9jEobEaKTuVIAr5M0uFUzHsYTd9XBM_D3euJctnzYlbp1TXFHCmYoKSxY2FmYsI70VbjA7BZWvGCQ0HOwm58ZP5waYMvRx3mjs78CTTzI1rSt0C0LcJaPvrpIX9oT1d73eazvtqNhyLvXjLWRSaODyySLEQcg9gFZoBIQs-yN5Axjs",
   },
-];
+] as const;
 
 export default function ThesisSection() {
   const t = useTranslations("Thesis");
 
   return (
-    <section className="thesis-section py-20 px-4">
-      <div className="container mx-auto max-w-6xl">
-        <div className="thesis-header text-center mb-16">
-          <motion.h2
+    <>
+      <section
+        className="py-20 lg:py-32 px-6 lg:px-20"
+        style={{ backgroundColor: "#141E19" }}
+      >
+        <div className="max-w-5xl mx-auto text-center">
+          <span
+            className="uppercase tracking-[0.4em] text-[10px] font-black mb-4 block"
+            style={{ color: "#d4af37" }}
+          >
+            {t("essenceSubtitle")}
+          </span>
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-primary mb-2"
+            className="text-5xl md:text-7xl font-display mb-8 leading-tight text-white"
           >
             {t("title")}
-          </motion.h2>
-          <p className="text-text-muted text-lg">{t("subtitle")}</p>
+          </motion.h1>
+          <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+            {t("subtitle")}
+          </p>
         </div>
-        <div className="thesis-cards grid grid-cols-1 md:grid-cols-3 gap-8">
-          {CARDS.map((card, i) => (
-            <motion.div
-              key={card.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="thesis-card rounded-2xl border border-primary-light/20 bg-white p-8 shadow-sm hover:shadow-lg transition"
-            >
-              <div className="card-badge w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-lg font-bold mb-6">
-                {i + 1}
-              </div>
-              <div className="card-icon mb-4">{card.icon}</div>
-              <div className="card-text">
-                <h3 className="text-xl font-bold text-primary mb-2">{t(`${card.id}Title`)}</h3>
-                <p className="text-text-muted">{t(`${card.id}Desc`)}</p>
-              </div>
-            </motion.div>
-          ))}
+      </section>
+
+      <section
+        className="pb-32 px-6 lg:px-20"
+        style={{ backgroundColor: "#141E19" }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            {PILLARS.map((pillar, i) => (
+              <motion.div
+                key={pillar.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group flex flex-col items-center text-center p-8 rounded-2xl border border-white/10 transition-all hover:bg-[#202d26] hover:border-[#d4af37]/30 shadow-xl"
+                style={{ backgroundColor: "#1A2620" }}
+              >
+                <div className="w-20 h-20 flex items-center justify-center rounded-full border mb-8 group-hover:scale-110 transition-transform duration-500" style={{ backgroundColor: "#141E19", borderColor: "rgba(212, 175, 55, 0.3)" }}>
+                  <span
+                    className="material-symbols-outlined text-4xl"
+                    style={{ color: "#d4af37" }}
+                  >
+                    {pillar.icon}
+                  </span>
+                </div>
+                <h2 className="text-2xl font-display mb-4 tracking-wide text-white group-hover:text-[#d4af37] transition-colors">
+                  {t(`${pillar.id}Title`)}
+                </h2>
+                <p className="text-white/80 leading-relaxed font-light mb-10 text-sm">
+                  {t(`${pillar.id}Desc`)}
+                </p>
+                <div className="w-full h-72 overflow-hidden rounded-lg mb-2 shadow-2xl">
+                  <div className="w-full h-full relative transition-transform duration-700 group-hover:scale-110">
+                    <Image
+                      src={pillar.image}
+                      alt=""
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      unoptimized
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* CTA Section */}
+      <section
+        className="py-32 px-6 text-center"
+        style={{ backgroundColor: "#d4af37" }}
+      >
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-display mb-12 tracking-tight"
+          style={{ color: "#1a2e26" }}
+        >
+          {t("ctaTitle")}
+        </motion.h3>
+        <a
+          href={listingConfig.airbnbUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-14 py-6 rounded-full font-bold text-sm uppercase tracking-widest transition-all shadow-2xl hover:-translate-y-1"
+          style={{
+            backgroundColor: "#1a2e26",
+            color: "white",
+            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+          }}
+        >
+          {t("ctaButton")}
+        </a>
+      </section>
+    </>
   );
 }

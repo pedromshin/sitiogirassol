@@ -16,11 +16,20 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-const PROMPT = `Minimalist flat icon of a sunflower with exactly 6 petals arranged symmetrically around a circular core. 
-Clean geometric style, single-color silhouette or two-tone. 
-Colors: dark forest green (#1c3b33) for petals and core, or sage green (#8ebea8) on transparent/light background.
-No gradients, no shadows. Simple, elegant, suitable for favicon and app icon. 
-Square format, centered, plenty of padding.`;
+const PROMPT = `Professional flat-design sunflower icon for favicon and app icon.
+
+Exact design:
+- Central element: solid brown circle (#6B4423) at the center
+- Surrounding rays: 16–18 pointed triangular petals in golden yellow (#E8C547) evenly distributed around the center
+- Background: dark forest green rounded square (#1A2F28), with consistent margin around the sunflower
+- Style: flat, no gradients, no shadows, sharp edges, minimalist geometric shapes
+
+Design system colors (use exactly):
+- Petals/rays: #E8C547 (golden yellow)
+- Center disc: #6B4423 (medium brown)
+- Background: #1A2F28 (dark teal-green)
+
+Output: square 1024x1024, centered, generous padding, clean and professional, suitable for favicon and PWA icon.`;
 
 async function generate() {
   const body = JSON.stringify({

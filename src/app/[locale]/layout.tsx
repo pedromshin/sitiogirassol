@@ -24,10 +24,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const title = listingConfig.meta.title[loc] ?? listingConfig.meta.title.en;
   const description = listingConfig.meta.description[loc] ?? listingConfig.meta.description.en;
 
+  const ogImage = `${BASE_URL}/icons/og-image.png`;
   return {
     title,
     description,
-    openGraph: { title, description, url: `${BASE_URL}/${locale}` },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${locale}`,
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [ogImage],
+    },
     alternates: {
       languages: {
         en: `${BASE_URL}/en`,

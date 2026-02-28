@@ -31,7 +31,13 @@ function HouseModel() {
 
 export default function Scene3D() {
   return (
-    <div className="w-full h-full min-h-[300px] rounded-2xl overflow-hidden bg-primary-mid/10 border border-primary-light/20">
+    <div
+      className="w-full h-full min-h-[300px] rounded-2xl overflow-hidden border"
+      style={{
+        backgroundColor: "var(--color-bg-layer-3)",
+        borderColor: "var(--color-card-border)",
+      }}
+    >
       <Canvas
         camera={{ position: [3, 2, 3], fov: 50 }}
         gl={{ antialias: true, alpha: true }}

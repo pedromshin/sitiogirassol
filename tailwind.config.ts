@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { colors } from "./src/lib/design-system/colors.config";
 
 const config: Config = {
   content: [
@@ -9,20 +10,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#1c3b33",
-          mid: "#3a5a4c",
-          light: "#5e7b5b",
+        ...colors,
+        "bg-layer": {
+          1: "var(--color-bg-layer-1)",
+          2: "var(--color-bg-layer-2)",
+          3: "var(--color-bg-layer-3)",
+          4: "var(--color-bg-layer-4)",
+          5: "var(--color-bg-layer-5)",
         },
-        accent: {
-          DEFAULT: "#8ebea8",
-          light: "#c5e2dc",
+        card: {
+          DEFAULT: "var(--color-card-bg)",
+          border: "var(--color-card-border)",
+          "border-hover": "var(--color-card-border-hover)",
+          "featured-stripe": "var(--color-card-featured-stripe)",
         },
-        surface: "#f8faf8",
-        text: {
-          DEFAULT: "#1a2f28",
-          muted: "#5a7a6e",
-        },
+      },
+      fontFamily: {
+        display: ["var(--font-playfair)", "Playfair Display", "Georgia", "serif"],
+        serif: ["var(--font-playfair)", "Playfair Display", "Georgia", "serif"],
+        body: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
       },
       backdropBlur: {
         xs: "2px",

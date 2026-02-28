@@ -3,14 +3,22 @@
 import { useState } from "react";
 import { themeColorEntries } from "@/lib/theme-colors";
 
+type ColorEntry = { path: string; value: string };
+
 type ThemeColorPickerProps = {
   /** Compact inline swatches, or full panel */
   variant?: "compact" | "panel";
+  /** Override entries (default: all theme colors) */
+  entries?: ColorEntry[];
   /** Callback when a color is selected (hex value) */
   onSelect?: (hex: string, path: string) => void;
 };
 
-export default function ThemeColorPicker({ variant = "panel", onSelect }: ThemeColorPickerProps) {
+export default function ThemeColorPicker({
+  variant = "panel",
+  entries = themeColorEntries,
+  onSelect,
+}: ThemeColorPickerProps) {
   const [copied, setCopied] = useState<string | null>(null);
 
   const handleClick = (value: string, path: string) => {
@@ -27,7 +35,7 @@ export default function ThemeColorPicker({ variant = "panel", onSelect }: ThemeC
 
   return (
     <div className={baseClass}>
-      {themeColorEntries.map(({ path, value }) => (
+      {entries.map(({ path, value }) => (
         <button
           key={path}
           type="button"

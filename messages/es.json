@@ -1,4 +1,10 @@
 {
+  "StatsFooterBar": {
+    "areaVerde": "Área Verde",
+    "suites": "Suites",
+    "climatizada": "Climatizada",
+    "deSaoPaulo": "de São Paulo"
+  },
   "Header": {
     "home": "Inicio",
     "info": "Información",
@@ -13,7 +19,23 @@
     "nearbyPlaces": "Lugares cercanos",
     "directions": "Cómo llegar",
     "allRightsReserved": "Todos los derechos reservados",
-    "info": "Información"
+    "info": "Información",
+    "description": "Redefiniendo el concepto de exclusividad y confort en destinos deslumbrantes rodeados por la naturaleza.",
+    "navigation": "Navegación",
+    "aboutUs": "Sobre Nosotros",
+    "photoGallery": "Galería de Fotos",
+    "amenities": "Comodidades",
+    "ratesAndReservations": "Tarifas y Reservas",
+    "support": "Soporte",
+    "faq": "Preguntas Frecuentes",
+    "cancellationPolicy": "Política de Cancelación",
+    "termsOfUse": "Términos de Uso",
+    "privacy": "Privacidad",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Recibe curadorías exclusivas directamente en tu correo.",
+    "emailPlaceholder": "Tu correo",
+    "location": "São Roque, SP",
+    "phone": "+55 (11) 99999-9999"
   },
   "PhotoCarousel": {
     "all": "Todos",
@@ -27,6 +49,23 @@
   },
   "Amenities": {
     "title": "Lo que ofrece este lugar",
+    "subtitle": "Comodidades exclusivas diseñadas para proporcionar una experiencia de vida incomparable.",
+    "connectivity": "Conectividad",
+    "connectivityDesc": "Wi-Fi de alta velocidad en toda la propiedad.",
+    "privateLeisure": "Ocio Privado",
+    "privateLeisureDesc": "Piscina de borde infinito con calefacción solar.",
+    "parking": "Estacionamiento",
+    "parkingDesc": "Garaje cubierto para hasta 6 vehículos de lujo.",
+    "security": "Seguridad 24h",
+    "securityDesc": "Monitoreo avanzado y control de acceso.",
+    "fitness": "Espacio Fitness",
+    "fitnessDesc": "Gimnasio completo con equipos Technogym.",
+    "wineCellar": "Bodega Climatizada",
+    "wineCellarDesc": "Espacio para colección con control de humedad.",
+    "cinema": "Cine",
+    "cinemaDesc": "Sala de proyección con audio Dolby Atmos.",
+    "spa": "Spa y Sauna",
+    "spaDesc": "Ambiente de relajación con sauna seca.",
     "bathroom": "Baño",
     "bedroomAndLaundry": "Dormitorio y lavandería",
     "entertainment": "Entretenimiento",
@@ -40,6 +79,13 @@
   },
   "Calendar": {
     "title": "Verificar disponibilidad",
+    "titleLine1": "Confira la ",
+    "titleHighlight": "Disponibilidad",
+    "description": "Selecciona las fechas de tu estancia y asegura tu reserva en un refugio de naturaleza preservada.",
+    "reserved": "Reservado",
+    "available": "Disponible",
+    "selectedPeriod": "Período Seleccionado",
+    "clear": "Limpiar",
     "nights": "noches",
     "total": "Total",
     "bookNow": "Reservar en Airbnb",
@@ -48,41 +94,80 @@
   },
   "InfoPage": {
     "title": "Información de la propiedad",
+    "subtitle": "Todo lo que necesitas saber para tu estancia",
     "houseRules": "Reglas de la casa",
     "poolRules": "Reglas de la piscina",
     "poolSchedule": "Horario de limpieza de la piscina",
     "directions": "Cómo llegar",
-    "shopping": "Compras y cercanías"
+    "shopping": "Compras y cercanías",
+    "nearbyPlaces": "Lugares cercanos",
+    "bookCta": "Reserva tu estancia"
   },
   "Metrics": {
-    "title": "La propiedad en resumen",
+    "title": "La propiedad en ",
+    "titleHighlight": "resumen",
     "subtitle": "Características principales de Girassol",
-    "bedrooms": "Dormitorios",
+    "bedrooms": "Dormitorios / Suites",
     "beds": "Camas",
     "bathrooms": "Baños",
     "maxGuests": "Huéspedes máx",
     "size": "Tamaño",
     "pool": "Piscina",
     "nature": "Naturaleza",
-    "nightlyRate": "Desde / noche"
+    "nightlyRate": "Desde / noche",
+    "bedroomsDesc": "Suites completas",
+    "bedsDesc": "Alojamientos",
+    "bathroomsDesc": "Equipados",
+    "maxGuestsDesc": "Capacidad",
+    "sizeDesc": "Área construida",
+    "poolDesc": "Privada y climatizada",
+    "natureDesc": "Preservados",
+    "nightlyRateDesc": "Valor base",
+    "taglinePart1": "Naturaleza. ",
+    "taglineHighlight": "Confort."
   },
   "Mission": {
     "headline": "Naturaleza. Confort.",
     "highlight": "Tranquilidad.",
     "description": "Un auténtico Sitio brasileño con 2,6 hectáreas de naturaleza. Piscina, parrilla, senderos offroad y privacidad total. Tu refugio lejos de la ciudad."
   },
+  "Gallery": {
+    "title": "Galería de Fotos",
+    "subtitle": "Espacios y momentos en Sítio Girassol",
+    "viewAll": "Ver todas",
+    "exclusive": "Exclusivo",
+    "panoramicView": "Vista Panorámica"
+  },
   "Thesis": {
+    "essenceSubtitle": "La Esencia del Refugio",
     "title": "Por qué Girassol",
-    "subtitle": "Qué hace especial este lugar",
+    "subtitle": "Una armonía meticulosamente diseñada entre el lujo contemporáneo y el alma vibrante de la naturaleza salvaje.",
     "natureTitle": "Naturaleza",
-    "natureDesc": "2,6 hectáreas de terreno privado. Senderos, vida silvestre e inmersión total en el campo.",
+    "natureDesc": "Preservación activa y contacto directo con el ecosistema local. Siente el pulso del bosque en cada amanecer.",
     "comfortTitle": "Confort",
-    "comfortDesc": "3 dormitorios, piscina con cascada, cocina completa, WiFi. Todo lo que necesitas para una estancia relajante.",
+    "comfortDesc": "Suites premium con diseño original y materiales orgánicos, creadas para tu relajación absoluta y regeneración.",
     "experienceTitle": "Experiencia",
-    "experienceDesc": "Áreas de parrilla, fogata, hamaca, comedor al aire libre. Crea recuerdos con familia y amigos."
+    "experienceDesc": "Curaduría de momentos exclusivos, desde alta gastronomía sostenible hasta itinerarios de exploración privados.",
+    "ctaTitle": "¿Listo para tu renovación?",
+    "ctaButton": "Reserva tu Experiencia"
+  },
+  "Location": {
+    "label": "Ubicación",
+    "title": "São Roque",
+    "description": "Ubicada en el campo de São Roque, a pocos minutos de los mejores mercados y comodidades locales. 60 km de São Paulo.",
+    "nearbyHighlight": "5 min del Mercado São Roque",
+    "viewFullMap": "Ver Mapa Completo",
+    "mapAlt": "Mapa de la ubicación de la propiedad"
+  },
+  "Features": {
+    "requestDetails": "Solicitar Más Detalles"
   },
   "CTA": {
     "title": "¿Listo para reservar tu estancia?",
-    "button": "Reservar en Airbnb"
+    "titleLine1": "¿Listo para reservar tu ",
+    "titleHighlight": "estancia de lujo?",
+    "description": "Transforma tus momentos en recuerdos inolvidables. Nuestro equipo está listo para recibirte con el más alto estándar de hospitalidad.",
+    "button": "Reservar en Airbnb",
+    "consultant": "Hablar con Consultor"
   }
 }

@@ -2,27 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./theme-vars.css";
+
+/* Semantic tokens - dark forest luxury theme (forest-dark #141E19, forest-mid #1A2620, accent-gold #d4af37) */
 :root {
-  --color-primary: #1c3b33;
-  --color-primary-mid: #3a5a4c;
-  --color-primary-light: #5e7b5b;
-  --color-accent: #8ebea8;
-  --color-accent-light: #c5e2dc;
-  --color-surface: #f8faf8;
-  --color-text: #1a2f28;
-  --color-muted: #5a7a6e;
+  /* Background layers - forest theme */
+  --color-bg-layer-1: #141E19;
+  --color-bg-layer-2: #1A2620;
+  --color-bg-layer-3: #222d26;
+  --color-bg-layer-4: #2a352e;
+  --color-bg-layer-5: #353d38;
+  /* Card semantic */
+  --color-card-bg: #1A2620;
+  --color-card-border: rgba(255, 255, 255, 0.1);
+  --color-card-border-hover: rgba(212, 175, 55, 0.3);
+  --color-card-featured-stripe: #d4af37;
+  /* Header frosted glass */
+  --color-header-bg: rgba(20, 30, 25, 0.95);
+  --color-header-border: rgba(255, 255, 255, 0.1);
+  /* Button semantic */
+  --color-btn-primary-bg: #1A2620;
+  --color-btn-primary-text: #141E19;
+  --color-btn-cta-bg: #d4af37;
+  --color-btn-secondary-border: #d4af37;
+  /* Section spacing - consistent vertical rhythm */
+  --section-padding-y: 4rem; /* 64px mobile */
+  --section-padding-y-md: 5rem; /* 80px tablet */
+  --section-padding-y-lg: 6rem; /* 96px desktop */
+  /* Container horizontal padding - distance from viewport edges */
+  --container-padding-x: 1rem; /* 16px mobile */
+  --container-padding-x-sm: 1.5rem; /* 24px tablet */
+  --container-padding-x-lg: 2rem; /* 32px desktop */
+  /* Grid gaps */
+  --grid-gap: 1rem;
+  --grid-gap-md: 1.5rem;
+  --grid-gap-lg: 2rem;
+  --grid-gap-xl: 3rem;
 }
 
 @layer base {
-  body {
-    @apply text-text bg-surface antialiased;
+  html {
+    overflow-x: hidden;
   }
+  body {
+    @apply antialiased min-h-screen overflow-x-hidden;
+    color: #f3f4f6;
+    background-color: #141E19;
+  }
+}
+
+.font-serif-italic {
+  font-family: var(--font-playfair), "Playfair Display", serif;
+  font-style: italic;
 }
 
 @layer components {
   .glass {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Section wrapper - consistent vertical padding */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  /* Content container - max-width + responsive horizontal padding */
+  .content-container {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .content-container-narrow {
+    @apply mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .content-container-wide {
+    @apply mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8;
   }
 }
 
@@ -62,7 +117,44 @@
   animation-play-state: paused;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Landing - dark layered background */
+.landing-custom {
+  background-color: var(--color-bg-layer-1);
+}
+
+/* Card semantic - dark cards with green hover */
+.thesis-card,
+.product-card,
+.metric-item {
+  background-color: var(--color-card-bg) !important;
+  border-color: var(--color-card-border) !important;
+}
+.thesis-card:hover,
+.product-card:hover {
+  border-color: var(--color-card-border-hover) !important;
+}
+
+/* Metrics section - stat cards with gold accent hover */
+.stat-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(212, 175, 55, 0.05);
+  background-color: #1A2620;
+}
+.stat-card:hover {
+  border-color: rgba(212, 175, 55, 0.2);
+  background-color: #222d26;
+  transform: translateY(-4px);
+}
+
 /* react-date-range theme override */
 .rdrCalendarWrapper {
-  --rdr-primary-color: #1c3b33 !important;
+  --rdr-primary-color: #d4af37 !important;
 }

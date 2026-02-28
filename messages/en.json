@@ -1,4 +1,10 @@
 {
+  "StatsFooterBar": {
+    "areaVerde": "Green Area",
+    "suites": "Suites",
+    "climatizada": "Heated",
+    "deSaoPaulo": "from São Paulo"
+  },
   "Header": {
     "home": "Home",
     "info": "Info",
@@ -13,7 +19,23 @@
     "nearbyPlaces": "Nearby places",
     "directions": "Directions",
     "allRightsReserved": "All rights reserved",
-    "info": "Info"
+    "info": "Info",
+    "description": "Redefining the concept of exclusivity and comfort in stunning destinations surrounded by nature.",
+    "navigation": "Navigation",
+    "aboutUs": "About Us",
+    "photoGallery": "Photo Gallery",
+    "amenities": "Amenities",
+    "ratesAndReservations": "Rates and Reservations",
+    "support": "Support",
+    "faq": "FAQ",
+    "cancellationPolicy": "Cancellation Policy",
+    "termsOfUse": "Terms of Use",
+    "privacy": "Privacy",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Receive exclusive curations directly in your email.",
+    "emailPlaceholder": "Your email",
+    "location": "São Roque, SP",
+    "phone": "+55 (11) 99999-9999"
   },
   "PhotoCarousel": {
     "all": "All",
@@ -27,6 +49,23 @@
   },
   "Amenities": {
     "title": "What this place offers",
+    "subtitle": "Exclusive amenities designed to provide an incomparable living experience.",
+    "connectivity": "Connectivity",
+    "connectivityDesc": "High-speed Wi-Fi throughout the property.",
+    "privateLeisure": "Private Leisure",
+    "privateLeisureDesc": "Infinity pool with solar heating.",
+    "parking": "Parking",
+    "parkingDesc": "Covered garage for up to 6 luxury vehicles.",
+    "security": "24h Security",
+    "securityDesc": "Advanced monitoring and access control.",
+    "fitness": "Fitness Space",
+    "fitnessDesc": "Full gym with Technogym equipment.",
+    "wineCellar": "Climate-Controlled Wine Cellar",
+    "wineCellarDesc": "Space for your collection with humidity control.",
+    "cinema": "Cinema",
+    "cinemaDesc": "Projection room with Dolby Atmos audio.",
+    "spa": "Spa & Sauna",
+    "spaDesc": "Relaxation environment with dry sauna.",
     "bathroom": "Bathroom",
     "bedroomAndLaundry": "Bedroom and laundry",
     "entertainment": "Entertainment",
@@ -40,6 +79,13 @@
   },
   "Calendar": {
     "title": "Check availability",
+    "titleLine1": "Check ",
+    "titleHighlight": "Availability",
+    "description": "Select your stay dates and secure your reservation in a refuge of preserved nature.",
+    "reserved": "Reserved",
+    "available": "Available",
+    "selectedPeriod": "Selected Period",
+    "clear": "Clear",
     "nights": "nights",
     "total": "Total",
     "bookNow": "Book on Airbnb",
@@ -48,41 +94,80 @@
   },
   "InfoPage": {
     "title": "Listing information",
+    "subtitle": "Everything you need to know for your stay",
     "houseRules": "House rules",
     "poolRules": "Swimming pool rules",
     "poolSchedule": "Pool cleaning schedule",
     "directions": "How to get there",
-    "shopping": "Shopping and nearby"
+    "shopping": "Shopping and nearby",
+    "nearbyPlaces": "Nearby places",
+    "bookCta": "Book your stay"
   },
   "Metrics": {
-    "title": "Property at a glance",
+    "title": "Property at a ",
+    "titleHighlight": "glance",
     "subtitle": "Key features of Girassol",
-    "bedrooms": "Bedrooms",
+    "bedrooms": "Rooms / Suites",
     "beds": "Beds",
     "bathrooms": "Bathrooms",
     "maxGuests": "Max guests",
     "size": "Size",
     "pool": "Pool",
     "nature": "Nature",
-    "nightlyRate": "From / night"
+    "nightlyRate": "From / night",
+    "bedroomsDesc": "Full suites",
+    "bedsDesc": "Accommodations",
+    "bathroomsDesc": "Equipped",
+    "maxGuestsDesc": "Capacity",
+    "sizeDesc": "Built area",
+    "poolDesc": "Private and heated",
+    "natureDesc": "Preserved",
+    "nightlyRateDesc": "Base rate",
+    "taglinePart1": "Nature. ",
+    "taglineHighlight": "Comfort."
   },
   "Mission": {
     "headline": "Nature. Comfort.",
     "highlight": "Tranquility.",
     "description": "An authentic Brazilian Sitio with 2.6 hectares of nature. Pool, BBQ, offroad trails, and complete privacy. Your refuge away from the city."
   },
+  "Gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "Spaces and moments at Sítio Girassol",
+    "viewAll": "View all",
+    "exclusive": "Exclusive",
+    "panoramicView": "Panoramic View"
+  },
   "Thesis": {
+    "essenceSubtitle": "The Essence of the Refuge",
     "title": "Why Girassol",
-    "subtitle": "What makes this place special",
+    "subtitle": "A meticulously designed harmony between contemporary luxury and the vibrant soul of wild nature.",
     "natureTitle": "Nature",
-    "natureDesc": "2.6 hectares of private land. Trails, wildlife, and complete immersion in the countryside.",
+    "natureDesc": "Active preservation and direct contact with the local ecosystem. Feel the pulse of the forest at every sunrise.",
     "comfortTitle": "Comfort",
-    "comfortDesc": "3 bedrooms, pool with waterfall, full kitchen, WiFi. Everything you need for a relaxing stay.",
+    "comfortDesc": "Premium suites with original design and organic materials, created for your absolute relaxation and regeneration.",
     "experienceTitle": "Experience",
-    "experienceDesc": "BBQ areas, fire pit, hammock, outdoor dining. Create memories with family and friends."
+    "experienceDesc": "Curated exclusive moments, from sustainable fine dining to private exploration itineraries.",
+    "ctaTitle": "Ready for your renewal?",
+    "ctaButton": "Reserve your Experience"
+  },
+  "Location": {
+    "label": "Location",
+    "title": "São Roque",
+    "description": "Located in the countryside of São Roque, a few minutes from the best markets and local conveniences. 60 km from São Paulo.",
+    "nearbyHighlight": "5 min to Mercado São Roque",
+    "viewFullMap": "View Full Map",
+    "mapAlt": "Map location of the property"
+  },
+  "Features": {
+    "requestDetails": "Request More Details"
   },
   "CTA": {
     "title": "Ready to book your stay?",
-    "button": "Book on Airbnb"
+    "titleLine1": "Ready to book your ",
+    "titleHighlight": "luxury stay?",
+    "description": "Transform your moments into unforgettable memories. Our team is ready to welcome you with the highest standard of hospitality.",
+    "button": "Book on Airbnb",
+    "consultant": "Talk to Consultant"
   }
 }

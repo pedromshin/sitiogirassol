@@ -8,20 +8,76 @@ export default function Footer() {
   const t = useTranslations("Footer");
 
   return (
-    <footer className="static-footer border-t border-primary-light/30 bg-primary text-white/80" role="contentinfo">
-      <div className="footer-content container mx-auto px-4 py-16">
-        <div className="footer-columns grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-          <div className="footer-column">
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Property</h4>
-            <ul className="space-y-2">
+    <footer
+      className="py-24 px-6 md:px-20 border-t border-white/5 mt-20"
+      style={{ backgroundColor: "#141E19" }}
+      role="contentinfo"
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+          {/* Column 1: Brand + Description + Social */}
+          <div className="space-y-8">
+            <div className="flex items-center gap-3">
+              <span
+                className="material-symbols-outlined text-3xl"
+                style={{ color: "#d4af37" }}
+              >
+                filter_vintage
+              </span>
+              <h2 className="text-2xl font-display font-bold text-white tracking-tight">
+                Girassol
+              </h2>
+            </div>
+            <p className="text-white/40 leading-relaxed font-light">
+              {t("description")}
+            </p>
+            <div className="flex items-center gap-5">
+              <a
+                href="#"
+                className="w-5 h-5 text-white/30 hover:text-[#d4af37] transition-colors"
+                aria-label="Website"
+              >
+                <span className="material-symbols-outlined text-xl">public</span>
+              </a>
+              <a
+                href="#"
+                className="w-5 h-5 text-white/30 hover:text-[#d4af37] transition-colors"
+                aria-label="Share"
+              >
+                <span className="material-symbols-outlined text-xl">share</span>
+              </a>
+              <a
+                href="mailto:contato@girassol.example.com"
+                className="w-5 h-5 text-white/30 hover:text-[#d4af37] transition-colors"
+                aria-label="Email"
+              >
+                <span className="material-symbols-outlined text-xl">alternate_email</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Column 2: Navegação */}
+          <div className="space-y-8">
+            <h4
+              className="text-[10px] font-black uppercase tracking-widest"
+              style={{ color: "#d4af37" }}
+            >
+              {t("navigation")}
+            </h4>
+            <ul className="space-y-4 text-sm font-medium text-white/50">
               <li>
-                <Link href="/" className="text-accent-light/90 hover:text-white transition">
-                  Home
+                <Link href="/listing-info" className="hover:text-white transition-colors">
+                  {t("aboutUs")}
                 </Link>
               </li>
               <li>
-                <Link href="/listing-info" className="text-accent-light/90 hover:text-white transition">
-                  {t("info")}
+                <Link href="/#gallery" className="hover:text-white transition-colors">
+                  {t("photoGallery")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/#amenities" className="hover:text-white transition-colors">
+                  {t("amenities")}
                 </Link>
               </li>
               <li>
@@ -29,52 +85,88 @@ export default function Footer() {
                   href={listingConfig.airbnbUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent-light/90 hover:text-white transition"
+                  className="hover:text-white transition-colors"
                 >
-                  Book on Airbnb
+                  {t("ratesAndReservations")}
                 </a>
               </li>
             </ul>
           </div>
-          <div className="footer-column">
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">{t("nearbyPlaces")}</h4>
-            <ul className="space-y-2">
-              {listingConfig.nearbyPlaces.slice(0, 4).map((place) => (
-                <li key={place.url}>
-                  <a
-                    href={place.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent-light/90 hover:text-white transition"
-                  >
-                    {place.name}
-                    {place.distance && ` (${place.distance})`}
-                  </a>
-                </li>
-              ))}
+
+          {/* Column 3: Suporte */}
+          <div className="space-y-8">
+            <h4
+              className="text-[10px] font-black uppercase tracking-widest"
+              style={{ color: "#d4af37" }}
+            >
+              {t("support")}
+            </h4>
+            <ul className="space-y-4 text-sm font-medium text-white/50">
+              <li>
+                <Link href="/listing-info#faq" className="hover:text-white transition-colors">
+                  {t("faq")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/listing-info#cancellation" className="hover:text-white transition-colors">
+                  {t("cancellationPolicy")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="hover:text-white transition-colors">
+                  {t("termsOfUse")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="hover:text-white transition-colors">
+                  {t("privacy")}
+                </Link>
+              </li>
             </ul>
           </div>
-          <div className="footer-column">
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">{t("directions")}</h4>
-            <p className="text-accent-light/90 text-sm">
-              São Roque, SP — Castello Branco km 54B, Raposo Tavares
-            </p>
-          </div>
-          <div className="footer-column">
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Contact</h4>
-            <a
-              href={listingConfig.airbnbUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block rounded-lg bg-accent/20 px-4 py-2 text-sm font-medium text-accent-light hover:bg-accent/30 transition"
+
+          {/* Column 4: Newsletter */}
+          <div className="space-y-8">
+            <h4
+              className="text-[10px] font-black uppercase tracking-widest"
+              style={{ color: "#d4af37" }}
             >
-              Book via Airbnb
-            </a>
+              {t("newsletter")}
+            </h4>
+            <p className="text-white/40 text-sm font-light">
+              {t("newsletterDesc")}
+            </p>
+            <div className="relative">
+              <input
+                type="email"
+                placeholder={t("emailPlaceholder")}
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#d4af37]/50 text-white placeholder-white/20"
+              />
+              <button
+                type="button"
+                className="absolute right-2 top-2 p-1 hover:opacity-80 transition-opacity"
+                style={{ color: "#d4af37" }}
+                aria-label="Subscribe"
+              >
+                <span className="material-symbols-outlined">send</span>
+              </button>
+            </div>
           </div>
         </div>
-        <div className="footer-bottom border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-white/60">{t("allRightsReserved")}</p>
-          <span className="text-xl font-semibold text-white">Girassol</span>
+
+        {/* Bottom bar */}
+        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-[10px] uppercase tracking-[0.2em] font-bold text-white/20">
+          <p>{t("allRightsReserved")}</p>
+          <div className="flex items-center gap-10">
+            <div className="flex items-center gap-2">
+              <span className="material-symbols-outlined text-sm">location_on</span>
+              <span>{t("location")}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="material-symbols-outlined text-sm">phone_iphone</span>
+              <span>{t("phone")}</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

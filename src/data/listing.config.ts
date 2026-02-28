@@ -23,7 +23,13 @@ export interface ListingConfig {
   };
   hero: {
     headline: Record<string, string>;
+    headlineItalic: Record<string, string>;
     subheadline: Record<string, string>;
+    paragraph: Record<string, string>;
+    visual: {
+      tagline: Record<string, string>;
+      taglineUppercase: Record<string, string>;
+    };
   };
   pricing: {
     nightlyRate: number;
@@ -71,14 +77,36 @@ export const listingConfig: ListingConfig = {
   },
   hero: {
     headline: {
-      en: "Nature refuge, comfort and tranquility",
-      pt: "Refúgio de natureza, conforto e tranquilidade",
-      es: "Refugio de naturaleza, confort y tranquilidad",
+      en: "Nature refuge,",
+      pt: "Refúgio de natureza,",
+      es: "Refugio de naturaleza,",
+    },
+    headlineItalic: {
+      en: "comfort and tranquility",
+      pt: "conforto e tranquilidade",
+      es: "confort y tranquilidad",
     },
     subheadline: {
-      en: "Authentic Brazilian Sitio - Offroad, Nature, BBQ",
-      pt: "Remoto, natureza, privativo, completo, tranquilo",
-      es: "Sitio a 1,5 h SP offroad, senderos, piscina asador",
+      en: "Remote, nature, private, complete, tranquil.",
+      pt: "Remoto, natureza, privativo, completo, tranquilo.",
+      es: "Remoto, naturaleza, privado, completo, tranquilo.",
+    },
+    paragraph: {
+      en: "3 bedrooms, private pool and 2.6 hectares of preserved nature for your family. Book your stay in São Roque.",
+      pt: "3 quartos, piscina privativa e 2,6 hectares de natureza preservada para sua família. Reserve sua estadia em São Roque.",
+      es: "3 dormitorios, piscina privada y 2,6 hectáreas de naturaleza preservada para tu familia. Reserva tu estadía en São Roque.",
+    },
+    visual: {
+      tagline: {
+        en: "Inner peace",
+        pt: "Paz interior",
+        es: "Paz interior",
+      },
+      taglineUppercase: {
+        en: "Exclusive experience",
+        pt: "Experiência exclusiva",
+        es: "Experiencia exclusiva",
+      },
     },
   },
   pricing: {
