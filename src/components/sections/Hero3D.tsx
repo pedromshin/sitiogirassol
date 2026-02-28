@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { listingConfig } from "@/data/listing.config";
 import { useState, useEffect } from "react";
+import BrandIcon from "@/components/ui/BrandIcon";
 
 const HERO_BG_IMAGES = [
   "/bg/DSC_0559.JPG",
@@ -46,9 +47,40 @@ export default function Hero3D() {
   const tagline = hero.visual.tagline[locale] ?? hero.visual.tagline.en;
   const taglineUppercase = hero.visual.taglineUppercase[locale] ?? hero.visual.taglineUppercase.en;
 
-  const goNext = () => setCurrentIndex((i) => (i + 1) % HERO_BG_IMAGES.length);
-  const goPrev = () =>
+  const goNext = () => {
+    // #region agent log
+    fetch("http://127.0.0.1:7544/ingest/6ae883c0-8043-415b-a15d-acccd7823a99", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "7cd407" },
+      body: JSON.stringify({
+        sessionId: "7cd407",
+        location: "Hero3D.tsx:goNext",
+        message: "goNext called",
+        data: { currentIndex },
+        timestamp: Date.now(),
+        hypothesisId: "B",
+      }),
+    }).catch(() => {});
+    // #endregion
+    setCurrentIndex((i) => (i + 1) % HERO_BG_IMAGES.length);
+  };
+  const goPrev = () => {
+    // #region agent log
+    fetch("http://127.0.0.1:7544/ingest/6ae883c0-8043-415b-a15d-acccd7823a99", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "7cd407" },
+      body: JSON.stringify({
+        sessionId: "7cd407",
+        location: "Hero3D.tsx:goPrev",
+        message: "goPrev called",
+        data: { currentIndex },
+        timestamp: Date.now(),
+        hypothesisId: "B",
+      }),
+    }).catch(() => {});
+    // #endregion
     setCurrentIndex((i) => (i - 1 + HERO_BG_IMAGES.length) % HERO_BG_IMAGES.length);
+  };
 
   return (
     <main
@@ -85,10 +117,42 @@ export default function Hero3D() {
       </div>
 
       {/* Carousel controls */}
-      <div className="absolute bottom-8 right-8 md:right-16 z-20 flex items-center gap-3">
+      <div
+        className="absolute bottom-8 right-8 md:right-16 z-20 flex items-center gap-3"
+        onClick={() => {
+          // #region agent log
+          fetch("http://127.0.0.1:7544/ingest/6ae883c0-8043-415b-a15d-acccd7823a99", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "7cd407" },
+            body: JSON.stringify({
+              sessionId: "7cd407",
+              location: "Hero3D.tsx:controls-container",
+              message: "Controls container clicked",
+              data: {},
+              timestamp: Date.now(),
+              hypothesisId: "A",
+            }),
+          }).catch(() => {});
+          // #endregion
+        }}
+      >
         <button
           type="button"
           onClick={(e) => {
+            // #region agent log
+            fetch("http://127.0.0.1:7544/ingest/6ae883c0-8043-415b-a15d-acccd7823a99", {
+              method: "POST",
+              headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "7cd407" },
+              body: JSON.stringify({
+                sessionId: "7cd407",
+                location: "Hero3D.tsx:prev-button",
+                message: "Prev button onClick fired",
+                data: {},
+                timestamp: Date.now(),
+                hypothesisId: "A,E",
+              }),
+            }).catch(() => {});
+            // #endregion
             e.stopPropagation();
             goPrev();
           }}
@@ -103,6 +167,20 @@ export default function Hero3D() {
         <button
           type="button"
           onClick={(e) => {
+            // #region agent log
+            fetch("http://127.0.0.1:7544/ingest/6ae883c0-8043-415b-a15d-acccd7823a99", {
+              method: "POST",
+              headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "7cd407" },
+              body: JSON.stringify({
+                sessionId: "7cd407",
+                location: "Hero3D.tsx:next-button",
+                message: "Next button onClick fired",
+                data: {},
+                timestamp: Date.now(),
+                hypothesisId: "A,E",
+              }),
+            }).catch(() => {});
+            // #endregion
             e.stopPropagation();
             goNext();
           }}
@@ -123,7 +201,7 @@ export default function Hero3D() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mb-6 inline-block p-3 rounded-lg border border-warm-gold-border"
           >
-            <span className="material-symbols-outlined text-warm-gold text-4xl">filter_vintage</span>
+            <BrandIcon size={48} />
           </motion.div>
 
           <motion.h1

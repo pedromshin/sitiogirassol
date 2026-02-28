@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { listingConfig } from "@/data/listing.config";
+import BrandIcon from "@/components/ui/BrandIcon";
 
 export default function GlassyHeader() {
   const t = useTranslations("Header");
@@ -54,9 +55,7 @@ export default function GlassyHeader() {
           className="flex items-center gap-3"
           data-purpose="brand-identity"
         >
-          <div className="w-10 h-10 flex items-center justify-center text-warm-gold">
-            <span className="material-symbols-outlined text-3xl">filter_vintage</span>
-          </div>
+          <BrandIcon size={40} className="flex-shrink-0" />
           <span className="font-display text-xl font-bold tracking-tight text-white">
             Sítio Girassol
           </span>

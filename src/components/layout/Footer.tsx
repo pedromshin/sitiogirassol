@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { listingConfig } from "@/data/listing.config";
+import BrandIcon from "@/components/ui/BrandIcon";
 
 export default function Footer() {
   const t = useTranslations("Footer");
@@ -17,11 +18,9 @@ export default function Footer() {
           {/* Column 1: Brand + Description + Social */}
           <div className="space-y-8">
             <div className="flex items-center gap-3">
-              <span className="material-symbols-outlined text-3xl text-accent-gold">
-                filter_vintage
-              </span>
+              <BrandIcon size={40} className="flex-shrink-0" />
               <h2 className="text-2xl font-display font-bold text-white tracking-tight">
-                Girassol
+                Sítio Girassol
               </h2>
             </div>
             <p className="text-white/40 leading-relaxed font-light">

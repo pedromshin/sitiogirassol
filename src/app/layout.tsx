@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Girassol - Nature Refuge | São Roque, Brazil",
+  title: "Sítio Girassol - Nature Refuge | São Roque, Brazil",
   description:
     "Authentic Brazilian Sitio - Offroad, Nature, BBQ. 3 bedrooms, pool, 2.6 hectares of nature. Book your stay in São Roque.",
   icons: {

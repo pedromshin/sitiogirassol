@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { listingConfig } from "@/data/listing.config";
-import LinkPreview from "@/components/ui/LinkPreview";
 
 type Props = { locale: "en" | "pt" | "es" };
 
@@ -52,9 +51,8 @@ function InfoSection({
           {String(index + 1).padStart(2, "0")}
         </div>
         <div
-          className={`absolute -bottom-4 text-accent-gold opacity-20 ${
-            isReversed ? "-left-4" : "-right-4"
-          }`}
+          className={`absolute -bottom-4 text-accent-gold opacity-20 ${isReversed ? "-left-4" : "-right-4"
+            }`}
         >
           <span className="material-symbols-outlined text-8xl">
             {icons.decorativeIcon}
@@ -66,16 +64,14 @@ function InfoSection({
 
   const textBlock = (
     <div
-      className={`w-full md:w-1/2 text-center md:text-left order-2 md:order-2 ${
-        isReversed ? "md:text-right" : ""
-      }`}
+      className={`w-full md:w-1/2 text-center md:text-left order-2 md:order-2 ${isReversed ? "md:text-right" : ""
+        }`}
     >
       <h2
-        className={`font-display text-4xl mb-6 flex items-center gap-4 text-white ${
-          isReversed
+        className={`font-display text-4xl mb-6 flex items-center gap-4 text-white ${isReversed
             ? "justify-center md:justify-end"
             : "justify-center md:justify-start"
-        }`}
+          }`}
       >
         {isReversed && (
           <span className="material-symbols-outlined text-accent-gold text-3xl">
@@ -90,9 +86,8 @@ function InfoSection({
         )}
       </h2>
       <p
-        className={`text-lg text-white/80 leading-relaxed ${
-          isReversed ? "md:text-right" : ""
-        }`}
+        className={`text-lg text-white/80 leading-relaxed ${isReversed ? "md:text-right" : ""
+          }`}
       >
         {content}
       </p>
@@ -169,9 +164,8 @@ export default function InfoPageClient({ locale }: Props) {
                 href={place.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`bg-[#1A2620] p-4 rounded-lg flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow group border border-white/5 ${
-                  i === nearbyPlaces.length - 1 ? "md:col-span-2" : ""
-                }`}
+                className={`bg-[#1A2620] p-4 rounded-lg flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow group border border-white/5 ${i === nearbyPlaces.length - 1 ? "md:col-span-2" : ""
+                  }`}
               >
                 <div className="w-12 h-12 bg-white/5 rounded flex items-center justify-center text-gray-300 group-hover:text-accent-gold transition-colors">
                   <span className="material-symbols-outlined">
@@ -189,17 +183,6 @@ export default function InfoPageClient({ locale }: Props) {
                 </span>
               </a>
             ))}
-          </div>
-
-          {/* Link preview - paste a URL to see rich preview */}
-          <div className="mt-16 max-w-xl mx-auto">
-            <h3 className="font-display text-2xl mb-2 text-white text-center">
-              {t("linkPreviewTitle")}
-            </h3>
-            <p className="text-white/60 text-sm text-center mb-6">
-              {t("linkPreviewSubtitle")}
-            </p>
-            <LinkPreview />
           </div>
         </div>
       </section>

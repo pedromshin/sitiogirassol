@@ -65,9 +65,9 @@ export interface ListingConfig {
 export const listingConfig: ListingConfig = {
   meta: {
     title: {
-      en: "Girassol - Nature Refuge | São Roque, Brazil",
-      pt: "Girassol - Refúgio de Natureza | São Roque, Brasil",
-      es: "Girassol - Refugio de Naturaleza | São Roque, Brasil",
+      en: "Sítio Girassol - Nature Refuge | São Roque, Brazil",
+      pt: "Sítio Girassol - Refúgio de Natureza | São Roque, Brasil",
+      es: "Sítio Girassol - Refugio de Naturaleza | São Roque, Brasil",
     },
     description: {
       en: "Authentic Brazilian Sitio - Offroad, Nature, BBQ. 3 bedrooms, pool, 2.6 hectares of nature. Book your stay in São Roque.",

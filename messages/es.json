@@ -103,9 +103,7 @@
     "directions": "Cómo llegar",
     "shopping": "Compras y cercanías",
     "nearbyPlaces": "Lugares cercanos",
-    "bookCta": "Reserva tu estancia",
-    "linkPreviewTitle": "Vista previa de cualquier enlace",
-    "linkPreviewSubtitle": "Pega una URL para ver una vista previa"
+    "bookCta": "Reserva tu estancia"
   },
   "Metrics": {
     "title": "La propiedad en ",
