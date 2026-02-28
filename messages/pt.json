@@ -94,6 +94,8 @@
   },
   "InfoPage": {
     "title": "Informações da propriedade",
+    "titlePart1": "Informações da",
+    "titlePart2": "propriedade",
     "subtitle": "Tudo o que você precisa saber para sua estadia",
     "houseRules": "Regras da casa",
     "poolRules": "Regras da piscina",

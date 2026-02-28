@@ -117,8 +117,8 @@ export default function Hero3D() {
           </motion.div>
         </div>
 
-        {/* Hero Visual Element */}
-        <motion.div
+        {/* Hero Visual Element - HIDDEN WHILE NOT EXISTENT 3D MODEL*/}
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -130,7 +130,6 @@ export default function Hero3D() {
             style={{ background: "var(--color-hero-visual-bg)" }}
           >
             <div className="w-full h-full flex flex-col items-center justify-center relative">
-              {/* Abstract graphic layer */}
               <div className="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none">
                 <Image
                   alt="Property sketch"
@@ -139,7 +138,6 @@ export default function Hero3D() {
                   className="object-contain mix-blend-lighten"
                 />
               </div>
-              {/* Text highlight */}
               <div className="mt-auto text-center relative z-10">
                 <span className="block font-display text-3xl italic mb-2 text-warm-gold">
                   {tagline}
@@ -151,6 +149,7 @@ export default function Hero3D() {
             </div>
           </div>
         </motion.div>
+        */}
       </div>
     </main>
   );

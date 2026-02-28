@@ -94,6 +94,8 @@
   },
   "InfoPage": {
     "title": "Listing information",
+    "titlePart1": "Listing ",
+    "titlePart2": "information",
     "subtitle": "Everything you need to know for your stay",
     "houseRules": "House rules",
     "poolRules": "Swimming pool rules",

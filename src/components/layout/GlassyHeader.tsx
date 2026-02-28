@@ -2,26 +2,32 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { listingConfig } from "@/data/listing.config";
 
 export default function GlassyHeader() {
   const t = useTranslations("Header");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isInfoPage = pathname?.includes("listing-info");
 
   const navLinks = (
     <>
       <Link
         href="/"
-        className="text-white hover:text-warm-gold transition font-medium text-sm uppercase tracking-wide"
+        className={`text-sm font-medium uppercase tracking-widest transition-colors ${
+          isInfoPage ? "text-white/80 hover:text-accent-gold" : "text-white hover:text-warm-gold"
+        }`}
         onClick={() => setMobileMenuOpen(false)}
       >
         {t("home")}
       </Link>
       <Link
         href="/listing-info"
-        className="text-white/70 hover:text-white transition font-medium text-sm uppercase tracking-wide"
+        className={`text-sm font-medium uppercase tracking-widest transition-colors ${
+          isInfoPage ? "text-accent-gold" : "text-white/80 hover:text-accent-gold"
+        }`}
         onClick={() => setMobileMenuOpen(false)}
       >
         {t("info")}

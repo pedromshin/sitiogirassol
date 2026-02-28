@@ -326,7 +326,7 @@ export const listingConfig: ListingConfig = {
     },
   ],
   nearbyPlaces: [
-    { name: "Main property (Girassol)", url: "https://maps.app.goo.gl/T4AyvKtfkvXzrEA67", distance: "", type: "property" },
+    { name: "Main property (Girassol)", url: "https://maps.app.goo.gl/T4AyvKtfkvXzrEA67", distance: "12 km antes", type: "property" },
     { name: "Mercado São Roque", url: "https://maps.app.goo.gl/uc15RYv9sPc9Euij8", distance: "12 km antes", type: "market" },
     { name: "Farmácia", url: "https://maps.app.goo.gl/WATMaV2xWTJHARhT6", distance: "12 km antes", type: "pharmacy" },
     { name: "Panificadora e frango de padaria", url: "https://maps.app.goo.gl/zaotkbtZU7FLkL7C9", distance: "5 km antes", type: "bakery" },
