@@ -12,7 +12,8 @@
   "Footer": {
     "nearbyPlaces": "Nearby places",
     "directions": "Directions",
-    "allRightsReserved": "All rights reserved"
+    "allRightsReserved": "All rights reserved",
+    "info": "Info"
   },
   "PhotoCarousel": {
     "all": "All",
@@ -52,5 +53,36 @@
     "poolSchedule": "Pool cleaning schedule",
     "directions": "How to get there",
     "shopping": "Shopping and nearby"
+  },
+  "Metrics": {
+    "title": "Property at a glance",
+    "subtitle": "Key features of Girassol",
+    "bedrooms": "Bedrooms",
+    "beds": "Beds",
+    "bathrooms": "Bathrooms",
+    "maxGuests": "Max guests",
+    "size": "Size",
+    "pool": "Pool",
+    "nature": "Nature",
+    "nightlyRate": "From / night"
+  },
+  "Mission": {
+    "headline": "Nature. Comfort.",
+    "highlight": "Tranquility.",
+    "description": "An authentic Brazilian Sitio with 2.6 hectares of nature. Pool, BBQ, offroad trails, and complete privacy. Your refuge away from the city."
+  },
+  "Thesis": {
+    "title": "Why Girassol",
+    "subtitle": "What makes this place special",
+    "natureTitle": "Nature",
+    "natureDesc": "2.6 hectares of private land. Trails, wildlife, and complete immersion in the countryside.",
+    "comfortTitle": "Comfort",
+    "comfortDesc": "3 bedrooms, pool with waterfall, full kitchen, WiFi. Everything you need for a relaxing stay.",
+    "experienceTitle": "Experience",
+    "experienceDesc": "BBQ areas, fire pit, hammock, outdoor dining. Create memories with family and friends."
+  },
+  "CTA": {
+    "title": "Ready to book your stay?",
+    "button": "Book on Airbnb"
   }
 }

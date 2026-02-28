@@ -12,7 +12,8 @@
   "Footer": {
     "nearbyPlaces": "Lugares cercanos",
     "directions": "Cómo llegar",
-    "allRightsReserved": "Todos los derechos reservados"
+    "allRightsReserved": "Todos los derechos reservados",
+    "info": "Información"
   },
   "PhotoCarousel": {
     "all": "Todos",
@@ -52,5 +53,36 @@
     "poolSchedule": "Horario de limpieza de la piscina",
     "directions": "Cómo llegar",
     "shopping": "Compras y cercanías"
+  },
+  "Metrics": {
+    "title": "La propiedad en resumen",
+    "subtitle": "Características principales de Girassol",
+    "bedrooms": "Dormitorios",
+    "beds": "Camas",
+    "bathrooms": "Baños",
+    "maxGuests": "Huéspedes máx",
+    "size": "Tamaño",
+    "pool": "Piscina",
+    "nature": "Naturaleza",
+    "nightlyRate": "Desde / noche"
+  },
+  "Mission": {
+    "headline": "Naturaleza. Confort.",
+    "highlight": "Tranquilidad.",
+    "description": "Un auténtico Sitio brasileño con 2,6 hectáreas de naturaleza. Piscina, parrilla, senderos offroad y privacidad total. Tu refugio lejos de la ciudad."
+  },
+  "Thesis": {
+    "title": "Por qué Girassol",
+    "subtitle": "Qué hace especial este lugar",
+    "natureTitle": "Naturaleza",
+    "natureDesc": "2,6 hectáreas de terreno privado. Senderos, vida silvestre e inmersión total en el campo.",
+    "comfortTitle": "Confort",
+    "comfortDesc": "3 dormitorios, piscina con cascada, cocina completa, WiFi. Todo lo que necesitas para una estancia relajante.",
+    "experienceTitle": "Experiencia",
+    "experienceDesc": "Áreas de parrilla, fogata, hamaca, comedor al aire libre. Crea recuerdos con familia y amigos."
+  },
+  "CTA": {
+    "title": "¿Listo para reservar tu estancia?",
+    "button": "Reservar en Airbnb"
   }
 }

@@ -12,7 +12,8 @@
   "Footer": {
     "nearbyPlaces": "Lugares próximos",
     "directions": "Como chegar",
-    "allRightsReserved": "Todos os direitos reservados"
+    "allRightsReserved": "Todos os direitos reservados",
+    "info": "Informações"
   },
   "PhotoCarousel": {
     "all": "Todos",
@@ -52,5 +53,36 @@
     "poolSchedule": "Horário de limpeza da piscina",
     "directions": "Como chegar",
     "shopping": "Compras e proximidades"
+  },
+  "Metrics": {
+    "title": "A propriedade em resumo",
+    "subtitle": "Principais características do Girassol",
+    "bedrooms": "Quartos",
+    "beds": "Camas",
+    "bathrooms": "Banheiros",
+    "maxGuests": "Hóspedes máx",
+    "size": "Tamanho",
+    "pool": "Piscina",
+    "nature": "Natureza",
+    "nightlyRate": "A partir de / noite"
+  },
+  "Mission": {
+    "headline": "Natureza. Conforto.",
+    "highlight": "Tranquilidade.",
+    "description": "Um autêntico Sítio brasileiro com 2,6 hectares de natureza. Piscina, churrasqueira, trilhas offroad e privacidade total. Seu refúgio longe da cidade."
+  },
+  "Thesis": {
+    "title": "Por que Girassol",
+    "subtitle": "O que torna este lugar especial",
+    "natureTitle": "Natureza",
+    "natureDesc": "2,6 hectares de terra privada. Trilhas, vida selvagem e imersão total no campo.",
+    "comfortTitle": "Conforto",
+    "comfortDesc": "3 quartos, piscina com cascata, cozinha completa, WiFi. Tudo que você precisa para uma estadia relaxante.",
+    "experienceTitle": "Experiência",
+    "experienceDesc": "Áreas de churrasco, fogueira, rede, jantar ao ar livre. Crie memórias com família e amigos."
+  },
+  "CTA": {
+    "title": "Pronto para reservar sua estadia?",
+    "button": "Reservar no Airbnb"
   }
 }

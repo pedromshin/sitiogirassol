@@ -2,10 +2,14 @@ import dynamic from "next/dynamic";
 import { setRequestLocale } from "next-intl/server";
 
 const Hero3D = dynamic(() => import("@/components/sections/Hero3D"), { ssr: true });
-const PhotoCarousel = dynamic(() => import("@/components/sections/PhotoCarousel"), { ssr: false });
+const MetricsSection = dynamic(() => import("@/components/sections/MetricsSection"), { ssr: true });
+const MissionSection = dynamic(() => import("@/components/sections/MissionSection"), { ssr: true });
+const ThesisSection = dynamic(() => import("@/components/sections/ThesisSection"), { ssr: true });
+const GalleryMarquee = dynamic(() => import("@/components/sections/GalleryMarquee"), { ssr: false });
 const FeaturesSection = dynamic(() => import("@/components/sections/FeaturesSection"), { ssr: true });
 const AmenitiesSection = dynamic(() => import("@/components/sections/AmenitiesSection"), { ssr: true });
 const CalendarSection = dynamic(() => import("@/components/sections/CalendarSection"), { ssr: false });
+const CTASection = dynamic(() => import("@/components/sections/CTASection"), { ssr: true });
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -16,12 +20,16 @@ export default async function HomePage({ params }: PageProps) {
   setRequestLocale(locale);
 
   return (
-    <div>
+    <div className="landing-custom">
       <Hero3D />
-      <PhotoCarousel />
+      <MetricsSection />
+      <MissionSection />
+      <ThesisSection />
+      <GalleryMarquee />
       <FeaturesSection />
       <AmenitiesSection />
       <CalendarSection />
+      <CTASection />
     </div>
   );
 }
