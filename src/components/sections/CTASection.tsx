@@ -8,20 +8,20 @@ export default function CTASection() {
   const t = useTranslations("CTA");
 
   return (
-    <section className="relative overflow-hidden rounded-section border border-white/10 py-24 px-8 mx-4 md:mx-10 mt-20 mb-20 backdrop-blur-sm bg-forest-mid">
+    <section className="relative overflow-hidden rounded-section border border-white/10 py-16 md:py-24 px-6 sm:px-8 mx-4 md:mx-10 mt-12 md:mt-20 mb-12 md:mb-20 backdrop-blur-sm bg-forest-mid">
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl font-display text-white leading-tight"
+          className="text-3xl sm:text-5xl md:text-7xl font-display text-white leading-tight"
         >
           {t("titleLine1")}
           <span className="italic text-accent-gold">
             {t("titleHighlight")}
           </span>
         </motion.h2>
-        <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+        <p className="text-white/60 text-base md:text-lg lg:text-xl max-w-2xl mx-auto font-light leading-relaxed px-2">
           {t("description")}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">

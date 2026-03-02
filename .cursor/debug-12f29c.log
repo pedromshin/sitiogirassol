@@ -1,0 +1,2 @@
+{"sessionId":"12f29c","location":"Hero3D.tsx:logLayout","message":"Layout overlap check","data":{"hypothesisId":"H1","vw":375,"vh":710,"panelBottom":-1033,"panelTop":-1588.5,"carouselTop":-961,"carouselBottom":-921,"overlapY":false,"overlapX":true,"overlaps":false},"timestamp":1772485755429}
+{"sessionId":"12f29c","location":"Hero3D.tsx:logButtonShape","message":"Carousel button dimensions","data":{"hypothesisId":"H2","width":40,"height":40,"isSquare":true},"timestamp":1772485755429}

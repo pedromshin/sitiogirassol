@@ -62,16 +62,16 @@ export default function MetricsSection() {
 
   return (
     <section
-      className="py-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto bg-forest-dark"
+      className="py-12 md:py-20 px-4 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto bg-forest-dark"
       data-purpose="property-summary"
     >
       {/* Section Header */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-10 md:mb-16">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-display mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl font-display mb-4 md:mb-6"
         >
           {t("title")}
           <span className="font-serif-italic text-accent-gold">
@@ -100,7 +100,7 @@ export default function MetricsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="stat-card p-8 flex flex-col items-center text-center rounded-xl"
+              className="stat-card p-4 sm:p-6 md:p-8 flex flex-col items-center text-center rounded-xl"
             >
               <span className="text-gray-400 text-xs uppercase tracking-wider mb-2">
                 {t(key)}
@@ -115,12 +115,12 @@ export default function MetricsSection() {
       </div>
 
       {/* Bottom Tagline */}
-      <div className="mt-24 text-center">
+      <div className="mt-16 md:mt-24 text-center">
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl font-display leading-tight"
+          className="text-3xl sm:text-5xl md:text-7xl font-display leading-tight"
         >
           {t("taglinePart1")}
           <span className="font-serif-italic text-accent-gold">

@@ -203,3 +203,16 @@
   color: rgba(212, 175, 55, 0.9) !important;
   text-decoration: line-through;
 }
+
+/* Calendar mobile responsivity - scale via font-size (rdr uses em) */
+@media (max-width: 767px) {
+  .rdrCalendarWrapper {
+    font-size: 10px !important; /* 27.667em ≈ 277px at 10px, fits 320px viewport */
+    width: 100% !important;
+    max-width: 100%;
+  }
+  .rdrMonth {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}

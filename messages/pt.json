@@ -8,7 +8,7 @@
   "StatsFooterBar": {
     "areaVerde": "Área Verde",
     "suites": "Suítes",
-    "climatizada": "Climatizada",
+    "climatizada": "Privada",
     "pool": "Piscina",
     "deSaoPaulo": "de São Paulo"
   },
@@ -56,7 +56,7 @@
     "connectivity": "Conectividade",
     "connectivityDesc": "Wi-Fi de alta velocidade em toda a propriedade.",
     "privateLeisure": "Lazer Privativo",
-    "privateLeisureDesc": "Piscina com cascata e aquecimento solar.",
+    "privateLeisureDesc": "Piscina com cascata.",
     "parking": "Estacionamento",
     "parkingDesc": "Garagem coberta para até 6 veículos.",
     "privateEntrance": "Entrada Privada",
@@ -118,7 +118,7 @@
     "bathroomsDesc": "Equipados",
     "maxGuestsDesc": "Capacidade",
     "sizeDesc": "Área construída",
-    "poolDesc": "Privativa e Climatizada",
+    "poolDesc": "Privativa",
     "natureDesc": "Preservados",
     "nightlyRateDesc": "Valor base",
     "taglinePart1": "Natureza. ",
@@ -133,8 +133,9 @@
     "title": "Galeria de Fotos",
     "subtitle": "Espaços e momentos no Sítio Girassol",
     "viewAll": "Ver todas",
-    "exclusive": "Exclusivo",
-    "panoramicView": "Vista Panorâmica"
+    "heroAlt": "Piscina com cascata de pedra e vegetação tropical",
+    "heroBadge": "Especial",
+    "heroTitle": "Piscina com Cascata"
   },
   "Thesis": {
     "essenceSubtitle": "A Essência do Refúgio",

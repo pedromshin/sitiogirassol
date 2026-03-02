@@ -8,7 +8,7 @@
   "StatsFooterBar": {
     "areaVerde": "Green Area",
     "suites": "Suites",
-    "climatizada": "Heated",
+    "climatizada": "Private",
     "pool": "Pool",
     "deSaoPaulo": "from São Paulo"
   },
@@ -56,7 +56,7 @@
     "connectivity": "Connectivity",
     "connectivityDesc": "High-speed Wi-Fi throughout the property.",
     "privateLeisure": "Private Leisure",
-    "privateLeisureDesc": "Pool with waterfall and solar heating.",
+    "privateLeisureDesc": "Pool with waterfall.",
     "parking": "Parking",
     "parkingDesc": "Covered garage for up to 6 vehicles.",
     "privateEntrance": "Private Entrance",
@@ -118,7 +118,7 @@
     "bathroomsDesc": "Equipped",
     "maxGuestsDesc": "Capacity",
     "sizeDesc": "Built area",
-    "poolDesc": "Private and heated",
+    "poolDesc": "Private",
     "natureDesc": "Preserved",
     "nightlyRateDesc": "Base rate",
     "taglinePart1": "Nature. ",
@@ -133,8 +133,9 @@
     "title": "Photo Gallery",
     "subtitle": "Spaces and moments at Sítio Girassol",
     "viewAll": "View all",
-    "exclusive": "Exclusive",
-    "panoramicView": "Panoramic View"
+    "heroAlt": "Pool with stone waterfall and tropical vegetation",
+    "heroBadge": "Special",
+    "heroTitle": "Pool with Waterfall"
   },
   "Thesis": {
     "essenceSubtitle": "The Essence of the Refuge",

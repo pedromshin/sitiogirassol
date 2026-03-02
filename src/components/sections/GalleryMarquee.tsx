@@ -54,31 +54,28 @@ export default function GalleryMarquee() {
   const locale = useLocale() as "en" | "pt" | "es";
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
   const featuredPhotos = getFirstPhotoPerCategory();
-  const heroPhoto = listingConfig.photos.find((p) => p.category === "exterior" || p.category === "pool") ?? listingConfig.photos[0];
 
   return (
     <section id="gallery" className="section-padding bg-forest-dark">
       <SectionContainer size="wide">
-        {/* Hero Gallery Highlight */}
-        {heroPhoto && (
-          <div className="group relative overflow-hidden rounded-xl aspect-[21/9] mb-8 shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-t from-forest-mid via-transparent to-transparent opacity-60 z-10" />
-            <Image
-              src={heroPhoto.src}
-              alt={heroPhoto.alt}
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-              sizes="(max-width: 1400px) 100vw, 1400px"
-              priority={false}
-            />
-            <div className="absolute bottom-6 left-8 z-20">
-              <span className="inline-block px-3 py-1 font-bold text-xs uppercase tracking-widest rounded mb-2 bg-accent-gold text-forest-mid">
-                {t("exclusive")}
-              </span>
-              <h1 className="font-display text-4xl text-white">{t("panoramicView")}</h1>
-            </div>
+        {/* Hero Gallery Highlight - Pool with waterfall (DSC_0712) */}
+        <div className="group relative overflow-hidden rounded-xl aspect-[21/9] mb-8 shadow-2xl">
+          <div className="absolute inset-0 bg-gradient-to-t from-forest-mid via-transparent to-transparent opacity-60 z-10" />
+          <Image
+            src="/bg/DSC_0712.JPG"
+            alt={t("heroAlt")}
+            fill
+            className="object-cover object-[25%_50%] transition-transform duration-700 group-hover:scale-105"
+            sizes="(max-width: 1400px) 100vw, 1400px"
+            priority={false}
+          />
+          <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-8 z-20">
+            <span className="inline-block px-3 py-1 font-bold text-xs uppercase tracking-widest rounded mb-2 bg-accent-gold text-forest-mid">
+              {t("heroBadge")}
+            </span>
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl text-white">{t("heroTitle")}</h1>
           </div>
-        )}
+        </div>
 
         {/* Gallery Header */}
         <div className="flex items-center justify-between mb-6">
@@ -136,7 +133,7 @@ export default function GalleryMarquee() {
             type="button"
             aria-label={tAria("previous")}
             onClick={() => swiperInstance?.slidePrev()}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-forest-mid/90 border border-white/10 text-accent-gold flex items-center justify-center hover:bg-forest-hover hover:border-accent-gold/30 transition-colors shadow-lg"
+            className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-forest-mid/90 border border-white/10 text-accent-gold flex items-center justify-center hover:bg-forest-hover hover:border-accent-gold/30 transition-colors shadow-lg"
           >
             <span className="material-symbols-outlined text-xl">chevron_left</span>
           </button>
@@ -144,7 +141,7 @@ export default function GalleryMarquee() {
             type="button"
             aria-label={tAria("next")}
             onClick={() => swiperInstance?.slideNext()}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-forest-mid/90 border border-white/10 text-accent-gold flex items-center justify-center hover:bg-forest-hover hover:border-accent-gold/30 transition-colors shadow-lg"
+            className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-forest-mid/90 border border-white/10 text-accent-gold flex items-center justify-center hover:bg-forest-hover hover:border-accent-gold/30 transition-colors shadow-lg"
           >
             <span className="material-symbols-outlined text-xl">chevron_right</span>
           </button>

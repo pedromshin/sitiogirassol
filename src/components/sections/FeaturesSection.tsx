@@ -55,14 +55,14 @@ export default function FeaturesSection() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="section-padding rounded-2xl mx-4 md:mx-10 bg-forest-dark border border-white/10"
+      className="section-padding rounded-2xl mx-3 sm:mx-4 md:mx-10 bg-forest-dark border border-white/10"
     >
-      <div className="max-w-[1200px] mx-auto px-4 md:px-10">
+        <div className="max-w-[1200px] mx-auto px-3 sm:px-4 md:px-10">
         <div className="mb-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-4xl font-display font-bold text-white mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white mb-4"
           >
             {t("title")}
           </motion.h2>
@@ -112,26 +112,28 @@ export default function FeaturesSection() {
                   onClick={() => toggle(cat.id)}
                   className="w-full flex items-center justify-between gap-4 px-4 py-3.5 text-left hover:bg-white/[0.03] transition-colors"
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 min-w-0">
                     <div className="size-9 rounded-lg flex items-center justify-center bg-accent-gold-muted text-accent-gold shrink-0">
                       <span className="material-symbols-outlined text-xl">
                         {cat.icon}
                       </span>
                     </div>
-                    <span className="font-display font-medium text-white">
+                    <span className="font-display font-medium text-white truncate">
                       {t(cat.titleKey)}
                     </span>
-                    <span className="text-slate-500 text-sm">
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className="text-white/80 text-sm tabular-nums">
                       {cat.items.length}
                     </span>
+                    <span
+                      className={`material-symbols-outlined text-slate-400 transition-transform duration-200 ${
+                        expanded[cat.id] ? "rotate-180" : ""
+                      }`}
+                    >
+                      expand_more
+                    </span>
                   </div>
-                  <span
-                    className={`material-symbols-outlined text-slate-400 transition-transform duration-200 ${
-                      expanded[cat.id] ? "rotate-180" : ""
-                    }`}
-                  >
-                    expand_more
-                  </span>
                 </button>
 
                 <AnimatePresence>

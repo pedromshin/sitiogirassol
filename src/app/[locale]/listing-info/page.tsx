@@ -15,13 +15,13 @@ export default async function ListingInfoPage({ params }: PageProps) {
   return (
     <div className="listing-info-page bg-[#141E19] text-white">
       {/* Hero section - matches HTML reference */}
-      <section className="pt-40 pb-20 px-6 text-center max-w-4xl mx-auto">
-        <h1 className="font-display text-5xl md:text-7xl mb-6 leading-tight text-white">
+      <section className="pt-28 sm:pt-36 md:pt-40 pb-12 md:pb-20 px-4 sm:px-6 text-center max-w-4xl mx-auto">
+        <h1 className="font-display text-3xl sm:text-5xl md:text-7xl mb-4 md:mb-6 leading-tight text-white">
           {t("titlePart1")}
           <br />
           <span className="italic text-accent-gold">{t("titlePart2")}</span>
         </h1>
-        <p className="text-xl md:text-2xl text-white/80 font-light max-w-2xl mx-auto">
+        <p className="text-base sm:text-xl md:text-2xl text-white/80 font-light max-w-2xl mx-auto">
           {t("subtitle")}
         </p>
       </section>

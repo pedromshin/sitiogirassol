@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { listingConfig } from "@/data/listing.config";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import BrandIcon from "@/components/ui/BrandIcon";
 
 const HERO_BG_IMAGES = [
@@ -31,6 +31,75 @@ const HERO_VISUAL_IMAGE =
 
 export default function Hero3D() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const contentPanelRef = useRef<HTMLDivElement>(null);
+  const carouselControlsRef = useRef<HTMLDivElement>(null);
+  const prevBtnRef = useRef<HTMLButtonElement>(null);
+
+  // #region agent log
+  useEffect(() => {
+    const logLayout = () => {
+      const panel = contentPanelRef.current;
+      const carousel = carouselControlsRef.current;
+      if (!panel || !carousel) return;
+      const panelRect = panel.getBoundingClientRect();
+      const carouselRect = carousel.getBoundingClientRect();
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      const overlapY = panelRect.bottom > carouselRect.top && panelRect.top < carouselRect.bottom;
+      const overlapX = panelRect.right > carouselRect.left && panelRect.left < carouselRect.right;
+      const overlaps = overlapY && overlapX;
+      fetch("http://127.0.0.1:7544/ingest/6ae883c0-8043-415b-a15d-acccd7823a99", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "12f29c" },
+        body: JSON.stringify({
+          sessionId: "12f29c",
+          location: "Hero3D.tsx:logLayout",
+          message: "Layout overlap check",
+          data: {
+            hypothesisId: "H1",
+            vw,
+            vh,
+            panelBottom: panelRect.bottom,
+            panelTop: panelRect.top,
+            carouselTop: carouselRect.top,
+            carouselBottom: carouselRect.bottom,
+            overlapY,
+            overlapX,
+            overlaps,
+          },
+          timestamp: Date.now(),
+        }),
+      }).catch(() => {});
+    };
+    const logButtonShape = () => {
+      const btn = prevBtnRef.current;
+      if (!btn) return;
+      const r = btn.getBoundingClientRect();
+      const isSquare = Math.abs(r.width - r.height) < 2;
+      fetch("http://127.0.0.1:7544/ingest/6ae883c0-8043-415b-a15d-acccd7823a99", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "12f29c" },
+        body: JSON.stringify({
+          sessionId: "12f29c",
+          location: "Hero3D.tsx:logButtonShape",
+          message: "Carousel button dimensions",
+          data: { hypothesisId: "H2", width: r.width, height: r.height, isSquare },
+          timestamp: Date.now(),
+        }),
+      }).catch(() => {});
+    };
+    const runAll = () => {
+      logLayout();
+      logButtonShape();
+    };
+    const t = setTimeout(runAll, 150);
+    window.addEventListener("resize", runAll);
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("resize", logLayout);
+    };
+  }, []);
+  // #endregion
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -58,7 +127,7 @@ export default function Hero3D() {
 
   return (
     <main
-      className="relative min-h-screen flex items-center pt-20"
+      className="relative min-h-screen flex items-center pt-16 sm:pt-20 pb-20 sm:pb-24"
       data-purpose="hero-banner"
       style={{ backgroundColor: "var(--color-bg-layer-1)" }}
     >
@@ -91,14 +160,18 @@ export default function Hero3D() {
       </div>
 
       {/* Carousel controls */}
-      <div className="absolute bottom-8 right-8 md:right-16 z-20 flex items-center gap-3">
+      <div
+        ref={carouselControlsRef}
+        className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-16 z-20 flex items-center gap-2 md:gap-3"
+      >
         <button
+          ref={prevBtnRef}
           type="button"
           onClick={(e) => {
             e.stopPropagation();
             goPrev();
           }}
-          className="p-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
+          className="size-10 flex items-center justify-center shrink-0 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
           aria-label={tAria("previousImage")}
         >
           <span className="material-symbols-outlined text-white text-2xl">chevron_left</span>
@@ -112,31 +185,35 @@ export default function Hero3D() {
             e.stopPropagation();
             goNext();
           }}
-          className="p-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
+          className="size-10 flex items-center justify-center shrink-0 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
           aria-label={tAria("nextImage")}
         >
           <span className="material-symbols-outlined text-white text-2xl">chevron_right</span>
         </button>
       </div>
 
-      <div className="relative z-10 content-container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16 lg:py-24">
-        {/* Content Container */}
-        <div className="max-w-2xl" data-purpose="hero-content">
+      <div className="relative z-10 content-container grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center py-12 sm:py-16 lg:py-24">
+        {/* Content Container with glassy blur background */}
+        <div
+          ref={contentPanelRef}
+          className="w-full max-w-xl rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 backdrop-blur-xl bg-white/5 border border-white/20 shadow-xl"
+          data-purpose="hero-content"
+        >
           {/* Logo Icon Subtitle */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="mb-6 inline-block p-3 rounded-lg border border-warm-gold-border"
+            className="mb-4 sm:mb-6 inline-block p-2 sm:p-3 rounded-lg border border-warm-gold-border"
           >
-            <BrandIcon size={48} />
+            <BrandIcon size={40} />
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-5xl md:text-7xl font-display font-bold text-white leading-[1.1] mb-6 tracking-tight"
+            className="text-3xl sm:text-5xl md:text-7xl font-display font-bold text-white leading-[1.1] mb-4 md:mb-6 tracking-tight"
           >
             {headline}{" "}
             <span className="text-warm-gold italic font-display">{headlineItalic}</span>
@@ -146,7 +223,7 @@ export default function Hero3D() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-            className="text-xl md:text-2xl text-white/90 font-light mb-4"
+            className="text-lg sm:text-xl md:text-2xl text-white/90 font-light mb-3 md:mb-4"
           >
             {subheadline}
           </motion.p>
@@ -155,7 +232,7 @@ export default function Hero3D() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-lg text-white/70 mb-10 leading-relaxed max-w-lg"
+            className="text-base sm:text-lg text-white/70 mb-6 md:mb-10 leading-relaxed max-w-lg"
           >
             {paragraph.includes(". ") ? (
               <>

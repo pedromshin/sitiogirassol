@@ -10,11 +10,11 @@ export default function Footer() {
 
   return (
     <footer
-      className="py-24 px-6 md:px-20 border-t border-white/5 mt-20 bg-forest-dark"
+      className="py-16 md:py-24 px-4 sm:px-6 md:px-20 border-t border-white/5 mt-12 md:mt-20 bg-forest-dark"
       role="contentinfo"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 mb-16 md:mb-20">
           {/* Column 1: Brand + Description + Social */}
           <div className="space-y-8">
             <div className="flex items-center gap-3">
@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-xs-caps uppercase tracking-caps-tight font-bold text-white/20">
+        <div className="pt-8 md:pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 text-xs-caps uppercase tracking-caps-tight font-bold text-white/20 text-center md:text-left">
           <p>{t("allRightsReserved")}</p>
           <div className="flex items-center gap-10">
             <div className="flex items-center gap-2">

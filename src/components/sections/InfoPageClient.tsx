@@ -69,7 +69,7 @@ function InfoSection({
         }`}
     >
       <h2
-        className={`font-display text-4xl mb-6 flex items-center gap-4 text-white ${isReversed
+        className={`font-display text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-6 flex items-center gap-3 md:gap-4 text-white ${isReversed
             ? "justify-center md:justify-end"
             : "justify-center md:justify-start"
           }`}
@@ -87,7 +87,7 @@ function InfoSection({
         )}
       </h2>
       <p
-        className={`text-lg text-white/80 leading-relaxed ${isReversed ? "md:text-right" : ""
+        className={`text-base md:text-lg text-white/80 leading-relaxed ${isReversed ? "md:text-right" : ""
           }`}
       >
         {content}

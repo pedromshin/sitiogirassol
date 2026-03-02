@@ -10,14 +10,24 @@ import { listingConfig } from "@/data/listing.config";
 import { calculateTotalPrice } from "@/lib/pricing";
 import { addDays, format } from "date-fns";
 
+const MOBILE_BREAKPOINT = 768;
+
 export default function CalendarSection() {
   const t = useTranslations("Calendar");
+  const [isMobile, setIsMobile] = useState(false);
   const [dateRange, setDateRange] = useState<Range>({
     startDate: new Date(),
     endDate: addDays(new Date(), 1),
     key: "selection",
   });
   const [disabledDates, setDisabledDates] = useState<Date[]>([]);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   useEffect(() => {
     if (listingConfig.calendar.airbnbIcalUrl) {
@@ -53,22 +63,22 @@ export default function CalendarSection() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
-      className="py-12 px-6 md:px-20 bg-forest-dark"
+      className="py-12 px-4 sm:px-6 md:px-20 bg-forest-dark overflow-x-hidden"
       id="availability"
     >
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
         {/* Left: Copy + Legend */}
-        <div className="space-y-8">
-          <h2 className="text-5xl md:text-6xl font-display text-white leading-tight">
+        <div className="space-y-6 md:space-y-8">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display text-white leading-tight">
             {t("titleLine1")}
             <span className="italic text-accent-gold">
               {t("titleHighlight")}
             </span>
           </h2>
-          <p className="text-white/60 text-lg max-w-md font-light leading-relaxed">
+          <p className="text-white/60 text-base md:text-lg max-w-md font-light leading-relaxed">
             {t("description")}
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-4 md:gap-6">
             <div className="flex items-center gap-3 text-xs uppercase tracking-widest font-bold text-white/40">
               <span className="w-2 h-2 rounded-full bg-accent-gold" />
               {t("reserved")}
@@ -81,8 +91,8 @@ export default function CalendarSection() {
         </div>
 
         {/* Right: Calendar + Pricing */}
-        <div className="backdrop-blur-md p-10 rounded-3xl border border-white/10 shadow-2xl" style={{ backgroundColor: "var(--color-calendar-backdrop)" }}>
-          <div className="rounded-2xl overflow-hidden border border-white/10 bg-forest-mid">
+        <div className="backdrop-blur-md p-4 sm:p-6 md:p-10 rounded-2xl md:rounded-3xl border border-white/10 shadow-2xl overflow-hidden" style={{ backgroundColor: "var(--color-calendar-backdrop)" }}>
+          <div className="rounded-xl md:rounded-2xl overflow-hidden border border-white/10 bg-forest-mid [&_.rdrCalendarWrapper]:!max-w-full">
             <DateRange
               ranges={[dateRange]}
               onChange={(r: RangeKeyDict) =>
@@ -92,11 +102,12 @@ export default function CalendarSection() {
               minDate={new Date()}
               rangeColors={["var(--color-accent-gold)"]}
               showDateDisplay={false}
-              direction="horizontal"
+              direction={isMobile ? "vertical" : "horizontal"}
+              months={isMobile ? 1 : 2}
             />
           </div>
 
-          <div className="mt-10 pt-8 border-t border-white/10">
+          <div className="mt-6 md:mt-10 pt-6 md:pt-8 border-t border-white/10">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <p className="text-xs-caps text-white/40 uppercase font-black tracking-widest mb-1">
