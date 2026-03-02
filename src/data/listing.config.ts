@@ -124,8 +124,12 @@ export const listingConfig: ListingConfig = {
       },
     },
   },
+  // ═══════════════════════════════════════════════════════════════════
+  // RESERVATION PRICE – single source of truth (change here only)
+  // Used by: CalendarSection, MetricsSection, JsonLd (SEO), lib/pricing
+  // ═══════════════════════════════════════════════════════════════════
   pricing: {
-    nightlyRate: 260,
+    nightlyRate: 340,
     weeklyDiscountPercent: 33,
     monthlyDiscountPercent: 50,
     currency: "BRL",
@@ -533,7 +537,7 @@ export const listingConfig: ListingConfig = {
       type: "property",
     },
     {
-      name: "Mercado São Roque",
+      name: "Mercado Figueira",
       url: "https://maps.app.goo.gl/uc15RYv9sPc9Euij8",
       distance: "12 km antes",
       type: "market",
