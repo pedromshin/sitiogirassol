@@ -1,8 +1,15 @@
 {
+  "Common": {
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "previous": "Previous",
+    "next": "Next"
+  },
   "StatsFooterBar": {
     "areaVerde": "Green Area",
     "suites": "Suites",
     "climatizada": "Heated",
+    "pool": "Pool",
     "deSaoPaulo": "from São Paulo"
   },
   "Header": {
@@ -26,19 +33,11 @@
     "photoGallery": "Photo Gallery",
     "amenities": "Amenities",
     "ratesAndReservations": "Rates and Reservations",
-    "support": "Support",
-    "faq": "FAQ",
-    "cancellationPolicy": "Cancellation Policy",
-    "termsOfUse": "Terms of Use",
-    "privacy": "Privacy",
-    "newsletter": "Newsletter",
-    "newsletterDesc": "Receive exclusive curations directly in your email.",
-    "emailPlaceholder": "Your email",
-    "location": "São Roque, SP",
-    "phone": "+55 (11) 99999-9999"
+    "location": "São Roque, SP"
   },
   "PhotoCarousel": {
     "all": "All",
+    "noPhotosInCategory": "No photos in this category",
     "livingRoom": "Living room",
     "diningArea": "Dining area",
     "bedroom": "Bedroom",
@@ -50,25 +49,22 @@
   "Amenities": {
     "title": "What this place offers",
     "subtitle": "Exclusive amenities designed to provide an incomparable living experience.",
+    "searchPlaceholder": "Search amenities...",
+    "expandAll": "Expand all",
+    "collapseAll": "Collapse all",
+    "noResults": "No amenities found.",
     "connectivity": "Connectivity",
     "connectivityDesc": "High-speed Wi-Fi throughout the property.",
     "privateLeisure": "Private Leisure",
-    "privateLeisureDesc": "Infinity pool with solar heating.",
+    "privateLeisureDesc": "Pool with waterfall and solar heating.",
     "parking": "Parking",
-    "parkingDesc": "Covered garage for up to 6 luxury vehicles.",
-    "security": "24h Security",
-    "securityDesc": "Advanced monitoring and access control.",
-    "fitness": "Fitness Space",
-    "fitnessDesc": "Full gym with Technogym equipment.",
-    "wineCellar": "Climate-Controlled Wine Cellar",
-    "wineCellarDesc": "Space for your collection with humidity control.",
-    "cinema": "Cinema",
-    "cinemaDesc": "Projection room with Dolby Atmos audio.",
-    "spa": "Spa & Sauna",
-    "spaDesc": "Relaxation environment with dry sauna.",
+    "parkingDesc": "Covered garage for up to 6 vehicles.",
+    "privateEntrance": "Private Entrance",
+    "privateEntranceDesc": "An entrance that's only available to guests.",
     "bathroom": "Bathroom",
     "bedroomAndLaundry": "Bedroom and laundry",
     "entertainment": "Entertainment",
+    "sportsCourt": "Sports court",
     "family": "Family",
     "heatingAndCooling": "Heating and cooling",
     "internetAndOffice": "Internet and office",
@@ -143,7 +139,7 @@
   "Thesis": {
     "essenceSubtitle": "The Essence of the Refuge",
     "title": "Why Girassol",
-    "subtitle": "A meticulously designed harmony between contemporary luxury and the vibrant soul of wild nature.",
+    "subtitle": "A meticulously designed harmony between cozy comfort and the vibrant soul of wild nature.",
     "natureTitle": "Nature",
     "natureDesc": "Active preservation and direct contact with the local ecosystem. Feel the pulse of the forest at every sunrise.",
     "comfortTitle": "Comfort",
@@ -167,8 +163,8 @@
   "CTA": {
     "title": "Ready to book your stay?",
     "titleLine1": "Ready to book your ",
-    "titleHighlight": "luxury stay?",
-    "description": "Transform your moments into unforgettable memories. Our team is ready to welcome you with the highest standard of hospitality.",
+    "titleHighlight": "family stay?",
+    "description": "Transform your moments into unforgettable memories with the ones you love. Our team is ready to welcome you with warm hospitality.",
     "button": "Book on Airbnb",
     "consultant": "Talk to Consultant"
   }

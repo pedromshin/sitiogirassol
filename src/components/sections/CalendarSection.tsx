@@ -21,9 +21,12 @@ export default function CalendarSection() {
 
   useEffect(() => {
     if (listingConfig.calendar.airbnbIcalUrl) {
-      import("@/lib/ical").then(({ fetchBlockedDates }) => {
-        fetchBlockedDates(listingConfig.calendar.airbnbIcalUrl!).then(setDisabledDates);
-      });
+      fetch("/api/calendar/blocked")
+        .then((res) => res.json())
+        .then(({ dates }: { dates: string[] }) => {
+          setDisabledDates(dates.map((d) => new Date(d)));
+        })
+        .catch(() => setDisabledDates([]));
     } else if (listingConfig.calendar.blockedDates?.length) {
       setDisabledDates(
         listingConfig.calendar.blockedDates.map((d) => new Date(d))

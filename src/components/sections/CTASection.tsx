@@ -33,12 +33,6 @@ export default function CTASection() {
           >
             {t("button").toUpperCase()}
           </a>
-          <a
-            href="mailto:contato@girassol.example.com"
-            className="w-full sm:w-auto px-12 py-5 border-2 border-accent-gold text-accent-gold rounded-full font-bold text-lg transition-all hover:bg-accent-gold hover:text-forest-dark"
-          >
-            {t("consultant").toUpperCase()}
-          </a>
         </div>
       </div>
     </section>

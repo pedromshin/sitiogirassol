@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { listingConfig } from "@/data/listing.config";
@@ -39,6 +39,8 @@ export default function Hero3D() {
     return () => clearInterval(id);
   }, []);
   const locale = (useLocale() || "pt") as "en" | "pt" | "es";
+  const t = useTranslations("Header");
+  const tAria = useTranslations("Common");
   const hero = listingConfig.hero;
   const headline = hero.headline[locale] ?? hero.headline.en;
   const headlineItalic = hero.headlineItalic[locale] ?? hero.headlineItalic.en;
@@ -48,37 +50,9 @@ export default function Hero3D() {
   const taglineUppercase = hero.visual.taglineUppercase[locale] ?? hero.visual.taglineUppercase.en;
 
   const goNext = () => {
-    // #region agent log
-    fetch("http://127.0.0.1:7544/ingest/6ae883c0-8043-415b-a15d-acccd7823a99", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "7cd407" },
-      body: JSON.stringify({
-        sessionId: "7cd407",
-        location: "Hero3D.tsx:goNext",
-        message: "goNext called",
-        data: { currentIndex },
-        timestamp: Date.now(),
-        hypothesisId: "B",
-      }),
-    }).catch(() => {});
-    // #endregion
     setCurrentIndex((i) => (i + 1) % HERO_BG_IMAGES.length);
   };
   const goPrev = () => {
-    // #region agent log
-    fetch("http://127.0.0.1:7544/ingest/6ae883c0-8043-415b-a15d-acccd7823a99", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "7cd407" },
-      body: JSON.stringify({
-        sessionId: "7cd407",
-        location: "Hero3D.tsx:goPrev",
-        message: "goPrev called",
-        data: { currentIndex },
-        timestamp: Date.now(),
-        hypothesisId: "B",
-      }),
-    }).catch(() => {});
-    // #endregion
     setCurrentIndex((i) => (i - 1 + HERO_BG_IMAGES.length) % HERO_BG_IMAGES.length);
   };
 
@@ -117,47 +91,15 @@ export default function Hero3D() {
       </div>
 
       {/* Carousel controls */}
-      <div
-        className="absolute bottom-8 right-8 md:right-16 z-20 flex items-center gap-3"
-        onClick={() => {
-          // #region agent log
-          fetch("http://127.0.0.1:7544/ingest/6ae883c0-8043-415b-a15d-acccd7823a99", {
-            method: "POST",
-            headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "7cd407" },
-            body: JSON.stringify({
-              sessionId: "7cd407",
-              location: "Hero3D.tsx:controls-container",
-              message: "Controls container clicked",
-              data: {},
-              timestamp: Date.now(),
-              hypothesisId: "A",
-            }),
-          }).catch(() => {});
-          // #endregion
-        }}
-      >
+      <div className="absolute bottom-8 right-8 md:right-16 z-20 flex items-center gap-3">
         <button
           type="button"
           onClick={(e) => {
-            // #region agent log
-            fetch("http://127.0.0.1:7544/ingest/6ae883c0-8043-415b-a15d-acccd7823a99", {
-              method: "POST",
-              headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "7cd407" },
-              body: JSON.stringify({
-                sessionId: "7cd407",
-                location: "Hero3D.tsx:prev-button",
-                message: "Prev button onClick fired",
-                data: {},
-                timestamp: Date.now(),
-                hypothesisId: "A,E",
-              }),
-            }).catch(() => {});
-            // #endregion
             e.stopPropagation();
             goPrev();
           }}
           className="p-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
-          aria-label="Previous image"
+          aria-label={tAria("previousImage")}
         >
           <span className="material-symbols-outlined text-white text-2xl">chevron_left</span>
         </button>
@@ -167,25 +109,11 @@ export default function Hero3D() {
         <button
           type="button"
           onClick={(e) => {
-            // #region agent log
-            fetch("http://127.0.0.1:7544/ingest/6ae883c0-8043-415b-a15d-acccd7823a99", {
-              method: "POST",
-              headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "7cd407" },
-              body: JSON.stringify({
-                sessionId: "7cd407",
-                location: "Hero3D.tsx:next-button",
-                message: "Next button onClick fired",
-                data: {},
-                timestamp: Date.now(),
-                hypothesisId: "A,E",
-              }),
-            }).catch(() => {});
-            // #endregion
             e.stopPropagation();
             goNext();
           }}
           className="p-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors"
-          aria-label="Next image"
+          aria-label={tAria("nextImage")}
         >
           <span className="material-symbols-outlined text-white text-2xl">chevron_right</span>
         </button>
@@ -254,14 +182,14 @@ export default function Hero3D() {
               onClick={(e) => e.stopPropagation()}
               className="w-full sm:w-auto px-8 py-4 font-bold rounded-lg text-center transition-all duration-300 hover:opacity-90 shadow-lg bg-warm-gold text-forest-dark"
             >
-              Book on Airbnb
+              {t("bookOnAirbnb")}
             </a>
             <Link
               href="/listing-info"
               onClick={(e) => e.stopPropagation()}
               className="w-full sm:w-auto px-8 py-4 border border-white/20 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300 text-center"
             >
-              View Info
+              {t("info")}
             </Link>
           </motion.div>
         </div>

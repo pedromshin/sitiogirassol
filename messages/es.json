@@ -1,8 +1,15 @@
 {
+  "Common": {
+    "previousImage": "Imagen anterior",
+    "nextImage": "Siguiente imagen",
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
   "StatsFooterBar": {
     "areaVerde": "Área Verde",
     "suites": "Suites",
     "climatizada": "Climatizada",
+    "pool": "Piscina",
     "deSaoPaulo": "de São Paulo"
   },
   "Header": {
@@ -26,19 +33,11 @@
     "photoGallery": "Galería de Fotos",
     "amenities": "Comodidades",
     "ratesAndReservations": "Tarifas y Reservas",
-    "support": "Soporte",
-    "faq": "Preguntas Frecuentes",
-    "cancellationPolicy": "Política de Cancelación",
-    "termsOfUse": "Términos de Uso",
-    "privacy": "Privacidad",
-    "newsletter": "Newsletter",
-    "newsletterDesc": "Recibe curadorías exclusivas directamente en tu correo.",
-    "emailPlaceholder": "Tu correo",
-    "location": "São Roque, SP",
-    "phone": "+55 (11) 99999-9999"
+    "location": "São Roque, SP"
   },
   "PhotoCarousel": {
     "all": "Todos",
+    "noPhotosInCategory": "No hay fotos en esta categoría",
     "livingRoom": "Sala de estar",
     "diningArea": "Área de comedor",
     "bedroom": "Dormitorio",
@@ -50,25 +49,22 @@
   "Amenities": {
     "title": "Lo que ofrece este lugar",
     "subtitle": "Comodidades exclusivas diseñadas para proporcionar una experiencia de vida incomparable.",
+    "searchPlaceholder": "Buscar comodidades...",
+    "expandAll": "Expandir todo",
+    "collapseAll": "Contraer",
+    "noResults": "No se encontraron comodidades.",
     "connectivity": "Conectividad",
     "connectivityDesc": "Wi-Fi de alta velocidad en toda la propiedad.",
     "privateLeisure": "Ocio Privado",
-    "privateLeisureDesc": "Piscina de borde infinito con calefacción solar.",
+    "privateLeisureDesc": "Piscina con cascada y calefacción solar.",
     "parking": "Estacionamiento",
     "parkingDesc": "Garaje cubierto para hasta 6 vehículos de lujo.",
-    "security": "Seguridad 24h",
-    "securityDesc": "Monitoreo avanzado y control de acceso.",
-    "fitness": "Espacio Fitness",
-    "fitnessDesc": "Gimnasio completo con equipos Technogym.",
-    "wineCellar": "Bodega Climatizada",
-    "wineCellarDesc": "Espacio para colección con control de humedad.",
-    "cinema": "Cine",
-    "cinemaDesc": "Sala de proyección con audio Dolby Atmos.",
-    "spa": "Spa y Sauna",
-    "spaDesc": "Ambiente de relajación con sauna seca.",
+    "privateEntrance": "Entrada Privada",
+    "privateEntranceDesc": "Una entrada disponible solo para huéspedes.",
     "bathroom": "Baño",
     "bedroomAndLaundry": "Dormitorio y lavandería",
     "entertainment": "Entretenimiento",
+    "sportsCourt": "Cancha deportiva",
     "family": "Familia",
     "heatingAndCooling": "Calefacción y refrigeración",
     "internetAndOffice": "Internet y oficina",
@@ -79,7 +75,7 @@
   },
   "Calendar": {
     "title": "Verificar disponibilidad",
-    "titleLine1": "Confira la ",
+    "titleLine1": "Verifica la ",
     "titleHighlight": "Disponibilidad",
     "description": "Selecciona las fechas de tu estancia y asegura tu reserva en un refugio de naturaleza preservada.",
     "reserved": "Reservado",
@@ -143,7 +139,7 @@
   "Thesis": {
     "essenceSubtitle": "La Esencia del Refugio",
     "title": "Por qué Girassol",
-    "subtitle": "Una armonía meticulosamente diseñada entre el lujo contemporáneo y el alma vibrante de la naturaleza salvaje.",
+    "subtitle": "Una armonía meticulosamente diseñada entre el confort acogedor y el alma vibrante de la naturaleza salvaje.",
     "natureTitle": "Naturaleza",
     "natureDesc": "Preservación activa y contacto directo con el ecosistema local. Siente el pulso del bosque en cada amanecer.",
     "comfortTitle": "Confort",
@@ -167,8 +163,8 @@
   "CTA": {
     "title": "¿Listo para reservar tu estancia?",
     "titleLine1": "¿Listo para reservar tu ",
-    "titleHighlight": "estancia de lujo?",
-    "description": "Transforma tus momentos en recuerdos inolvidables. Nuestro equipo está listo para recibirte con el más alto estándar de hospitalidad.",
+    "titleHighlight": "estancia en familia?",
+    "description": "Transforma tus momentos en recuerdos inolvidables con quienes amas. Nuestro equipo está listo para recibirte con hospitalidad cálida.",
     "button": "Reservar en Airbnb",
     "consultant": "Hablar con Consultor"
   }

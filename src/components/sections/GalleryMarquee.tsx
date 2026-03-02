@@ -1,11 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
-import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
 import { listingConfig } from "@/data/listing.config";
 import type { PhotoCategory } from "@/data/listing.config";
+import SectionContainer from "@/components/ui/SectionContainer";
+import "swiper/css";
 
 const CATEGORY_LABELS: Record<PhotoCategory, Record<string, string>> = {
   "living-room": { en: "Living Room", pt: "Sala de Estar", es: "Sala de estar" },
@@ -46,13 +50,15 @@ function getFirstPhotoPerCategory() {
 
 export default function GalleryMarquee() {
   const t = useTranslations("Gallery");
+  const tAria = useTranslations("Common");
   const locale = useLocale() as "en" | "pt" | "es";
+  const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
   const featuredPhotos = getFirstPhotoPerCategory();
   const heroPhoto = listingConfig.photos.find((p) => p.category === "exterior" || p.category === "pool") ?? listingConfig.photos[0];
 
   return (
     <section id="gallery" className="section-padding bg-forest-dark">
-      <div className="max-w-[1200px] mx-auto w-full px-4 md:px-10">
+      <SectionContainer size="wide">
         {/* Hero Gallery Highlight */}
         {heroPhoto && (
           <div className="group relative overflow-hidden rounded-xl aspect-[21/9] mb-8 shadow-2xl">
@@ -62,7 +68,7 @@ export default function GalleryMarquee() {
               alt={heroPhoto.alt}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
-              sizes="100vw"
+              sizes="(max-width: 1400px) 100vw, 1400px"
               priority={false}
             />
             <div className="absolute bottom-6 left-8 z-20">
@@ -75,7 +81,7 @@ export default function GalleryMarquee() {
         )}
 
         {/* Gallery Header */}
-        <div className="flex items-center justify-between mb-6 px-2">
+        <div className="flex items-center justify-between mb-6">
           <h2 className="font-display text-2xl md:text-3xl font-bold text-white">{t("title")}</h2>
           <Link
             href="/listing-info"
@@ -86,36 +92,64 @@ export default function GalleryMarquee() {
           </Link>
         </div>
 
-        {/* Horizontal Scroll Gallery */}
-        <div className="flex overflow-x-auto gap-6 pb-6 px-2 snap-x no-scrollbar">
-          {featuredPhotos.map((photo, i) => {
-            const label = CATEGORY_LABELS[photo.category]?.[locale] ?? CATEGORY_LABELS[photo.category]?.en ?? photo.category;
-            const desc = CATEGORY_DESCS[photo.category]?.[locale] ?? CATEGORY_DESCS[photo.category]?.en ?? "";
-            return (
-              <motion.div
-                key={`${photo.category}-${i}`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="min-w-[320px] md:min-w-[400px] snap-start group cursor-pointer shrink-0"
-              >
-                <div className="aspect-video rounded-xl overflow-hidden mb-3 border border-white/5 transition-all duration-500 group-hover:scale-110">
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 768px) 320px, 400px"
-                  />
-                </div>
-                <h3 className="text-white font-display text-lg">{label}</h3>
-                <p className="text-slate-400 text-sm font-light">{desc}</p>
-              </motion.div>
-            );
-          })}
+        {/* Swiper Carousel - proper UI component */}
+        <div className="relative">
+          <Swiper
+            onSwiper={setSwiperInstance}
+            spaceBetween={24}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="!overflow-visible"
+          >
+            {featuredPhotos.map((photo, i) => {
+              const label = CATEGORY_LABELS[photo.category]?.[locale] ?? CATEGORY_LABELS[photo.category]?.en ?? photo.category;
+              const desc = CATEGORY_DESCS[photo.category]?.[locale] ?? CATEGORY_DESCS[photo.category]?.en ?? "";
+              return (
+                <SwiperSlide key={`${photo.category}-${i}`}>
+                  <Link href="/listing-info" className="block group/card">
+                    <div className="stat-card rounded-xl overflow-hidden border border-white/5 p-0 transition-all duration-300 group-hover/card:border-accent-gold/30 group-hover/card:shadow-xl">
+                      <div className="relative aspect-video w-full overflow-hidden">
+                        <Image
+                          src={photo.src}
+                          alt={photo.alt}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover/card:scale-105"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <h3 className="text-white font-display text-lg font-semibold">{label}</h3>
+                        <p className="text-slate-400 text-sm font-light mt-1">{desc}</p>
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+
+          {/* Custom navigation arrows */}
+          <button
+            type="button"
+            aria-label={tAria("previous")}
+            onClick={() => swiperInstance?.slidePrev()}
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-forest-mid/90 border border-white/10 text-accent-gold flex items-center justify-center hover:bg-forest-hover hover:border-accent-gold/30 transition-colors shadow-lg"
+          >
+            <span className="material-symbols-outlined text-xl">chevron_left</span>
+          </button>
+          <button
+            type="button"
+            aria-label={tAria("next")}
+            onClick={() => swiperInstance?.slideNext()}
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-forest-mid/90 border border-white/10 text-accent-gold flex items-center justify-center hover:bg-forest-hover hover:border-accent-gold/30 transition-colors shadow-lg"
+          >
+            <span className="material-symbols-outlined text-xl">chevron_right</span>
+          </button>
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 }

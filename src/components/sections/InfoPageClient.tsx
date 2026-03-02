@@ -10,6 +10,7 @@ const SECTION_ICONS: Record<
   string,
   { titleIcon: string; decorativeIcon: string }
 > = {
+  "property-description": { titleIcon: "home", decorativeIcon: "landscape" },
   directions: { titleIcon: "location_on", decorativeIcon: "place" },
   shopping: { titleIcon: "storefront", decorativeIcon: "shopping_bag" },
   "house-rules": { titleIcon: "cottage", decorativeIcon: "home" },

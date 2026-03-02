@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 const STATS = [
   { value: "2.6ha", labelKey: "areaVerde" },
   { value: "3", labelKey: "suites" },
-  { value: "Piscina", labelKey: "climatizada" },
+  { valueKey: "pool", labelKey: "climatizada" },
   { value: "60km", labelKey: "deSaoPaulo" },
 ] as const;
 
@@ -25,7 +25,7 @@ export default function StatsFooterBar() {
               className={`text-center ${i > 0 ? "border-l border-white/10" : ""}`}
             >
               <div className="font-display text-3xl mb-1 text-warm-gold">
-                {stat.value}
+                {"valueKey" in stat ? t(stat.valueKey) : stat.value}
               </div>
               <div className="text-white/40 text-xs uppercase tracking-widest">
                 {t(stat.labelKey)}

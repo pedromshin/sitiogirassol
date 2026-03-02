@@ -193,3 +193,13 @@
 .rdrCalendarWrapper {
   --rdr-primary-color: var(--color-accent-gold) !important;
 }
+
+/* Reserved/blocked dates - clearly visible */
+.rdrDayDisabled {
+  background-color: rgba(212, 175, 55, 0.25) !important;
+  opacity: 1;
+}
+.rdrDayDisabled .rdrDayNumber span {
+  color: rgba(212, 175, 55, 0.9) !important;
+  text-decoration: line-through;
+}

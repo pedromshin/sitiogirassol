@@ -1,8 +1,15 @@
 {
+  "Common": {
+    "previousImage": "Imagem anterior",
+    "nextImage": "Próxima imagem",
+    "previous": "Anterior",
+    "next": "Próximo"
+  },
   "StatsFooterBar": {
     "areaVerde": "Área Verde",
     "suites": "Suítes",
     "climatizada": "Climatizada",
+    "pool": "Piscina",
     "deSaoPaulo": "de São Paulo"
   },
   "Header": {
@@ -26,19 +33,11 @@
     "photoGallery": "Galeria de Fotos",
     "amenities": "Comodidades",
     "ratesAndReservations": "Tarifas e Reservas",
-    "support": "Suporte",
-    "faq": "Dúvidas Frequentes",
-    "cancellationPolicy": "Política de Cancelamento",
-    "termsOfUse": "Termos de Uso",
-    "privacy": "Privacidade",
-    "newsletter": "Newsletter",
-    "newsletterDesc": "Receba curadorias exclusivas diretamente em seu e-mail.",
-    "emailPlaceholder": "Seu e-mail",
-    "location": "São Roque, SP",
-    "phone": "+55 (11) 99999-9999"
+    "location": "São Roque, SP"
   },
   "PhotoCarousel": {
     "all": "Todos",
+    "noPhotosInCategory": "Nenhuma foto nesta categoria",
     "livingRoom": "Sala de estar",
     "diningArea": "Área de jantar",
     "bedroom": "Quarto",
@@ -50,25 +49,22 @@
   "Amenities": {
     "title": "O que este lugar oferece",
     "subtitle": "Comodidades exclusivas projetadas para proporcionar uma experiência de vida incomparável.",
+    "searchPlaceholder": "Buscar comodidades...",
+    "expandAll": "Expandir tudo",
+    "collapseAll": "Recolher",
+    "noResults": "Nenhuma comodidade encontrada.",
     "connectivity": "Conectividade",
     "connectivityDesc": "Wi-Fi de alta velocidade em toda a propriedade.",
     "privateLeisure": "Lazer Privativo",
-    "privateLeisureDesc": "Piscina de borda infinita com aquecimento solar.",
+    "privateLeisureDesc": "Piscina com cascata e aquecimento solar.",
     "parking": "Estacionamento",
-    "parkingDesc": "Garagem coberta para até 6 veículos de luxo.",
-    "security": "Segurança 24h",
-    "securityDesc": "Monitoramento avançado e controle de acesso.",
-    "fitness": "Espaço Fitness",
-    "fitnessDesc": "Academia completa com equipamentos Technogym.",
-    "wineCellar": "Adega Climatizada",
-    "wineCellarDesc": "Espaço para coleção com controle de umidade.",
-    "cinema": "Cinema",
-    "cinemaDesc": "Sala de projeção com áudio Dolby Atmos.",
-    "spa": "Spa & Sauna",
-    "spaDesc": "Ambiente de relaxamento com sauna seca.",
+    "parkingDesc": "Garagem coberta para até 6 veículos.",
+    "privateEntrance": "Entrada Privada",
+    "privateEntranceDesc": "Entrada exclusiva para hóspedes.",
     "bathroom": "Banheiro",
     "bedroomAndLaundry": "Quarto e lavanderia",
     "entertainment": "Entretenimento",
+    "sportsCourt": "Quadra esportiva",
     "family": "Família",
     "heatingAndCooling": "Aquecimento e refrigeração",
     "internetAndOffice": "Internet e escritório",
@@ -143,7 +139,7 @@
   "Thesis": {
     "essenceSubtitle": "A Essência do Refúgio",
     "title": "Por que Girassol",
-    "subtitle": "Uma harmonia meticulosamente desenhada entre o luxo contemporâneo e a alma vibrante da natureza selvagem.",
+    "subtitle": "Uma harmonia meticulosamente desenhada entre o aconchego e a alma vibrante da natureza selvagem.",
     "natureTitle": "Natureza",
     "natureDesc": "Preservação ativa e contato direto com o ecossistema local. Sinta o pulso da floresta em cada amanhecer.",
     "comfortTitle": "Conforto",
@@ -167,8 +163,8 @@
   "CTA": {
     "title": "Pronto para reservar sua estadia?",
     "titleLine1": "Pronto para reservar sua ",
-    "titleHighlight": "estadia de luxo?",
-    "description": "Transforme seus momentos em memórias inesquecíveis. Nossa equipe está pronta para receber você com o mais alto padrão de hospitalidade.",
+    "titleHighlight": "estadia em família?",
+    "description": "Transforme seus momentos em memórias inesquecíveis com quem você ama. Nossa equipe está pronta para receber você com hospitalidade calorosa.",
     "button": "Reservar no Airbnb",
     "consultant": "Falar com Consultor"
   }

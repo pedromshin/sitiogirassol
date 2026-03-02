@@ -55,8 +55,23 @@ export interface ListingConfig {
     type: string;
   };
   amenities: Array<{ category: string; items: string[] }>;
-  infoSections: Array<{ id: string; title: Record<string, string>; content: Record<string, string> }>;
-  nearbyPlaces: Array<{ name: string; url: string; distance: string; type: string }>;
+  infoSections: Array<{
+    id: string;
+    title: Record<string, string>;
+    content: Record<string, string>;
+  }>;
+  nearbyPlaces: Array<{
+    name: string;
+    url: string;
+    distance: string;
+    type: string;
+  }>;
+  location: {
+    /** General area map (no exact property pin) - embed iframe src */
+    mapEmbedUrl: string;
+    /** Link for "View Full Map" - general São Roque area */
+    generalAreaUrl: string;
+  };
   directions: Record<string, string>;
   shopping: Record<string, string>;
   airbnbUrl: string;
@@ -116,64 +131,214 @@ export const listingConfig: ListingConfig = {
     currency: "BRL",
   },
   calendar: {
+    airbnbIcalUrl:
+      "https://www.airbnb.com/calendar/ical/1345960842338220775.ics?t=5807f23cb26b48919e07c0f8e95c05a9",
     blockedDates: [],
   },
   photos: [
     // Living room (4)
-    { src: "/images/living-room/001_Living-room_1.jpeg", alt: "Living room Girassol", category: "living-room" },
-    { src: "/images/living-room/011_Living-room_2.jpeg", alt: "Living room view", category: "living-room" },
-    { src: "/images/living-room/012_Living-room_3.jpeg", alt: "Living room interior", category: "living-room" },
-    { src: "/images/living-room/013_Living-room_4.jpeg", alt: "Living room detail", category: "living-room" },
+    {
+      src: "/images/living-room/001_Living-room_1.jpeg",
+      alt: "Living room Girassol",
+      category: "living-room",
+    },
+    {
+      src: "/images/living-room/011_Living-room_2.jpeg",
+      alt: "Living room view",
+      category: "living-room",
+    },
+    {
+      src: "/images/living-room/012_Living-room_3.jpeg",
+      alt: "Living room interior",
+      category: "living-room",
+    },
+    {
+      src: "/images/living-room/013_Living-room_4.jpeg",
+      alt: "Living room detail",
+      category: "living-room",
+    },
     // Dining area (2)
-    { src: "/images/dining-area/002_Dining-area_1.jpeg", alt: "Dining area Girassol", category: "dining-area" },
-    { src: "/images/dining-area/014_Dining-area_2.jpeg", alt: "Dining area view", category: "dining-area" },
+    {
+      src: "/images/dining-area/002_Dining-area_1.jpeg",
+      alt: "Dining area Girassol",
+      category: "dining-area",
+    },
+    {
+      src: "/images/dining-area/014_Dining-area_2.jpeg",
+      alt: "Dining area view",
+      category: "dining-area",
+    },
     // Bedroom 1 (2)
-    { src: "/images/bedroom-1/003_Bedroom-1_1.jpeg", alt: "Bedroom 1 Girassol", category: "bedroom-1" },
-    { src: "/images/bedroom-1/015_Bedroom-1_2.jpeg", alt: "Bedroom 1 view", category: "bedroom-1" },
+    {
+      src: "/images/bedroom-1/003_Bedroom-1_1.jpeg",
+      alt: "Bedroom 1 Girassol",
+      category: "bedroom-1",
+    },
+    {
+      src: "/images/bedroom-1/015_Bedroom-1_2.jpeg",
+      alt: "Bedroom 1 view",
+      category: "bedroom-1",
+    },
     // Bedroom 2 (1)
-    { src: "/images/bedroom-2/004_Bedroom-2_1.jpeg", alt: "Bedroom 2 Girassol", category: "bedroom-2" },
+    {
+      src: "/images/bedroom-2/004_Bedroom-2_1.jpeg",
+      alt: "Bedroom 2 Girassol",
+      category: "bedroom-2",
+    },
     // Bedroom 3 (1)
-    { src: "/images/bedroom-3/005_Bedroom-3_1.jpeg", alt: "Bedroom 3 Girassol", category: "bedroom-3" },
+    {
+      src: "/images/bedroom-3/005_Bedroom-3_1.jpeg",
+      alt: "Bedroom 3 Girassol",
+      category: "bedroom-3",
+    },
     // Full bathroom 1 (1)
-    { src: "/images/bathroom-1/006_Full-bathroom-1_1.jpeg", alt: "Bathroom 1 Girassol", category: "bathroom-1" },
+    {
+      src: "/images/bathroom-1/006_Full-bathroom-1_1.jpeg",
+      alt: "Bathroom 1 Girassol",
+      category: "bathroom-1",
+    },
     // Full bathroom 2 (1)
-    { src: "/images/bathroom-2/007_Full-bathroom-2_1.jpeg", alt: "Bathroom 2 Girassol", category: "bathroom-2" },
+    {
+      src: "/images/bathroom-2/007_Full-bathroom-2_1.jpeg",
+      alt: "Bathroom 2 Girassol",
+      category: "bathroom-2",
+    },
     // Exterior (6)
-    { src: "/images/exterior/008_Exterior_1.jpeg", alt: "Girassol exterior", category: "exterior" },
-    { src: "/images/exterior/016_Exterior_2.jpeg", alt: "Exterior view", category: "exterior" },
-    { src: "/images/exterior/017_Exterior_3.jpeg", alt: "Property exterior", category: "exterior" },
-    { src: "/images/exterior/018_Exterior_4.jpeg", alt: "Garden view", category: "exterior" },
-    { src: "/images/exterior/019_Exterior_5.jpeg", alt: "Nature surroundings", category: "exterior" },
-    { src: "/images/exterior/020_Exterior_6.jpeg", alt: "Outdoor area", category: "exterior" },
+    {
+      src: "/images/exterior/008_Exterior_1.jpeg",
+      alt: "Girassol exterior",
+      category: "exterior",
+    },
+    {
+      src: "/images/exterior/016_Exterior_2.jpeg",
+      alt: "Exterior view",
+      category: "exterior",
+    },
+    {
+      src: "/images/exterior/017_Exterior_3.jpeg",
+      alt: "Property exterior",
+      category: "exterior",
+    },
+    {
+      src: "/images/exterior/018_Exterior_4.jpeg",
+      alt: "Garden view",
+      category: "exterior",
+    },
+    {
+      src: "/images/exterior/019_Exterior_5.jpeg",
+      alt: "Nature surroundings",
+      category: "exterior",
+    },
+    {
+      src: "/images/exterior/020_Exterior_6.jpeg",
+      alt: "Outdoor area",
+      category: "exterior",
+    },
     // Pool (20)
-    { src: "/images/pool/001_Pool_1.jpeg", alt: "Pool area Girassol", category: "pool" },
+    {
+      src: "/images/pool/001_Pool_1.jpeg",
+      alt: "Pool area Girassol",
+      category: "pool",
+    },
     { src: "/images/pool/002_Pool_2.jpeg", alt: "Pool view", category: "pool" },
-    { src: "/images/pool/003_Pool_3.jpeg", alt: "Pool and deck", category: "pool" },
+    {
+      src: "/images/pool/003_Pool_3.jpeg",
+      alt: "Pool and deck",
+      category: "pool",
+    },
     { src: "/images/pool/004_Pool_4.jpeg", alt: "Pool area", category: "pool" },
-    { src: "/images/pool/005_Pool_5.jpeg", alt: "Swimming pool Girassol", category: "pool" },
-    { src: "/images/pool/006_Pool_6.jpeg", alt: "Pool with nature view", category: "pool" },
-    { src: "/images/pool/007_Pool_7.jpeg", alt: "Pool deck area", category: "pool" },
-    { src: "/images/pool/008_Pool_8.jpeg", alt: "Pool and garden", category: "pool" },
-    { src: "/images/pool/009_Pool_9.jpeg", alt: "Pool area view", category: "pool" },
-    { src: "/images/pool/010_Pool_10.jpeg", alt: "Pool Girassol", category: "pool" },
-    { src: "/images/pool/011_Pool_11.jpeg", alt: "Pool and sun loungers", category: "pool" },
-    { src: "/images/pool/012_Pool_12.jpeg", alt: "Pool area Girassol", category: "pool" },
-    { src: "/images/pool/013_Pool_13.jpeg", alt: "Swimming pool", category: "pool" },
-    { src: "/images/pool/014_Pool_14.jpeg", alt: "Pool deck", category: "pool" },
-    { src: "/images/pool/015_Pool_15.jpeg", alt: "Pool and outdoor area", category: "pool" },
-    { src: "/images/pool/016_Pool_16.jpeg", alt: "Pool view Girassol", category: "pool" },
-    { src: "/images/pool/017_Pool_17.jpeg", alt: "Pool area", category: "pool" },
-    { src: "/images/pool/018_Pool_18.jpeg", alt: "Pool and nature", category: "pool" },
-    { src: "/images/pool/019_Pool_19.jpeg", alt: "Pool Girassol property", category: "pool" },
-    { src: "/images/pool/020_Pool_20.jpeg", alt: "Pool area São Roque", category: "pool" },
+    {
+      src: "/images/pool/005_Pool_5.jpeg",
+      alt: "Swimming pool Girassol",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/006_Pool_6.jpeg",
+      alt: "Pool with nature view",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/007_Pool_7.jpeg",
+      alt: "Pool deck area",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/008_Pool_8.jpeg",
+      alt: "Pool and garden",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/009_Pool_9.jpeg",
+      alt: "Pool area view",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/010_Pool_10.jpeg",
+      alt: "Pool Girassol",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/011_Pool_11.jpeg",
+      alt: "Pool and sun loungers",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/012_Pool_12.jpeg",
+      alt: "Pool area Girassol",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/013_Pool_13.jpeg",
+      alt: "Swimming pool",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/014_Pool_14.jpeg",
+      alt: "Pool deck",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/015_Pool_15.jpeg",
+      alt: "Pool and outdoor area",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/016_Pool_16.jpeg",
+      alt: "Pool view Girassol",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/017_Pool_17.jpeg",
+      alt: "Pool area",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/018_Pool_18.jpeg",
+      alt: "Pool and nature",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/019_Pool_19.jpeg",
+      alt: "Pool Girassol property",
+      category: "pool",
+    },
+    {
+      src: "/images/pool/020_Pool_20.jpeg",
+      alt: "Pool area São Roque",
+      category: "pool",
+    },
     // Additional (1)
-    { src: "/images/additional/010_Additional-photos_1.jpeg", alt: "Girassol property", category: "additional" },
+    {
+      src: "/images/additional/010_Additional-photos_1.jpeg",
+      alt: "Girassol property",
+      category: "additional",
+    },
   ],
   property: {
     bedrooms: 3,
     beds: 4,
     bathrooms: 3,
-    maxGuests: 12,
+    maxGuests: 6,
     sizeSqm: 280,
     yearBuilt: 2010,
     categories: ["Countryside", "Tropical"],
@@ -280,6 +445,19 @@ export const listingConfig: ListingConfig = {
   ],
   infoSections: [
     {
+      id: "property-description",
+      title: {
+        en: "About the space",
+        pt: "Sobre o espaço",
+        es: "Sobre el espacio",
+      },
+      content: {
+        en: "Property on two plateaus plus 2.6 hectares of nature. Pool, game room and barbecue grill on the upper plateau, with access to the main house second floor where the main suite is located with king bed and access to a common balcony with hammock supports. Second spacious bedroom with large window and double bed, third bedroom with bunk bed and additional single mattresses, and bathroom with glass shower enclosure and electric shower. On the ground floor there is a large covered balcony and barbecue grill, living room with smart TV, fireplace, and access to a secondary balcony with beautiful sunset views. The kitchen and living room share the space. Various board games, hammocks for resting, tennis and volleyball court, balls and pump, mosquito repellent equipment.",
+        pt: "Terreno em dois platôs mais 2,6 hectares de natureza. Piscina, sala de jogos e churrasqueira no platô superior, com acesso ao segundo andar da casa principal onde está a suíte principal com cama king e acesso a varanda comum com suporte para redes. Segundo quarto espaçoso com janelão e cama de casal, terceiro quarto com cama beliche e mais colchões avulsos, e banheiro com box de vidro e chuveiro elétrico. No primeiro andar há uma grande varanda coberta e churrasqueira, sala com TV smart, lareira, e acesso a uma varanda secundária com belo visual do pôr do Sol. A cozinha e a sala compartilham o espaço. Diversos jogos de tabuleiro, redes para descansar, rede de tênis e vôlei, bolas e enchedor, equipamentos contra mosquitos.",
+        es: "Terreno en dos mesetas más 2,6 hectáreas de naturaleza. Piscina, sala de juegos y parrilla en la meseta superior, con acceso al segundo piso de la casa principal donde está la suite principal con cama king y acceso a la terraza común con soportes para hamacas. Segundo dormitorio espacioso con ventanal y cama de matrimonio, tercer dormitorio con litera y colchones adicionales, y baño con ducha de vidrio y ducha eléctrica. En la planta baja hay una gran terraza cubierta y parrilla, sala con TV smart, chimenea, y acceso a una terraza secundaria con hermosa vista del atardecer. La cocina y la sala comparten el espacio. Diversos juegos de mesa, hamacas para descansar, cancha de tenis y voleibol, pelotas e inflador, equipos contra mosquitos.",
+      },
+    },
+    {
       id: "directions",
       title: { en: "How to get there", pt: "Como chegar", es: "Cómo llegar" },
       content: {
@@ -290,7 +468,11 @@ export const listingConfig: ListingConfig = {
     },
     {
       id: "shopping",
-      title: { en: "Shopping and nearby", pt: "Compras e proximidades", es: "Compras y cercanías" },
+      title: {
+        en: "Shopping and nearby",
+        pt: "Compras e proximidades",
+        es: "Compras y cercanías",
+      },
       content: {
         en: "Market approximately 5 km before the property. For larger shopping, market 12 km before arrival.",
         pt: "Mercado a aproximadamente 5 km antes da propriedade. Para compras maiores, mercado a 12 km antes da chegada.",
@@ -299,38 +481,81 @@ export const listingConfig: ListingConfig = {
     },
     {
       id: "house-rules",
-      title: { en: "House rules", pt: "Regras da casa", es: "Reglas de la casa" },
+      title: {
+        en: "House rules",
+        pt: "Regras da casa",
+        es: "Reglas de la casa",
+      },
       content: {
-        en: "Add your house rules here.",
-        pt: "Adicione as regras da casa aqui.",
-        es: "Añada las reglas de la casa aquí.",
+        en: "Pets allowed. Events allowed. Smoking, vaping and e-cigarettes allowed. No quiet hours. Commercial photography and filming allowed. Maximum 6 guests. Check-in between 12:00 PM and 8:00 PM. Check-out before 6:00 PM. Please do not use glass objects in the pool area. Collect all cigarette butts and small garbage that falls on the floor during your stay.",
+        pt: "Animais permitidos. Eventos permitidos. Fumo, vaporizadores e cigarros eletrônicos permitidos. Sem horário de silêncio. Fotografia e filmagem comercial permitidas. Máximo 6 hóspedes. Check-in entre 12h e 20h. Check-out antes das 18h. Pedimos que não usem objetos de vidro na área da piscina. Recolher todas bitucas e pequenos lixos que caem no chão durante a estadia.",
+        es: "Mascotas permitidas. Eventos permitidos. Fumar, vapear y cigarrillos electrónicos permitidos. Sin horario de silencio. Fotografía y filmación comercial permitidas. Máximo 6 huéspedes. Check-in entre 12:00 y 20:00. Check-out antes de las 18:00. Pedimos que no usen objetos de vidrio en el área de la piscina. Recolectar todas las colillas y pequeños desperdicios que caen al suelo durante la estadía.",
       },
     },
     {
       id: "pool-rules",
-      title: { en: "Swimming pool rules", pt: "Regras da piscina", es: "Reglas de la piscina" },
+      title: {
+        en: "Swimming pool rules",
+        pt: "Regras da piscina",
+        es: "Reglas de la piscina",
+      },
       content: {
-        en: "Add pool rules here.",
-        pt: "Adicione as regras da piscina aqui.",
-        es: "Añada las reglas de la piscina aquí.",
+        en: "Do not use glass objects in the pool area. Please use plastic or other safe materials for drinks and food by the pool.",
+        pt: "Não use objetos de vidro na área da piscina. Utilize plástico ou outros materiais seguros para bebidas e alimentos à beira da piscina.",
+        es: "No usar objetos de vidrio en el área de la piscina. Utilice plástico u otros materiales seguros para bebidas y alimentos junto a la piscina.",
       },
     },
     {
       id: "pool-schedule",
-      title: { en: "Pool cleaning schedule", pt: "Horário de limpeza da piscina", es: "Horario de limpieza de la piscina" },
+      title: {
+        en: "Pool cleaning schedule",
+        pt: "Horário de limpeza da piscina",
+        es: "Horario de limpieza de la piscina",
+      },
       content: {
-        en: "Add pool cleaning schedule here.",
-        pt: "Adicione o horário de limpeza da piscina aqui.",
-        es: "Añada el horario de limpieza de la piscina aquí.",
+        en: "Please contact the host for the current pool cleaning schedule.",
+        pt: "Consulte o horário de limpeza da piscina com o anfitrião.",
+        es: "Consulte el horario de limpieza de la piscina con el anfitrión.",
       },
     },
   ],
+  location: {
+    mapEmbedUrl:
+      "https://www.google.com/maps?q=-23.49073257663386,-47.270569464393205&output=embed",
+    generalAreaUrl:
+      "https://www.google.com/maps?q=-23.49073257663386,-47.270569464393205",
+  },
   nearbyPlaces: [
-    { name: "Main property (Girassol)", url: "https://maps.app.goo.gl/T4AyvKtfkvXzrEA67", distance: "12 km antes", type: "property" },
-    { name: "Mercado São Roque", url: "https://maps.app.goo.gl/uc15RYv9sPc9Euij8", distance: "12 km antes", type: "market" },
-    { name: "Farmácia", url: "https://maps.app.goo.gl/WATMaV2xWTJHARhT6", distance: "12 km antes", type: "pharmacy" },
-    { name: "Panificadora e frango de padaria", url: "https://maps.app.goo.gl/zaotkbtZU7FLkL7C9", distance: "5 km antes", type: "bakery" },
-    { name: "Mercearia Figueiras, açougue, adega, tabacaria Siqueira", url: "https://maps.app.goo.gl/uc15RYv9sPc9Euij8", distance: "5 km antes", type: "market" },
+    {
+      name: "Main property (Girassol)",
+      url: "https://maps.app.goo.gl/T4AyvKtfkvXzrEA67",
+      distance: "12 km antes",
+      type: "property",
+    },
+    {
+      name: "Mercado São Roque",
+      url: "https://maps.app.goo.gl/uc15RYv9sPc9Euij8",
+      distance: "12 km antes",
+      type: "market",
+    },
+    {
+      name: "Farmácia",
+      url: "https://maps.app.goo.gl/WATMaV2xWTJHARhT6",
+      distance: "12 km antes",
+      type: "pharmacy",
+    },
+    {
+      name: "Panificadora e frango de padaria",
+      url: "https://maps.app.goo.gl/zaotkbtZU7FLkL7C9",
+      distance: "5 km antes",
+      type: "bakery",
+    },
+    {
+      name: "Mercearia Figueiras, açougue, adega, tabacaria Siqueira",
+      url: "https://maps.app.goo.gl/uc15RYv9sPc9Euij8",
+      distance: "5 km antes",
+      type: "market",
+    },
   ],
   directions: {
     en: "From São Paulo, the best route is via Rodovia Castello Branco, exit at km 54B to access Rodovia Raposo Tavares, or follow directly via Raposo. Follow the 'Girassol' signs when approaching. The exact location is provided after reservation confirmation.",

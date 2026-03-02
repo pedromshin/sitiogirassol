@@ -24,7 +24,7 @@ export default async function HomePage({ params }: PageProps) {
       <Hero3D />
       <StatsFooterBar />
       <MetricsSection />
-      <ThesisSection />
+      {/* <ThesisSection /> */}
       <GalleryMarquee />
       <FeaturesSection />
       <LocationSection />

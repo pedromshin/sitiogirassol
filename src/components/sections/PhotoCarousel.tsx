@@ -28,6 +28,7 @@ const CATEGORY_LABELS: Record<PhotoCategory, string> = {
 
 export default function PhotoCarousel() {
   const t = useTranslations("PhotoCarousel");
+  const tGallery = useTranslations("Gallery");
   const [activeFilter, setActiveFilter] = useState<PhotoCategory | "all">("all");
 
   const filteredPhotos = useMemo(() => {
@@ -56,7 +57,7 @@ export default function PhotoCarousel() {
           viewport={{ once: true }}
           className="text-3xl font-bold text-white mb-8 text-center"
         >
-          Gallery
+          {tGallery("title")}
         </motion.h2>
 
         <div className="flex flex-wrap gap-2 justify-center mb-8">
@@ -115,7 +116,7 @@ export default function PhotoCarousel() {
             ) : (
               <SwiperSlide>
                 <div className="w-full aspect-video bg-forest-mid/20 flex items-center justify-center text-slate-400">
-                  No photos in this category
+                  {t("noPhotosInCategory")}
                 </div>
               </SwiperSlide>
             )}
