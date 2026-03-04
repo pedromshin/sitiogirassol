@@ -61,18 +61,10 @@ export default function GlassyHeader() {
           </span>
         </Link>
         <div className="hidden md:flex items-center gap-8">{navLinks}</div>
-        <div className="flex items-center gap-4 md:hidden">
-          <a
-            href={listingConfig.airbnbUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded-lg text-sm font-bold bg-warm-gold text-forest-dark"
-          >
-            {t("bookOnAirbnb")}
-          </a>
+        <div className="flex items-center md:hidden">
           <button
             type="button"
-            className="p-2 text-white"
+            className="flex-shrink-0 p-2 text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -94,6 +86,15 @@ export default function GlassyHeader() {
           <Link href="/listing-info" onClick={() => setMobileMenuOpen(false)} className="text-white font-medium">
             {t("info")}
           </Link>
+          <a
+            href={listingConfig.airbnbUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex justify-center px-4 py-3 rounded-lg text-sm font-bold bg-warm-gold text-forest-dark"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            {t("bookOnAirbnb")}
+          </a>
           <LanguageSwitcher />
         </div>
       )}

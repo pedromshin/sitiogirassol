@@ -152,9 +152,9 @@ export default function Hero3D() {
             />
           </div>
         ))}
-        {/* Dark overlay for text readability */}
+        {/* Dark overlay for text readability - lighter on mobile to show more background */}
         <div
-          className="absolute inset-0 bg-gradient-to-r from-forest-mid/95 via-forest-mid/60 to-transparent z-[2]"
+          className="absolute inset-0 bg-gradient-to-r from-forest-mid/70 via-forest-mid/35 to-transparent md:from-forest-mid/95 md:via-forest-mid/60 md:to-transparent z-[2]"
           aria-hidden
         />
       </div>
@@ -193,10 +193,10 @@ export default function Hero3D() {
       </div>
 
       <div className="relative z-10 content-container grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center py-12 sm:py-16 lg:py-24">
-        {/* Content Container with glassy blur background */}
+        {/* Content Container with glassy blur background - compact on mobile to reveal background */}
         <div
           ref={contentPanelRef}
-          className="w-full max-w-xl rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 backdrop-blur-xl bg-white/5 border border-white/20 shadow-xl"
+          className="w-full max-w-[min(92%,22rem)] sm:max-w-[28rem] md:max-w-xl mx-auto md:mx-0 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 backdrop-blur-xl bg-white/5 border border-white/20 shadow-xl"
           data-purpose="hero-content"
         >
           {/* Logo Icon Subtitle */}
@@ -204,7 +204,7 @@ export default function Hero3D() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="mb-4 sm:mb-6 inline-block p-2 sm:p-3 rounded-lg border border-warm-gold-border"
+            className="mb-3 sm:mb-6 inline-block p-2 sm:p-3 rounded-lg border border-warm-gold-border"
           >
             <BrandIcon size={40} />
           </motion.div>
@@ -213,7 +213,7 @@ export default function Hero3D() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-3xl sm:text-5xl md:text-7xl font-display font-bold text-white leading-[1.1] mb-4 md:mb-6 tracking-tight"
+            className="text-2xl sm:text-5xl md:text-7xl font-display font-bold text-white leading-[1.1] mb-3 md:mb-6 tracking-tight"
           >
             {headline}{" "}
             <span className="text-warm-gold italic font-display">{headlineItalic}</span>
@@ -223,7 +223,7 @@ export default function Hero3D() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-            className="text-lg sm:text-xl md:text-2xl text-white/90 font-light mb-3 md:mb-4"
+            className="text-base sm:text-xl md:text-2xl text-white/90 font-light mb-2 md:mb-4"
           >
             {subheadline}
           </motion.p>
@@ -232,7 +232,7 @@ export default function Hero3D() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-base sm:text-lg text-white/70 mb-6 md:mb-10 leading-relaxed max-w-lg"
+            className="text-sm sm:text-lg text-white/70 mb-4 md:mb-10 leading-relaxed max-w-lg"
           >
             {paragraph.includes(". ") ? (
               <>
@@ -249,7 +249,7 @@ export default function Hero3D() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-center gap-4"
+            className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4"
             data-purpose="hero-actions"
           >
             <a
