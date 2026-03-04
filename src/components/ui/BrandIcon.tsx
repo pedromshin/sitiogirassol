@@ -1,5 +1,5 @@
 /**
- * Brand sunflower icon - use in header, footer, and elsewhere.
+ * Brand icon - use in header, footer, and elsewhere.
  * Uses the official favicon.svg for consistency.
  */
 import Image from "next/image";

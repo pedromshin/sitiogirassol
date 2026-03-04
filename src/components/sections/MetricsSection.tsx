@@ -23,7 +23,7 @@ const CheckIcon = () => (
 
 const METRIC_KEYS = [
   "bedrooms",
-  "beds",
+  "balcony",
   "bathrooms",
   "maxGuests",
   "size",
@@ -38,8 +38,8 @@ function getMetricValue(key: MetricKey): string | number {
   switch (key) {
     case "bedrooms":
       return listingConfig.property.bedrooms;
-    case "beds":
-      return listingConfig.property.beds;
+    case "balcony":
+      return "check";
     case "bathrooms":
       return listingConfig.property.bathrooms;
     case "maxGuests":

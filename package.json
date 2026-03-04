@@ -10,7 +10,7 @@
     "theme:css": "tsx scripts/generate-theme-css.ts",
     "icons": "tsx scripts/generate-icons.ts",
     "optimize:images": "tsx scripts/optimize-hero-images.ts",
-    "prebuild": "npm run theme:css && npm run optimize:images"
+    "prebuild": "npm run theme:css && npm run icons && npm run optimize:images"
   },
   "dependencies": {
     "@react-three/drei": "^9.92.7",
