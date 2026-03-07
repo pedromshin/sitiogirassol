@@ -6,8 +6,9 @@ import { listingConfig } from "@/data/listing.config";
 import GlassyHeader from "@/components/layout/GlassyHeader";
 import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/seo/JsonLd";
+import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://girassol.example.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -68,6 +69,7 @@ export default async function LocaleLayout({
         <main className="flex-1">{children}</main>
         <Footer />
       </div>
+      <StickyMobileCTA />
     </NextIntlClientProvider>
   );
 }

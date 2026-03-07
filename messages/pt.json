@@ -15,12 +15,16 @@
   "Header": {
     "home": "Início",
     "info": "Informações",
-    "bookOnAirbnb": "Reservar no Airbnb",
+    "bookOnAirbnb": "Reservar no Airbnb - 40% OFF",
     "language": "Idioma"
   },
   "Hero": {
     "headline": "Refúgio de natureza, conforto e tranquilidade",
-    "subheadline": "Remoto, natureza, privativo, completo, tranquilo"
+    "subheadline": "Remoto, natureza, privativo, completo, tranquilo",
+    "trustExclusive": "Propriedade exclusiva",
+    "trustLocation": "São Roque, SP",
+    "trustCapacity": "Até {guests} hóspedes",
+    "whatsappCta": "Fale no WhatsApp"
   },
   "Footer": {
     "nearbyPlaces": "Lugares próximos",
@@ -172,5 +176,10 @@
     "description": "Transforme seus momentos em memórias inesquecíveis com quem você ama. Nossa equipe está pronta para receber você com hospitalidade calorosa.",
     "button": "Reservar no Airbnb",
     "consultant": "Falar com Consultor"
+  },
+  "StickyCTA": {
+    "book": "Reservar",
+    "whatsapp": "WhatsApp",
+    "fromPerNight": "a partir de R$ {price}/noite"
   }
 }

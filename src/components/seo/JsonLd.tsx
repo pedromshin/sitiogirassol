@@ -1,6 +1,6 @@
 import { listingConfig } from "@/data/listing.config";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://girassol.example.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
 
 export default function JsonLd({ locale }: { locale: string }) {
   const title = listingConfig.meta.title[locale as "en" | "pt" | "es"] ?? listingConfig.meta.title.en;

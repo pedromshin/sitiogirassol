@@ -75,6 +75,7 @@ export interface ListingConfig {
   directions: Record<string, string>;
   shopping: Record<string, string>;
   airbnbUrl: string;
+  whatsappNumber?: string;
 }
 
 export const listingConfig: ListingConfig = {
@@ -572,4 +573,5 @@ export const listingConfig: ListingConfig = {
     es: "Mercado aproximadamente 5 km antes de la propiedad. Para compras más grandes, mercado 12 km antes de la llegada (con carnicería, bodega, tabaquería).",
   },
   airbnbUrl: "https://www.airbnb.com/rooms/1345960842338220775",
+  whatsappNumber: "5511919295010",
 };

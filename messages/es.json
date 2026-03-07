@@ -15,12 +15,16 @@
   "Header": {
     "home": "Inicio",
     "info": "Información",
-    "bookOnAirbnb": "Reservar en Airbnb",
+    "bookOnAirbnb": "Reservar en Airbnb - 40% OFF",
     "language": "Idioma"
   },
   "Hero": {
     "headline": "Refugio de naturaleza, confort y tranquilidad",
-    "subheadline": "Sitio a 1,5 h SP offroad, senderos, piscina asador"
+    "subheadline": "Sitio a 1,5 h SP offroad, senderos, piscina asador",
+    "trustExclusive": "Propiedad exclusiva",
+    "trustLocation": "São Roque, SP",
+    "trustCapacity": "Hasta {guests} huéspedes",
+    "whatsappCta": "Hablar por WhatsApp"
   },
   "Footer": {
     "nearbyPlaces": "Lugares cercanos",
@@ -172,5 +176,10 @@
     "description": "Transforma tus momentos en recuerdos inolvidables con quienes amas. Nuestro equipo está listo para recibirte con hospitalidad cálida.",
     "button": "Reservar en Airbnb",
     "consultant": "Hablar con Consultor"
+  },
+  "StickyCTA": {
+    "book": "Reservar",
+    "whatsapp": "WhatsApp",
+    "fromPerNight": "desde R$ {price}/noche"
   }
 }

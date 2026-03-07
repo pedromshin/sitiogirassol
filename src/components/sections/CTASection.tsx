@@ -29,7 +29,7 @@ export default function CTASection() {
             href={listingConfig.airbnbUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-12 py-5 rounded-full font-bold text-lg transition-all shadow-xl border border-white/10 bg-forest-mid text-white"
+            className="w-full sm:w-auto px-12 py-5 rounded-full font-bold text-lg transition-all shadow-xl hover:scale-105 bg-warm-gold text-forest-dark"
           >
             {t("button").toUpperCase()}
           </a>

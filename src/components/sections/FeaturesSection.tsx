@@ -57,7 +57,7 @@ export default function FeaturesSection() {
       transition={{ duration: 0.6 }}
       className="section-padding rounded-2xl mx-3 sm:mx-4 md:mx-10 bg-forest-dark border border-white/10"
     >
-        <div className="max-w-[1200px] mx-auto px-3 sm:px-4 md:px-10">
+      <div className="max-w-[1200px] mx-auto px-3 sm:px-4 md:px-10">
         <div className="mb-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -127,9 +127,8 @@ export default function FeaturesSection() {
                       {cat.items.length}
                     </span>
                     <span
-                      className={`material-symbols-outlined text-slate-400 transition-transform duration-200 ${
-                        expanded[cat.id] ? "rotate-180" : ""
-                      }`}
+                      className={`material-symbols-outlined text-slate-400 transition-transform duration-200 ${expanded[cat.id] ? "rotate-180" : ""
+                        }`}
                     >
                       expand_more
                     </span>
@@ -177,7 +176,7 @@ export default function FeaturesSection() {
 
         <div className="mt-12 flex justify-center">
           <a
-            href="mailto:contato@girassol.example.com"
+            href="https://www.airbnb.com/rooms/1345960842338220775"
             className="inline-flex items-center justify-center px-10 py-4 rounded-full font-bold text-sm tracking-widest uppercase transition-all shadow-xl bg-accent-gold text-forest-mid hover:bg-white"
           >
             {tCta("requestDetails")}

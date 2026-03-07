@@ -15,12 +15,16 @@
   "Header": {
     "home": "Home",
     "info": "Info",
-    "bookOnAirbnb": "Book on Airbnb",
+    "bookOnAirbnb": "Book on Airbnb - 40% OFF",
     "language": "Language"
   },
   "Hero": {
     "headline": "Nature refuge, comfort and tranquility",
-    "subheadline": "Authentic Brazilian Sitio - Offroad, Nature, BBQ"
+    "subheadline": "Authentic Brazilian Sitio - Offroad, Nature, BBQ",
+    "trustExclusive": "Exclusive property",
+    "trustLocation": "São Roque, SP",
+    "trustCapacity": "Up to {guests} guests",
+    "whatsappCta": "Chat on WhatsApp"
   },
   "Footer": {
     "nearbyPlaces": "Nearby places",
@@ -172,5 +176,10 @@
     "description": "Transform your moments into unforgettable memories with the ones you love. Our team is ready to welcome you with warm hospitality.",
     "button": "Book on Airbnb",
     "consultant": "Talk to Consultant"
+  },
+  "StickyCTA": {
+    "book": "Book Now",
+    "whatsapp": "WhatsApp",
+    "fromPerNight": "from R$ {price}/night"
   }
 }
