@@ -3,13 +3,14 @@ import { setRequestLocale } from "next-intl/server";
 
 const Hero3D = dynamic(() => import("@/components/sections/Hero3D"), { ssr: true });
 const StatsFooterBar = dynamic(() => import("@/components/sections/StatsFooterBar"), { ssr: true });
-const MetricsSection = dynamic(() => import("@/components/sections/MetricsSection"), { ssr: false });
+const MetricsSection = dynamic(() => import("@/components/sections/MetricsSection"), { ssr: true });
 const ThesisSection = dynamic(() => import("@/components/sections/ThesisSection"), { ssr: false });
 const GalleryMarquee = dynamic(() => import("@/components/sections/GalleryMarquee"), { ssr: false });
-const FeaturesSection = dynamic(() => import("@/components/sections/FeaturesSection"), { ssr: false });
-const LocationSection = dynamic(() => import("@/components/sections/LocationSection"), { ssr: false });
+const FeaturesSection = dynamic(() => import("@/components/sections/FeaturesSection"), { ssr: true });
+const LocationSection = dynamic(() => import("@/components/sections/LocationSection"), { ssr: true });
 const CalendarSection = dynamic(() => import("@/components/sections/CalendarSection"), { ssr: false });
-const CTASection = dynamic(() => import("@/components/sections/CTASection"), { ssr: false });
+const FAQSection = dynamic(() => import("@/components/sections/FAQSection"), { ssr: true });
+const CTASection = dynamic(() => import("@/components/sections/CTASection"), { ssr: true });
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -29,6 +30,7 @@ export default async function HomePage({ params }: PageProps) {
       <FeaturesSection />
       <LocationSection />
       <CalendarSection />
+      <FAQSection locale={locale as "en" | "pt" | "es"} />
       <CTASection />
     </div>
   );

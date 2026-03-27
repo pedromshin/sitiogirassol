@@ -1,6 +1,6 @@
 import { routing } from "@/i18n/routing";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://girassol.example.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
 
 export default function sitemap() {
   const routes = ["", "/listing-info"];

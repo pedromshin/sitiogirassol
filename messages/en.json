@@ -181,5 +181,10 @@
     "book": "Book Now",
     "whatsapp": "WhatsApp",
     "fromPerNight": "from R$ {price}/night"
+  },
+  "FAQ": {
+    "title": "Frequently Asked ",
+    "titleHighlight": "Questions",
+    "subtitle": "Everything you need to know about Sítio Girassol"
   }
 }

@@ -1,6 +1,9 @@
-import { listingConfig } from "@/data/listing.config";
+"use client";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
+import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { motion, AnimatePresence } from "framer-motion";
+import { listingConfig } from "@/data/listing.config";
 
 type Locale = "en" | "pt" | "es";
 
@@ -109,132 +112,64 @@ const faqItems: Record<Locale, Array<{ question: string; answer: string }>> = {
   ],
 };
 
-export default function JsonLd({ locale }: { locale: string }) {
-  const loc = (locale as Locale) ?? "en";
-  const title = listingConfig.meta.title[loc] ?? listingConfig.meta.title.en;
-  const description = listingConfig.meta.description[loc] ?? listingConfig.meta.description.en;
-  const faqs = faqItems[loc] ?? faqItems.en;
-
-  const vacationRental = {
-    "@context": "https://schema.org",
-    "@type": "VacationRental",
-    name: title,
-    description,
-    url: `${BASE_URL}/${locale}`,
-    image: listingConfig.photos.slice(0, 10).map((p) => `${BASE_URL}${p.src}`),
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "São Roque",
-      addressRegion: "SP",
-      postalCode: "18181-000",
-      addressCountry: "BR",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: -23.49073257663386,
-      longitude: -47.270569464393205,
-    },
-    numberOfRooms: listingConfig.property.bedrooms,
-    numberOfBathroomsTotal: listingConfig.property.bathrooms,
-    floorSize: {
-      "@type": "QuantitativeValue",
-      value: listingConfig.property.sizeSqm,
-      unitCode: "MTK",
-    },
-    occupancy: {
-      "@type": "QuantitativeValue",
-      value: listingConfig.property.maxGuests,
-    },
-    petsAllowed: true,
-    checkinTime: "12:00",
-    checkoutTime: "18:00",
-    amenityFeature: listingConfig.amenities.flatMap((a) =>
-      a.items.map((item) => ({
-        "@type": "LocationFeatureSpecification",
-        name: item,
-        value: true,
-      }))
-    ),
-    offers: {
-      "@type": "Offer",
-      price: listingConfig.pricing.nightlyRate,
-      priceCurrency: listingConfig.pricing.currency,
-      availability: "https://schema.org/InStock",
-      url: listingConfig.airbnbUrl,
-      priceSpecification: [
-        {
-          "@type": "UnitPriceSpecification",
-          price: listingConfig.pricing.nightlyRate,
-          priceCurrency: listingConfig.pricing.currency,
-          unitText: "NIGHT",
-        },
-      ],
-    },
-    containedInPlace: {
-      "@type": "City",
-      name: "São Roque",
-      containedInPlace: {
-        "@type": "State",
-        name: "São Paulo",
-      },
-    },
-    additionalType: "https://schema.org/House",
-  };
-
-  const organization = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Sítio Girassol",
-    url: BASE_URL,
-    logo: `${BASE_URL}/icons/og-image.png`,
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: `+${listingConfig.whatsappNumber}`,
-      contactType: "reservations",
-      availableLanguage: ["Portuguese", "English", "Spanish"],
-    },
-    sameAs: [listingConfig.airbnbUrl],
-  };
-
-  const faqPage = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
-
-  const breadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Sítio Girassol",
-        item: `${BASE_URL}/${locale}`,
-      },
-    ],
-  };
-
-  const schemas = [vacationRental, organization, faqPage, breadcrumb];
+export default function FAQSection({ locale }: { locale: Locale }) {
+  const t = useTranslations("FAQ");
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const faqs = faqItems[locale] ?? faqItems.en;
 
   return (
-    <>
-      {schemas.map((schema, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
-          }}
-        />
-      ))}
-    </>
+    <section className="py-16 md:py-24 px-4 sm:px-6 md:px-10">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display text-white leading-tight">
+            {t("title")}
+            <span className="italic text-accent-gold">{t("titleHighlight")}</span>
+          </h2>
+          <p className="mt-4 text-white/60 text-base md:text-lg font-light max-w-xl mx-auto">
+            {t("subtitle")}
+          </p>
+        </div>
+
+        <div className="space-y-3">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm bg-white/[0.03]"
+            >
+              <button
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full flex items-center justify-between px-6 py-5 text-left transition-colors hover:bg-white/[0.03]"
+              >
+                <span className="text-white font-medium text-base md:text-lg pr-4">
+                  {faq.question}
+                </span>
+                <span
+                  className={`material-symbols-outlined text-accent-gold shrink-0 transition-transform duration-300 ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                >
+                  expand_more
+                </span>
+              </button>
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <p className="px-6 pb-5 text-white/70 text-sm md:text-base leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

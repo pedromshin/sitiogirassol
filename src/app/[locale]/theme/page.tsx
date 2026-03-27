@@ -1,7 +1,12 @@
+import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import ThemeColorPicker from "@/components/ui/ThemeColorPicker";
 import { BASE_HEX } from "@/lib/design-system";
 import { groupColorEntriesByFamily } from "@/lib/theme-colors";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 type PageProps = {
   params: Promise<{ locale: string }>;

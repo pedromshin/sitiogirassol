@@ -81,14 +81,14 @@ export interface ListingConfig {
 export const listingConfig: ListingConfig = {
   meta: {
     title: {
-      en: "Sítio Girassol - Nature Refuge | São Roque, Brazil",
-      pt: "Sítio Girassol - Refúgio de Natureza | São Roque, Brasil",
-      es: "Sítio Girassol - Refugio de Naturaleza | São Roque, Brasil",
+      en: "Sítio Girassol - Vacation Rental with Pool in São Roque, SP | 2.6 ha Nature Retreat",
+      pt: "Sítio Girassol - Aluguel de Temporada com Piscina em São Roque, SP | Chácara 2,6 ha",
+      es: "Sítio Girassol - Alquiler Vacacional con Piscina en São Roque, SP | Finca 2,6 ha",
     },
     description: {
-      en: "Authentic Brazilian Sitio - Offroad, Nature, BBQ. 3 bedrooms, pool, 2.6 hectares of nature. Book your stay in São Roque.",
-      pt: "Remoto, natureza, privativo, completo, tranquilo. 3 quartos, piscina, 2,6 hectares de natureza. Reserve em São Roque.",
-      es: "Sitio a 1,5 h SP offroad, senderos, piscina asador. 3 dormitorios, piscina. Reserve en São Roque.",
+      en: "Private vacation rental 60 km from São Paulo. 3 bedrooms, pool, BBQ, fireplace, offroad trails on 2.6 hectares of preserved nature in São Roque, SP. Pets welcome. Book on Airbnb.",
+      pt: "Chácara para alugar em São Roque, SP — 60 km de São Paulo. 3 quartos, piscina privativa, churrasqueira, lareira, trilhas offroad em 2,6 hectares de natureza preservada. Aceita pets. Reserve no Airbnb.",
+      es: "Finca vacacional a 60 km de São Paulo. 3 dormitorios, piscina privada, parrilla, chimenea, senderos offroad en 2,6 hectáreas de naturaleza preservada en São Roque, SP. Acepta mascotas. Reserve en Airbnb.",
     },
   },
   hero: {
@@ -144,198 +144,206 @@ export const listingConfig: ListingConfig = {
     // Living room (4)
     {
       src: "/images/living-room/001_Living-room_1.jpeg",
-      alt: "Living room Girassol",
+      alt: "Sala de estar com lareira no Sítio Girassol, chácara em São Roque SP",
       category: "living-room",
     },
     {
       src: "/images/living-room/011_Living-room_2.jpeg",
-      alt: "Living room view",
+      alt: "Sala de estar com TV smart e sofá no Sítio Girassol São Roque",
       category: "living-room",
     },
     {
       src: "/images/living-room/012_Living-room_3.jpeg",
-      alt: "Living room interior",
+      alt: "Interior da sala de estar na chácara Sítio Girassol",
       category: "living-room",
     },
     {
       src: "/images/living-room/013_Living-room_4.jpeg",
-      alt: "Living room detail",
+      alt: "Detalhe da sala de estar do Sítio Girassol em São Roque",
       category: "living-room",
     },
     // Dining area (2)
     {
       src: "/images/dining-area/002_Dining-area_1.jpeg",
-      alt: "Dining area Girassol",
+      alt: "Área de jantar do Sítio Girassol, aluguel temporada São Roque",
       category: "dining-area",
     },
     {
       src: "/images/dining-area/014_Dining-area_2.jpeg",
-      alt: "Dining area view",
+      alt: "Mesa de jantar na chácara Sítio Girassol São Roque SP",
       category: "dining-area",
     },
     // Bedroom 1 (2)
     {
       src: "/images/bedroom-1/003_Bedroom-1_1.jpeg",
-      alt: "Bedroom 1 Girassol",
+      alt: "Suíte principal com cama king no Sítio Girassol São Roque",
       category: "bedroom-1",
     },
     {
       src: "/images/bedroom-1/015_Bedroom-1_2.jpeg",
-      alt: "Bedroom 1 view",
+      alt: "Quarto principal com varanda e vista no Sítio Girassol",
       category: "bedroom-1",
     },
     // Bedroom 2 (1)
     {
       src: "/images/bedroom-2/004_Bedroom-2_1.jpeg",
-      alt: "Bedroom 2 Girassol",
+      alt: "Segundo quarto com cama de casal no Sítio Girassol São Roque",
       category: "bedroom-2",
     },
     // Bedroom 3 (1)
     {
       src: "/images/bedroom-3/005_Bedroom-3_1.jpeg",
-      alt: "Bedroom 3 Girassol",
+      alt: "Terceiro quarto com beliche no Sítio Girassol, ideal para famílias",
       category: "bedroom-3",
     },
     // Full bathroom 1 (1)
     {
       src: "/images/bathroom-1/006_Full-bathroom-1_1.jpeg",
-      alt: "Bathroom 1 Girassol",
+      alt: "Banheiro com box de vidro no Sítio Girassol São Roque",
       category: "bathroom-1",
     },
     // Full bathroom 2 (1)
     {
       src: "/images/bathroom-2/007_Full-bathroom-2_1.jpeg",
-      alt: "Bathroom 2 Girassol",
+      alt: "Segundo banheiro completo na chácara Sítio Girassol",
       category: "bathroom-2",
     },
     // Exterior (6)
     {
       src: "/images/exterior/008_Exterior_1.jpeg",
-      alt: "Girassol exterior",
+      alt: "Fachada do Sítio Girassol, chácara para alugar em São Roque SP",
       category: "exterior",
     },
     {
       src: "/images/exterior/016_Exterior_2.jpeg",
-      alt: "Exterior view",
+      alt: "Vista externa do Sítio Girassol com natureza preservada",
       category: "exterior",
     },
     {
       src: "/images/exterior/017_Exterior_3.jpeg",
-      alt: "Property exterior",
+      alt: "Área externa da propriedade Sítio Girassol em São Roque",
       category: "exterior",
     },
     {
       src: "/images/exterior/018_Exterior_4.jpeg",
-      alt: "Garden view",
+      alt: "Jardim e área verde do Sítio Girassol, 2,6 hectares de natureza",
       category: "exterior",
     },
     {
       src: "/images/exterior/019_Exterior_5.jpeg",
-      alt: "Nature surroundings",
+      alt: "Natureza preservada nos 2,6 hectares do Sítio Girassol São Roque",
       category: "exterior",
     },
     {
       src: "/images/exterior/020_Exterior_6.jpeg",
-      alt: "Outdoor area",
+      alt: "Área de lazer ao ar livre no Sítio Girassol perto de São Paulo",
       category: "exterior",
     },
     // Pool (20)
     {
       src: "/images/pool/001_Pool_1.jpeg",
-      alt: "Pool area Girassol",
+      alt: "Piscina privativa do Sítio Girassol, chácara com piscina São Roque",
       category: "pool",
     },
-    { src: "/images/pool/002_Pool_2.jpeg", alt: "Pool view", category: "pool" },
+    {
+      src: "/images/pool/002_Pool_2.jpeg",
+      alt: "Vista da piscina no Sítio Girassol São Roque SP",
+      category: "pool",
+    },
     {
       src: "/images/pool/003_Pool_3.jpeg",
-      alt: "Pool and deck",
+      alt: "Piscina com deck no Sítio Girassol, aluguel temporada São Roque",
       category: "pool",
     },
-    { src: "/images/pool/004_Pool_4.jpeg", alt: "Pool area", category: "pool" },
+    {
+      src: "/images/pool/004_Pool_4.jpeg",
+      alt: "Área da piscina na chácara Sítio Girassol em São Roque",
+      category: "pool",
+    },
     {
       src: "/images/pool/005_Pool_5.jpeg",
-      alt: "Swimming pool Girassol",
+      alt: "Piscina do Sítio Girassol cercada por natureza em São Roque SP",
       category: "pool",
     },
     {
       src: "/images/pool/006_Pool_6.jpeg",
-      alt: "Pool with nature view",
+      alt: "Piscina com vista para a mata no Sítio Girassol",
       category: "pool",
     },
     {
       src: "/images/pool/007_Pool_7.jpeg",
-      alt: "Pool deck area",
+      alt: "Deck da piscina no Sítio Girassol, chácara perto de São Paulo",
       category: "pool",
     },
     {
       src: "/images/pool/008_Pool_8.jpeg",
-      alt: "Pool and garden",
+      alt: "Piscina e jardim do Sítio Girassol em São Roque",
       category: "pool",
     },
     {
       src: "/images/pool/009_Pool_9.jpeg",
-      alt: "Pool area view",
+      alt: "Vista da piscina privativa na chácara Sítio Girassol",
       category: "pool",
     },
     {
       src: "/images/pool/010_Pool_10.jpeg",
-      alt: "Pool Girassol",
+      alt: "Piscina do Sítio Girassol, casa de campo São Roque SP",
       category: "pool",
     },
     {
       src: "/images/pool/011_Pool_11.jpeg",
-      alt: "Pool and sun loungers",
+      alt: "Espreguiçadeiras na piscina do Sítio Girassol São Roque",
       category: "pool",
     },
     {
       src: "/images/pool/012_Pool_12.jpeg",
-      alt: "Pool area Girassol",
+      alt: "Área de piscina com churrasqueira no Sítio Girassol",
       category: "pool",
     },
     {
       src: "/images/pool/013_Pool_13.jpeg",
-      alt: "Swimming pool",
+      alt: "Piscina no sítio para alugar em São Roque, Sítio Girassol",
       category: "pool",
     },
     {
       src: "/images/pool/014_Pool_14.jpeg",
-      alt: "Pool deck",
+      alt: "Deck da piscina do Sítio Girassol, refúgio perto de SP",
       category: "pool",
     },
     {
       src: "/images/pool/015_Pool_15.jpeg",
-      alt: "Pool and outdoor area",
+      alt: "Piscina e área de lazer no Sítio Girassol São Roque",
       category: "pool",
     },
     {
       src: "/images/pool/016_Pool_16.jpeg",
-      alt: "Pool view Girassol",
+      alt: "Vista panorâmica da piscina no Sítio Girassol",
       category: "pool",
     },
     {
       src: "/images/pool/017_Pool_17.jpeg",
-      alt: "Pool area",
+      alt: "Área da piscina do Sítio Girassol, aluguel por temporada",
       category: "pool",
     },
     {
       src: "/images/pool/018_Pool_18.jpeg",
-      alt: "Pool and nature",
+      alt: "Piscina cercada por natureza no Sítio Girassol São Roque SP",
       category: "pool",
     },
     {
       src: "/images/pool/019_Pool_19.jpeg",
-      alt: "Pool Girassol property",
+      alt: "Propriedade Sítio Girassol com piscina privativa em São Roque",
       category: "pool",
     },
     {
       src: "/images/pool/020_Pool_20.jpeg",
-      alt: "Pool area São Roque",
+      alt: "Piscina do Sítio Girassol na região de São Roque SP",
       category: "pool",
     },
     // Additional (1)
     {
       src: "/images/additional/010_Additional-photos_1.jpeg",
-      alt: "Girassol property",
+      alt: "Sítio Girassol, chácara para alugar com piscina em São Roque SP",
       category: "additional",
     },
   ],

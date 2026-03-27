@@ -181,5 +181,10 @@
     "book": "Reservar",
     "whatsapp": "WhatsApp",
     "fromPerNight": "a partir de R$ {price}/noite"
+  },
+  "FAQ": {
+    "title": "Perguntas ",
+    "titleHighlight": "Frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre o Sítio Girassol"
   }
 }
