@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-stopped_at: Phase 1 context gathered
-last_updated: "2026-03-27T23:39:21.998Z"
-last_activity: 2026-03-27 -- Roadmap created (3 phases, 32 requirements mapped)
+status: executing
+stopped_at: Completed 01-01-PLAN.md
+last_updated: "2026-03-27T23:58:47.121Z"
+last_activity: 2026-03-27
 progress:
   total_phases: 3
   completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
+  total_plans: 3
+  completed_plans: 1
   percent: 0
 ---
 
@@ -21,14 +21,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-27)
 
 **Core value:** Hit R$4,000 revenue by end of April 2026 and R$7,000 by end of May 2026
-**Current focus:** Phase 1: Foundation
+**Current focus:** Phase 01 — foundation
 
 ## Current Position
 
-Phase: 1 of 3 (Foundation)
-Plan: 0 of 3 in current phase
-Status: Ready to plan
-Last activity: 2026-03-27 -- Roadmap created (3 phases, 32 requirements mapped)
+Phase: 01 (foundation) — EXECUTING
+Plan: 2 of 3
+Status: Ready to execute
+Last activity: 2026-03-27
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -52,6 +52,7 @@ Progress: [░░░░░░░░░░] 0%
 - Trend: -
 
 *Updated after each plan completion*
+| Phase 01 P01 | 2min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -63,6 +64,8 @@ Recent decisions affecting current work:
 - [Roadmap]: 3 phases (coarse granularity) -- Foundation, Distribution + Marketing Launch, Growth Engine
 - [Roadmap]: Phase 1 must complete this week (by Apr 3) -- ADR floor and listing optimization are gating for all downstream spend
 - [Roadmap]: Ads restructured from Traffic to Leads/Messages objective -- Conversions objective impossible without OTA pixel access
+- [Phase 01]: Website nightlyRate set to R$280 (weekday base) matching 'starting from' convention
+- [Phase 01]: cleaningFee: 180 added to listing.config.ts -- field already existed as optional in interface
 
 ### Pending Todos
 
@@ -76,6 +79,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-27T23:39:21.972Z
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-foundation/01-CONTEXT.md
+Last session: 2026-03-27T23:58:47.114Z
+Stopped at: Completed 01-01-PLAN.md
+Resume file: None

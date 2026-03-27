@@ -9,12 +9,12 @@ Requirements for revenue targets. Each maps to roadmap phases.
 
 ### Pricing Optimization
 
-- [ ] **PRICE-01**: Set ADR floor pricing — never below R$280/night weekdays, R$380/night weekends
-- [ ] **PRICE-02**: Reduce weekly discount from 33% to 10-15%
-- [ ] **PRICE-03**: Reduce monthly discount from 50% to 25-30%
-- [ ] **PRICE-04**: Set holiday premium pricing for Easter (Apr 17-21) at R$500-700/night and Labor Day (May 1-2) at R$450-600/night
-- [ ] **PRICE-05**: Implement day-of-week yield management (Fri/Sat premium 25-35% above weekday base)
-- [ ] **PRICE-06**: Add cleaning fee of R$150-200 to discourage low-value 1-night stays
+- [x] **PRICE-01**: Set ADR floor pricing — never below R$280/night weekdays, R$380/night weekends
+- [x] **PRICE-02**: Reduce weekly discount from 33% to 10-15%
+- [x] **PRICE-03**: Reduce monthly discount from 50% to 25-30%
+- [x] **PRICE-04**: Set holiday premium pricing for Easter (Apr 17-21) at R$500-700/night and Labor Day (May 1-2) at R$450-600/night
+- [x] **PRICE-05**: Implement day-of-week yield management (Fri/Sat premium 25-35% above weekday base)
+- [x] **PRICE-06**: Add cleaning fee of R$150-200 to discourage low-value 1-night stays
 - [ ] **PRICE-07**: Start PriceLabs free trial for dynamic pricing with R$280 floor (Phase 2+)
 
 ### Multi-Platform Distribution
@@ -92,12 +92,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PRICE-01 | Phase 1 | Pending |
-| PRICE-02 | Phase 1 | Pending |
-| PRICE-03 | Phase 1 | Pending |
-| PRICE-04 | Phase 1 | Pending |
-| PRICE-05 | Phase 1 | Pending |
-| PRICE-06 | Phase 1 | Pending |
+| PRICE-01 | Phase 1 | Complete |
+| PRICE-02 | Phase 1 | Complete |
+| PRICE-03 | Phase 1 | Complete |
+| PRICE-04 | Phase 1 | Complete |
+| PRICE-05 | Phase 1 | Complete |
+| PRICE-06 | Phase 1 | Complete |
 | PRICE-07 | Phase 2 | Pending |
 | DIST-01 | Phase 2 | Pending |
 | DIST-02 | Phase 2 | Pending |

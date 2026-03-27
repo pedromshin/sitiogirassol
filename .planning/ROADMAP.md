@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- Update website pricing config and create Airbnb pricing change guide (PRICE-01 through PRICE-06)
+- [x] 01-01-PLAN.md -- Update website pricing config and create Airbnb pricing change guide (PRICE-01 through PRICE-06)
 - [ ] 01-02-PLAN.md -- Create listing optimization guide with photo selection, title/description copy, and settings (LISTING-01 through LISTING-05)
 - [ ] 01-03-PLAN.md -- Create guest message templates, house manual, and Airbnb communication setup guide (COMM-01 through COMM-05)
 
