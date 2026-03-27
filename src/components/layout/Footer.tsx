@@ -23,7 +23,7 @@ export default function Footer() {
                 Sítio Girassol
               </h2>
             </div>
-            <p className="text-white/40 leading-relaxed font-light">
+            <p className="text-white/70 leading-relaxed font-light">
               {t("description")}
             </p>
             <div className="flex items-center gap-5">
@@ -31,7 +31,7 @@ export default function Footer() {
                 href="https://www.facebook.com/profile.php?id=61555772530647&locale=pt_BR"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-5 h-5 text-white/30 hover:text-accent-gold transition-colors"
+                className="w-5 h-5 text-white/60 hover:text-accent-gold transition-colors"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -42,7 +42,7 @@ export default function Footer() {
                 href="https://www.instagram.com/sitiogirassol.sp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-5 h-5 text-white/30 hover:text-accent-gold transition-colors"
+                className="w-5 h-5 text-white/60 hover:text-accent-gold transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -54,10 +54,10 @@ export default function Footer() {
 
           {/* Column 2: Navegação */}
           <div className="space-y-8">
-            <h4 className="text-xs-caps font-black uppercase tracking-widest text-accent-gold">
+            <h3 className="text-xs-caps font-black uppercase tracking-widest text-accent-gold">
               {t("navigation")}
-            </h4>
-            <ul className="space-y-4 text-sm font-medium text-white/50">
+            </h3>
+            <ul className="space-y-4 text-sm font-medium text-white/70">
               <li>
                 <Link href="/listing-info" className="hover:text-white transition-colors">
                   {t("aboutUs")}
@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 md:pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 text-xs-caps uppercase tracking-caps-tight font-bold text-white/20 text-center md:text-left">
+        <div className="pt-8 md:pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 text-xs-caps uppercase tracking-caps-tight font-bold text-white/60 text-center md:text-left">
           <p>{t("allRightsReserved")}</p>
           <div className="flex items-center gap-10">
             <div className="flex items-center gap-2">

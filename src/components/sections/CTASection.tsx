@@ -21,7 +21,7 @@ export default function CTASection() {
             {t("titleHighlight")}
           </span>
         </motion.h2>
-        <p className="text-white/60 text-base md:text-lg lg:text-xl max-w-2xl mx-auto font-light leading-relaxed px-2">
+        <p className="text-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto font-light leading-relaxed px-2">
           {t("description")}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">

@@ -34,7 +34,7 @@ export default function StickyMobileCTA() {
             <span className="text-warm-gold font-display text-lg font-bold">
               R$ {listingConfig.pricing.nightlyRate}
             </span>
-            <span className="text-white/50 text-xs block">/noite</span>
+            <span className="text-white/70 text-xs block">/noite</span>
           </div>
 
           {/* CTA buttons */}

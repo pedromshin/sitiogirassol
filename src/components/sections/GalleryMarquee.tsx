@@ -120,7 +120,7 @@ export default function GalleryMarquee() {
                       </div>
                       <div className="p-4">
                         <h3 className="text-white font-display text-lg font-semibold">{label}</h3>
-                        <p className="text-slate-400 text-sm font-light mt-1">{desc}</p>
+                        <p className="text-slate-300 text-sm font-light mt-1">{desc}</p>
                       </div>
                     </div>
                   </Link>

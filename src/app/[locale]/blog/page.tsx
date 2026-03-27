@@ -89,7 +89,7 @@ export default async function BlogPage({ params }: PageProps) {
         <h1 className="font-display text-3xl sm:text-5xl md:text-7xl mb-4 leading-tight">
           {heading}
         </h1>
-        <p className="text-white/60 text-base md:text-lg font-light max-w-xl mx-auto">
+        <p className="text-white/70 text-base md:text-lg font-light max-w-xl mx-auto">
           {subtitle}
         </p>
       </section>
@@ -122,7 +122,7 @@ export default async function BlogPage({ params }: PageProps) {
                   <h2 className="font-display text-xl md:text-2xl text-white mt-2 mb-3 group-hover:text-accent-gold transition-colors">
                     {post.title[loc] ?? post.title.en}
                   </h2>
-                  <p className="text-white/60 text-sm md:text-base line-clamp-3">
+                  <p className="text-white/70 text-sm md:text-base line-clamp-3">
                     {post.description[loc] ?? post.description.en}
                   </p>
                 </div>

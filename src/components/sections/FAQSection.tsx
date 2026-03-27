@@ -185,7 +185,7 @@ export default function FAQSection({ locale }: { locale: Locale }) {
             {t("title")}
             <span className="italic text-accent-gold">{t("titleHighlight")}</span>
           </h2>
-          <p className="mt-4 text-white/60 text-base md:text-lg font-light max-w-xl mx-auto">
+          <p className="mt-4 text-white/70 text-base md:text-lg font-light max-w-xl mx-auto">
             {t("subtitle")}
           </p>
         </div>

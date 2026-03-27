@@ -75,15 +75,15 @@ export default function CalendarSection() {
               {t("titleHighlight")}
             </span>
           </h2>
-          <p className="text-white/60 text-base md:text-lg max-w-md font-light leading-relaxed">
+          <p className="text-white/70 text-base md:text-lg max-w-md font-light leading-relaxed">
             {t("description")}
           </p>
           <div className="flex flex-wrap gap-4 md:gap-6">
-            <div className="flex items-center gap-3 text-xs uppercase tracking-widest font-bold text-white/40">
+            <div className="flex items-center gap-3 text-xs uppercase tracking-widest font-bold text-white/70">
               <span className="w-2 h-2 rounded-full bg-accent-gold" />
               {t("reserved")}
             </div>
-            <div className="flex items-center gap-3 text-xs uppercase tracking-widest font-bold text-white/40">
+            <div className="flex items-center gap-3 text-xs uppercase tracking-widest font-bold text-white/70">
               <span className="w-2 h-2 rounded-full border border-white/20" />
               {t("available")}
             </div>
@@ -110,14 +110,14 @@ export default function CalendarSection() {
           <div className="mt-6 md:mt-10 pt-6 md:pt-8 border-t border-white/10">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <p className="text-xs-caps text-white/40 uppercase font-black tracking-widest mb-1">
+                <p className="text-xs-caps text-white/70 uppercase font-black tracking-widest mb-1">
                   {t("selectedPeriod")}
                 </p>
                 <p className="text-lg font-display text-white">{formatPeriod()}</p>
               </div>
             </div>
             <div className="space-y-4">
-              <div className="flex justify-between text-white/60">
+              <div className="flex justify-between text-white/70">
                 <span>
                   R$ {listingConfig.pricing.nightlyRate} x {price.nights} {t("nights")}
                 </span>

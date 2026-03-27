@@ -27,7 +27,7 @@ export default function StatsFooterBar() {
               <div className="font-display text-3xl mb-1 text-warm-gold">
                 {"valueKey" in stat ? t(stat.valueKey) : stat.value}
               </div>
-              <div className="text-white/40 text-xs uppercase tracking-widest">
+              <div className="text-white/70 text-xs uppercase tracking-widest">
                 {t(stat.labelKey)}
               </div>
             </div>

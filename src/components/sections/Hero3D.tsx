@@ -201,7 +201,7 @@ export default function Hero3D() {
           </div>
 
           {/* Trust signals */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-4 text-xs text-white/50">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-4 text-xs text-white/70">
             <span className="flex items-center gap-1">
               <span className="material-symbols-outlined text-accent-gold text-sm">verified</span>
               {tHero("trustExclusive")}

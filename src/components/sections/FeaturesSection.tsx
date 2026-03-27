@@ -75,15 +75,17 @@ export default function FeaturesSection() {
         {/* Search + expand all */}
         <div className="flex flex-col sm:flex-row gap-3 mb-6">
           <div className="relative flex-1">
-            <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xl">
+            <label htmlFor="amenity-search" className="sr-only">{t("searchPlaceholder")}</label>
+            <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl" aria-hidden="true">
               search
             </span>
             <input
+              id="amenity-search"
               type="text"
               placeholder={t("searchPlaceholder")}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-forest-mid border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-accent-gold/50 transition-colors"
+              className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-forest-mid border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:border-accent-gold/50 transition-colors"
             />
           </div>
           <button

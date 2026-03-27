@@ -188,7 +188,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           &larr; {backLabel}
         </Link>
 
-        <time className="block mt-6 text-xs uppercase tracking-widest text-white/40 font-bold">
+        <time className="block mt-6 text-xs uppercase tracking-widest text-white/70 font-bold">
           {new Date(post.publishedAt).toLocaleDateString(
             loc === "pt" ? "pt-BR" : loc === "es" ? "es-ES" : "en-US",
             { year: "numeric", month: "long", day: "numeric" }
@@ -216,7 +216,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           {post.tags.map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 text-xs rounded-full border border-white/10 text-white/40"
+              className="px-3 py-1 text-xs rounded-full border border-white/10 text-white/70"
             >
               {tag}
             </span>

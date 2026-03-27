@@ -14,8 +14,6 @@
     "prebuild": "npm run theme:css && npm run icons && npm run optimize:images && npm run bake:planning"
   },
   "dependencies": {
-    "@react-three/drei": "^9.92.7",
-    "@react-three/fiber": "^8.15.12",
     "@tailwindcss/typography": "^0.5.19",
     "@vercel/analytics": "^1.6.1",
     "@vercel/speed-insights": "^1.3.1",
@@ -29,8 +27,7 @@
     "react": "^18.2.0",
     "react-date-range": "^2.0.1",
     "react-dom": "^18.2.0",
-    "swiper": "^11.1.4",
-    "three": "^0.163.0"
+    "swiper": "^11.1.4"
   },
   "browserslist": [
     "last 2 Chrome versions",
@@ -42,7 +39,6 @@
     "@types/node": "^20.14.0",
     "@types/react": "^18.2.0",
     "@types/react-date-range": "^1.4.4",
-    "@types/three": "^0.163.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.5",
