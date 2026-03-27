@@ -14,13 +14,10 @@ type AdminPageProps = {
 export default async function AdminPage({ searchParams }: AdminPageProps) {
   headers(); // force dynamic rendering
 
-  const token = process.env.ADMIN_TOKEN;
-  const provided = typeof searchParams.token === "string" ? searchParams.token : undefined;
+  const token = process.env.ADMIN_TOKEN ?? "";
+  const provided = typeof searchParams.token === "string" ? searchParams.token : "";
 
-  // Debug: log to Vercel function logs
-  console.log("[admin] ADMIN_TOKEN set:", !!token, "provided:", !!provided, "match:", token === provided);
-
-  if (token && provided !== token) {
+  if (token && token !== provided) {
     notFound();
   }
 
