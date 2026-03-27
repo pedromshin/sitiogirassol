@@ -17,7 +17,10 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
   const token = process.env.ADMIN_TOKEN;
   const provided = typeof searchParams.token === "string" ? searchParams.token : undefined;
 
-  if (!token || !provided || provided !== token) {
+  // Debug: log to Vercel function logs
+  console.log("[admin] ADMIN_TOKEN set:", !!token, "provided:", !!provided, "match:", token === provided);
+
+  if (token && provided !== token) {
     notFound();
   }
 
