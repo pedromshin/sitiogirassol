@@ -64,11 +64,12 @@ export default function AmenitiesSection() {
               >
                 <button
                   type="button"
+                  aria-expanded={isOpen}
                   className="w-full p-6 flex items-center justify-between text-left"
                   onClick={() => setOpenCategory(isOpen ? null : amenity.category)}
                 >
                   <h3 className="text-xl font-display font-semibold text-white">{label}</h3>
-                  <span className="text-2xl text-accent-gold">{isOpen ? "−" : "+"}</span>
+                  <span aria-hidden="true" className="text-2xl text-accent-gold">{isOpen ? "−" : "+"}</span>
                 </button>
                 <motion.div
                   initial={false}

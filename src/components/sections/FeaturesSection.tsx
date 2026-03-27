@@ -67,7 +67,7 @@ export default function FeaturesSection() {
             {t("title")}
           </motion.h2>
           <div className="h-1 w-20 rounded-full mx-auto mb-4 bg-accent-gold" />
-          <p className="text-slate-400 mt-4 max-w-xl mx-auto font-light">
+          <p className="text-slate-300 mt-4 max-w-xl mx-auto font-light">
             {t("subtitle")}
           </p>
         </div>
@@ -89,7 +89,7 @@ export default function FeaturesSection() {
           <button
             type="button"
             onClick={toggleAll}
-            className="shrink-0 px-4 py-2.5 rounded-lg border border-white/10 text-slate-400 hover:text-white hover:border-accent-gold/30 transition-colors text-sm font-medium"
+            className="shrink-0 px-4 py-2.5 rounded-lg border border-white/10 text-slate-300 hover:text-white hover:border-accent-gold/30 transition-colors text-sm font-medium"
           >
             {expandAll ? t("collapseAll") : t("expandAll")}
           </button>
@@ -110,6 +110,8 @@ export default function FeaturesSection() {
                 <button
                   type="button"
                   onClick={() => toggle(cat.id)}
+                  aria-expanded={expanded[cat.id]}
+                  aria-label={t(cat.titleKey)}
                   className="w-full flex items-center justify-between gap-4 px-4 py-3.5 text-left hover:bg-white/[0.03] transition-colors"
                 >
                   <div className="flex items-center gap-3 min-w-0">
@@ -127,6 +129,7 @@ export default function FeaturesSection() {
                       {cat.items.length}
                     </span>
                     <span
+                      aria-hidden="true"
                       className={`material-symbols-outlined text-slate-400 transition-transform duration-200 ${expanded[cat.id] ? "rotate-180" : ""
                         }`}
                     >

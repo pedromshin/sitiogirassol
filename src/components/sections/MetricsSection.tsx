@@ -78,7 +78,7 @@ export default function MetricsSection() {
             {t("titleHighlight")}
           </span>
         </motion.h2>
-        <p className="text-gray-500 uppercase tracking-caps-tight text-xs-caps md:text-xs font-semibold">
+        <p className="text-gray-400 uppercase tracking-caps-tight text-xs-caps md:text-xs font-semibold">
           {t("subtitle")}
         </p>
         <div className="w-24 h-px bg-accent-gold mx-auto mt-6 opacity-50" />
@@ -102,7 +102,7 @@ export default function MetricsSection() {
               transition={{ delay: i * 0.05 }}
               className="stat-card p-4 sm:p-6 md:p-8 flex flex-col items-center text-center rounded-xl"
             >
-              <span className="text-gray-400 text-xs uppercase tracking-wider mb-2">
+              <span className="text-gray-300 text-xs uppercase tracking-wider mb-2">
                 {t(key)}
               </span>
               <div className="text-3xl font-display mb-1 text-accent-gold">
@@ -116,7 +116,7 @@ export default function MetricsSection() {
 
       {/* Bottom Tagline */}
       <div className="mt-16 md:mt-24 text-center">
-        <motion.h3
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -126,7 +126,7 @@ export default function MetricsSection() {
           <span className="font-serif-italic text-accent-gold">
             {t("taglineHighlight")}
           </span>
-        </motion.h3>
+        </motion.p>
       </div>
     </section>
   );

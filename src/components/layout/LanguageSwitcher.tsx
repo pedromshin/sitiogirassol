@@ -20,8 +20,10 @@ export default function LanguageSwitcher() {
         <button
           key={code}
           onClick={() => router.replace(pathname, { locale: code })}
+          aria-label={code === "en" ? "English" : code === "pt" ? "Português" : "Español"}
+          aria-current={locale === code ? "true" : undefined}
           className={`text-xs font-medium transition ${
-            locale === code ? "text-warm-gold font-bold" : "text-white/50 hover:text-white"
+            locale === code ? "text-warm-gold font-bold" : "text-white/60 hover:text-white"
           }`}
         >
           {label}
