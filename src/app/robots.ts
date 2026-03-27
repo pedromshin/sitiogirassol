@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sitiogirassol.org";
 
 export default function robots() {
   return {
@@ -15,6 +15,5 @@ export default function robots() {
       },
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,
-    host: BASE_URL,
   };
 }

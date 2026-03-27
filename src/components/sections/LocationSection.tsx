@@ -1,28 +1,58 @@
 "use client";
 
+import { useRef, useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { listingConfig } from "@/data/listing.config";
 
 export default function LocationSection() {
   const t = useTranslations("Location");
   const { mapEmbedUrl, generalAreaUrl } = listingConfig.location;
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowMap(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="section-padding px-4 sm:px-6 md:px-10 bg-forest-dark">
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row gap-8 items-center border border-white/10 rounded-2xl overflow-hidden p-2 bg-forest-mid">
-          <div className="w-full md:w-1/2 aspect-square md:aspect-auto md:h-[400px] rounded-xl overflow-hidden shrink-0 relative">
-            <iframe
-              src={mapEmbedUrl}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title={t("mapAlt")}
-              className="absolute inset-0 w-full h-full"
-            />
+          <div
+            ref={containerRef}
+            className="w-full md:w-1/2 aspect-square md:aspect-auto md:h-[400px] rounded-xl overflow-hidden shrink-0 relative bg-forest-dark"
+          >
+            {showMap ? (
+              <iframe
+                src={mapEmbedUrl}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title={t("mapAlt")}
+                className="absolute inset-0 w-full h-full"
+              />
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center text-white/30">
+                <span className="material-symbols-outlined text-4xl">map</span>
+              </div>
+            )}
           </div>
           <div className="w-full md:w-1/2 p-6 md:p-10">
             <span className="font-bold text-xs uppercase tracking-widest block mb-2 text-accent-gold">

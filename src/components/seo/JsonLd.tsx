@@ -1,6 +1,6 @@
 import { listingConfig } from "@/data/listing.config";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sitiogirassol.org";
 
 type Locale = "en" | "pt" | "es";
 
@@ -118,6 +118,8 @@ export default function JsonLd({ locale }: { locale: string }) {
   const vacationRental = {
     "@context": "https://schema.org",
     "@type": "VacationRental",
+    identifier: "sitio-girassol-sao-roque",
+    "@id": `${BASE_URL}/#vacation-rental`,
     name: title,
     description,
     url: `${BASE_URL}/${locale}`,
@@ -170,6 +172,23 @@ export default function JsonLd({ locale }: { locale: string }) {
         },
       ],
     },
+    containsPlace: [
+      {
+        "@type": "Room",
+        name: loc === "pt" ? "Suíte Principal" : loc === "es" ? "Suite Principal" : "Master Suite",
+        description: loc === "pt" ? "Quarto com cama king size e banheiro privativo" : loc === "es" ? "Habitación con cama king y baño privado" : "Bedroom with king bed and private bathroom",
+      },
+      {
+        "@type": "Room",
+        name: loc === "pt" ? "Segundo Quarto" : loc === "es" ? "Segundo Dormitorio" : "Second Bedroom",
+        description: loc === "pt" ? "Quarto com cama de casal" : loc === "es" ? "Habitación con cama doble" : "Bedroom with double bed",
+      },
+      {
+        "@type": "Room",
+        name: loc === "pt" ? "Terceiro Quarto" : loc === "es" ? "Tercer Dormitorio" : "Third Bedroom",
+        description: loc === "pt" ? "Quarto com beliche e colchões extras" : loc === "es" ? "Habitación con litera y colchones extras" : "Bedroom with bunk bed and extra mattresses",
+      },
+    ],
     containedInPlace: {
       "@type": "City",
       name: "São Roque",

@@ -4,11 +4,6 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    outputFileTracingIncludes: {
-      "/admin": ["./.planning/**/*"],
-    },
-  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "**" },

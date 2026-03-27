@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/seo/JsonLd";
 import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sitiogirassol.org";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

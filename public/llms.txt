@@ -1,0 +1,40 @@
+# Sítio Girassol
+
+> Vacation rental property with pool in São Roque, SP, Brazil — 60 km from São Paulo
+
+## Property Overview
+- Type: Entire house (chalet) on 2.6 hectares
+- Location: São Roque, São Paulo, Brazil
+- Capacity: 6 guests, 3 bedrooms, 3 bathrooms, 280 sqm
+- Highlights: Private pool, BBQ area, fireplace, pet-friendly, sports courts
+
+## Pricing
+- Nightly: R$ 340 BRL
+- Weekly: R$ 228/night (33% discount)
+- Monthly: R$ 170/night (50% discount)
+- Check-in: 12:00 PM | Check-out: 6:00 PM
+
+## Key Amenities
+- Private pool with sun loungers
+- 2 BBQ areas (churrasqueira) with outdoor kitchen
+- Indoor fireplace
+- Tennis, volleyball, football, and badminton courts
+- Wi-Fi, TV, game room with foosball
+- Full kitchen, washer, parking
+- Pet-friendly, children welcome
+
+## Location
+- Coordinates: -23.4907, -47.2706
+- 60 km from São Paulo city center (~1-1.5 hours drive)
+- Near São Roque wine region (Rota do Vinho)
+- Surrounded by Atlantic Forest nature
+
+## Contact & Booking
+- Website: https://sitiogirassol.org
+- Airbnb: https://www.airbnb.com.br/rooms/1345960842338220775
+- Instagram: @sitiogirassol.sp
+
+## More Information
+- Full details: https://sitiogirassol.org/llms-full.txt
+- Blog: https://sitiogirassol.org/pt/blog
+- Property info: https://sitiogirassol.org/pt/listing-info

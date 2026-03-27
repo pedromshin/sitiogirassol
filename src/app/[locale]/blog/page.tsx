@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { blogPosts } from "@/data/blog-posts";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sitiogirassol.org";
 
 type PageProps = {
   params: Promise<{ locale: string }>;

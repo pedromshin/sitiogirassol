@@ -1,7 +1,7 @@
 import { routing } from "@/i18n/routing";
 import { blogPosts } from "@/data/blog-posts";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sitiogirassol.org";
 
 export default function sitemap() {
   const staticRoutes = ["", "/listing-info", "/blog"];

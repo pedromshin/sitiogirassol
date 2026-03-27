@@ -38,3 +38,5 @@ next-env.d.ts
 # scripts
 scripts/.venv
 scripts/test_output
+
+/marketing

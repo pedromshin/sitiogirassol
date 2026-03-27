@@ -10,7 +10,8 @@
     "theme:css": "tsx scripts/generate-theme-css.ts",
     "icons": "tsx scripts/generate-icons.ts",
     "optimize:images": "tsx scripts/optimize-hero-images.ts",
-    "prebuild": "npm run theme:css && npm run icons && npm run optimize:images"
+    "bake:planning": "tsx scripts/bake-planning.ts",
+    "prebuild": "npm run theme:css && npm run icons && npm run optimize:images && npm run bake:planning"
   },
   "dependencies": {
     "@react-three/drei": "^9.92.7",
@@ -31,6 +32,12 @@
     "swiper": "^11.1.4",
     "three": "^0.163.0"
   },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ],
   "devDependencies": {
     "@types/node": "^20.14.0",
     "@types/react": "^18.2.0",

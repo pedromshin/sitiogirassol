@@ -1,6 +1,5 @@
 import { readPlanningDocs, groupDocs } from "@/lib/admin/planning-reader";
 import { notFound } from "next/navigation";
-import { headers } from "next/headers";
 import PlanningNav from "@/components/admin/PlanningNav";
 import MarkdownPanel from "@/components/admin/MarkdownPanel";
 
@@ -22,7 +21,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
     notFound();
   }
 
-  const docs = await readPlanningDocs();
+  const docs = readPlanningDocs();
   const groups = groupDocs(docs);
   const navDocs = docs.map(({ id, label, group }) => ({ id, label, group }));
 

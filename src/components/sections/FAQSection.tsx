@@ -138,12 +138,14 @@ export default function FAQSection({ locale }: { locale: Locale }) {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                aria-expanded={openIndex === index}
                 className="w-full flex items-center justify-between px-6 py-5 text-left transition-colors hover:bg-white/[0.03]"
               >
                 <span className="text-white font-medium text-base md:text-lg pr-4">
                   {faq.question}
                 </span>
                 <span
+                  aria-hidden="true"
                   className={`material-symbols-outlined text-accent-gold shrink-0 transition-transform duration-300 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
