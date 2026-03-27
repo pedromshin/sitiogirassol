@@ -12,13 +12,14 @@ export default function GlassyHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const isInfoPage = pathname?.includes("listing-info");
+  const isBlogPage = pathname?.includes("/blog");
 
   const navLinks = (
     <>
       <Link
         href="/"
         className={`text-sm font-medium uppercase tracking-widest transition-colors ${
-          isInfoPage ? "text-white/80 hover:text-accent-gold" : "text-white hover:text-warm-gold"
+          isInfoPage || isBlogPage ? "text-white/80 hover:text-accent-gold" : "text-white hover:text-warm-gold"
         }`}
         onClick={() => setMobileMenuOpen(false)}
       >
@@ -32,6 +33,15 @@ export default function GlassyHeader() {
         onClick={() => setMobileMenuOpen(false)}
       >
         {t("info")}
+      </Link>
+      <Link
+        href="/blog"
+        className={`text-sm font-medium uppercase tracking-widest transition-colors ${
+          isBlogPage ? "text-accent-gold" : "text-white/80 hover:text-accent-gold"
+        }`}
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        {t("blog")}
       </Link>
       <div className="flex items-center gap-3 ml-4 border-l border-white/20 pl-6">
         <LanguageSwitcher />
@@ -85,6 +95,9 @@ export default function GlassyHeader() {
           </Link>
           <Link href="/listing-info" onClick={() => setMobileMenuOpen(false)} className="text-white font-medium">
             {t("info")}
+          </Link>
+          <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="text-white font-medium">
+            {t("blog")}
           </Link>
           <a
             href={listingConfig.airbnbUrl}

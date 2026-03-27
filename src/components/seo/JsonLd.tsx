@@ -193,7 +193,11 @@ export default function JsonLd({ locale }: { locale: string }) {
       contactType: "reservations",
       availableLanguage: ["Portuguese", "English", "Spanish"],
     },
-    sameAs: [listingConfig.airbnbUrl],
+    sameAs: [
+      listingConfig.airbnbUrl,
+      "https://www.facebook.com/profile.php?id=61555772530647",
+      "https://www.instagram.com/sitiogirassol.sp/",
+    ],
   };
 
   const faqPage = {

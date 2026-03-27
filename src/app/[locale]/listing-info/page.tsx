@@ -46,6 +46,36 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
+function InfoBreadcrumbJsonLd({ locale }: { locale: string }) {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Sítio Girassol",
+        item: `${BASE_URL}/${locale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: locale === "pt" ? "Informações" : locale === "es" ? "Información" : "Info",
+        item: `${BASE_URL}/${locale}/listing-info`,
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c"),
+      }}
+    />
+  );
+}
+
 export default async function ListingInfoPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -54,7 +84,8 @@ export default async function ListingInfoPage({ params }: PageProps) {
 
   return (
     <div className="listing-info-page bg-[#141E19] text-white">
-      {/* Hero section - matches HTML reference */}
+      <InfoBreadcrumbJsonLd locale={locale} />
+      {/* Hero section */}
       <section className="pt-28 sm:pt-36 md:pt-40 pb-12 md:pb-20 px-4 sm:px-6 text-center max-w-4xl mx-auto">
         <h1 className="font-display text-3xl sm:text-5xl md:text-7xl mb-4 md:mb-6 leading-tight text-white">
           {t("titlePart1")}
