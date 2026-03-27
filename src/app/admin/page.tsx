@@ -1,23 +1,23 @@
 import { readPlanningDocs, groupDocs } from "@/lib/admin/planning-reader";
 import { notFound } from "next/navigation";
+import { headers } from "next/headers";
 import PlanningNav from "@/components/admin/PlanningNav";
 import MarkdownPanel from "@/components/admin/MarkdownPanel";
 
 export const dynamic = "force-dynamic";
-
-function verifyAccess(searchParams: Record<string, string | string[] | undefined>): boolean {
-  const token = process.env.ADMIN_TOKEN;
-  if (!token) return false;
-  const provided = typeof searchParams.token === "string" ? searchParams.token : undefined;
-  return provided === token;
-}
+export const runtime = "nodejs";
 
 type AdminPageProps = {
   readonly searchParams: Record<string, string | string[] | undefined>;
 };
 
 export default async function AdminPage({ searchParams }: AdminPageProps) {
-  if (!verifyAccess(searchParams)) {
+  headers(); // force dynamic rendering
+
+  const token = process.env.ADMIN_TOKEN;
+  const provided = typeof searchParams.token === "string" ? searchParams.token : undefined;
+
+  if (!token || !provided || provided !== token) {
     notFound();
   }
 
