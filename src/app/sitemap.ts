@@ -12,6 +12,14 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: (route === "" ? "weekly" : "monthly") as "weekly" | "monthly",
       priority: route === "" ? 1 : 0.8,
+      alternates: {
+        languages: {
+          en: `${BASE_URL}/en${route}`,
+          pt: `${BASE_URL}/pt${route}`,
+          es: `${BASE_URL}/es${route}`,
+          "x-default": `${BASE_URL}/pt${route}`,
+        },
+      },
     }))
   );
 
@@ -21,6 +29,14 @@ export default function sitemap() {
       lastModified: new Date(post.updatedAt ?? post.publishedAt),
       changeFrequency: "monthly" as const,
       priority: 0.7,
+      alternates: {
+        languages: {
+          en: `${BASE_URL}/en/blog/${post.slug}`,
+          pt: `${BASE_URL}/pt/blog/${post.slug}`,
+          es: `${BASE_URL}/es/blog/${post.slug}`,
+          "x-default": `${BASE_URL}/pt/blog/${post.slug}`,
+        },
+      },
     }))
   );
 

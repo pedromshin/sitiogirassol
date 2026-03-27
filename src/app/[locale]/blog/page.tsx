@@ -37,6 +37,7 @@ export async function generateMetadata({ params }: PageProps) {
         en: `${BASE_URL}/en/blog`,
         pt: `${BASE_URL}/pt/blog`,
         es: `${BASE_URL}/es/blog`,
+        "x-default": `${BASE_URL}/pt/blog`,
       },
     },
     openGraph: { title, description, url: `${BASE_URL}/${locale}/blog` },
@@ -56,8 +57,34 @@ export default async function BlogPage({ params }: PageProps) {
       ? "Consejos, guías e inspiración para tu próximo viaje al interior"
       : "Tips, guides and inspiration for your next countryside getaway";
 
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Blog - Sítio Girassol",
+    description: blogMeta.description[loc] ?? blogMeta.description.en,
+    url: `${BASE_URL}/${locale}/blog`,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Sítio Girassol",
+      url: BASE_URL,
+    },
+    hasPart: blogPosts.map((post) => ({
+      "@type": "Article",
+      headline: post.title[loc] ?? post.title.en,
+      url: `${BASE_URL}/${locale}/blog/${post.slug}`,
+      datePublished: post.publishedAt,
+      image: post.coverImage,
+    })),
+  };
+
   return (
     <div className="bg-[#141E19] text-white min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(collectionSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <section className="pt-28 sm:pt-36 md:pt-40 pb-12 md:pb-16 px-4 sm:px-6 text-center max-w-4xl mx-auto">
         <h1 className="font-display text-3xl sm:text-5xl md:text-7xl mb-4 leading-tight">
           {heading}

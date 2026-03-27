@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const title = listingConfig.meta.title[loc] ?? listingConfig.meta.title.en;
   const description = listingConfig.meta.description[loc] ?? listingConfig.meta.description.en;
 
-  const ogImage = `${BASE_URL}/icons/og-image.png`;
   return {
+    metadataBase: new URL(BASE_URL),
     title,
     description,
     openGraph: {
@@ -36,13 +36,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: "Sítio Girassol",
       locale: locale === "pt" ? "pt_BR" : locale === "es" ? "es_ES" : "en_US",
       type: "website",
-      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
     },
     alternates: {
       canonical: `${BASE_URL}/${locale}`,
@@ -50,6 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         en: `${BASE_URL}/en`,
         pt: `${BASE_URL}/pt`,
         es: `${BASE_URL}/es`,
+        "x-default": `${BASE_URL}/pt`,
       },
     },
     keywords: locale === "pt"

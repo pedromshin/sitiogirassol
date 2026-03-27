@@ -115,14 +115,22 @@ export default function JsonLd({ locale }: { locale: string }) {
   const description = listingConfig.meta.description[loc] ?? listingConfig.meta.description.en;
   const faqs = faqItems[loc] ?? faqItems.en;
 
+  const amenityFeature = listingConfig.amenities.flatMap((a) =>
+    a.items.map((item) => ({
+      "@type": "LocationFeatureSpecification" as const,
+      name: item,
+      value: true,
+    }))
+  );
+
   const vacationRental = {
     "@context": "https://schema.org",
     "@type": "VacationRental",
-    identifier: "sitio-girassol-sao-roque",
-    "@id": `${BASE_URL}/#vacation-rental`,
     name: title,
     description,
     url: `${BASE_URL}/${locale}`,
+    identifier: "1345960842338220775",
+    tourBookingPage: listingConfig.airbnbUrl,
     image: listingConfig.photos.slice(0, 10).map((p) => `${BASE_URL}${p.src}`),
     address: {
       "@type": "PostalAddress",
@@ -150,45 +158,71 @@ export default function JsonLd({ locale }: { locale: string }) {
     petsAllowed: true,
     checkinTime: "12:00",
     checkoutTime: "18:00",
-    amenityFeature: listingConfig.amenities.flatMap((a) =>
-      a.items.map((item) => ({
-        "@type": "LocationFeatureSpecification",
-        name: item,
-        value: true,
-      }))
-    ),
+    amenityFeature,
+    containsPlace: {
+      "@type": "Accommodation",
+      bed: [
+        { "@type": "BedDetails", typeOfBed: "King", numberOfBeds: 1 },
+        { "@type": "BedDetails", typeOfBed: "Double", numberOfBeds: 2 },
+        { "@type": "BedDetails", typeOfBed: "Bunk Bed", numberOfBeds: 1 },
+      ],
+      occupancy: {
+        "@type": "QuantitativeValue",
+        value: listingConfig.property.maxGuests,
+      },
+      amenityFeature,
+    },
     offers: {
-      "@type": "Offer",
-      price: listingConfig.pricing.nightlyRate,
-      priceCurrency: listingConfig.pricing.currency,
-      availability: "https://schema.org/InStock",
-      url: listingConfig.airbnbUrl,
-      priceSpecification: [
+      "@type": "AggregateOffer",
+      lowPrice: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100)),
+      highPrice: listingConfig.pricing.nightlyRate,
+      priceCurrency: "BRL",
+      offerCount: 3,
+      offers: [
         {
-          "@type": "UnitPriceSpecification",
+          "@type": "Offer",
+          name: loc === "pt" ? "Diária" : loc === "es" ? "Por noche" : "Nightly",
           price: listingConfig.pricing.nightlyRate,
-          priceCurrency: listingConfig.pricing.currency,
-          unitText: "NIGHT",
+          priceCurrency: "BRL",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: listingConfig.pricing.nightlyRate,
+            priceCurrency: "BRL",
+            unitText: "NIGHT",
+          },
+          availability: "https://schema.org/InStock",
+          url: listingConfig.airbnbUrl,
+        },
+        {
+          "@type": "Offer",
+          name: loc === "pt" ? "Semanal (33% desconto)" : loc === "es" ? "Semanal (33% descuento)" : "Weekly (33% off)",
+          price: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100)),
+          priceCurrency: "BRL",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100)),
+            priceCurrency: "BRL",
+            unitText: "NIGHT",
+          },
+          availability: "https://schema.org/InStock",
+          url: listingConfig.airbnbUrl,
+        },
+        {
+          "@type": "Offer",
+          name: loc === "pt" ? "Mensal (50% desconto)" : loc === "es" ? "Mensual (50% descuento)" : "Monthly (50% off)",
+          price: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100)),
+          priceCurrency: "BRL",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100)),
+            priceCurrency: "BRL",
+            unitText: "NIGHT",
+          },
+          availability: "https://schema.org/InStock",
+          url: listingConfig.airbnbUrl,
         },
       ],
     },
-    containsPlace: [
-      {
-        "@type": "Room",
-        name: loc === "pt" ? "Suíte Principal" : loc === "es" ? "Suite Principal" : "Master Suite",
-        description: loc === "pt" ? "Quarto com cama king size e banheiro privativo" : loc === "es" ? "Habitación con cama king y baño privado" : "Bedroom with king bed and private bathroom",
-      },
-      {
-        "@type": "Room",
-        name: loc === "pt" ? "Segundo Quarto" : loc === "es" ? "Segundo Dormitorio" : "Second Bedroom",
-        description: loc === "pt" ? "Quarto com cama de casal" : loc === "es" ? "Habitación con cama doble" : "Bedroom with double bed",
-      },
-      {
-        "@type": "Room",
-        name: loc === "pt" ? "Terceiro Quarto" : loc === "es" ? "Tercer Dormitorio" : "Third Bedroom",
-        description: loc === "pt" ? "Quarto com beliche e colchões extras" : loc === "es" ? "Habitación con litera y colchones extras" : "Bedroom with bunk bed and extra mattresses",
-      },
-    ],
     containedInPlace: {
       "@type": "City",
       name: "São Roque",
@@ -262,7 +296,101 @@ export default function JsonLd({ locale }: { locale: string }) {
     },
   };
 
-  const schemas = [vacationRental, organization, faqPage, breadcrumb, webSite];
+  const lodgingBusiness = {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    name: "Sítio Girassol",
+    description: listingConfig.meta.description[loc] ?? listingConfig.meta.description.en,
+    url: `${BASE_URL}/${locale}`,
+    image: listingConfig.photos.slice(0, 5).map((p) => `${BASE_URL}${p.src}`),
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "São Roque",
+      addressRegion: "SP",
+      postalCode: "18181-000",
+      addressCountry: "BR",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -23.4907,
+      longitude: -47.2706,
+    },
+    telephone: listingConfig.whatsappNumber,
+    priceRange: "R$ 170 - R$ 340",
+    currenciesAccepted: "BRL",
+    checkinTime: "12:00",
+    checkoutTime: "18:00",
+    starRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+    },
+    amenityFeature,
+    numberOfRooms: 3,
+    petsAllowed: true,
+    makesOffer: {
+      "@type": "Offer",
+      priceSpecification: [
+        {
+          "@type": "UnitPriceSpecification",
+          price: listingConfig.pricing.nightlyRate,
+          priceCurrency: "BRL",
+          unitText: "NIGHT",
+          name: loc === "pt" ? "Diária" : loc === "es" ? "Por noche" : "Per night",
+        },
+        {
+          "@type": "UnitPriceSpecification",
+          price: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100)),
+          priceCurrency: "BRL",
+          unitText: "NIGHT",
+          name: loc === "pt" ? "Semanal (33% desconto)" : loc === "es" ? "Semanal (33% descuento)" : "Weekly (33% discount)",
+        },
+        {
+          "@type": "UnitPriceSpecification",
+          price: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100)),
+          priceCurrency: "BRL",
+          unitText: "NIGHT",
+          name: loc === "pt" ? "Mensal (50% desconto)" : loc === "es" ? "Mensual (50% descuento)" : "Monthly (50% discount)",
+        },
+      ],
+    },
+  };
+
+  const touristDestination = {
+    "@context": "https://schema.org",
+    "@type": "TouristDestination",
+    name: loc === "pt"
+      ? "São Roque - Região Vinícola de São Paulo"
+      : loc === "es"
+      ? "São Roque - Región Vinícola de São Paulo"
+      : "São Roque - São Paulo Wine Region",
+    description: loc === "pt"
+      ? "São Roque é conhecida como a Terra do Vinho, localizada a apenas 60 km de São Paulo. A região oferece vinícolas, trilhas, gastronomia e turismo rural."
+      : loc === "es"
+      ? "São Roque es conocida como la Tierra del Vino, ubicada a solo 60 km de São Paulo. La región ofrece bodegas, senderos, gastronomía y turismo rural."
+      : "São Roque is known as the Land of Wine, located just 60 km from São Paulo. The region offers wineries, trails, gastronomy, and rural tourism.",
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -23.5292,
+      longitude: -47.1353,
+    },
+    containedInPlace: {
+      "@type": "AdministrativeArea",
+      name: "São Paulo",
+      "@id": "https://www.wikidata.org/wiki/Q174",
+    },
+    touristType: loc === "pt"
+      ? ["Turismo Rural", "Enoturismo", "Turismo de Natureza", "Turismo Familiar"]
+      : loc === "es"
+      ? ["Turismo Rural", "Enoturismo", "Turismo de Naturaleza", "Turismo Familiar"]
+      : ["Rural Tourism", "Wine Tourism", "Nature Tourism", "Family Tourism"],
+    containsPlace: {
+      "@type": "VacationRental",
+      name: "Sítio Girassol",
+      url: `${BASE_URL}/${locale}`,
+    },
+  };
+
+  const schemas = [vacationRental, lodgingBusiness, touristDestination, organization, faqPage, breadcrumb, webSite];
 
   return (
     <>
