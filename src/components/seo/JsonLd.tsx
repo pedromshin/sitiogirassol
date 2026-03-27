@@ -226,7 +226,24 @@ export default function JsonLd({ locale }: { locale: string }) {
     ],
   };
 
-  const schemas = [vacationRental, organization, faqPage, breadcrumb];
+  const webSite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Sítio Girassol",
+    url: BASE_URL,
+    inLanguage: [
+      { "@type": "Language", name: "Portuguese" },
+      { "@type": "Language", name: "English" },
+      { "@type": "Language", name: "Spanish" },
+    ],
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${BASE_URL}/${loc}/blog?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const schemas = [vacationRental, organization, faqPage, breadcrumb, webSite];
 
   return (
     <>

@@ -28,7 +28,7 @@ export default function LocationSection() {
             <span className="font-bold text-xs uppercase tracking-widest block mb-2 text-accent-gold">
               {t("label")}
             </span>
-            <h3 className="font-display text-2xl sm:text-3xl text-white mb-4">{t("title")}</h3>
+            <h2 className="font-display text-2xl sm:text-3xl text-white mb-4">{t("title")}</h2>
             <p className="text-slate-400 font-light mb-6">{t("description")}</p>
             <div className="flex items-center gap-3 text-white mb-8">
               <span className="material-symbols-outlined text-accent-gold">

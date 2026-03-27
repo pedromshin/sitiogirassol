@@ -67,13 +67,13 @@ export default function GalleryMarquee() {
             fill
             className="object-cover object-[25%_50%] transition-transform duration-700 group-hover:scale-105"
             sizes="(max-width: 1400px) 100vw, 1400px"
-            priority={false}
+            priority
           />
           <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-8 z-20">
             <span className="inline-block px-3 py-1 font-bold text-xs uppercase tracking-widest rounded mb-2 bg-accent-gold text-forest-mid">
               {t("heroBadge")}
             </span>
-            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl text-white">{t("heroTitle")}</h1>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-white">{t("heroTitle")}</h2>
           </div>
         </div>
 
@@ -113,6 +113,7 @@ export default function GalleryMarquee() {
                           src={photo.src}
                           alt={photo.alt}
                           fill
+                          loading="lazy"
                           className="object-cover transition-transform duration-500 group-hover/card:scale-105"
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />

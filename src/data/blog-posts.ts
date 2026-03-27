@@ -1,3 +1,5 @@
+import { listingConfig } from "./listing.config";
+
 export type BlogPost = {
   slug: string;
   title: Record<string, string>;
@@ -212,5 +214,371 @@ Tarifas desde R$ 340/noche con descuentos de hasta 50% para estadías mensuales.
       es: "Piscina privada de Sítio Girassol, finca para alquilar en São Roque",
     },
     tags: ["chácara", "aluguel temporada", "são paulo", "piscina"],
+  },
+  {
+    slug: "fim-de-semana-interior-sp",
+    title: {
+      pt: "Fim de Semana no Interior de SP: Roteiro Completo para Famílias",
+      en: "Weekend in São Paulo Countryside: Complete Family Itinerary",
+      es: "Fin de Semana en el Interior de SP: Itinerario Completo para Familias",
+    },
+    description: {
+      pt: "Planeje o fim de semana perfeito no interior de São Paulo. Roteiro com vinícolas, trilhas, gastronomia e hospedagem em São Roque para famílias.",
+      en: "Plan the perfect weekend in the São Paulo countryside. Itinerary with wineries, trails, gastronomy, and accommodation in São Roque for families.",
+      es: "Planifica el fin de semana perfecto en el interior de São Paulo. Itinerario con bodegas, senderos, gastronomía y alojamiento en São Roque para familias.",
+    },
+    content: {
+      pt: `Um fim de semana no interior de São Paulo é o antídoto perfeito para o estresse da capital. A região de São Roque, a apenas 60 km de SP, oferece o equilíbrio ideal entre natureza, gastronomia e descanso.
+
+## Sexta-feira: Chegada e Instalação
+
+Saia de São Paulo no final da tarde pela Castello Branco. Em aproximadamente 1 hora você chega a São Roque. Chegue ao **Sítio Girassol** antes das 20h (horário de check-in), acomode-se nos 3 quartos confortáveis e acenda a lareira para uma noite tranquila.
+
+## Sábado: Vinícolas e Natureza
+
+Comece o dia com café da manhã na varanda com vista para os 2,6 hectares de natureza. Pela manhã, visite a Rota do Vinho — a Vinícola Góes e a Villa Santa Maria são as mais tradicionais.
+
+Almoce em um dos restaurantes italianos da região e volte para o sítio à tarde para aproveitar a **piscina privativa** e a churrasqueira. As crianças podem brincar na quadra de tênis e vôlei.
+
+## Domingo: Trilhas e Despedida
+
+Aproveite a manhã para fazer trilhas pela propriedade ou jogar jogos de tabuleiro em família. O check-out é até as 18h, então aproveite a piscina mais uma vez antes de partir.
+
+## Dicas Práticas
+
+- **Mercado**: Faça compras no Mercado Figueira (12 km antes do sítio) ou na mercearia local (5 km antes)
+- **Pets**: O Sítio Girassol aceita animais de estimação
+- **Diária**: A partir de R$ ${listingConfig.pricing.nightlyRate}/noite com descontos semanais e mensais
+
+[Reserve no Sítio Girassol](https://www.airbnb.com/rooms/1345960842338220775) e garanta seu refúgio no interior.`,
+      en: `A weekend in the São Paulo countryside is the perfect antidote to city stress. The São Roque region, just 60 km from SP, offers the ideal balance of nature, gastronomy, and relaxation.
+
+## Friday: Arrival and Settling In
+
+Leave São Paulo in the late afternoon via Castello Branco highway. In approximately 1 hour you'll reach São Roque. Arrive at **Sítio Girassol** before 8 PM (check-in time), settle into the 3 comfortable bedrooms, and light the fireplace for a peaceful evening.
+
+## Saturday: Wineries and Nature
+
+Start the day with breakfast on the balcony overlooking 2.6 hectares of nature. In the morning, visit the Wine Route — Vinícola Góes and Villa Santa Maria are the most traditional.
+
+Have lunch at one of the region's Italian restaurants and return to the sítio in the afternoon to enjoy the **private pool** and BBQ. Kids can play on the tennis and volleyball court.
+
+## Sunday: Trails and Departure
+
+Enjoy the morning hiking the property trails or playing board games with the family. Check-out is at 6 PM, so enjoy the pool one more time before leaving.
+
+## Practical Tips
+
+- **Grocery**: Shop at Mercado Figueira (12 km before the sítio) or the local store (5 km before)
+- **Pets**: Sítio Girassol is pet-friendly
+- **Rate**: From R$ ${listingConfig.pricing.nightlyRate}/night with weekly and monthly discounts
+
+[Book at Sítio Girassol](https://www.airbnb.com/rooms/1345960842338220775) and secure your countryside retreat.`,
+      es: `Un fin de semana en el interior de São Paulo es el antídoto perfecto para el estrés de la capital. La región de São Roque, a solo 60 km de SP, ofrece el equilibrio ideal entre naturaleza, gastronomía y descanso.
+
+## Viernes: Llegada e Instalación
+
+Salga de São Paulo al final de la tarde por la Castello Branco. En aproximadamente 1 hora llegará a São Roque. Llegue al **Sítio Girassol** antes de las 20h (horario de check-in), acomódese en los 3 dormitorios confortables y encienda la chimenea para una noche tranquila.
+
+## Sábado: Bodegas y Naturaleza
+
+Comience el día con desayuno en la terraza con vista a las 2,6 hectáreas de naturaleza. Por la mañana, visite la Ruta del Vino — Vinícola Góes y Villa Santa Maria son las más tradicionales.
+
+Almuerce en uno de los restaurantes italianos de la región y vuelva a la finca por la tarde para disfrutar de la **piscina privada** y la parrilla. Los niños pueden jugar en la cancha de tenis y voleibol.
+
+## Domingo: Senderos y Despedida
+
+Aproveche la mañana para hacer senderos por la propiedad o jugar juegos de mesa en familia. El check-out es hasta las 18h, así que disfrute la piscina una vez más antes de partir.
+
+## Consejos Prácticos
+
+- **Mercado**: Haga compras en Mercado Figueira (12 km antes de la finca) o en la tienda local (5 km antes)
+- **Mascotas**: Sítio Girassol acepta mascotas
+- **Tarifa**: Desde R$ ${listingConfig.pricing.nightlyRate}/noche con descuentos semanales y mensuales
+
+[Reserve en Sítio Girassol](https://www.airbnb.com/rooms/1345960842338220775) y asegure su refugio en el interior.`,
+    },
+    publishedAt: "2026-03-27",
+    coverImage: "/images/exterior/019_Exterior_5.jpeg",
+    coverAlt: {
+      pt: "Natureza preservada no Sítio Girassol, fim de semana no interior de SP",
+      en: "Preserved nature at Sítio Girassol, weekend in São Paulo countryside",
+      es: "Naturaleza preservada en Sítio Girassol, fin de semana en el interior de SP",
+    },
+    tags: ["fim de semana", "interior sp", "roteiro", "família"],
+  },
+  {
+    slug: "sitio-com-piscina-para-alugar",
+    title: {
+      pt: "Sítio com Piscina para Alugar Perto de São Paulo: Como Encontrar o Ideal",
+      en: "Farm with Pool for Rent Near São Paulo: How to Find the Perfect One",
+      es: "Finca con Piscina para Alquilar Cerca de São Paulo: Cómo Encontrar la Ideal",
+    },
+    description: {
+      pt: "Procurando sítio com piscina para alugar perto de SP? Veja critérios essenciais: piscina privativa, churrasqueira, aceita pets, natureza e preço justo.",
+      en: "Looking for a farm with pool for rent near SP? See essential criteria: private pool, BBQ, pet-friendly, nature, and fair pricing.",
+      es: "¿Buscando finca con piscina para alquilar cerca de SP? Vea criterios esenciales: piscina privada, parrilla, acepta mascotas, naturaleza y precio justo.",
+    },
+    content: {
+      pt: `A busca por um sítio com piscina para alugar perto de São Paulo é cada vez mais comum, especialmente para famílias que querem fugir da rotina sem viajar longas distâncias.
+
+## O que Avaliar ao Escolher um Sítio com Piscina
+
+### Piscina Privativa vs Compartilhada
+
+A grande diferença está na privacidade. Em chácaras compartilhadas, você divide a piscina com outros hóspedes. No **Sítio Girassol**, a piscina é 100% privativa — só você e sua família.
+
+### Tamanho da Propriedade
+
+Quanto maior a área verde, melhor a experiência. Propriedades com menos de 1 hectare podem parecer apertadas. O Sítio Girassol oferece **2,6 hectares** de natureza preservada.
+
+### Infraestrutura Completa
+
+Verifique se o sítio tem: churrasqueira coberta (para dias de chuva), cozinha equipada, Wi-Fi, e área de lazer. No Girassol, temos duas churrasqueiras, cozinha completa, lareira, quadra esportiva e jogos de tabuleiro.
+
+### Aceita Pets?
+
+Para quem tem animais de estimação, esse é um critério eliminatório. O Sítio Girassol é **pet-friendly** e oferece ampla área cercada para seu animal brincar com segurança.
+
+### Distância de São Paulo
+
+O ideal é até 1h30 de viagem. São Roque fica a apenas 60 km (1h pela Castello Branco), sendo uma das opções mais próximas com natureza genuína.
+
+## Por que o Sítio Girassol é a Melhor Escolha
+
+- Piscina privativa
+- 2,6 hectares de natureza
+- 3 quartos (até 6 hóspedes)
+- Duas churrasqueiras
+- Aceita pets
+- Wi-Fi
+- Quadra de tênis e vôlei
+- Lareira
+- Diária a partir de R$ ${listingConfig.pricing.nightlyRate}
+- ${listingConfig.pricing.weeklyDiscountPercent}% desconto semanal / ${listingConfig.pricing.monthlyDiscountPercent}% mensal
+
+[Reserve agora no Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
+      en: `The search for a farm with pool for rent near São Paulo is increasingly common, especially for families wanting to escape routine without traveling long distances.
+
+## What to Evaluate When Choosing a Farm with Pool
+
+### Private vs Shared Pool
+
+The big difference is privacy. In shared properties, you share the pool with other guests. At **Sítio Girassol**, the pool is 100% private — just you and your family.
+
+### Property Size
+
+The larger the green area, the better the experience. Properties under 1 hectare can feel cramped. Sítio Girassol offers **2.6 hectares** of preserved nature.
+
+### Complete Infrastructure
+
+Check if the farm has: covered BBQ (for rainy days), equipped kitchen, Wi-Fi, and leisure area. At Girassol, we have two BBQ areas, full kitchen, fireplace, sports court, and board games.
+
+### Pet-Friendly?
+
+For pet owners, this is a deal-breaker criterion. Sítio Girassol is **pet-friendly** and offers ample fenced area for your pet to play safely.
+
+### Distance from São Paulo
+
+Ideally within 1.5 hours. São Roque is just 60 km (1h via Castello Branco), making it one of the closest options with genuine nature.
+
+## Why Sítio Girassol is the Best Choice
+
+- Private pool
+- 2.6 hectares of nature
+- 3 bedrooms (up to 6 guests)
+- Two BBQ areas
+- Pet-friendly
+- Wi-Fi
+- Tennis and volleyball court
+- Fireplace
+- Rates from R$ ${listingConfig.pricing.nightlyRate}/night
+- ${listingConfig.pricing.weeklyDiscountPercent}% weekly / ${listingConfig.pricing.monthlyDiscountPercent}% monthly discounts
+
+[Book now on Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
+      es: `La búsqueda de una finca con piscina para alquilar cerca de São Paulo es cada vez más común, especialmente para familias que quieren escapar de la rutina sin viajar largas distancias.
+
+## Qué Evaluar al Elegir una Finca con Piscina
+
+### Piscina Privada vs Compartida
+
+La gran diferencia está en la privacidad. En propiedades compartidas, compartes la piscina con otros huéspedes. En **Sítio Girassol**, la piscina es 100% privada — solo tú y tu familia.
+
+### Tamaño de la Propiedad
+
+Cuanto mayor el área verde, mejor la experiencia. Propiedades con menos de 1 hectárea pueden sentirse apretadas. Sítio Girassol ofrece **2,6 hectáreas** de naturaleza preservada.
+
+### Infraestructura Completa
+
+Verifica si la finca tiene: parrilla cubierta (para días de lluvia), cocina equipada, Wi-Fi y área de ocio. En Girassol, tenemos dos parrillas, cocina completa, chimenea, cancha deportiva y juegos de mesa.
+
+### ¿Acepta Mascotas?
+
+Para quienes tienen mascotas, este es un criterio eliminatorio. Sítio Girassol es **pet-friendly** y ofrece amplia área cercada para que tu mascota juegue con seguridad.
+
+### Distancia de São Paulo
+
+Lo ideal es hasta 1h30 de viaje. São Roque está a solo 60 km (1h por la Castello Branco), siendo una de las opciones más cercanas con naturaleza genuina.
+
+## Por qué Sítio Girassol es la Mejor Opción
+
+- Piscina privada
+- 2,6 hectáreas de naturaleza
+- 3 dormitorios (hasta 6 huéspedes)
+- Dos parrillas
+- Acepta mascotas
+- Wi-Fi
+- Cancha de tenis y voleibol
+- Chimenea
+- Tarifas desde R$ ${listingConfig.pricing.nightlyRate}/noche
+- ${listingConfig.pricing.weeklyDiscountPercent}% descuento semanal / ${listingConfig.pricing.monthlyDiscountPercent}% mensual
+
+[Reserve ahora en Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
+    },
+    publishedAt: "2026-03-27",
+    coverImage: "/images/pool/005_Pool_5.jpeg",
+    coverAlt: {
+      pt: "Piscina privativa cercada por natureza no Sítio Girassol São Roque",
+      en: "Private pool surrounded by nature at Sítio Girassol São Roque",
+      es: "Piscina privada rodeada de naturaleza en Sítio Girassol São Roque",
+    },
+    tags: ["sítio com piscina", "aluguel", "perto de são paulo", "pet-friendly"],
+  },
+  {
+    slug: "hospedagem-pet-friendly-interior-sp",
+    title: {
+      pt: "Hospedagem Pet-Friendly no Interior de SP: Onde Levar seu Pet nas Férias",
+      en: "Pet-Friendly Accommodation in São Paulo Countryside: Where to Take Your Pet",
+      es: "Hospedaje Pet-Friendly en el Interior de SP: Dónde Llevar tu Mascota",
+    },
+    description: {
+      pt: "Guia de hospedagens que aceitam pets no interior de São Paulo. Dicas para viajar com animais, o que levar e as melhores chácaras pet-friendly perto de SP.",
+      en: "Guide to pet-friendly accommodations in the São Paulo countryside. Tips for traveling with pets, what to bring, and the best pet-friendly farms near SP.",
+      es: "Guía de hospedajes que aceptan mascotas en el interior de São Paulo. Consejos para viajar con animales, qué llevar y las mejores fincas pet-friendly cerca de SP.",
+    },
+    content: {
+      pt: `Viajar com pets é cada vez mais comum, mas encontrar hospedagem que realmente aceite animais de estimação no interior de São Paulo ainda é um desafio. Muitos lugares dizem aceitar pets mas impõem tantas restrições que a experiência se torna estressante.
+
+## O que Verificar Antes de Reservar
+
+### Política Real de Pets
+
+Pergunte diretamente: qual o tamanho máximo aceito? Precisa de caixa de transporte? Tem taxa extra? Alguns lugares aceitam apenas cães pequenos ou cobram valores abusivos.
+
+### Área Externa Cercada
+
+Para que seu pet possa brincar livremente, a propriedade precisa ter **área cercada**. Isso é fundamental para a segurança do animal e sua tranquilidade.
+
+### Superfícies e Pisos
+
+Pisos escorregadios podem machucar seu pet. Propriedades com área de grama e terra são mais confortáveis para animais.
+
+## Dicas para Viajar com seu Pet
+
+1. **Leve a caminha e cobertores** do seu pet — o cheiro familiar reduz o estresse
+2. **Água e ração suficientes** para toda a estadia
+3. **Coleira e identificação** atualizadas
+4. **Saquinhos** para recolher dejetos
+5. **Brinquedos favoritos** para manter o pet entretido
+6. **Carteira de vacinação** sempre à mão
+
+## Sítio Girassol: Verdadeiramente Pet-Friendly
+
+No **Sítio Girassol** em São Roque, pets são genuinamente bem-vindos — sem taxas extras e sem restrições de porte. A propriedade oferece:
+
+- **2,6 hectares totalmente cercados** para seu pet explorar com segurança
+- **Ampla área de grama** natural
+- **Piscina privativa** (área separada para pets)
+- **Sem vizinhos próximos** — seu pet pode latir e brincar sem preocupação
+- **Trilhas na natureza** perfeitas para passeios com o pet
+
+A apenas 60 km de São Paulo, com 3 quartos e capacidade para 6 hóspedes. Diária a partir de R$ ${listingConfig.pricing.nightlyRate}.
+
+[Reserve o Sítio Girassol no Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
+      en: `Traveling with pets is increasingly common, but finding accommodation that truly accepts pets in the São Paulo countryside is still a challenge. Many places claim to accept pets but impose so many restrictions that the experience becomes stressful.
+
+## What to Check Before Booking
+
+### Actual Pet Policy
+
+Ask directly: what's the maximum size accepted? Do you need a carrier? Is there an extra fee? Some places only accept small dogs or charge excessive fees.
+
+### Fenced Outdoor Area
+
+For your pet to play freely, the property needs a **fenced area**. This is essential for your pet's safety and your peace of mind.
+
+### Surfaces and Floors
+
+Slippery floors can hurt your pet. Properties with grass and natural terrain are more comfortable for animals.
+
+## Tips for Traveling with Your Pet
+
+1. **Bring your pet's bed and blankets** — the familiar smell reduces stress
+2. **Enough water and food** for the entire stay
+3. **Updated collar and ID**
+4. **Waste bags** for cleanup
+5. **Favorite toys** to keep your pet entertained
+6. **Vaccination records** always handy
+
+## Sítio Girassol: Truly Pet-Friendly
+
+At **Sítio Girassol** in São Roque, pets are genuinely welcome — no extra fees and no size restrictions. The property offers:
+
+- **2.6 fully fenced hectares** for your pet to explore safely
+- **Ample natural grass area**
+- **Private pool** (separate area for pets)
+- **No nearby neighbors** — your pet can bark and play without worry
+- **Nature trails** perfect for walks with your pet
+
+Just 60 km from São Paulo, with 3 bedrooms and capacity for 6 guests. Rates from R$ ${listingConfig.pricing.nightlyRate}/night.
+
+[Book Sítio Girassol on Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
+      es: `Viajar con mascotas es cada vez más común, pero encontrar hospedaje que realmente acepte animales en el interior de São Paulo sigue siendo un desafío. Muchos lugares dicen aceptar mascotas pero imponen tantas restricciones que la experiencia se vuelve estresante.
+
+## Qué Verificar Antes de Reservar
+
+### Política Real de Mascotas
+
+Pregunte directamente: ¿cuál es el tamaño máximo aceptado? ¿Necesita transportín? ¿Hay tarifa extra? Algunos lugares solo aceptan perros pequeños o cobran valores excesivos.
+
+### Área Externa Cercada
+
+Para que tu mascota pueda jugar libremente, la propiedad necesita un **área cercada**. Esto es fundamental para la seguridad del animal y tu tranquilidad.
+
+### Superficies y Pisos
+
+Pisos resbaladizos pueden lastimar a tu mascota. Propiedades con área de césped y tierra son más cómodas para animales.
+
+## Consejos para Viajar con tu Mascota
+
+1. **Lleva la cama y cobijas** de tu mascota — el olor familiar reduce el estrés
+2. **Agua y comida suficientes** para toda la estadía
+3. **Collar e identificación** actualizados
+4. **Bolsas** para recoger desechos
+5. **Juguetes favoritos** para mantener a tu mascota entretenida
+6. **Cartilla de vacunación** siempre a mano
+
+## Sítio Girassol: Verdaderamente Pet-Friendly
+
+En **Sítio Girassol** en São Roque, las mascotas son genuinamente bienvenidas — sin tarifas extras y sin restricciones de tamaño. La propiedad ofrece:
+
+- **2,6 hectáreas totalmente cercadas** para que tu mascota explore con seguridad
+- **Amplia área de césped** natural
+- **Piscina privada** (área separada para mascotas)
+- **Sin vecinos cercanos** — tu mascota puede ladrar y jugar sin preocupación
+- **Senderos en la naturaleza** perfectos para paseos con tu mascota
+
+A solo 60 km de São Paulo, con 3 dormitorios y capacidad para 6 huéspedes. Tarifas desde R$ ${listingConfig.pricing.nightlyRate}/noche.
+
+[Reserve Sítio Girassol en Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
+    },
+    publishedAt: "2026-03-27",
+    coverImage: "/images/exterior/020_Exterior_6.jpeg",
+    coverAlt: {
+      pt: "Área de lazer ao ar livre no Sítio Girassol, hospedagem pet-friendly em São Roque",
+      en: "Outdoor leisure area at Sítio Girassol, pet-friendly accommodation in São Roque",
+      es: "Área de ocio al aire libre en Sítio Girassol, hospedaje pet-friendly en São Roque",
+    },
+    tags: ["pet-friendly", "hospedagem", "interior sp", "viajar com pets"],
   },
 ];
