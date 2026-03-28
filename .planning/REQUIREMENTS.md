@@ -27,17 +27,17 @@ Requirements for revenue targets. Each maps to roadmap phases.
 
 ### Facebook/Instagram Ads
 
-- [ ] **ADS-01**: Restructure Facebook ad campaigns from Traffic objective to Leads/Messages objective
-- [ ] **ADS-02**: Set up retargeting audience from website visitors (Facebook Pixel already installed)
+- [x] **ADS-01**: Restructure Facebook ad campaigns from Traffic objective to Leads/Messages objective
+- [x] **ADS-02**: Set up retargeting audience from website visitors (Facebook Pixel already installed)
 - [ ] **ADS-03**: Create 3-layer ad funnel — Layer 1: Awareness (Reels/video reach), Layer 2: Consideration (retargeting engaged users), Layer 3: Conversion (Leads/Messages to past engagers)
-- [ ] **ADS-04**: Set up campaign budget optimization (CBO) instead of per-ad-set budgets
+- [x] **ADS-04**: Set up campaign budget optimization (CBO) instead of per-ad-set budgets
 - [ ] **ADS-05**: Create lookalike audiences from website visitors and Instagram engagers
-- [ ] **ADS-06**: Define monthly ad budget with clear ROI tracking (target: R$0.50 or less per qualified lead)
+- [x] **ADS-06**: Define monthly ad budget with clear ROI tracking (target: R$0.50 or less per qualified lead)
 
 ### Instagram Content Strategy
 
-- [ ] **INSTA-01**: Establish 3-4 Reels per week posting cadence focused on property experience (not empty rooms)
-- [ ] **INSTA-02**: Define content pillars — Property Experience 30%, Local Discovery 25%, Social Proof 25%, Behind the Scenes 20%
+- [x] **INSTA-01**: Establish 3-4 Reels per week posting cadence focused on property experience (not empty rooms)
+- [x] **INSTA-02**: Define content pillars — Property Experience 30%, Local Discovery 25%, Social Proof 25%, Behind the Scenes 20%
 - [ ] **INSTA-03**: Create content batch production workflow (film 2-3 hours, produce 2 weeks of content)
 - [ ] **INSTA-04**: Develop 10+ Reel templates/concepts that can be repeated with variations
 
@@ -109,14 +109,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LISTING-03 | Phase 1 | Complete |
 | LISTING-04 | Phase 1 | Complete |
 | LISTING-05 | Phase 1 | Complete |
-| ADS-01 | Phase 2 | Pending |
-| ADS-02 | Phase 2 | Pending |
+| ADS-01 | Phase 2 | Complete |
+| ADS-02 | Phase 2 | Complete |
 | ADS-03 | Phase 3 | Pending |
-| ADS-04 | Phase 2 | Pending |
+| ADS-04 | Phase 2 | Complete |
 | ADS-05 | Phase 3 | Pending |
-| ADS-06 | Phase 2 | Pending |
-| INSTA-01 | Phase 2 | Pending |
-| INSTA-02 | Phase 2 | Pending |
+| ADS-06 | Phase 2 | Complete |
+| INSTA-01 | Phase 2 | Complete |
+| INSTA-02 | Phase 2 | Complete |
 | INSTA-03 | Phase 3 | Pending |
 | INSTA-04 | Phase 3 | Pending |
 | COMM-01 | Phase 1 | Complete |
