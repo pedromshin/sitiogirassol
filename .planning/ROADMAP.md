@@ -45,12 +45,12 @@ Plans:
   3. Manual double-booking prevention protocol is documented and executed within 1 hour of every booking on any platform
   4. Facebook/Instagram ads are running with Leads or Messages objective (zero active campaigns using Traffic objective), with a defined monthly budget and ROI tracking
   5. Instagram is posting 3-4 Reels per week following defined content pillars (Property Experience, Local Discovery, Social Proof, Behind the Scenes)
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
-- [ ] 02-03: TBD
+- [ ] 02-01-PLAN.md -- Create platform listing guides for Booking.com, VRBO/AlugueTemporada, and TemporadaLivre (DIST-01, DIST-02, DIST-05)
+- [ ] 02-02-PLAN.md -- Create calendar sync guide with double-booking prevention protocol and PriceLabs setup guide (DIST-03, DIST-04, PRICE-07)
+- [ ] 02-03-PLAN.md -- Create Facebook Ads restructuring guide and Instagram content strategy (ADS-01, ADS-02, ADS-04, ADS-06, INSTA-01, INSTA-02)
 
 ### Phase 3: Growth Engine
 **Goal**: A repeatable marketing system that sustains bookings through shoulder and low season without one-off effort
