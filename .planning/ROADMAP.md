@@ -48,7 +48,7 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md -- Create platform listing guides for Booking.com, VRBO/AlugueTemporada, and TemporadaLivre (DIST-01, DIST-02, DIST-05)
+- [x] 02-01-PLAN.md -- Create platform listing guides for Booking.com, VRBO/AlugueTemporada, and TemporadaLivre (DIST-01, DIST-02, DIST-05)
 - [x] 02-02-PLAN.md -- Create calendar sync guide with double-booking prevention protocol and PriceLabs setup guide (DIST-03, DIST-04, PRICE-07)
 - [ ] 02-03-PLAN.md -- Create Facebook Ads restructuring guide and Instagram content strategy (ADS-01, ADS-02, ADS-04, ADS-06, INSTA-01, INSTA-02)
 

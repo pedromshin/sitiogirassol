@@ -19,11 +19,11 @@ Requirements for revenue targets. Each maps to roadmap phases.
 
 ### Multi-Platform Distribution
 
-- [ ] **DIST-01**: Create and publish Booking.com listing with matching photos, description, and pricing
-- [ ] **DIST-02**: Create and publish VRBO/AlugueTemporada listing
+- [x] **DIST-01**: Create and publish Booking.com listing with matching photos, description, and pricing
+- [x] **DIST-02**: Create and publish VRBO/AlugueTemporada listing
 - [x] **DIST-03**: Set up iCal calendar sync between Airbnb, Booking.com, and VRBO
 - [x] **DIST-04**: Establish manual double-booking prevention protocol (block dates on other platforms within 1 hour of any booking)
-- [ ] **DIST-05**: Research and list on TemporadaLivre (zero-commission subscription model)
+- [x] **DIST-05**: Research and list on TemporadaLivre (zero-commission subscription model)
 
 ### Facebook/Instagram Ads
 
@@ -99,11 +99,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PRICE-05 | Phase 1 | Complete |
 | PRICE-06 | Phase 1 | Complete |
 | PRICE-07 | Phase 2 | Complete |
-| DIST-01 | Phase 2 | Pending |
-| DIST-02 | Phase 2 | Pending |
+| DIST-01 | Phase 2 | Complete |
+| DIST-02 | Phase 2 | Complete |
 | DIST-03 | Phase 2 | Complete |
 | DIST-04 | Phase 2 | Complete |
-| DIST-05 | Phase 2 | Pending |
+| DIST-05 | Phase 2 | Complete |
 | LISTING-01 | Phase 1 | Complete |
 | LISTING-02 | Phase 1 | Complete |
 | LISTING-03 | Phase 1 | Complete |

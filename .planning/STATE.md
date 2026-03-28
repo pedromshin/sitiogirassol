@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-02-PLAN.md (calendar sync guide + PriceLabs setup guide)
-last_updated: "2026-03-28T00:44:15.662Z"
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-03-28T00:46:18.927Z"
 last_activity: 2026-03-28
 progress:
   total_phases: 3
   completed_phases: 1
   total_plans: 6
-  completed_plans: 4
+  completed_plans: 5
   percent: 0
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 ## Current Position
 
 Phase: 02 (distribution-marketing-launch) — EXECUTING
-Plan: 2 of 3
+Plan: 3 of 3
 Status: Ready to execute
 Last activity: 2026-03-28
 
@@ -56,6 +56,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01 P02 | 3min | 2 tasks | 2 files |
 | Phase 01 P03 | 4min | 3 tasks | 3 files |
 | Phase 02 P02 | 3min | 2 tasks | 2 files |
+| Phase 02 P01 | 5min | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -74,6 +75,8 @@ Recent decisions affecting current work:
 - [Phase 01]: House manual uses 8-section bilingual format with owner placeholder pattern
 - [Phase 02]: Airbnb as hub in iCal sync topology -- all platforms sync bidirectionally through Airbnb
 - [Phase 02]: PriceLabs manual review mode for 2 weeks before enabling auto-sync, R$280 floor / R$700 ceiling
+- [Phase 02]: Platform descriptions adapted per D-02: Booking.com structured/factual, VRBO narrative/experiential, TemporadaLivre Portuguese-only
+- [Phase 02]: All 3 platform guides use identical base pricing (R$280/R$380/R$180) per D-01
 
 ### Pending Todos
 
@@ -87,6 +90,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-28T00:44:15.658Z
-Stopped at: Completed 02-02-PLAN.md (calendar sync guide + PriceLabs setup guide)
+Last session: 2026-03-28T00:46:18.924Z
+Stopped at: Completed 02-01-PLAN.md
 Resume file: None
