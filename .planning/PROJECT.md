@@ -26,10 +26,10 @@ Hit R$ 4,000 revenue by end of April 2026 and R$ 7,000 by end of May 2026 throug
 
 - [ ] Achieve R$ 4,000 total revenue by end of April 2026
 - [ ] Achieve R$ 7,000 total revenue by end of May 2026
-- [ ] Create data-driven Facebook/Instagram ad campaigns optimized for booking conversions
-- [ ] Develop Instagram content strategy and posting cadence
-- [ ] List property on Booking.com to expand reach
-- [ ] List property on additional Brazilian platforms (AlugueTemporada/TemporadaLivre)
+- [x] Create data-driven Facebook/Instagram ad campaigns optimized for booking conversions — Validated in Phase 2: Distribution + Marketing Launch
+- [x] Develop Instagram content strategy and posting cadence — Validated in Phase 2: Distribution + Marketing Launch
+- [x] List property on Booking.com to expand reach — Validated in Phase 2: Distribution + Marketing Launch
+- [x] List property on additional Brazilian platforms (AlugueTemporada/TemporadaLivre) — Validated in Phase 2: Distribution + Marketing Launch
 - [x] Implement seasonal pricing strategy based on historical data — Validated in Phase 1: Foundation
 - [x] Optimize Airbnb listing (title, description, photos, pricing, settings) — Validated in Phase 1: Foundation
 - [ ] Create a repeatable marketing system (not one-off efforts)
@@ -118,4 +118,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-28 after Phase 1: Foundation complete — pricing config updated, listing/communication guides delivered*
+*Last updated: 2026-03-28 after Phase 2: Distribution + Marketing Launch complete — platform listing guides, calendar sync, ads restructuring, and Instagram strategy delivered*
