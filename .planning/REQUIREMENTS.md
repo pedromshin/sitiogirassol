@@ -15,14 +15,14 @@ Requirements for revenue targets. Each maps to roadmap phases.
 - [x] **PRICE-04**: Set holiday premium pricing for Easter (Apr 17-21) at R$500-700/night and Labor Day (May 1-2) at R$450-600/night
 - [x] **PRICE-05**: Implement day-of-week yield management (Fri/Sat premium 25-35% above weekday base)
 - [x] **PRICE-06**: Add cleaning fee of R$150-200 to discourage low-value 1-night stays
-- [ ] **PRICE-07**: Start PriceLabs free trial for dynamic pricing with R$280 floor (Phase 2+)
+- [x] **PRICE-07**: Start PriceLabs free trial for dynamic pricing with R$280 floor (Phase 2+)
 
 ### Multi-Platform Distribution
 
 - [ ] **DIST-01**: Create and publish Booking.com listing with matching photos, description, and pricing
 - [ ] **DIST-02**: Create and publish VRBO/AlugueTemporada listing
-- [ ] **DIST-03**: Set up iCal calendar sync between Airbnb, Booking.com, and VRBO
-- [ ] **DIST-04**: Establish manual double-booking prevention protocol (block dates on other platforms within 1 hour of any booking)
+- [x] **DIST-03**: Set up iCal calendar sync between Airbnb, Booking.com, and VRBO
+- [x] **DIST-04**: Establish manual double-booking prevention protocol (block dates on other platforms within 1 hour of any booking)
 - [ ] **DIST-05**: Research and list on TemporadaLivre (zero-commission subscription model)
 
 ### Facebook/Instagram Ads
@@ -98,11 +98,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PRICE-04 | Phase 1 | Complete |
 | PRICE-05 | Phase 1 | Complete |
 | PRICE-06 | Phase 1 | Complete |
-| PRICE-07 | Phase 2 | Pending |
+| PRICE-07 | Phase 2 | Complete |
 | DIST-01 | Phase 2 | Pending |
 | DIST-02 | Phase 2 | Pending |
-| DIST-03 | Phase 2 | Pending |
-| DIST-04 | Phase 2 | Pending |
+| DIST-03 | Phase 2 | Complete |
+| DIST-04 | Phase 2 | Complete |
 | DIST-05 | Phase 2 | Pending |
 | LISTING-01 | Phase 1 | Complete |
 | LISTING-02 | Phase 1 | Complete |
