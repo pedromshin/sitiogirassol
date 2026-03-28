@@ -61,11 +61,11 @@ Plans:
   2. Lookalike audiences built from website visitors and Instagram engagers are active and receiving ad spend
   3. Content batch production workflow is operational: 2-3 hours of filming produces 2 weeks of scheduled Reels from 10+ repeatable templates
   4. Total revenue reaches R$4,000 by April 30 and is on track for R$7,000 by May 31 (tracked weekly in a simple spreadsheet)
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md -- Create Meta Ads 3-layer funnel setup guide with lookalike audience creation (ADS-03, ADS-05)
+- [ ] 03-02-PLAN.md -- Create content batch production workflow, expanded Reel templates, and revenue tracking template (INSTA-03, INSTA-04)
 
 ## Progress
 
