@@ -38,8 +38,8 @@ Requirements for revenue targets. Each maps to roadmap phases.
 
 - [x] **INSTA-01**: Establish 3-4 Reels per week posting cadence focused on property experience (not empty rooms)
 - [x] **INSTA-02**: Define content pillars — Property Experience 30%, Local Discovery 25%, Social Proof 25%, Behind the Scenes 20%
-- [ ] **INSTA-03**: Create content batch production workflow (film 2-3 hours, produce 2 weeks of content)
-- [ ] **INSTA-04**: Develop 10+ Reel templates/concepts that can be repeated with variations
+- [x] **INSTA-03**: Create content batch production workflow (film 2-3 hours, produce 2 weeks of content)
+- [x] **INSTA-04**: Develop 10+ Reel templates/concepts that can be repeated with variations
 
 ### Airbnb Listing Optimization
 
@@ -117,8 +117,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ADS-06 | Phase 2 | Complete |
 | INSTA-01 | Phase 2 | Complete |
 | INSTA-02 | Phase 2 | Complete |
-| INSTA-03 | Phase 3 | Pending |
-| INSTA-04 | Phase 3 | Pending |
+| INSTA-03 | Phase 3 | Complete |
+| INSTA-04 | Phase 3 | Complete |
 | COMM-01 | Phase 1 | Complete |
 | COMM-02 | Phase 1 | Complete |
 | COMM-03 | Phase 1 | Complete |
