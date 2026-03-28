@@ -32,8 +32,8 @@ Hit R$ 4,000 revenue by end of April 2026 and R$ 7,000 by end of May 2026 throug
 - [x] List property on additional Brazilian platforms (AlugueTemporada/TemporadaLivre) — Validated in Phase 2: Distribution + Marketing Launch
 - [x] Implement seasonal pricing strategy based on historical data — Validated in Phase 1: Foundation
 - [x] Optimize Airbnb listing (title, description, photos, pricing, settings) — Validated in Phase 1: Foundation
-- [ ] Create a repeatable marketing system (not one-off efforts)
-- [ ] Analyze and apply insights from all marketing data in marketing/ folder
+- [x] Create a repeatable marketing system (not one-off efforts) — Validated in Phase 3: Growth Engine
+- [x] Analyze and apply insights from all marketing data in marketing/ folder — Validated across Phases 1-3
 
 ### Out of Scope
 
@@ -118,4 +118,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-28 after Phase 2: Distribution + Marketing Launch complete — platform listing guides, calendar sync, ads restructuring, and Instagram strategy delivered*
+*Last updated: 2026-03-28 after Phase 3: Growth Engine complete — all 3 phases delivered, milestone v1.0 complete*
