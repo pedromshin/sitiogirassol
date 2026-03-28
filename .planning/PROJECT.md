@@ -30,8 +30,8 @@ Hit R$ 4,000 revenue by end of April 2026 and R$ 7,000 by end of May 2026 throug
 - [ ] Develop Instagram content strategy and posting cadence
 - [ ] List property on Booking.com to expand reach
 - [ ] List property on additional Brazilian platforms (AlugueTemporada/TemporadaLivre)
-- [ ] Implement seasonal pricing strategy based on historical data
-- [ ] Optimize Airbnb listing (title, description, photos, pricing, settings)
+- [x] Implement seasonal pricing strategy based on historical data — Validated in Phase 1: Foundation
+- [x] Optimize Airbnb listing (title, description, photos, pricing, settings) — Validated in Phase 1: Foundation
 - [ ] Create a repeatable marketing system (not one-off efforts)
 - [ ] Analyze and apply insights from all marketing data in marketing/ folder
 
@@ -118,4 +118,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-27 after initialization*
+*Last updated: 2026-03-28 after Phase 1: Foundation complete — pricing config updated, listing/communication guides delivered*
