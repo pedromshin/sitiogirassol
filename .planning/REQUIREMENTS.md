@@ -43,11 +43,11 @@ Requirements for revenue targets. Each maps to roadmap phases.
 
 ### Airbnb Listing Optimization
 
-- [ ] **LISTING-01**: Audit and upgrade listing photos — bright hero shot (pool/exterior golden hour), wide-angle interiors, minimum 25 photos
-- [ ] **LISTING-02**: Optimize listing title and description for Airbnb SEO (keywords: sítio, natureza, piscina, churrasco, Sorocaba, São Paulo)
-- [ ] **LISTING-03**: Set minimum stay to 2 nights (1 night only for weekday gap-fills)
-- [ ] **LISTING-04**: Set advance notice to 1-2 days (not same-day) to ensure preparation quality
-- [ ] **LISTING-05**: Review and optimize Airbnb categories (Countryside, Tropical + any additional relevant categories)
+- [x] **LISTING-01**: Audit and upgrade listing photos — bright hero shot (pool/exterior golden hour), wide-angle interiors, minimum 25 photos
+- [x] **LISTING-02**: Optimize listing title and description for Airbnb SEO (keywords: sítio, natureza, piscina, churrasco, Sorocaba, São Paulo)
+- [x] **LISTING-03**: Set minimum stay to 2 nights (1 night only for weekday gap-fills)
+- [x] **LISTING-04**: Set advance notice to 1-2 days (not same-day) to ensure preparation quality
+- [x] **LISTING-05**: Review and optimize Airbnb categories (Countryside, Tropical + any additional relevant categories)
 
 ### Guest Communication & Reviews
 
@@ -104,11 +104,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DIST-03 | Phase 2 | Pending |
 | DIST-04 | Phase 2 | Pending |
 | DIST-05 | Phase 2 | Pending |
-| LISTING-01 | Phase 1 | Pending |
-| LISTING-02 | Phase 1 | Pending |
-| LISTING-03 | Phase 1 | Pending |
-| LISTING-04 | Phase 1 | Pending |
-| LISTING-05 | Phase 1 | Pending |
+| LISTING-01 | Phase 1 | Complete |
+| LISTING-02 | Phase 1 | Complete |
+| LISTING-03 | Phase 1 | Complete |
+| LISTING-04 | Phase 1 | Complete |
+| LISTING-05 | Phase 1 | Complete |
 | ADS-01 | Phase 2 | Pending |
 | ADS-02 | Phase 2 | Pending |
 | ADS-03 | Phase 3 | Pending |
