@@ -29,9 +29,9 @@ Requirements for revenue targets. Each maps to roadmap phases.
 
 - [x] **ADS-01**: Restructure Facebook ad campaigns from Traffic objective to Leads/Messages objective
 - [x] **ADS-02**: Set up retargeting audience from website visitors (Facebook Pixel already installed)
-- [ ] **ADS-03**: Create 3-layer ad funnel — Layer 1: Awareness (Reels/video reach), Layer 2: Consideration (retargeting engaged users), Layer 3: Conversion (Leads/Messages to past engagers)
+- [x] **ADS-03**: Create 3-layer ad funnel — Layer 1: Awareness (Reels/video reach), Layer 2: Consideration (retargeting engaged users), Layer 3: Conversion (Leads/Messages to past engagers)
 - [x] **ADS-04**: Set up campaign budget optimization (CBO) instead of per-ad-set budgets
-- [ ] **ADS-05**: Create lookalike audiences from website visitors and Instagram engagers
+- [x] **ADS-05**: Create lookalike audiences from website visitors and Instagram engagers
 - [x] **ADS-06**: Define monthly ad budget with clear ROI tracking (target: R$0.50 or less per qualified lead)
 
 ### Instagram Content Strategy
@@ -111,9 +111,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LISTING-05 | Phase 1 | Complete |
 | ADS-01 | Phase 2 | Complete |
 | ADS-02 | Phase 2 | Complete |
-| ADS-03 | Phase 3 | Pending |
+| ADS-03 | Phase 3 | Complete |
 | ADS-04 | Phase 2 | Complete |
-| ADS-05 | Phase 3 | Pending |
+| ADS-05 | Phase 3 | Complete |
 | ADS-06 | Phase 2 | Complete |
 | INSTA-01 | Phase 2 | Complete |
 | INSTA-02 | Phase 2 | Complete |
