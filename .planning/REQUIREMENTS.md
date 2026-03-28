@@ -51,11 +51,11 @@ Requirements for revenue targets. Each maps to roadmap phases.
 
 ### Guest Communication & Reviews
 
-- [ ] **COMM-01**: Create pre-stay message template (3 days before arrival with directions, expectations, tips)
-- [ ] **COMM-02**: Create day-of-arrival message template (check-in instructions, welcome info, WhatsApp for emergencies)
-- [ ] **COMM-03**: Create post-checkout review request message (personalized, sent within 24 hours)
-- [ ] **COMM-04**: Maintain response time under 1 hour during operating hours
-- [ ] **COMM-05**: Create house manual / welcome guide document for guests
+- [x] **COMM-01**: Create pre-stay message template (3 days before arrival with directions, expectations, tips)
+- [x] **COMM-02**: Create day-of-arrival message template (check-in instructions, welcome info, WhatsApp for emergencies)
+- [x] **COMM-03**: Create post-checkout review request message (personalized, sent within 24 hours)
+- [x] **COMM-04**: Maintain response time under 1 hour during operating hours
+- [x] **COMM-05**: Create house manual / welcome guide document for guests
 
 ## v2 Requirements
 
@@ -119,11 +119,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INSTA-02 | Phase 2 | Pending |
 | INSTA-03 | Phase 3 | Pending |
 | INSTA-04 | Phase 3 | Pending |
-| COMM-01 | Phase 1 | Pending |
-| COMM-02 | Phase 1 | Pending |
-| COMM-03 | Phase 1 | Pending |
-| COMM-04 | Phase 1 | Pending |
-| COMM-05 | Phase 1 | Pending |
+| COMM-01 | Phase 1 | Complete |
+| COMM-02 | Phase 1 | Complete |
+| COMM-03 | Phase 1 | Complete |
+| COMM-04 | Phase 1 | Complete |
+| COMM-05 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 32 total
