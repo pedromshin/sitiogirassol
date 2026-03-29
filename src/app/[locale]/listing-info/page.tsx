@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: PageProps) {
         en: `${BASE_URL}/en/listing-info`,
         pt: `${BASE_URL}/pt/listing-info`,
         es: `${BASE_URL}/es/listing-info`,
-        "x-default": `${BASE_URL}/pt/listing-info`,
+        "x-default": `${BASE_URL}/listing-info`,
       },
     },
     openGraph: {

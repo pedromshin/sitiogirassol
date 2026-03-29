@@ -10,19 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/", "/_next/", "/theme", "/admin"],
       },
-      {
-        userAgent: "Googlebot",
-        allow: "/",
-        disallow: ["/api/", "/_next/", "/theme", "/admin"],
-      },
-      // AI search crawlers - explicitly allowed for GEO
-      { userAgent: "ChatGPT-User", allow: "/" },
-      { userAgent: "OAI-SearchBot", allow: "/" },
-      { userAgent: "PerplexityBot", allow: "/" },
-      { userAgent: "Perplexity-User", allow: "/" },
-      { userAgent: "Claude-SearchBot", allow: "/" },
-      { userAgent: "Applebot", allow: "/" },
-      { userAgent: "Bytespider", allow: "/" },
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,
   };

@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: PageProps) {
         en: `${BASE_URL}/en/blog`,
         pt: `${BASE_URL}/pt/blog`,
         es: `${BASE_URL}/es/blog`,
-        "x-default": `${BASE_URL}/pt/blog`,
+        "x-default": `${BASE_URL}/blog`,
       },
     },
     openGraph: { title, description, url: `${BASE_URL}/${locale}/blog` },

@@ -17,7 +17,7 @@ export default function sitemap() {
           en: `${BASE_URL}/en${route}`,
           pt: `${BASE_URL}/pt${route}`,
           es: `${BASE_URL}/es${route}`,
-          "x-default": `${BASE_URL}/pt${route}`,
+          "x-default": `${BASE_URL}${route}`,
         },
       },
     }))
@@ -34,7 +34,7 @@ export default function sitemap() {
           en: `${BASE_URL}/en/blog/${post.slug}`,
           pt: `${BASE_URL}/pt/blog/${post.slug}`,
           es: `${BASE_URL}/es/blog/${post.slug}`,
-          "x-default": `${BASE_URL}/pt/blog/${post.slug}`,
+          "x-default": `${BASE_URL}/blog/${post.slug}`,
         },
       },
     }))
