@@ -146,6 +146,14 @@ export default async function BlogPostPage({ params }: PageProps) {
   const content = post.content[loc] ?? post.content.en;
   const title = post.title[loc] ?? post.title.en;
 
+  const inlineMarkdown = (text: string) =>
+    text
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>')
+      .replace(
+        /\[(.*?)\]\((.*?)\)/g,
+        '<a href="$2" class="text-accent-gold underline hover:text-warm-gold" target="_blank" rel="noopener noreferrer">$1</a>'
+      );
+
   const sections = content.split("\n\n").map((block, i) => {
     if (block.startsWith("## ")) {
       return (
@@ -157,17 +165,34 @@ export default async function BlogPostPage({ params }: PageProps) {
         </h2>
       );
     }
-    const html = block
-      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>')
-      .replace(
-        /\[(.*?)\]\((.*?)\)/g,
-        '<a href="$2" class="text-accent-gold underline hover:text-warm-gold" target="_blank" rel="noopener noreferrer">$1</a>'
+    if (block.startsWith("### ")) {
+      return (
+        <h3
+          key={i}
+          className="text-xl md:text-2xl font-display text-white mt-8 mb-3"
+        >
+          {block.replace("### ", "")}
+        </h3>
       );
+    }
+    if (block.includes("\n- ") || block.startsWith("- ")) {
+      const items = block.split("\n").filter((line) => line.startsWith("- "));
+      return (
+        <ul key={i} className="list-disc list-inside space-y-2 mb-4 text-white/70 text-base md:text-lg">
+          {items.map((item, j) => (
+            <li
+              key={j}
+              dangerouslySetInnerHTML={{ __html: inlineMarkdown(item.replace(/^- /, "")) }}
+            />
+          ))}
+        </ul>
+      );
+    }
     return (
       <p
         key={i}
         className="text-white/70 text-base md:text-lg leading-relaxed mb-4"
-        dangerouslySetInnerHTML={{ __html: html }}
+        dangerouslySetInnerHTML={{ __html: inlineMarkdown(block) }}
       />
     );
   });
