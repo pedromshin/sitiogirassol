@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "@/data/blog-posts";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sitiogirassol.org";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps) {
         en: `${BASE_URL}/en/blog/${slug}`,
         pt: `${BASE_URL}/pt/blog/${slug}`,
         es: `${BASE_URL}/es/blog/${slug}`,
-        "x-default": `${BASE_URL}/blog/${slug}`,
+        "x-default": `${BASE_URL}/pt/blog/${slug}`,
       },
     },
     openGraph: {

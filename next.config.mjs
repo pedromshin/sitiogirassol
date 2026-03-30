@@ -13,6 +13,16 @@ const nextConfig = {
       { protocol: "http", hostname: "**" },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.sitiogirassol.org" }],
+        destination: "https://sitiogirassol.org/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

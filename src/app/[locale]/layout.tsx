@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/seo/JsonLd";
 import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sitiogirassol.org";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         en: `${BASE_URL}/en`,
         pt: `${BASE_URL}/pt`,
         es: `${BASE_URL}/es`,
-        "x-default": BASE_URL,
+        "x-default": `${BASE_URL}/pt`,
       },
     },
     keywords: locale === "pt"

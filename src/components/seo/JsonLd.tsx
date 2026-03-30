@@ -1,6 +1,6 @@
 import { listingConfig } from "@/data/listing.config";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sitiogirassol.org";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
 
 type Locale = "en" | "pt" | "es";
 
