@@ -296,65 +296,6 @@ export default function JsonLd({ locale }: { locale: string }) {
     },
   };
 
-  const lodgingBusiness = {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    name: "Sítio Girassol",
-    description: listingConfig.meta.description[loc] ?? listingConfig.meta.description.en,
-    url: `${BASE_URL}/${locale}`,
-    image: listingConfig.photos.slice(0, 5).map((p) => `${BASE_URL}${p.src}`),
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "São Roque",
-      addressRegion: "SP",
-      postalCode: "18181-000",
-      addressCountry: "BR",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: -23.4907,
-      longitude: -47.2706,
-    },
-    telephone: listingConfig.whatsappNumber,
-    priceRange: "R$ 170 - R$ 340",
-    currenciesAccepted: "BRL",
-    checkinTime: "12:00",
-    checkoutTime: "18:00",
-    starRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-    },
-    amenityFeature,
-    numberOfRooms: 3,
-    petsAllowed: true,
-    makesOffer: {
-      "@type": "Offer",
-      priceSpecification: [
-        {
-          "@type": "UnitPriceSpecification",
-          price: listingConfig.pricing.nightlyRate,
-          priceCurrency: "BRL",
-          unitText: "NIGHT",
-          name: loc === "pt" ? "Diária" : loc === "es" ? "Por noche" : "Per night",
-        },
-        {
-          "@type": "UnitPriceSpecification",
-          price: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100)),
-          priceCurrency: "BRL",
-          unitText: "NIGHT",
-          name: loc === "pt" ? "Semanal (33% desconto)" : loc === "es" ? "Semanal (33% descuento)" : "Weekly (33% discount)",
-        },
-        {
-          "@type": "UnitPriceSpecification",
-          price: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100)),
-          priceCurrency: "BRL",
-          unitText: "NIGHT",
-          name: loc === "pt" ? "Mensal (50% desconto)" : loc === "es" ? "Mensual (50% descuento)" : "Monthly (50% discount)",
-        },
-      ],
-    },
-  };
-
   const touristDestination = {
     "@context": "https://schema.org",
     "@type": "TouristDestination",
@@ -390,7 +331,7 @@ export default function JsonLd({ locale }: { locale: string }) {
     },
   };
 
-  const schemas = [vacationRental, lodgingBusiness, touristDestination, organization, faqPage, breadcrumb, webSite];
+  const schemas = [vacationRental, touristDestination, organization, faqPage, breadcrumb, webSite];
 
   return (
     <>
