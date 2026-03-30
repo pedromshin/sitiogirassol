@@ -325,7 +325,7 @@ export default function JsonLd({ locale }: { locale: string }) {
       ? ["Turismo Rural", "Enoturismo", "Turismo de Naturaleza", "Turismo Familiar"]
       : ["Rural Tourism", "Wine Tourism", "Nature Tourism", "Family Tourism"],
     containsPlace: {
-      "@type": "VacationRental",
+      "@type": "LodgingBusiness",
       name: "Sítio Girassol",
       url: `${BASE_URL}/${locale}`,
     },
