@@ -130,7 +130,7 @@ export const listingConfig: ListingConfig = {
   // Used by: CalendarSection, MetricsSection, JsonLd (SEO), lib/pricing
   // ═══════════════════════════════════════════════════════════════════
   pricing: {
-    nightlyRate: 280,
+    nightlyRate: 238,
     weeklyDiscountPercent: 12,
     monthlyDiscountPercent: 27,
     cleaningFee: 180,
