@@ -207,7 +207,6 @@ export default function JsonLd({ locale }: { locale: string }) {
     containsPlace: [
       {
         "@type": "Accommodation",
-        additionalType: "https://schema.org/Room",
         name: loc === "pt" ? "Suíte Principal" : loc === "es" ? "Suite Principal" : "Master Suite",
         description: loc === "pt"
           ? "Quarto com cama king size e banheiro privativo"
@@ -228,7 +227,6 @@ export default function JsonLd({ locale }: { locale: string }) {
       },
       {
         "@type": "Accommodation",
-        additionalType: "https://schema.org/Room",
         name: loc === "pt" ? "Segundo Quarto" : loc === "es" ? "Segundo Dormitorio" : "Second Bedroom",
         description: loc === "pt"
           ? "Quarto com cama de casal"
@@ -246,7 +244,6 @@ export default function JsonLd({ locale }: { locale: string }) {
       },
       {
         "@type": "Accommodation",
-        additionalType: "https://schema.org/Room",
         name: loc === "pt" ? "Terceiro Quarto" : loc === "es" ? "Tercer Dormitorio" : "Third Bedroom",
         description: loc === "pt"
           ? "Quarto com beliche e colchões extras"
@@ -325,7 +322,6 @@ export default function JsonLd({ locale }: { locale: string }) {
         name: "São Paulo",
       },
     },
-    additionalType: "https://schema.org/House",
   };
 
   const organization = {
