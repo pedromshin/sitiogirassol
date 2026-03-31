@@ -791,6 +791,7 @@ Reservar tu retiro en el **Sítio Girassol** es sencillo. La propiedad está dis
 [Reserve en Airbnb](https://www.airbnb.com/rooms/1345960842338220775) y transforma tu próximo fin de semana en un verdadero retiro en la naturaleza — a solo 1 hora de São Paulo.`,
     },
     publishedAt: "2026-03-29",
+    updatedAt: "2026-03-31",
     coverImage: "/images/exterior/016_Exterior_2.jpeg",
     coverAlt: {
       pt: "Vista da natureza preservada no Sítio Girassol, retiro na natureza perto de São Paulo",
@@ -1132,6 +1133,7 @@ Tarifas desde R$ ${listingConfig.pricing.nightlyRate}/noche, con ${listingConfig
 [Reserve en Airbnb](https://www.airbnb.com/rooms/1345960842338220775) y garantiza tu casa de campo ideal para el próximo fin de semana en el interior de São Paulo.`,
     },
     publishedAt: "2026-03-29",
+    updatedAt: "2026-03-31",
     coverImage: "/images/pool/003_Pool_3.jpeg",
     coverAlt: {
       pt: "Piscina privativa do Sítio Girassol, casa de campo para aluguel de temporada em São Roque SP",
@@ -1542,6 +1544,7 @@ El Sítio Girassol ofrece self check-in desde las 12h y check-out hasta las 18h 
 [Reserve en Airbnb](https://www.airbnb.com/rooms/1345960842338220775) y proporciona a tu familia un fin de semana inolvidable en el interior de São Paulo.`,
     },
     publishedAt: "2026-03-29",
+    updatedAt: "2026-03-31",
     coverImage: "/images/pool/008_Pool_8.jpeg",
     coverAlt: {
       pt: "Área da piscina do Sítio Girassol, atividades para família no interior de São Paulo",

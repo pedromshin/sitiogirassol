@@ -289,11 +289,6 @@ export default function JsonLd({ locale }: { locale: string }) {
       { "@type": "Language", name: "English" },
       { "@type": "Language", name: "Spanish" },
     ],
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${BASE_URL}/${loc}/blog?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 
   const touristDestination = {
