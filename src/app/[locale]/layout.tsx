@@ -73,6 +73,11 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang="${locale}";`,
+        }}
+      />
       <JsonLd locale={locale} />
       <div className="min-h-screen flex flex-col">
         <GlassyHeader />

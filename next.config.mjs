@@ -28,6 +28,27 @@ const nextConfig = {
           },
         ],
       },
+      // Explicitly signal indexability for locale pages
+      {
+        source: "/:locale(pt|en|es)/:path*",
+        headers: [
+          { key: "X-Robots-Tag", value: "index, follow" },
+        ],
+      },
+      // Prevent admin pages from being indexed via header
+      {
+        source: "/admin/:path*",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow" },
+        ],
+      },
+      // Cache sitemap for 1 hour (allows frequent re-fetches by crawlers)
+      {
+        source: "/sitemap.xml",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=3600, s-maxage=3600" },
+        ],
+      },
       {
         source: "/images/(.*)",
         headers: [

@@ -11,7 +11,10 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  const locales = ["pt", "en", "es"];
+  return locales.flatMap((locale) =>
+    blogPosts.map((post) => ({ locale, slug: post.slug }))
+  );
 }
 
 export async function generateMetadata({ params }: PageProps) {
@@ -247,6 +250,38 @@ export default async function BlogPostPage({ params }: PageProps) {
             </span>
           ))}
         </div>
+
+        {/* Internal linking CTA — distributes link equity and drives conversions */}
+        <aside className="mt-16 p-6 md:p-8 rounded-2xl border border-accent-gold/20 bg-accent-gold/5">
+          <h3 className="font-display text-xl md:text-2xl text-white mb-3">
+            {loc === "pt"
+              ? "Hospede-se no Sítio Girassol"
+              : loc === "es"
+              ? "Hospédese en Sítio Girassol"
+              : "Stay at Sítio Girassol"}
+          </h3>
+          <p className="text-white/70 text-base mb-4">
+            {loc === "pt"
+              ? "3 quartos, piscina privativa, churrasqueira e 2,6 hectares de natureza preservada em São Roque, SP — a apenas 60 km de São Paulo. Pet-friendly."
+              : loc === "es"
+              ? "3 dormitorios, piscina privada, parrilla y 2,6 hectáreas de naturaleza preservada en São Roque, SP — a solo 60 km de São Paulo. Pet-friendly."
+              : "3 bedrooms, private pool, BBQ and 2.6 hectares of preserved nature in São Roque, SP — just 60 km from São Paulo. Pet-friendly."}
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href={`/${locale}`}
+              className="inline-block px-5 py-2.5 rounded-full bg-accent-gold text-forest-dark font-bold text-sm hover:bg-warm-gold transition-colors"
+            >
+              {loc === "pt" ? "Conheça o Sítio" : loc === "es" ? "Conocer el Sítio" : "Explore the Property"}
+            </Link>
+            <Link
+              href={`/${locale}/listing-info`}
+              className="inline-block px-5 py-2.5 rounded-full border border-white/20 text-white font-bold text-sm hover:border-accent-gold/40 transition-colors"
+            >
+              {loc === "pt" ? "Informações" : loc === "es" ? "Información" : "More Info"}
+            </Link>
+          </div>
+        </aside>
       </article>
     </div>
   );

@@ -1,17 +1,25 @@
+import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { blogPosts } from "@/data/blog-posts";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
 
-export default function sitemap() {
-  const staticRoutes = ["", "/listing-info", "/blog"];
+/** Fixed dates for static routes — update when content actually changes */
+const STATIC_ROUTE_DATES: Record<string, string> = {
+  "": "2026-03-28",
+  "/listing-info": "2026-03-28",
+  "/blog": "2026-03-28",
+};
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const staticRoutes = Object.keys(STATIC_ROUTE_DATES);
 
   const staticUrls = routing.locales.flatMap((locale) =>
     staticRoutes.map((route) => ({
       url: `${BASE_URL}/${locale}${route}`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_ROUTE_DATES[route]),
       changeFrequency: (route === "" ? "weekly" : "monthly") as "weekly" | "monthly",
-      priority: route === "" ? 1 : 0.8,
+      priority: route === "" ? 1.0 : 0.8,
       alternates: {
         languages: {
           en: `${BASE_URL}/en${route}`,
