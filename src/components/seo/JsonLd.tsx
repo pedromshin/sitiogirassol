@@ -134,9 +134,10 @@ export default function JsonLd({ locale }: { locale: string }) {
     image: listingConfig.photos.slice(0, 10).map((p) => `${BASE_URL}${p.src}`),
     address: {
       "@type": "PostalAddress",
-      addressLocality: "São Roque",
+      streetAddress: "Rua Sem Nome, 3.14 - Vila Sorocabana",
+      addressLocality: "Mairinque",
       addressRegion: "SP",
-      postalCode: "18181-000",
+      postalCode: "18120-000",
       addressCountry: "BR",
     },
     geo: {
@@ -159,6 +160,50 @@ export default function JsonLd({ locale }: { locale: string }) {
     checkinTime: "12:00",
     checkoutTime: "18:00",
     amenityFeature,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: 4.6,
+      bestRating: 5,
+      worstRating: 1,
+      reviewCount: 15,
+    },
+    review: [
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Tatyana" },
+        datePublished: "2026-01",
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+        reviewBody: "Passando aqui para realizar minha avaliação, onde eu e mais 4 pessoas tivemos a oportunidade de se hospedar em um espaço maravilhoso. Lugar muito aconchegante que faz você estar mais conectado com Deus e com a natureza, o espaço muito limpo e organizado ,além de uma ótima estrutura. Fomos muito bem acolhidos pelos anfitriões e de todos os espaços que visitei ,sem dúvida este é um dos melhores. Agradeço por dias tão maravilhosos, e pela rica oportunidade. Espero que possamos voltar em breve!",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Arnaldo" },
+        datePublished: "2026-01",
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+        reviewBody: "Bom nossa estadia foi simplesmente inesquecível ficamos 5 dias 4 pessoas um cachorro foram dias ótimos nos divertimos muito quando chegamos ja esta tudo limpo a casa tem tudo que precisa ! nos sentimos em casa a casa tinha 3 banheiros todos com chuveiro quente cozinha tem de tudo quartos com cama gigante cobertas e vários travesseiros a sala contém tv tv tem Wi-Fi tinha opções para jogar vôlei ou tênis a pscina e muito top com uma cascada! realmente valeu a pena passar esses dias no sitio girassol",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Mateus" },
+        datePublished: "2025-12",
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+        reviewBody: "Vivemos um Natal inesquecível no Sítio Paraíso. Um lugar simplesmente maravilhoso, cercado de muito verde e natureza, que transmite paz desde a chegada. A proprietária, Rosângela, nos deu todo o suporte do início ao fim da estadia, sempre muito atenciosa e prestativa. Com certeza é um lugar para voltar muitas outras vezes. Gratidão por dias tão especiais!",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Luciana" },
+        datePublished: "2025-03",
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+        reviewBody: "Eu e minha família passamos o final de semana no Sítio Girassol ,e amamos. Casa limpa e quartos confortáveis para as 10 pessoas. Área externa linda , piscina maravilhosa. Aproveitamos tudo que tinha pra oferecer,fizemos a trilha para o rio,jogamos na quadra, fizemos fogueira á noite, piscina com cascata relaxante. A caseira muito fofa nos recepcionou com um delicioso bolo de fubá. O caseiro sempre proativo. O anfitrião incrível,sempre respondendo rápido e resolvendo qualquer eventualidade. Enfim,amamos tudo e indico de olhos fechados.",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Ana Gloria" },
+        datePublished: "2025-03",
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+        reviewBody: "O lugar é maravilhoso, corresponde exatamente como as fotos. Fora. Dias mega agradáveis. Na propriedade tem uma trilha que vai até um rio bem gostoso para relaxar, trilha de fácil acesso. A piscina é muito boa, ao lado de um espaço com mesa de jogos, churrasqueira, geladeira e banheiro, podendo passar o dia todo no ambiente. A casa corresponde perfeitamente como as fotos, roupa de cama extremamente limpas e banheiros limpos. A cozinha conta com tudo que se é necessário.",
+      },
+    ],
     containsPlace: [
       {
         "@type": "Accommodation",
