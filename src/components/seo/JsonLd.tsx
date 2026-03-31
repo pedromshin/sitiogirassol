@@ -204,12 +204,23 @@ export default function JsonLd({ locale }: { locale: string }) {
         reviewBody: "O lugar é maravilhoso, corresponde exatamente como as fotos. Fora. Dias mega agradáveis. Na propriedade tem uma trilha que vai até um rio bem gostoso para relaxar, trilha de fácil acesso. A piscina é muito boa, ao lado de um espaço com mesa de jogos, churrasqueira, geladeira e banheiro, podendo passar o dia todo no ambiente. A casa corresponde perfeitamente como as fotos, roupa de cama extremamente limpas e banheiros limpos. A cozinha conta com tudo que se é necessário.",
       },
     ],
-    bed: [
-      { "@type": "BedDetails", typeOfBed: "King", numberOfBeds: 1 },
-      { "@type": "BedDetails", typeOfBed: "Double", numberOfBeds: 1 },
-      { "@type": "BedDetails", typeOfBed: "Bunk Bed", numberOfBeds: 1 },
-      { "@type": "BedDetails", typeOfBed: "Single", numberOfBeds: 2 },
-    ],
+    containsPlace: {
+      "@type": "Accommodation",
+      name: title,
+      numberOfRooms: listingConfig.property.bedrooms,
+      numberOfBathroomsTotal: listingConfig.property.bathrooms,
+      occupancy: {
+        "@type": "QuantitativeValue",
+        value: listingConfig.property.maxGuests,
+      },
+      bed: [
+        { "@type": "BedDetails", typeOfBed: "King", numberOfBeds: 1 },
+        { "@type": "BedDetails", typeOfBed: "Double", numberOfBeds: 1 },
+        { "@type": "BedDetails", typeOfBed: "Bunk Bed", numberOfBeds: 1 },
+        { "@type": "BedDetails", typeOfBed: "Single", numberOfBeds: 2 },
+      ],
+      amenityFeature,
+    },
     offers: {
       "@type": "AggregateOffer",
       lowPrice: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100)),
