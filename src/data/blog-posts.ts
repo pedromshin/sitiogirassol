@@ -44,6 +44,10 @@ Segundo o Guia Gastronômico de São Roque, a cidade abriga mais de 50 restauran
 
 Para uma experiência completa no turismo rural de São Roque, alugar uma chácara ou sítio na região é a melhor opção. O **Sítio Girassol** oferece 3 quartos (suíte king, quarto de casal e beliche), piscina privativa, duas churrasqueiras, quadra de tênis e vôlei, lareira, Wi-Fi e 2,6 hectares de natureza preservada — tudo com capacidade para até 6 hóspedes. Diárias a partir de R$ ${listingConfig.pricing.nightlyRate}/noite, com ${listingConfig.pricing.weeklyDiscountPercent}% de desconto para estadias semanais e ${listingConfig.pricing.monthlyDiscountPercent}% para mensais. A propriedade aceita pets e está a apenas 60 km de São Paulo. [Reserve no Airbnb](https://www.airbnb.com/rooms/1345960842338220775).
 
+## São Roque no Feriado de Tiradentes
+
+O feriado de Tiradentes (21 de abril) é uma das melhores épocas para visitar São Roque. Em 2026, o feriado cai numa terça-feira, criando a possibilidade de um feriadão de 4 dias (sábado 18 a terça 21 de abril). A região recebe milhares de turistas da capital, atraídos pelas vinícolas em plena safra de outono, temperaturas amenas entre 12°C e 22°C, e a programação especial dos restaurantes. Para quem busca fugir das praias lotadas, São Roque é a alternativa perfeita: perto de São Paulo, com preços mais acessíveis e sem enfrentar o trânsito do litoral. Para um guia completo do feriado, confira nosso [roteiro de Tiradentes perto de SP](/pt/blog/onde-passar-feriado-tiradentes-perto-sp).
+
 ## Como chegar
 
 São Roque fica a 60 km de São Paulo, com acesso principal pela Rodovia Raposo Tavares (SP-270) ou pela Rodovia Castello Branco (SP-280), saída km 54B. O trajeto leva entre 1 hora e 1h30, dependendo do trânsito. De acordo com o DER-SP, a Raposo Tavares tem pedágio de R$ 5,20 (valor de 2026) no trecho até São Roque. Para quem vem do ABC Paulista, a alternativa pela Rodovia Régis Bittencourt até Embu e depois pela estrada local também leva cerca de 1h30. GPS recomendado: buscar "São Roque, SP" e seguir pela via de sua preferência.`,
@@ -64,6 +68,10 @@ According to the São Roque Gastronomic Guide, the city hosts over 50 restaurant
 ## Where to Stay
 
 For a complete São Roque rural tourism experience, renting a countryside property is the best option. **Sítio Girassol** offers 3 bedrooms (king suite, double room, and bunk room), a private pool, two BBQ areas, tennis and volleyball court, fireplace, Wi-Fi, and 2.6 hectares of preserved nature — all with capacity for up to 6 guests. Rates start at R$ ${listingConfig.pricing.nightlyRate}/night, with ${listingConfig.pricing.weeklyDiscountPercent}% off for weekly stays and ${listingConfig.pricing.monthlyDiscountPercent}% off for monthly stays. The property is pet-friendly and just 60 km from São Paulo. [Book on Airbnb](https://www.airbnb.com/rooms/1345960842338220775).
+
+## São Roque During the Tiradentes Holiday
+
+The Tiradentes holiday (April 21) is one of the best times to visit São Roque. In 2026, the holiday falls on a Tuesday, creating the possibility of a 4-day break (Saturday April 18 to Tuesday April 21). The region attracts thousands of tourists from the capital, drawn by wineries in full autumn harvest season, mild temperatures between 12°C and 22°C, and special restaurant menus. For those looking to avoid crowded beaches, São Roque is the perfect alternative: close to São Paulo, more affordable, and without the coastal traffic jams. For a complete holiday guide, check our [Tiradentes near SP itinerary](/en/blog/onde-passar-feriado-tiradentes-perto-sp).
 
 ## How to Get There
 
@@ -86,11 +94,16 @@ Según la Guía Gastronómica de São Roque, la ciudad alberga más de 50 restau
 
 Para una experiencia completa en el turismo rural de São Roque, alquilar una finca o chacra en la región es la mejor opción. **Sítio Girassol** ofrece 3 dormitorios (suite king, habitación doble y litera), piscina privada, dos parrillas, cancha de tenis y voleibol, chimenea, Wi-Fi y 2,6 hectáreas de naturaleza preservada — todo con capacidad para hasta 6 huéspedes. Tarifas desde R$ ${listingConfig.pricing.nightlyRate}/noche, con ${listingConfig.pricing.weeklyDiscountPercent}% de descuento para estadías semanales y ${listingConfig.pricing.monthlyDiscountPercent}% para mensuales. La propiedad acepta mascotas y está a solo 60 km de São Paulo. [Reserve en Airbnb](https://www.airbnb.com/rooms/1345960842338220775).
 
+## São Roque en el Feriado de Tiradentes
+
+El feriado de Tiradentes (21 de abril) es una de las mejores épocas para visitar São Roque. En 2026, el feriado cae en martes, creando la posibilidad de un fin de semana largo de 4 días (sábado 18 a martes 21 de abril). La región recibe miles de turistas de la capital, atraídos por las bodegas en plena cosecha de otoño, temperaturas agradables entre 12°C y 22°C, y la programación especial de los restaurantes. Para quienes buscan escapar de las playas abarrotadas, São Roque es la alternativa perfecta: cerca de São Paulo, con precios más accesibles y sin enfrentar el tráfico del litoral. Para una guía completa del feriado, consulta nuestro [itinerario de Tiradentes cerca de SP](/es/blog/onde-passar-feriado-tiradentes-perto-sp).
+
 ## Cómo llegar
 
 São Roque está a 60 km de São Paulo, con acceso principal por la Rodovia Raposo Tavares (SP-270) o por la Rodovia Castello Branco (SP-280), salida km 54B. El trayecto dura entre 1 hora y 1h30, dependiendo del tránsito. De acuerdo con el DER-SP, el peaje de la Raposo Tavares es de R$ 5,20 (valor 2026) en el tramo hasta São Roque. Para quienes vienen del ABC Paulista, la alternativa por la Rodovia Régis Bittencourt hasta Embu y luego por camino local también toma aproximadamente 1h30. GPS recomendado: buscar "São Roque, SP" y seguir la vía de su preferencia.`,
     },
     publishedAt: "2026-03-27",
+    updatedAt: "2026-03-31",
     coverImage: "/images/exterior/008_Exterior_1.jpeg",
     coverAlt: {
       pt: "Vista do Sítio Girassol em São Roque, interior de São Paulo",
@@ -1552,5 +1565,235 @@ El Sítio Girassol ofrece self check-in desde las 12h y check-out hasta las 18h 
       es: "Área de la piscina de Sítio Girassol, actividades para familia en el interior de São Paulo",
     },
     tags: ["família", "crianças", "atividades", "interior sp", "são roque"],
+  },
+  {
+    slug: "onde-passar-feriado-tiradentes-perto-sp",
+    title: {
+      pt: "Onde Passar o Feriado de Tiradentes 2026 Perto de SP: Guia Completo",
+      en: "Where to Spend the Tiradentes 2026 Holiday Near SP: Complete Guide",
+      es: "Dónde Pasar el Feriado de Tiradentes 2026 Cerca de SP: Guía Completa",
+    },
+    description: {
+      pt: "Descubra os melhores destinos para o feriado de Tiradentes 2026 perto de São Paulo. São Roque oferece vinícolas, natureza e hospedagem rural a apenas 60 km da capital.",
+      en: "Discover the best destinations for the 2026 Tiradentes holiday near São Paulo. São Roque offers wineries, nature, and rural accommodation just 60 km from the capital.",
+      es: "Descubre los mejores destinos para el feriado de Tiradentes 2026 cerca de São Paulo. São Roque ofrece bodegas, naturaleza y hospedaje rural a solo 60 km de la capital.",
+    },
+    content: {
+      pt: `O feriado de Tiradentes em 2026 cai numa terça-feira, dia 21 de abril, criando a oportunidade perfeita para um feriadão de 4 dias — do sábado 18 até a terça 21. Para quem mora em São Paulo, essa é a chance ideal de fugir do trânsito, da poluição e do ritmo frenético da capital. E não é preciso ir longe: a apenas 60 km de SP, São Roque oferece tudo o que você precisa para um descanso memorável com a família ou amigos.
+
+Enquanto milhares de paulistanos lotam as rodovias rumo ao litoral, enfrentando horas de congestionamento e preços inflacionados nas praias, São Roque permanece como um refúgio tranquilo, acessível e cheio de experiências autênticas. Neste guia completo, mostramos por que São Roque é o destino perfeito para o feriado de Tiradentes 2026 e como aproveitar cada dia do feriadão.
+
+## Por que São Roque para o Feriado de Tiradentes
+
+São Roque é conhecida como a "Terra do Vinho" e está localizada a apenas 60 km de São Paulo, com acesso rápido pelas rodovias Raposo Tavares e Castello Branco. O trajeto leva entre 1 hora e 1h30, mesmo em feriados — bem diferente das 4 a 6 horas que muitos enfrentam para chegar ao litoral paulista.
+
+A região é um polo de enoturismo com mais de 30 vinícolas abertas à visitação, além de oferecer trilhas ecológicas em Mata Atlântica preservada, gastronomia de tradição italiana e uma atmosfera rural que parece estar a anos-luz da agitação urbana. São Roque também é significativamente mais barata que destinos litorâneos durante feriados prolongados: enquanto pousadas no litoral norte cobram a partir de R$ 800/noite em feriados, em São Roque é possível encontrar hospedagens rurais completas por valores muito mais acessíveis.
+
+Outro ponto forte: São Roque não lota como as praias. Você consegue visitar vinícolas sem filas intermináveis, jantar em restaurantes sem esperar duas horas por uma mesa, e curtir a natureza com tranquilidade. Para famílias com crianças ou grupos de amigos, isso faz toda a diferença.
+
+## O que Fazer em São Roque no Feriado de Tiradentes
+
+São Roque oferece uma variedade surpreendente de atividades para um feriadão de 4 dias. Confira as principais:
+
+- **Rota do Vinho**: O circuito reúne mais de 30 vinícolas em aproximadamente 10 km. Degustações começam a partir de R$ 30 por pessoa, e muitas vinícolas oferecem almoços harmonizados entre R$ 80 e R$ 150. A Vinícola Góes e a Villa Santa Maria são paradas obrigatórias.
+
+- **Trilhas e caminhadas**: A região possui mais de 20 trilhas catalogadas em Mata Atlântica preservada. A Trilha do Morro do Saboó tem 4,5 km e oferece vistas panorâmicas espetaculares. Para trilhas mais leves, o Parque Natural Municipal conta com percursos de 1,5 km a 6 km.
+
+- **Gastronomia italiana**: São Roque abriga mais de 50 restaurantes, muitos com tradição italiana trazida por imigrantes no início do século XX. Massas artesanais, queijos locais e vinhos da região compõem uma experiência gastronômica completa.
+
+- **Queijarias artesanais**: Visite produtores locais que fabricam mais de 12 variedades de queijos que harmonizam perfeitamente com os vinhos da região.
+
+- **Relaxar na piscina**: Alugar uma propriedade rural com piscina privativa é a melhor forma de aproveitar as tardes ensolaradas de abril sem sair de casa.
+
+Para um guia completo de atividades na região, confira nosso artigo [o que fazer em São Roque](/pt/blog/o-que-fazer-em-sao-roque).
+
+## Onde se Hospedar em São Roque no Feriado de Tiradentes
+
+Para aproveitar ao máximo o feriado prolongado, a melhor opção é alugar um sítio ou chácara para o grupo todo. Diferente de pousadas e hotéis, uma propriedade rural oferece privacidade total, espaço para as crianças brincarem, churrasqueira para reunir a turma e liberdade de horários.
+
+O **Sítio Girassol** é a escolha ideal para o feriadão de Tiradentes. A propriedade conta com 3 quartos (suíte king, quarto de casal e beliche), piscina privativa com deck, duas churrasqueiras (coberta e ao ar livre), quadra de tênis e vôlei, lareira de pedra, Wi-Fi de alta velocidade e 2,6 hectares de natureza preservada. A propriedade aceita pets e acomoda até 6 hóspedes com total conforto.
+
+As diárias são a partir de R$ ${listingConfig.pricing.nightlyRate}/noite, com ${listingConfig.pricing.weeklyDiscountPercent}% de desconto para estadias semanais e ${listingConfig.pricing.monthlyDiscountPercent}% para estadias mensais. Para o feriadão de 4 dias, você aproveita a estrutura completa pagando muito menos do que uma pousada no litoral.
+
+[Reserve no Airbnb](https://www.airbnb.com/rooms/1345960842338220775) e garanta sua estadia antes que as datas esgotem.
+
+Para mais opções de chácaras na região, veja nosso guia de [chácaras para alugar perto de SP](/pt/blog/chacara-para-alugar-perto-de-sao-paulo).
+
+## Dicas para Aproveitar o Feriadão de Tiradentes
+
+Para garantir o melhor feriadão possível, siga estas dicas práticas:
+
+- **Reserve com antecedência**: Feriados prolongados esgotam rápido. Propriedades populares como o Sítio Girassol costumam ter suas datas preenchidas semanas antes do feriado. Não deixe para a última hora.
+
+- **Leve agasalhos**: Abril marca o início do outono no interior paulista. As noites em São Roque podem ser frescas, com temperaturas entre 12°C e 18°C. Leve casacos e roupas de frio — a lareira do Sítio Girassol é perfeita para essas noites.
+
+- **Escolha a melhor rota**: Saindo de São Paulo, as melhores opções são a Raposo Tavares (SP-270) e a Castello Branco (SP-280). Evite sair na sexta à tarde; prefira sábado cedo ou sexta antes das 14h.
+
+- **Abasteça antes de chegar**: Faça compras de supermercado em São Roque antes de seguir para a propriedade. Assim você terá tudo pronto para o churrasco e as refeições em casa.
+
+- **Aproveite os 4 dias**: Com 4 dias disponíveis, organize um roteiro que inclua pelo menos um dia de vinícolas, um dia de trilha e dois dias de descanso na propriedade. Sem pressa, sem correria.
+
+## Como Chegar a São Roque
+
+A viagem de São Paulo a São Roque é rápida e simples:
+
+- **Pela Raposo Tavares (SP-270)**: Siga pela rodovia até a saída para São Roque. O trajeto tem aproximadamente 60 km e leva entre 1 hora e 1h30 dependendo do trânsito.
+
+- **Pela Castello Branco (SP-280)**: Outra opção é seguir pela Castello Branco até a saída km 54B em direção a São Roque. Distância e tempo similares à Raposo Tavares.
+
+- **Pedágio**: O pedágio no trecho até São Roque pela Raposo Tavares é de aproximadamente R$ 5,20 (valor de 2026).
+
+- **GPS**: Basta buscar "São Roque, SP" no GPS ou aplicativo de navegação e seguir pela rota de sua preferência.
+
+Dica: no feriado de Tiradentes, a Raposo Tavares costuma ter menos trânsito que as rodovias que levam ao litoral. Você chega descansado e pronto para aproveitar.
+
+O feriado de Tiradentes 2026 é a oportunidade perfeita para desconectar da rotina e curtir o interior paulista. O Sítio Girassol oferece toda a estrutura para um feriadão inesquecível: piscina, churrasqueira, natureza, lareira e espaço de sobra para a família toda — inclusive os pets. [Reserve agora no Airbnb](https://www.airbnb.com/rooms/1345960842338220775) e garanta seu feriadão em São Roque.`,
+      en: `Tiradentes Day in 2026 falls on a Tuesday, April 21st, creating the perfect opportunity for a 4-day break — from Saturday the 18th through Tuesday the 21st. For São Paulo residents, this is the ideal chance to escape the traffic, pollution, and frantic pace of the capital. And you don't need to go far: just 60 km from SP, São Roque offers everything you need for a memorable getaway with family or friends.
+
+While thousands of paulistanos crowd the highways heading to the coast, facing hours of congestion and inflated beach prices, São Roque remains a peaceful, accessible refuge full of authentic experiences. In this complete guide, we show you why São Roque is the perfect destination for the 2026 Tiradentes holiday and how to make the most of every day.
+
+## Why São Roque for the Tiradentes Holiday
+
+São Roque is known as the "Land of Wine" and is located just 60 km from São Paulo, with quick access via the Raposo Tavares and Castello Branco highways. The drive takes between 1 hour and 1.5 hours, even during holidays — quite different from the 4 to 6 hours many face to reach the São Paulo coastline.
+
+The region is a wine tourism hub with over 30 wineries open for visits, along with ecological trails through preserved Atlantic Forest, Italian-tradition gastronomy, and a rural atmosphere that feels light-years away from the urban hustle. São Roque is also significantly cheaper than coastal destinations during extended holidays: while guesthouses on the north coast charge from R$ 800/night during holidays, in São Roque you can find complete rural accommodations at much more affordable prices.
+
+Another strong point: São Roque doesn't get overcrowded like the beaches. You can visit wineries without endless queues, dine at restaurants without waiting two hours for a table, and enjoy nature in peace. For families with children or groups of friends, this makes all the difference.
+
+## What to Do in São Roque During the Tiradentes Holiday
+
+São Roque offers a surprising variety of activities for a 4-day break. Here are the highlights:
+
+- **Wine Route**: The circuit brings together over 30 wineries across approximately 10 km. Tastings start from R$ 30 per person, and many wineries offer paired lunches between R$ 80 and R$ 150. Vinícola Góes and Villa Santa Maria are must-visit stops.
+
+- **Trails and hikes**: The region has over 20 catalogued trails through preserved Atlantic Forest. The Morro do Saboó Trail is 4.5 km long and offers spectacular panoramic views. For easier walks, the Municipal Natural Park has routes from 1.5 km to 6 km.
+
+- **Italian gastronomy**: São Roque is home to over 50 restaurants, many with Italian traditions brought by immigrants in the early 20th century. Artisan pasta, local cheeses, and regional wines create a complete gastronomic experience.
+
+- **Artisan cheese makers**: Visit local producers who craft over 12 cheese varieties that pair perfectly with regional wines.
+
+- **Relax by the pool**: Renting a rural property with a private pool is the best way to enjoy sunny April afternoons without leaving home.
+
+For a complete guide to activities in the region, check out our article on [what to do in São Roque](/en/blog/o-que-fazer-em-sao-roque).
+
+## Where to Stay in São Roque for the Tiradentes Holiday
+
+To make the most of the extended holiday, the best option is to rent a sítio or chácara (country estate) for your entire group. Unlike guesthouses and hotels, a rural property offers total privacy, space for children to play, a BBQ grill for gathering everyone together, and freedom to set your own schedule.
+
+**Sítio Girassol** is the ideal choice for the Tiradentes holiday weekend. The property features 3 bedrooms (king suite, double room, and bunk bed room), a private pool with deck, two BBQ grills (covered and outdoor), tennis and volleyball court, stone fireplace, high-speed Wi-Fi, and 2.6 hectares of preserved nature. The property is pet-friendly and accommodates up to 6 guests in total comfort.
+
+Nightly rates start from R$ ${listingConfig.pricing.nightlyRate}/night, with a ${listingConfig.pricing.weeklyDiscountPercent}% discount for weekly stays and ${listingConfig.pricing.monthlyDiscountPercent}% for monthly stays. For the 4-day holiday break, you enjoy the complete facilities while paying much less than a coastal guesthouse.
+
+[Book on Airbnb](https://www.airbnb.com/rooms/1345960842338220775) and secure your stay before the dates fill up.
+
+For more countryside rental options in the area, see our guide on [chácaras for rent near SP](/en/blog/chacara-para-alugar-perto-de-sao-paulo).
+
+## Tips for Making the Most of the Holiday Break
+
+To ensure the best possible holiday experience, follow these practical tips:
+
+- **Book early**: Extended holidays fill up fast. Popular properties like Sítio Girassol tend to have their dates taken weeks before the holiday. Don't leave it to the last minute.
+
+- **Pack layers**: April marks the beginning of autumn in the São Paulo countryside. Evenings in São Roque can be cool, with temperatures between 12°C and 18°C. Bring jackets and warm clothing — the Sítio Girassol fireplace is perfect for those chilly nights.
+
+- **Choose the best route**: Leaving from São Paulo, the best options are Raposo Tavares (SP-270) and Castello Branco (SP-280). Avoid leaving on Friday afternoon; prefer Saturday morning or Friday before 2 PM.
+
+- **Stock up before arriving**: Do your grocery shopping in São Roque before heading to the property. That way you'll have everything ready for BBQs and home-cooked meals.
+
+- **Make the most of all 4 days**: With 4 days available, plan an itinerary that includes at least one day at wineries, one day for hiking, and two days relaxing at the property. No rush, no stress.
+
+## How to Get There
+
+The trip from São Paulo to São Roque is quick and straightforward:
+
+- **Via Raposo Tavares (SP-270)**: Follow the highway to the São Roque exit. The route is approximately 60 km and takes between 1 hour and 1.5 hours depending on traffic.
+
+- **Via Castello Branco (SP-280)**: Another option is to follow Castello Branco to exit km 54B towards São Roque. Distance and time are similar to Raposo Tavares.
+
+- **Toll**: The toll on the stretch to São Roque via Raposo Tavares is approximately R$ 5.20 (2026 rate).
+
+- **GPS**: Simply search for "São Roque, SP" on your GPS or navigation app and follow your preferred route.
+
+Tip: during the Tiradentes holiday, Raposo Tavares tends to have less traffic than the highways leading to the coast. You arrive rested and ready to enjoy your break.
+
+The 2026 Tiradentes holiday is the perfect opportunity to disconnect from routine and enjoy the São Paulo countryside. Sítio Girassol offers all the facilities for an unforgettable break: pool, BBQ, nature, fireplace, and plenty of space for the whole family — including your pets. [Book now on Airbnb](https://www.airbnb.com/rooms/1345960842338220775) and secure your holiday in São Roque.`,
+      es: `El feriado de Tiradentes en 2026 cae un martes 21 de abril, creando la oportunidad perfecta para un fin de semana largo de 4 días — del sábado 18 al martes 21. Para quienes viven en São Paulo, esta es la ocasión ideal para escapar del tráfico, la contaminación y el ritmo frenético de la capital. Y no hace falta ir lejos: a solo 60 km de SP, São Roque ofrece todo lo que necesitas para un descanso memorable con la familia o amigos.
+
+Mientras miles de paulistanos abarrotan las carreteras rumbo a la costa, enfrentando horas de congestión y precios inflados en las playas, São Roque permanece como un refugio tranquilo, accesible y lleno de experiencias auténticas. En esta guía completa, te mostramos por qué São Roque es el destino perfecto para el feriado de Tiradentes 2026 y cómo aprovechar cada día del fin de semana largo.
+
+## Por qué São Roque para el Feriado de Tiradentes
+
+São Roque es conocida como la "Tierra del Vino" y está ubicada a solo 60 km de São Paulo, con acceso rápido por las autopistas Raposo Tavares y Castello Branco. El trayecto toma entre 1 hora y 1 hora y media, incluso durante feriados — muy diferente de las 4 a 6 horas que muchos enfrentan para llegar a la costa paulista.
+
+La región es un polo de enoturismo con más de 30 bodegas abiertas a visitación, además de senderos ecológicos en Mata Atlántica preservada, gastronomía de tradición italiana y una atmósfera rural que parece estar a años luz del ajetreo urbano. São Roque también es significativamente más barata que los destinos costeros durante feriados prolongados: mientras las posadas en la costa norte cobran desde R$ 800/noche en feriados, en São Roque es posible encontrar hospedajes rurales completos a precios mucho más accesibles.
+
+Otro punto fuerte: São Roque no se llena como las playas. Puedes visitar bodegas sin filas interminables, cenar en restaurantes sin esperar dos horas por una mesa y disfrutar la naturaleza con tranquilidad. Para familias con niños o grupos de amigos, esto marca toda la diferencia.
+
+## Qué Hacer en São Roque en el Feriado de Tiradentes
+
+São Roque ofrece una variedad sorprendente de actividades para un fin de semana largo de 4 días. Estas son las principales:
+
+- **Ruta del Vino**: El circuito reúne más de 30 bodegas en aproximadamente 10 km. Las degustaciones comienzan desde R$ 30 por persona, y muchas bodegas ofrecen almuerzos armonizados entre R$ 80 y R$ 150. Vinícola Góes y Villa Santa Maria son paradas obligatorias.
+
+- **Senderos y caminatas**: La región cuenta con más de 20 senderos catalogados en Mata Atlántica preservada. El Sendero del Morro do Saboó tiene 4,5 km y ofrece vistas panorámicas espectaculares. Para caminatas más suaves, el Parque Natural Municipal cuenta con recorridos de 1,5 km a 6 km.
+
+- **Gastronomía italiana**: São Roque alberga más de 50 restaurantes, muchos con tradición italiana traída por inmigrantes a principios del siglo XX. Pastas artesanales, quesos locales y vinos de la región componen una experiencia gastronómica completa.
+
+- **Queserías artesanales**: Visita productores locales que elaboran más de 12 variedades de quesos que armonizan perfectamente con los vinos de la región.
+
+- **Relajarse junto a la piscina**: Alquilar una propiedad rural con piscina privada es la mejor forma de disfrutar las tardes soleadas de abril sin salir de casa.
+
+Para una guía completa de actividades en la región, consulta nuestro artículo [qué hacer en São Roque](/es/blog/o-que-fazer-em-sao-roque).
+
+## Dónde Hospedarse en São Roque en el Feriado de Tiradentes
+
+Para aprovechar al máximo el feriado prolongado, la mejor opción es alquilar un sítio o chácara (finca rural) para todo el grupo. A diferencia de posadas y hoteles, una propiedad rural ofrece privacidad total, espacio para que los niños jueguen, parrilla para reunir al grupo y libertad de horarios.
+
+El **Sítio Girassol** es la elección ideal para el feriado de Tiradentes. La propiedad cuenta con 3 dormitorios (suite king, habitación doble y litera), piscina privada con deck, dos parrillas (cubierta y al aire libre), cancha de tenis y voleibol, chimenea de piedra, Wi-Fi de alta velocidad y 2,6 hectáreas de naturaleza preservada. La propiedad acepta mascotas y acomoda hasta 6 huéspedes con total comodidad.
+
+Las tarifas son desde R$ ${listingConfig.pricing.nightlyRate}/noche, con ${listingConfig.pricing.weeklyDiscountPercent}% de descuento para estadías semanales y ${listingConfig.pricing.monthlyDiscountPercent}% para estadías mensuales. Para el feriado de 4 días, disfrutas de toda la estructura pagando mucho menos que una posada en la costa.
+
+[Reserva en Airbnb](https://www.airbnb.com/rooms/1345960842338220775) y asegura tu estadía antes de que se agoten las fechas.
+
+Para más opciones de fincas en la región, consulta nuestra guía de [fincas para alquilar cerca de SP](/es/blog/chacara-para-alugar-perto-de-sao-paulo).
+
+## Consejos para Aprovechar el Fin de Semana Largo
+
+Para garantizar la mejor experiencia posible en el feriado, sigue estos consejos prácticos:
+
+- **Reserva con anticipación**: Los feriados prolongados se llenan rápido. Propiedades populares como el Sítio Girassol suelen tener sus fechas ocupadas semanas antes del feriado. No lo dejes para último momento.
+
+- **Lleva ropa de abrigo**: Abril marca el inicio del otoño en el interior paulista. Las noches en São Roque pueden ser frescas, con temperaturas entre 12°C y 18°C. Lleva chaquetas y ropa de abrigo — la chimenea del Sítio Girassol es perfecta para esas noches frescas.
+
+- **Elige la mejor ruta**: Saliendo de São Paulo, las mejores opciones son Raposo Tavares (SP-270) y Castello Branco (SP-280). Evita salir el viernes por la tarde; prefiere el sábado temprano o el viernes antes de las 14h.
+
+- **Abastécete antes de llegar**: Haz las compras del supermercado en São Roque antes de dirigirte a la propiedad. Así tendrás todo listo para la parrilla y las comidas en casa.
+
+- **Aprovecha los 4 días completos**: Con 4 días disponibles, organiza un itinerario que incluya al menos un día de bodegas, un día de senderismo y dos días de descanso en la propiedad. Sin apuros, sin estrés.
+
+## Cómo Llegar a São Roque
+
+El viaje desde São Paulo a São Roque es rápido y sencillo:
+
+- **Por Raposo Tavares (SP-270)**: Sigue por la autopista hasta la salida a São Roque. El trayecto tiene aproximadamente 60 km y toma entre 1 hora y 1 hora y media dependiendo del tráfico.
+
+- **Por Castello Branco (SP-280)**: Otra opción es seguir por Castello Branco hasta la salida km 54B en dirección a São Roque. Distancia y tiempo similares a Raposo Tavares.
+
+- **Peaje**: El peaje en el tramo hasta São Roque por Raposo Tavares es de aproximadamente R$ 5,20 (valor de 2026).
+
+- **GPS**: Simplemente busca "São Roque, SP" en tu GPS o aplicación de navegación y sigue la ruta de tu preferencia.
+
+Consejo: durante el feriado de Tiradentes, Raposo Tavares suele tener menos tráfico que las autopistas que llevan a la costa. Llegas descansado y listo para disfrutar.
+
+El feriado de Tiradentes 2026 es la oportunidad perfecta para desconectar de la rutina y disfrutar del interior paulista. El Sítio Girassol ofrece toda la estructura para un feriado inolvidable: piscina, parrilla, naturaleza, chimenea y espacio de sobra para toda la familia — incluyendo las mascotas. [Reserva ahora en Airbnb](https://www.airbnb.com/rooms/1345960842338220775) y asegura tu feriado en São Roque.`,
+    },
+    publishedAt: "2026-03-31",
+    coverImage: "/images/exterior/014_Exterior_1.jpeg",
+    coverAlt: {
+      pt: "Vista do Sítio Girassol em São Roque, destino para o feriado de Tiradentes perto de São Paulo",
+      en: "View of Sítio Girassol in São Roque, destination for Tiradentes holiday near São Paulo",
+      es: "Vista de Sítio Girassol en São Roque, destino para el feriado de Tiradentes cerca de São Paulo",
+    },
+    tags: ["tiradentes", "feriado", "são roque", "interior sp", "abril"],
   },
 ];
