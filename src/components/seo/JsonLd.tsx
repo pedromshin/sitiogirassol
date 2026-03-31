@@ -314,14 +314,6 @@ export default function JsonLd({ locale }: { locale: string }) {
         },
       ],
     },
-    containedInPlace: {
-      "@type": "City",
-      name: "São Roque",
-      containedInPlace: {
-        "@type": "State",
-        name: "São Paulo",
-      },
-    },
   };
 
   const organization = {
