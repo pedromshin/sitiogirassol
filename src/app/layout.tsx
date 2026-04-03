@@ -20,9 +20,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sitiogirassol.org"),
-  title: "Sítio Girassol - Vacation Rental with Pool in São Roque, SP | 2.6 ha Nature Retreat",
+  title: "Sítio Girassol - Aluguel de Temporada com Piscina em São Roque, SP | 2,6 ha de Natureza",
   description:
-    "Private vacation rental 60 km from São Paulo. 3 bedrooms, pool, BBQ, fireplace, offroad trails on 2.6 hectares of preserved nature in São Roque, SP. Pets welcome. Book on Airbnb.",
+    "Chácara para alugar a 60 km de São Paulo. 3 quartos, piscina, churrasqueira, lareira, trilhas offroad em 2,6 hectares de natureza preservada em São Roque, SP. Aceita pets. Reserve no Airbnb.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -43,7 +43,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
-      lang="pt"
+      lang="pt-BR"
       suppressHydrationWarning
       className={`${playfair.variable} ${inter.variable}`}
     >

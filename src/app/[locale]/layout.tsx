@@ -22,8 +22,8 @@ type LocaleLayoutProps = {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const loc = locale as "en" | "pt" | "es";
-  const title = listingConfig.meta.title[loc] ?? listingConfig.meta.title.en;
-  const description = listingConfig.meta.description[loc] ?? listingConfig.meta.description.en;
+  const title = listingConfig.meta.title[loc] ?? listingConfig.meta.title.pt;
+  const description = listingConfig.meta.description[loc] ?? listingConfig.meta.description.pt;
 
   return {
     metadataBase: new URL(BASE_URL),
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title,
       description,
-      url: `${BASE_URL}/${locale}`,
+      url: locale === "pt" ? BASE_URL : `${BASE_URL}/${locale}`,
       siteName: "Sítio Girassol",
       locale: locale === "pt" ? "pt_BR" : locale === "es" ? "es_ES" : "en_US",
       type: "website",
@@ -43,12 +43,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description,
     },
     alternates: {
-      canonical: `${BASE_URL}/${locale}`,
+      canonical: locale === "pt" ? BASE_URL : `${BASE_URL}/${locale}`,
       languages: {
         en: `${BASE_URL}/en`,
-        pt: `${BASE_URL}/pt`,
+        pt: BASE_URL,
         es: `${BASE_URL}/es`,
-        "x-default": `${BASE_URL}/pt`,
+        "x-default": BASE_URL,
       },
     },
     keywords: locale === "pt"
@@ -75,7 +75,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages} locale={locale}>
       <script
         dangerouslySetInnerHTML={{
-          __html: `document.documentElement.lang="${locale}";`,
+          __html: `document.documentElement.lang="${locale === "pt" ? "pt-BR" : locale}";`,
         }}
       />
       <JsonLd locale={locale} />

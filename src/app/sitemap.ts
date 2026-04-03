@@ -14,18 +14,21 @@ const STATIC_ROUTE_DATES: Record<string, string> = {
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = Object.keys(STATIC_ROUTE_DATES);
 
+  const localeUrl = (locale: string, path: string) =>
+    locale === "pt" ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
+
   const staticUrls = routing.locales.flatMap((locale) =>
     staticRoutes.map((route) => ({
-      url: `${BASE_URL}/${locale}${route}`,
+      url: localeUrl(locale, route),
       lastModified: new Date(STATIC_ROUTE_DATES[route]),
       changeFrequency: (route === "" ? "weekly" : "monthly") as "weekly" | "monthly",
       priority: route === "" ? 1.0 : 0.8,
       alternates: {
         languages: {
           en: `${BASE_URL}/en${route}`,
-          pt: `${BASE_URL}/pt${route}`,
+          pt: `${BASE_URL}${route}`,
           es: `${BASE_URL}/es${route}`,
-          "x-default": `${BASE_URL}/pt${route}`,
+          "x-default": `${BASE_URL}${route}`,
         },
       },
     }))
@@ -33,16 +36,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogUrls = routing.locales.flatMap((locale) =>
     blogPosts.map((post) => ({
-      url: `${BASE_URL}/${locale}/blog/${post.slug}`,
+      url: localeUrl(locale, `/blog/${post.slug}`),
       lastModified: new Date(post.updatedAt ?? post.publishedAt),
       changeFrequency: "monthly" as const,
       priority: 0.7,
       alternates: {
         languages: {
           en: `${BASE_URL}/en/blog/${post.slug}`,
-          pt: `${BASE_URL}/pt/blog/${post.slug}`,
+          pt: `${BASE_URL}/blog/${post.slug}`,
           es: `${BASE_URL}/es/blog/${post.slug}`,
-          "x-default": `${BASE_URL}/pt/blog/${post.slug}`,
+          "x-default": `${BASE_URL}/blog/${post.slug}`,
         },
       },
     }))
