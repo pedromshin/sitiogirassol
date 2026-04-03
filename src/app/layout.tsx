@@ -48,6 +48,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       className={`${playfair.variable} ${inter.variable}`}
     >
       <head>
+        <meta name="facebook-domain-verification" content="emv2hc3erb9fb04b52bxuu8p75myok" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         {/* Preconnect to external origins for faster resource loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
