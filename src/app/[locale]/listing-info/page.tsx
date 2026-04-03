@@ -56,13 +56,13 @@ function InfoBreadcrumbJsonLd({ locale }: { locale: string }) {
         "@type": "ListItem",
         position: 1,
         name: "Sítio Girassol",
-        item: `${BASE_URL}/${locale}`,
+        item: locale === "pt" ? BASE_URL : `${BASE_URL}/${locale}`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: locale === "pt" ? "Informações" : locale === "es" ? "Información" : "Info",
-        item: `${BASE_URL}/${locale}/listing-info`,
+        item: locale === "pt" ? `${BASE_URL}/listing-info` : `${BASE_URL}/${locale}/listing-info`,
       },
     ],
   };

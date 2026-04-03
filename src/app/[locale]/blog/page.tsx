@@ -62,7 +62,7 @@ export default async function BlogPage({ params }: PageProps) {
     "@type": "CollectionPage",
     name: "Blog - Sítio Girassol",
     description: blogMeta.description[loc] ?? blogMeta.description.en,
-    url: `${BASE_URL}/${locale}/blog`,
+    url: locale === "pt" ? `${BASE_URL}/blog` : `${BASE_URL}/${locale}/blog`,
     isPartOf: {
       "@type": "WebSite",
       name: "Sítio Girassol",
@@ -71,7 +71,7 @@ export default async function BlogPage({ params }: PageProps) {
     hasPart: blogPosts.map((post) => ({
       "@type": "Article",
       headline: post.title[loc] ?? post.title.en,
-      url: `${BASE_URL}/${locale}/blog/${post.slug}`,
+      url: locale === "pt" ? `${BASE_URL}/blog/${post.slug}` : `${BASE_URL}/${locale}/blog/${post.slug}`,
       datePublished: post.publishedAt,
       image: post.coverImage,
     })),

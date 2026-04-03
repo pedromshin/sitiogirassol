@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PageProps) {
     openGraph: {
       title,
       description,
-      url: `${BASE_URL}/${locale}/blog/${slug}`,
+      url: locale === "pt" ? `${BASE_URL}/blog/${slug}` : `${BASE_URL}/${locale}/blog/${slug}`,
       type: "article",
       publishedTime: post.publishedAt,
       images: [
@@ -82,7 +82,7 @@ function ArticleJsonLd({
       name: "Sítio Girassol",
       logo: { "@type": "ImageObject", url: `${BASE_URL}/icons/og-image.png` },
     },
-    mainEntityOfPage: `${BASE_URL}/${locale}/blog/${post.slug}`,
+    mainEntityOfPage: locale === "pt" ? `${BASE_URL}/blog/${post.slug}` : `${BASE_URL}/${locale}/blog/${post.slug}`,
   };
 
   return (
@@ -111,19 +111,19 @@ function BreadcrumbJsonLd({
         "@type": "ListItem",
         position: 1,
         name: "Sítio Girassol",
-        item: `${BASE_URL}/${locale}`,
+        item: locale === "pt" ? BASE_URL : `${BASE_URL}/${locale}`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: `${BASE_URL}/${locale}/blog`,
+        item: locale === "pt" ? `${BASE_URL}/blog` : `${BASE_URL}/${locale}/blog`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: post.title[loc] ?? post.title.en,
-        item: `${BASE_URL}/${locale}/blog/${post.slug}`,
+        item: locale === "pt" ? `${BASE_URL}/blog/${post.slug}` : `${BASE_URL}/${locale}/blog/${post.slug}`,
       },
     ],
   };

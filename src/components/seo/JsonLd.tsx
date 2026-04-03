@@ -129,7 +129,7 @@ export default function JsonLd({ locale }: { locale: string }) {
     additionalType: "https://schema.org/House",
     name: title,
     description,
-    url: `${BASE_URL}/${locale}`,
+    url: locale === "pt" ? BASE_URL : `${BASE_URL}/${locale}`,
     identifier: "1345960842338220775",
     tourBookingPage: listingConfig.airbnbUrl,
     image: listingConfig.photos.slice(0, 10).map((p) => `${BASE_URL}${p.src}`),
@@ -354,7 +354,7 @@ export default function JsonLd({ locale }: { locale: string }) {
     containsPlace: {
       "@type": "LodgingBusiness",
       name: "Sítio Girassol",
-      url: `${BASE_URL}/${locale}`,
+      url: locale === "pt" ? BASE_URL : `${BASE_URL}/${locale}`,
     },
   };
 
