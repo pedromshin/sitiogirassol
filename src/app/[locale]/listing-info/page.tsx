@@ -31,18 +31,18 @@ export async function generateMetadata({ params }: PageProps) {
     title,
     description,
     alternates: {
-      canonical: `${BASE_URL}/${locale}/listing-info`,
+      canonical: locale === "pt" ? `${BASE_URL}/listing-info` : `${BASE_URL}/${locale}/listing-info`,
       languages: {
         en: `${BASE_URL}/en/listing-info`,
-        pt: `${BASE_URL}/pt/listing-info`,
+        pt: `${BASE_URL}/listing-info`,
         es: `${BASE_URL}/es/listing-info`,
-        "x-default": `${BASE_URL}/pt/listing-info`,
+        "x-default": `${BASE_URL}/listing-info`,
       },
     },
     openGraph: {
       title,
       description,
-      url: `${BASE_URL}/${locale}/listing-info`,
+      url: locale === "pt" ? `${BASE_URL}/listing-info` : `${BASE_URL}/${locale}/listing-info`,
     },
   };
 }

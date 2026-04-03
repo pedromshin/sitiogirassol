@@ -20,9 +20,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sitiogirassol.org"),
-  title: "Sítio Girassol - Aluguel de Temporada com Piscina em São Roque, SP | 2,6 ha de Natureza",
+  title: "Sítio Girassol - Chácara para Alugar com Piscina em São Roque, SP | Perto de São Paulo",
   description:
-    "Chácara para alugar a 60 km de São Paulo. 3 quartos, piscina, churrasqueira, lareira, trilhas offroad em 2,6 hectares de natureza preservada em São Roque, SP. Aceita pets. Reserve no Airbnb.",
+    "Chácara para alugar perto de São Paulo. 3 quartos, piscina privativa com cascata, 2 churrasqueiras, lareira, trilhas offroad em 2,6 hectares de natureza em São Roque, SP. Pet-friendly. Reserve agora.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

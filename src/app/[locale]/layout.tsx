@@ -7,6 +7,7 @@ import GlassyHeader from "@/components/layout/GlassyHeader";
 import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/seo/JsonLd";
 import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
+import CookieConsent from "@/components/layout/CookieConsent";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sitiogirassol.org";
 
@@ -52,10 +53,32 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
     keywords: locale === "pt"
-      ? ["sítio girassol", "chácara para alugar São Roque", "aluguel temporada São Roque SP", "casa com piscina para alugar interior SP", "chácara perto de São Paulo", "sítio com piscina São Roque"]
+      ? [
+          "sítio girassol",
+          "chácara para alugar São Roque",
+          "aluguel temporada São Roque SP",
+          "casa com piscina para alugar interior SP",
+          "chácara perto de São Paulo",
+          "sítio com piscina São Roque",
+          "chácara aluguel fim de semana SP",
+          "casa campo perto São Paulo",
+          "aluguel chácara interior paulista",
+          "chácara com churrasqueira São Roque",
+          "sítio pet friendly São Paulo",
+          "casa temporada Sorocaba região",
+          "chácara para família São Roque",
+          "piscina privativa aluguel SP",
+        ]
       : locale === "es"
       ? ["sítio girassol", "finca vacacional São Roque", "alquiler vacacional São Paulo", "casa con piscina São Roque"]
       : ["sítio girassol", "vacation rental São Roque", "house with pool São Paulo countryside", "nature retreat São Roque SP"],
+    other: {
+      "geo.region": "BR-SP",
+      "geo.placename": "São Roque, São Paulo",
+      "geo.position": "-23.490732;-47.270569",
+      "ICBM": "-23.490732, -47.270569",
+      "content-language": locale === "pt" ? "pt-BR" : locale === "es" ? "es" : "en",
+    },
   };
 }
 
@@ -85,6 +108,7 @@ export default async function LocaleLayout({
         <Footer />
       </div>
       <StickyMobileCTA />
+      <CookieConsent />
     </NextIntlClientProvider>
   );
 }

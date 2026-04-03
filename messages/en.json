@@ -38,6 +38,7 @@
     "photoGallery": "Photo Gallery",
     "amenities": "Amenities",
     "ratesAndReservations": "Rates and Reservations",
+    "privacyPolicy": "Privacy Policy",
     "location": "São Roque, SP"
   },
   "PhotoCarousel": {
@@ -187,5 +188,29 @@
     "title": "Frequently Asked ",
     "titleHighlight": "Questions",
     "subtitle": "Everything you need to know about Sítio Girassol"
+  },
+  "CookieConsent": {
+    "title": "Cookies and privacy",
+    "message": "We use Google Analytics and Meta Pixel cookies to improve your experience and measure our ad performance. By accepting, you agree to the use of these cookies.",
+    "privacyLink": "Privacy Policy",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: April 3, 2026",
+    "intro": "Sítio Girassol (sitiogirassol.org) respects your privacy. This policy explains what data we collect, why, and how you can exercise your rights under the Brazilian General Data Protection Law (LGPD) and applicable international regulations.",
+    "dataCollectedTitle": "Data collected",
+    "dataCollectedBody": "We do not collect personal data directly (name, email, phone). Our site uses analytics tools that automatically collect:\n\n• IP address (anonymized)\n• Device type and browser\n• Pages visited and browsing time\n• Traffic source (search, social media, direct links)",
+    "purposeTitle": "Purpose of use",
+    "purposeBody": "The collected data is used exclusively to:\n\n• Measure site performance and improve visitor experience\n• Evaluate the effectiveness of advertising campaigns\n• Understand how visitors interact with our content",
+    "thirdPartiesTitle": "Third parties receiving data",
+    "thirdPartiesBody": "Browsing data is shared with:\n\n• Google Analytics 4 (Google LLC) — site traffic analysis\n• Meta Pixel (Meta Platforms, Inc.) — ad conversion measurement\n• Vercel Analytics (Vercel Inc.) — performance monitoring (no cookies)\n\nEach service has its own privacy policy and processes data according to its respective terms.",
+    "cookiesTitle": "Cookies",
+    "cookiesBody": "Analytics and advertising cookies (Google Analytics and Meta Pixel) are only activated after your explicit consent, given through the banner displayed on your first visit. Essential cookies for site functionality and Vercel Analytics (which does not use cookies) operate without requiring consent.\n\nYou can change your preference at any time by clearing your browser cookies and revisiting the site.",
+    "rightsTitle": "Your rights",
+    "rightsBody": "Under the LGPD and applicable privacy laws, you have the right to:\n\n• Know what data is being collected\n• Request deletion of your data\n• Revoke consent at any time\n• Request information about data sharing with third parties\n\nTo exercise any of these rights, please contact us.",
+    "contactTitle": "Contact",
+    "contactBody": "For privacy-related questions, contact us:\n\nWhatsApp: +55 (11) 91158-4094\nInstagram: @sitiogirassol.sp\n\nData controller: Sítio Girassol, São Roque, SP, Brazil."
   }
 }

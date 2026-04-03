@@ -88,6 +88,11 @@ export default function Footer() {
                   {t("ratesAndReservations")}
                 </a>
               </li>
+              <li>
+                <Link href="/privacy" className="hover:text-white transition-colors">
+                  {t("privacyPolicy")}
+                </Link>
+              </li>
             </ul>
           </div>
 

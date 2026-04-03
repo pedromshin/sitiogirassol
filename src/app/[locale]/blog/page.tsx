@@ -32,15 +32,15 @@ export async function generateMetadata({ params }: PageProps) {
     title,
     description,
     alternates: {
-      canonical: `${BASE_URL}/${locale}/blog`,
+      canonical: locale === "pt" ? `${BASE_URL}/blog` : `${BASE_URL}/${locale}/blog`,
       languages: {
         en: `${BASE_URL}/en/blog`,
-        pt: `${BASE_URL}/pt/blog`,
+        pt: `${BASE_URL}/blog`,
         es: `${BASE_URL}/es/blog`,
-        "x-default": `${BASE_URL}/pt/blog`,
+        "x-default": `${BASE_URL}/blog`,
       },
     },
-    openGraph: { title, description, url: `${BASE_URL}/${locale}/blog` },
+    openGraph: { title, description, url: locale === "pt" ? `${BASE_URL}/blog` : `${BASE_URL}/${locale}/blog` },
   };
 }
 

@@ -38,6 +38,7 @@
     "photoGallery": "Galeria de Fotos",
     "amenities": "Comodidades",
     "ratesAndReservations": "Tarifas e Reservas",
+    "privacyPolicy": "Política de Privacidade",
     "location": "São Roque, SP"
   },
   "PhotoCarousel": {
@@ -187,5 +188,29 @@
     "title": "Perguntas ",
     "titleHighlight": "Frequentes",
     "subtitle": "Tudo o que você precisa saber sobre o Sítio Girassol"
+  },
+  "CookieConsent": {
+    "title": "Cookies e privacidade",
+    "message": "Utilizamos cookies do Google Analytics e Meta Pixel para melhorar sua experiência e medir o desempenho dos nossos anúncios. Ao aceitar, você concorda com o uso desses cookies.",
+    "privacyLink": "Política de Privacidade",
+    "accept": "Aceitar",
+    "decline": "Recusar"
+  },
+  "Privacy": {
+    "title": "Política de Privacidade",
+    "lastUpdated": "Última atualização: 3 de abril de 2026",
+    "intro": "O Sítio Girassol (sitiogirassol.org) respeita sua privacidade. Esta política explica quais dados coletamos, por que e como você pode exercer seus direitos conforme a Lei Geral de Proteção de Dados (LGPD).",
+    "dataCollectedTitle": "Dados coletados",
+    "dataCollectedBody": "Não coletamos dados pessoais diretamente (nome, e-mail, telefone). Nosso site utiliza ferramentas de análise que coletam automaticamente:\n\n• Endereço IP (anonimizado)\n• Tipo de dispositivo e navegador\n• Páginas visitadas e tempo de navegação\n• Origem do acesso (busca, redes sociais, links diretos)",
+    "purposeTitle": "Finalidade do uso",
+    "purposeBody": "Os dados coletados são utilizados exclusivamente para:\n\n• Medir o desempenho do site e melhorar a experiência do visitante\n• Avaliar a eficácia das campanhas publicitárias\n• Entender como os visitantes interagem com nosso conteúdo",
+    "thirdPartiesTitle": "Terceiros que recebem dados",
+    "thirdPartiesBody": "Os dados de navegação são compartilhados com:\n\n• Google Analytics 4 (Google LLC) — análise de tráfego do site\n• Meta Pixel (Meta Platforms, Inc.) — medição de conversões de anúncios\n• Vercel Analytics (Vercel Inc.) — monitoramento de performance (sem cookies)\n\nCada serviço possui sua própria política de privacidade e processa os dados conforme seus respectivos termos.",
+    "cookiesTitle": "Cookies",
+    "cookiesBody": "Cookies de análise e publicidade (Google Analytics e Meta Pixel) só são ativados após seu consentimento explícito, dado através do banner exibido na primeira visita. Cookies essenciais para o funcionamento do site e o Vercel Analytics (que não utiliza cookies) operam sem necessidade de consentimento.\n\nVocê pode alterar sua preferência a qualquer momento limpando os cookies do navegador e revisitando o site.",
+    "rightsTitle": "Seus direitos (LGPD)",
+    "rightsBody": "Conforme a LGPD, você tem direito a:\n\n• Saber quais dados estão sendo coletados\n• Solicitar a exclusão dos seus dados\n• Revogar o consentimento a qualquer momento\n• Solicitar informações sobre o compartilhamento com terceiros\n\nPara exercer qualquer desses direitos, entre em contato conosco.",
+    "contactTitle": "Contato",
+    "contactBody": "Para questões sobre privacidade, entre em contato:\n\nWhatsApp: +55 (11) 91158-4094\nInstagram: @sitiogirassol.sp\n\nResponsável pelo tratamento de dados: Sítio Girassol, São Roque, SP."
   }
 }
