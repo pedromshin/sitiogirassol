@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { listingConfig } from "@/data/listing.config";
+import { trackEvent } from "@/lib/tracking";
 
 export default function CTASection() {
   const t = useTranslations("CTA");
@@ -29,6 +30,7 @@ export default function CTASection() {
             href={listingConfig.airbnbUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("airbnb_click", { location: "cta_section" })}
             className="w-full sm:w-auto px-12 py-5 rounded-full font-bold text-lg transition-all shadow-xl hover:scale-105 bg-warm-gold text-forest-dark"
           >
             {t("button").toUpperCase()}

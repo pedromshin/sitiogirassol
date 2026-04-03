@@ -132,7 +132,7 @@ export const listingConfig: ListingConfig = {
   pricing: {
     nightlyRate: 238,
     weeklyDiscountPercent: 12,
-    monthlyDiscountPercent: 27,
+    monthlyDiscountPercent: 25,
     cleaningFee: 180,
     currency: "BRL",
   },

@@ -8,6 +8,7 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { listingConfig } from "@/data/listing.config";
 import { calculateTotalPrice } from "@/lib/pricing";
+import { trackEvent } from "@/lib/tracking";
 import { addDays, format } from "date-fns";
 
 const MOBILE_BREAKPOINT = 768;
@@ -139,6 +140,7 @@ export default function CalendarSection() {
               href={listingConfig.airbnbUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent("airbnb_click", { location: "calendar" })}
               className="mt-6 block w-full text-center rounded-full py-4 font-bold transition shadow-lg bg-accent-gold text-forest-dark shadow-accent-gold"
             >
               {t("bookNow")}

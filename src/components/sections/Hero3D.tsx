@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { listingConfig } from "@/data/listing.config";
 import { useState, useEffect } from "react";
 import BrandIcon from "@/components/ui/BrandIcon";
+import { trackEvent } from "@/lib/tracking";
 
 const HERO_BG_IMAGES = [
   "/bg/DSC_0559.JPG",
@@ -172,7 +173,7 @@ export default function Hero3D() {
               href={listingConfig.airbnbUrl}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e) => { e.stopPropagation(); trackEvent("airbnb_click", { location: "hero" }); }}
               className="w-full sm:w-auto px-8 py-4 font-bold rounded-lg text-center transition-all duration-300 hover:opacity-90 shadow-lg bg-warm-gold text-forest-dark"
             >
               {t("bookOnAirbnb")}
@@ -182,7 +183,7 @@ export default function Hero3D() {
                 href={`https://wa.me/${listingConfig.whatsappNumber}?text=${encodeURIComponent("Olá! Tenho interesse em reservar o Sítio Girassol 🌻")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e) => { e.stopPropagation(); trackEvent("whatsapp_click", { location: "hero" }); }}
                 className="w-full sm:w-auto px-8 py-4 font-bold rounded-lg text-center transition-all duration-300 hover:opacity-90 shadow-lg bg-[#25D366] text-white flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

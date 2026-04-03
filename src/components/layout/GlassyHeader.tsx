@@ -6,6 +6,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { listingConfig } from "@/data/listing.config";
 import BrandIcon from "@/components/ui/BrandIcon";
+import { trackEvent } from "@/lib/tracking";
 
 export default function GlassyHeader() {
   const t = useTranslations("Header");
@@ -50,6 +51,7 @@ export default function GlassyHeader() {
         href={listingConfig.airbnbUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackEvent("airbnb_click", { location: "header" })}
         className="hidden sm:block px-6 py-2.5 rounded-lg text-sm bg-warm-gold text-forest-dark font-bold transition shadow-md hover:opacity-90"
       >
         {t("bookOnAirbnb")}
@@ -104,7 +106,7 @@ export default function GlassyHeader() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex justify-center px-4 py-3 rounded-lg text-sm font-bold bg-warm-gold text-forest-dark"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={() => { setMobileMenuOpen(false); trackEvent("airbnb_click", { location: "header_mobile" }); }}
           >
             {t("bookOnAirbnb")}
           </a>

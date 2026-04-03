@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { listingConfig } from "@/data/listing.config";
+import { trackEvent } from "@/lib/tracking";
 
 export default function StickyMobileCTA() {
   const t = useTranslations("StickyCTA");
@@ -44,6 +45,7 @@ export default function StickyMobileCTA() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent("whatsapp_click", { location: "sticky_mobile" })}
                 className="flex-1 flex items-center justify-center gap-1.5 py-3 rounded-lg font-bold text-sm transition-all bg-[#25D366] text-white"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -56,6 +58,7 @@ export default function StickyMobileCTA() {
               href={listingConfig.airbnbUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent("airbnb_click", { location: "sticky_mobile" })}
               className="flex-1 flex items-center justify-center gap-1.5 py-3 rounded-lg font-bold text-sm transition-all bg-warm-gold text-forest-dark"
             >
               {t("book")}
