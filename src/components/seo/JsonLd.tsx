@@ -126,6 +126,7 @@ export default function JsonLd({ locale }: { locale: string }) {
   const vacationRental = {
     "@context": "https://schema.org",
     "@type": "VacationRental",
+    additionalType: "https://schema.org/House",
     name: title,
     description,
     url: `${BASE_URL}/${locale}`,
@@ -202,77 +203,6 @@ export default function JsonLd({ locale }: { locale: string }) {
         datePublished: "2025-03",
         reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
         reviewBody: "O lugar é maravilhoso, corresponde exatamente como as fotos. Fora. Dias mega agradáveis. Na propriedade tem uma trilha que vai até um rio bem gostoso para relaxar, trilha de fácil acesso. A piscina é muito boa, ao lado de um espaço com mesa de jogos, churrasqueira, geladeira e banheiro, podendo passar o dia todo no ambiente. A casa corresponde perfeitamente como as fotos, roupa de cama extremamente limpas e banheiros limpos. A cozinha conta com tudo que se é necessário.",
-      },
-    ],
-    containsPlace: [
-      {
-        "@type": "Room",
-        name: loc === "pt" ? "Suíte Principal" : loc === "es" ? "Suite Principal" : "Master Suite",
-        description: loc === "pt"
-          ? "Quarto com cama king size e banheiro privativo"
-          : loc === "es"
-          ? "Habitación con cama king y baño privado"
-          : "Room with king bed and private bathroom",
-        occupancy: {
-          "@type": "QuantitativeValue",
-          value: 2,
-        },
-        bed: {
-          "@type": "BedDetails",
-          typeOfBed: "King",
-          numberOfBeds: 1,
-        },
-        numberOfBedrooms: 1,
-        numberOfBathroomsTotal: 1,
-        amenityFeature: [
-          { "@type": "LocationFeatureSpecification", name: "Private bathroom", value: true },
-          { "@type": "LocationFeatureSpecification", name: "Balcony", value: true },
-        ],
-      },
-      {
-        "@type": "Room",
-        name: loc === "pt" ? "Segundo Quarto" : loc === "es" ? "Segunda Habitación" : "Second Bedroom",
-        description: loc === "pt"
-          ? "Quarto com cama de casal"
-          : loc === "es"
-          ? "Habitación con cama doble"
-          : "Room with double bed",
-        occupancy: {
-          "@type": "QuantitativeValue",
-          value: 2,
-        },
-        bed: {
-          "@type": "BedDetails",
-          typeOfBed: "Double",
-          numberOfBeds: 1,
-        },
-        numberOfBedrooms: 1,
-        numberOfBathroomsTotal: 1,
-        amenityFeature: [
-          { "@type": "LocationFeatureSpecification", name: "Balcony", value: true },
-        ],
-      },
-      {
-        "@type": "Room",
-        name: loc === "pt" ? "Terceiro Quarto" : loc === "es" ? "Tercera Habitación" : "Third Bedroom",
-        description: loc === "pt"
-          ? "Quarto com beliche e colchões extras"
-          : loc === "es"
-          ? "Habitación con litera y colchones extra"
-          : "Room with bunk bed and extra mattresses",
-        occupancy: {
-          "@type": "QuantitativeValue",
-          value: 2,
-        },
-        bed: [
-          { "@type": "BedDetails", typeOfBed: "Bunk Bed", numberOfBeds: 1 },
-          { "@type": "BedDetails", typeOfBed: "Single", numberOfBeds: 2 },
-        ],
-        numberOfBedrooms: 1,
-        numberOfBathroomsTotal: 1,
-        amenityFeature: [
-          { "@type": "LocationFeatureSpecification", name: "Extra mattresses", value: true },
-        ],
       },
     ],
     containedInPlace: {
