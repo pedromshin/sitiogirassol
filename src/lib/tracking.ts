@@ -27,14 +27,15 @@ export function trackEvent(event: TrackingEvent, params: EventParams = {}): void
     window.gtag("event", event, params);
   }
 
-  // Meta Pixel — map to standard events where possible
+  // Meta Pixel — map to standard events for ad optimization
   if (typeof window !== "undefined" && window.fbq) {
-    const fbEventMap: Record<TrackingEvent, string> = {
-      whatsapp_click: "Contact",
-      airbnb_click: "Lead",
-      calendar_view: "ViewContent",
-      cta_click: "Lead",
+    const fbEventMap: Record<TrackingEvent, { event: string; defaults: Record<string, string> }> = {
+      whatsapp_click: { event: "Contact", defaults: { content_name: "Sítio Girassol" } },
+      airbnb_click: { event: "Schedule", defaults: { content_name: "Sítio Girassol — Reserva" } },
+      calendar_view: { event: "ViewContent", defaults: { content_name: "Sítio Girassol — Calendário" } },
+      cta_click: { event: "Lead", defaults: { content_name: "Sítio Girassol" } },
     };
-    window.fbq("track", fbEventMap[event], params);
+    const mapped = fbEventMap[event];
+    window.fbq("track", mapped.event, { ...mapped.defaults, ...params });
   }
 }
