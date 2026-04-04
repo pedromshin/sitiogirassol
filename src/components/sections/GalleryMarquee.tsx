@@ -68,6 +68,7 @@ export default function GalleryMarquee() {
             className="object-cover object-[25%_50%] transition-transform duration-700 group-hover:scale-105"
             sizes="(max-width: 1400px) 100vw, 1400px"
             priority
+            quality={60}
           />
           <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-8 z-20">
             <span className="inline-block px-3 py-1 font-bold text-xs uppercase tracking-widest rounded mb-2 bg-accent-gold text-forest-mid">

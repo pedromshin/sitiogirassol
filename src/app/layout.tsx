@@ -9,14 +9,16 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-playfair",
-  display: "swap",
+  display: "optional",
+  adjustFontFallback: true,
 });
 
 const inter = Inter({
   weight: ["400", "500", "600"],
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
+  display: "optional",
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
