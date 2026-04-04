@@ -50,6 +50,26 @@ function parseNum(v: string): number {
   return isNaN(n) ? 0 : n;
 }
 
+/** Split a CSV line respecting quoted fields that may contain commas */
+function splitCsvLine(line: string): string[] {
+  const fields: string[] = [];
+  let current = "";
+  let inQuotes = false;
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i];
+    if (ch === '"') {
+      inQuotes = !inQuotes;
+    } else if (ch === "," && !inQuotes) {
+      fields.push(current);
+      current = "";
+    } else {
+      current += ch;
+    }
+  }
+  fields.push(current);
+  return fields;
+}
+
 function findColIndex(headers: string[], candidates: string[]): number {
   for (const c of candidates) {
     const idx = headers.findIndex((h) => h.includes(c));
@@ -62,7 +82,7 @@ export function parseCampaignCsv(raw: string): CampaignRow[] {
   const lines = raw.trim().split("\n").filter(Boolean);
   if (lines.length < 2) return [];
 
-  const headers = lines[0].split(",").map(normalizeHeader);
+  const headers = splitCsvLine(lines[0]).map(normalizeHeader);
 
   // Locate custom derived metric columns positionally
   const derivedIndices = headers
@@ -72,7 +92,7 @@ export function parseCampaignCsv(raw: string): CampaignRow[] {
   const rows: CampaignRow[] = [];
 
   for (let i = 1; i < lines.length; i++) {
-    const cols = lines[i].split(",");
+    const cols = splitCsvLine(lines[i]);
     if (cols.length < 3) continue;
 
     const get = (candidates: string[]): string => {
