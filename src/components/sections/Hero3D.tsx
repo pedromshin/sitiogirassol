@@ -63,9 +63,8 @@ export default function Hero3D() {
       {/* Background Image Layer - only render nearby slides for performance */}
       <div className="absolute inset-0 z-0">
         {HERO_BG_IMAGES.map((src, i) => {
-          const prev = (currentIndex - 1 + HERO_BG_IMAGES.length) % HERO_BG_IMAGES.length;
           const next = (currentIndex + 1) % HERO_BG_IMAGES.length;
-          const isVisible = i === currentIndex || i === prev || i === next;
+          const isVisible = i === currentIndex || i === next;
           if (!isVisible) return null;
           return (
             <div
@@ -83,7 +82,7 @@ export default function Hero3D() {
                 className="object-cover"
                 priority={i === 0}
                 sizes="100vw"
-                quality={60}
+                quality={40}
               />
             </div>
           );

@@ -58,18 +58,34 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
-        {/* Preload Material Symbols to avoid render-blocking */}
+        {/* Preload LCP hero image for faster first paint */}
+        <link
+          rel="preload"
+          as="image"
+          href="/_next/image?url=%2Fbg%2FDSC_0559.JPG&w=1080&q=40"
+          fetchPriority="high"
+        />
+        {/* Preload Material Symbols — non-render-blocking via media swap */}
         <link
           rel="preload"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
           as="style"
           crossOrigin="anonymous"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
-          rel="stylesheet"
-          crossOrigin="anonymous"
+        {/* Load Material Symbols asynchronously to avoid render-blocking */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap';document.head.appendChild(l)})()`,
+          }}
         />
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+            rel="stylesheet"
+            crossOrigin="anonymous"
+          />
+        </noscript>
       </head>
       <body className="antialiased font-sans">
         {children}

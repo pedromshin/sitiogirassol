@@ -2,11 +2,23 @@ import dynamic from "next/dynamic";
 import { setRequestLocale } from "next-intl/server";
 
 const Hero3D = dynamic(() => import("@/components/sections/Hero3D"), { ssr: true });
-const StatsFooterBar = dynamic(() => import("@/components/sections/StatsFooterBar"), { ssr: true });
-const MetricsSection = dynamic(() => import("@/components/sections/MetricsSection"), { ssr: true });
+const StatsFooterBar = dynamic(() => import("@/components/sections/StatsFooterBar"), {
+  ssr: false,
+  loading: () => <div className="h-24 bg-forest-dark" />,
+});
+const MetricsSection = dynamic(() => import("@/components/sections/MetricsSection"), {
+  ssr: false,
+  loading: () => <div className="h-96 bg-forest-dark" />,
+});
 const GalleryMarquee = dynamic(() => import("@/components/sections/GalleryMarquee"), { ssr: false });
-const FeaturesSection = dynamic(() => import("@/components/sections/FeaturesSection"), { ssr: true });
-const LocationSection = dynamic(() => import("@/components/sections/LocationSection"), { ssr: true });
+const FeaturesSection = dynamic(() => import("@/components/sections/FeaturesSection"), {
+  ssr: false,
+  loading: () => <div className="h-96 bg-forest-dark" />,
+});
+const LocationSection = dynamic(() => import("@/components/sections/LocationSection"), {
+  ssr: false,
+  loading: () => <div className="h-96 bg-forest-dark" />,
+});
 const CalendarSection = dynamic(() => import("@/components/sections/CalendarSection"), {
   ssr: false,
   loading: () => <div className="h-96 bg-forest-dark" />,
