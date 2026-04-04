@@ -1,5 +1,3 @@
-import { listingConfig } from "./listing.config";
-
 export type BlogPost = {
   slug: string;
   title: Record<string, string>;
@@ -42,7 +40,7 @@ Segundo o Guia Gastronômico de São Roque, a cidade abriga mais de 50 restauran
 
 ## Onde se hospedar
 
-Para uma experiência completa no turismo rural de São Roque, alugar uma chácara ou sítio na região é a melhor opção. O **Sítio Girassol** oferece 3 quartos (suíte king, quarto de casal e beliche), piscina privativa, duas churrasqueiras, quadra de tênis e vôlei, lareira, Wi-Fi e 2,6 hectares de natureza preservada — tudo com capacidade para até 6 hóspedes. Diárias a partir de R$ ${listingConfig.pricing.nightlyRate}/noite, com ${listingConfig.pricing.weeklyDiscountPercent}% de desconto para estadias semanais e ${listingConfig.pricing.monthlyDiscountPercent}% para mensais. A propriedade aceita pets e está a apenas 60 km de São Paulo. [Reserve no Airbnb](https://www.airbnb.com/rooms/1345960842338220775).
+Para uma experiência completa no turismo rural de São Roque, alugar uma chácara ou sítio na região é a melhor opção. O **Sítio Girassol** oferece 3 quartos (suíte king, quarto de casal e beliche), piscina privativa, duas churrasqueiras, quadra de tênis e vôlei, lareira, Wi-Fi e 2,6 hectares de natureza preservada — tudo com capacidade para até 6 hóspedes. Preços dinâmicos com descontos para estadias semanais e mensais. A propriedade aceita pets e está a apenas 60 km de São Paulo. [Reserve no Airbnb](https://www.airbnb.com/rooms/1345960842338220775).
 
 ## São Roque no Feriado de Tiradentes
 
@@ -67,7 +65,7 @@ According to the São Roque Gastronomic Guide, the city hosts over 50 restaurant
 
 ## Where to Stay
 
-For a complete São Roque rural tourism experience, renting a countryside property is the best option. **Sítio Girassol** offers 3 bedrooms (king suite, double room, and bunk room), a private pool, two BBQ areas, tennis and volleyball court, fireplace, Wi-Fi, and 2.6 hectares of preserved nature — all with capacity for up to 6 guests. Rates start at R$ ${listingConfig.pricing.nightlyRate}/night, with ${listingConfig.pricing.weeklyDiscountPercent}% off for weekly stays and ${listingConfig.pricing.monthlyDiscountPercent}% off for monthly stays. The property is pet-friendly and just 60 km from São Paulo. [Book on Airbnb](https://www.airbnb.com/rooms/1345960842338220775).
+For a complete São Roque rural tourism experience, renting a countryside property is the best option. **Sítio Girassol** offers 3 bedrooms (king suite, double room, and bunk room), a private pool, two BBQ areas, tennis and volleyball court, fireplace, Wi-Fi, and 2.6 hectares of preserved nature — all with capacity for up to 6 guests. Dynamic pricing with discounts for weekly and monthly stays. The property is pet-friendly and just 60 km from São Paulo. [Book on Airbnb](https://www.airbnb.com/rooms/1345960842338220775).
 
 ## São Roque During the Tiradentes Holiday
 
@@ -92,7 +90,7 @@ Según la Guía Gastronómica de São Roque, la ciudad alberga más de 50 restau
 
 ## Dónde hospedarse
 
-Para una experiencia completa en el turismo rural de São Roque, alquilar una finca o chacra en la región es la mejor opción. **Sítio Girassol** ofrece 3 dormitorios (suite king, habitación doble y litera), piscina privada, dos parrillas, cancha de tenis y voleibol, chimenea, Wi-Fi y 2,6 hectáreas de naturaleza preservada — todo con capacidad para hasta 6 huéspedes. Tarifas desde R$ ${listingConfig.pricing.nightlyRate}/noche, con ${listingConfig.pricing.weeklyDiscountPercent}% de descuento para estadías semanales y ${listingConfig.pricing.monthlyDiscountPercent}% para mensuales. La propiedad acepta mascotas y está a solo 60 km de São Paulo. [Reserve en Airbnb](https://www.airbnb.com/rooms/1345960842338220775).
+Para una experiencia completa en el turismo rural de São Roque, alquilar una finca o chacra en la región es la mejor opción. **Sítio Girassol** ofrece 3 dormitorios (suite king, habitación doble y litera), piscina privada, dos parrillas, cancha de tenis y voleibol, chimenea, Wi-Fi y 2,6 hectáreas de naturaleza preservada — todo con capacidad para hasta 6 huéspedes. Precios dinámicos con descuentos para estadías semanales y mensuales. La propiedad acepta mascotas y está a solo 60 km de São Paulo. [Reserve en Airbnb](https://www.airbnb.com/rooms/1345960842338220775).
 
 ## São Roque en el Feriado de Tiradentes
 
@@ -125,7 +123,7 @@ São Roque está a 60 km de São Paulo, con acceso principal por la Rodovia Rapo
       es: "Guía completa para elegir la mejor finca para alquilar cerca de São Paulo. Vea qué evaluar: piscina, parrilla, dormitorios, mascotas y ubicación.",
     },
     content: {
-      pt: `A apenas 60 km de São Paulo, o Sítio Girassol oferece 2,6 hectares de natureza preservada com piscina privativa, churrasqueira, quadra esportiva e 3 quartos para até 6 hóspedes — com diárias a partir de R$ ${listingConfig.pricing.nightlyRate}/noite. Segundo a Secretaria de Turismo do Estado de São Paulo, a busca por chácaras e sítios para aluguel de temporada no interior paulista cresceu 42% entre 2022 e 2025. São Roque, onde o Sítio Girassol está localizado, figura entre os 5 destinos mais procurados para turismo rural no estado.
+      pt: `A apenas 60 km de São Paulo, o Sítio Girassol oferece 2,6 hectares de natureza preservada com piscina privativa, churrasqueira, quadra esportiva e 3 quartos para até 6 hóspedes — com preços dinâmicos e descontos para estadias prolongadas. Segundo a Secretaria de Turismo do Estado de São Paulo, a busca por chácaras e sítios para aluguel de temporada no interior paulista cresceu 42% entre 2022 e 2025. São Roque, onde o Sítio Girassol está localizado, figura entre os 5 destinos mais procurados para turismo rural no estado.
 
 ## 1. Localização e Acesso
 
@@ -155,8 +153,8 @@ Leia as avaliações recentes no Airbnb antes de reservar. Pesquisa da BrightLoc
 
 O **Sítio Girassol** em São Roque atende todos os critérios de uma chácara ideal para alugar perto de São Paulo: piscina privativa com deck e espreguiçadeiras, duas churrasqueiras equipadas (coberta + ao ar livre), 3 quartos com 4 camas (suíte king, casal e beliche), aceita pets, Wi-Fi de alta velocidade, quadra de tênis e vôlei, lareira de pedra, jogos de tabuleiro e 2,6 hectares de natureza preservada. A propriedade fica a 60 km de São Paulo, com acesso pavimentado pela Castello Branco ou Raposo Tavares, e oferece check-in das 12h às 20h.
 
-Diárias a partir de R$ ${listingConfig.pricing.nightlyRate}/noite, com ${listingConfig.pricing.weeklyDiscountPercent}% de desconto para estadias semanais (R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100))}/noite) e ${listingConfig.pricing.monthlyDiscountPercent}% para estadias mensais (R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100))}/noite). Todos os preços incluem acesso a todas as comodidades da propriedade. [Reserve no Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
-      en: `Just 60 km from São Paulo, Sítio Girassol offers 2.6 hectares of preserved nature with a private pool, BBQ areas, sports court, and 3 bedrooms for up to 6 guests — with rates starting at R$ ${listingConfig.pricing.nightlyRate}/night (approximately US$ 65). According to the São Paulo State Tourism Bureau, demand for rural vacation rentals in the São Paulo interior grew 42% between 2022 and 2025. São Roque, where Sítio Girassol is located, ranks among the top 5 most sought-after rural tourism destinations in the state.
+Preços dinâmicos com descontos para estadias semanais e mensais. Todos os preços incluem acesso a todas as comodidades da propriedade. [Reserve no Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
+      en: `Just 60 km from São Paulo, Sítio Girassol offers 2.6 hectares of preserved nature with a private pool, BBQ areas, sports court, and 3 bedrooms for up to 6 guests — with dynamic pricing and discounts for extended stays. According to the São Paulo State Tourism Bureau, demand for rural vacation rentals in the São Paulo interior grew 42% between 2022 and 2025. São Roque, where Sítio Girassol is located, ranks among the top 5 most sought-after rural tourism destinations in the state.
 
 ## 1. Location and Access
 
@@ -186,8 +184,8 @@ Read recent Airbnb reviews before booking. BrightLocal research shows that 87% o
 
 **Sítio Girassol** in São Roque meets every criterion for an ideal countryside rental near São Paulo: private pool with deck and sun loungers, two equipped BBQ areas (covered + outdoor), 3 bedrooms with 4 beds (king suite, double, bunk), pet-friendly, high-speed Wi-Fi, tennis and volleyball court, stone fireplace, board games, and 2.6 hectares of preserved nature. The property is 60 km from São Paulo with paved access via Castello Branco or Raposo Tavares highways, and offers check-in from 12 PM to 8 PM.
 
-Rates from R$ ${listingConfig.pricing.nightlyRate}/night, with ${listingConfig.pricing.weeklyDiscountPercent}% off for weekly stays (R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100))}/night) and ${listingConfig.pricing.monthlyDiscountPercent}% off for monthly stays (R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100))}/night). All prices include access to every property amenity. [Book on Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
-      es: `A solo 60 km de São Paulo, el Sítio Girassol ofrece 2,6 hectáreas de naturaleza preservada con piscina privada, parrillas, cancha deportiva y 3 dormitorios para hasta 6 huéspedes — con tarifas desde R$ ${listingConfig.pricing.nightlyRate}/noche. Según la Secretaría de Turismo del Estado de São Paulo, la demanda de fincas y chácaras para alquiler vacacional en el interior paulista creció un 42% entre 2022 y 2025. São Roque, donde se encuentra Sítio Girassol, figura entre los 5 destinos más buscados para turismo rural en el estado.
+Dynamic pricing with discounts for weekly and monthly stays. All prices include access to every property amenity. [Book on Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
+      es: `A solo 60 km de São Paulo, el Sítio Girassol ofrece 2,6 hectáreas de naturaleza preservada con piscina privada, parrillas, cancha deportiva y 3 dormitorios para hasta 6 huéspedes — con precios dinámicos y descuentos para estadías prolongadas. Según la Secretaría de Turismo del Estado de São Paulo, la demanda de fincas y chácaras para alquiler vacacional en el interior paulista creció un 42% entre 2022 y 2025. São Roque, donde se encuentra Sítio Girassol, figura entre los 5 destinos más buscados para turismo rural en el estado.
 
 ## 1. Ubicación y Acceso
 
@@ -217,7 +215,7 @@ Lee las reseñas recientes en Airbnb antes de reservar. Investigación de Bright
 
 **Sítio Girassol** en São Roque cumple todos los criterios de una finca ideal para alquilar cerca de São Paulo: piscina privada con deck y reposeras, dos parrillas equipadas (cubierta + al aire libre), 3 dormitorios con 4 camas (suite king, doble y litera), acepta mascotas, Wi-Fi de alta velocidad, cancha de tenis y voleibol, chimenea de piedra, juegos de mesa y 2,6 hectáreas de naturaleza preservada. La propiedad está a 60 km de São Paulo, con acceso pavimentado por Castello Branco o Raposo Tavares, y ofrece check-in de 12h a 20h.
 
-Tarifas desde R$ ${listingConfig.pricing.nightlyRate}/noche, con ${listingConfig.pricing.weeklyDiscountPercent}% de descuento para estadías semanales (R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100))}/noche) y ${listingConfig.pricing.monthlyDiscountPercent}% para estadías mensuales (R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100))}/noche). Todos los precios incluyen acceso a todas las comodidades de la propiedad. [Reserve en Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
+Precios dinámicos con descuentos para estadías semanales y mensuales. Todos los precios incluyen acceso a todas las comodidades de la propiedad. [Reserve en Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
     },
     publishedAt: "2026-03-27",
     coverImage: "/images/pool/001_Pool_1.jpeg",
@@ -261,7 +259,7 @@ Aproveite a manhã para fazer trilhas pela propriedade ou jogar jogos de tabulei
 
 - **Mercado**: Faça compras no Mercado Figueira (12 km antes do sítio) ou na mercearia local (5 km antes)
 - **Pets**: O Sítio Girassol aceita animais de estimação
-- **Diária**: A partir de R$ ${listingConfig.pricing.nightlyRate}/noite com descontos semanais e mensais
+- **Diária**: Preços dinâmicos com descontos semanais e mensais
 
 [Reserve no Sítio Girassol](https://www.airbnb.com/rooms/1345960842338220775) e garanta seu refúgio no interior.`,
       en: `A weekend in the São Paulo countryside is the perfect antidote to city stress. The São Roque region, just 60 km from SP, offers the ideal balance of nature, gastronomy, and relaxation.
@@ -284,7 +282,7 @@ Enjoy the morning hiking the property trails or playing board games with the fam
 
 - **Grocery**: Shop at Mercado Figueira (12 km before the sítio) or the local store (5 km before)
 - **Pets**: Sítio Girassol is pet-friendly
-- **Rate**: From R$ ${listingConfig.pricing.nightlyRate}/night with weekly and monthly discounts
+- **Rate**: Dynamic pricing with weekly and monthly discounts
 
 [Book at Sítio Girassol](https://www.airbnb.com/rooms/1345960842338220775) and secure your countryside retreat.`,
       es: `Un fin de semana en el interior de São Paulo es el antídoto perfecto para el estrés de la capital. La región de São Roque, a solo 60 km de SP, ofrece el equilibrio ideal entre naturaleza, gastronomía y descanso.
@@ -307,7 +305,7 @@ Aproveche la mañana para hacer senderos por la propiedad o jugar juegos de mesa
 
 - **Mercado**: Haga compras en Mercado Figueira (12 km antes de la finca) o en la tienda local (5 km antes)
 - **Mascotas**: Sítio Girassol acepta mascotas
-- **Tarifa**: Desde R$ ${listingConfig.pricing.nightlyRate}/noche con descuentos semanales y mensuales
+- **Tarifa**: Precios dinámicos con descuentos semanales y mensuales
 
 [Reserve en Sítio Girassol](https://www.airbnb.com/rooms/1345960842338220775) y asegure su refugio en el interior.`,
     },
@@ -367,8 +365,8 @@ O ideal é até 1h30 de viagem. São Roque fica a apenas 60 km (1h pela Castello
 - Wi-Fi
 - Quadra de tênis e vôlei
 - Lareira
-- Diária a partir de R$ ${listingConfig.pricing.nightlyRate}
-- ${listingConfig.pricing.weeklyDiscountPercent}% desconto semanal / ${listingConfig.pricing.monthlyDiscountPercent}% mensal
+- Preços dinâmicos — consulte no Airbnb
+- Descontos para estadias semanais e mensais
 
 [Reserve agora no Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
       en: `The search for a farm with pool for rent near São Paulo is increasingly common, especially for families wanting to escape routine without traveling long distances.
@@ -405,8 +403,8 @@ Ideally within 1.5 hours. São Roque is just 60 km (1h via Castello Branco), mak
 - Wi-Fi
 - Tennis and volleyball court
 - Fireplace
-- Rates from R$ ${listingConfig.pricing.nightlyRate}/night
-- ${listingConfig.pricing.weeklyDiscountPercent}% weekly / ${listingConfig.pricing.monthlyDiscountPercent}% monthly discounts
+- Dynamic pricing — check on Airbnb
+- Discounts for weekly and monthly stays
 
 [Book now on Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
       es: `La búsqueda de una finca con piscina para alquilar cerca de São Paulo es cada vez más común, especialmente para familias que quieren escapar de la rutina sin viajar largas distancias.
@@ -443,8 +441,8 @@ Lo ideal es hasta 1h30 de viaje. São Roque está a solo 60 km (1h por la Castel
 - Wi-Fi
 - Cancha de tenis y voleibol
 - Chimenea
-- Tarifas desde R$ ${listingConfig.pricing.nightlyRate}/noche
-- ${listingConfig.pricing.weeklyDiscountPercent}% descuento semanal / ${listingConfig.pricing.monthlyDiscountPercent}% mensual
+- Precios dinámicos — consulte en Airbnb
+- Descuentos para estadías semanales y mensuales
 
 [Reserve ahora en Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
     },
@@ -505,7 +503,7 @@ No **Sítio Girassol** em São Roque, pets são genuinamente bem-vindos — sem 
 - **Sem vizinhos próximos** — seu pet pode latir e brincar sem preocupação
 - **Trilhas na natureza** perfeitas para passeios com o pet
 
-A apenas 60 km de São Paulo, com 3 quartos e capacidade para 6 hóspedes. Diária a partir de R$ ${listingConfig.pricing.nightlyRate}.
+A apenas 60 km de São Paulo, com 3 quartos e capacidade para 6 hóspedes. Preços dinâmicos — consulte no Airbnb.
 
 [Reserve o Sítio Girassol no Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
       en: `Traveling with pets is increasingly common, but finding accommodation that truly accepts pets in the São Paulo countryside is still a challenge. Many places claim to accept pets but impose so many restrictions that the experience becomes stressful.
@@ -543,7 +541,7 @@ At **Sítio Girassol** in São Roque, pets are genuinely welcome — no extra fe
 - **No nearby neighbors** — your pet can bark and play without worry
 - **Nature trails** perfect for walks with your pet
 
-Just 60 km from São Paulo, with 3 bedrooms and capacity for 6 guests. Rates from R$ ${listingConfig.pricing.nightlyRate}/night.
+Just 60 km from São Paulo, with 3 bedrooms and capacity for 6 guests. Dynamic pricing — check on Airbnb.
 
 [Book Sítio Girassol on Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
       es: `Viajar con mascotas es cada vez más común, pero encontrar hospedaje que realmente acepte animales en el interior de São Paulo sigue siendo un desafío. Muchos lugares dicen aceptar mascotas pero imponen tantas restricciones que la experiencia se vuelve estresante.
@@ -581,7 +579,7 @@ En **Sítio Girassol** en São Roque, las mascotas son genuinamente bienvenidas 
 - **Sin vecinos cercanos** — tu mascota puede ladrar y jugar sin preocupación
 - **Senderos en la naturaleza** perfectos para paseos con tu mascota
 
-A solo 60 km de São Paulo, con 3 dormitorios y capacidad para 6 huéspedes. Tarifas desde R$ ${listingConfig.pricing.nightlyRate}/noche.
+A solo 60 km de São Paulo, con 3 dormitorios y capacidad para 6 huéspedes. Precios dinámicos — consulte en Airbnb.
 
 [Reserve Sítio Girassol en Airbnb](https://www.airbnb.com/rooms/1345960842338220775).`,
     },
@@ -663,9 +661,9 @@ Para famílias com crianças, a combinação de piscina privativa, quadra esport
 
 ## 7. Custo-Benefício Superior
 
-O último motivo — mas não menos importante — é o custo-benefício. Hotéis-fazenda e resorts wellness na região de São Paulo cobram facilmente acima de R$ 800 por pessoa por noite. No **Sítio Girassol**, a diária a partir de R$ ${listingConfig.pricing.nightlyRate}/noite dá acesso exclusivo a toda a propriedade: 2,6 hectares, piscina privativa, duas churrasqueiras, quadra esportiva, lareira, fogueira, sala de jogos, Wi-Fi e 3 quartos para até 6 hóspedes.
+O último motivo — mas não menos importante — é o custo-benefício. Hotéis-fazenda e resorts wellness na região de São Paulo cobram facilmente acima de R$ 800 por pessoa por noite. No **Sítio Girassol**, com preços dinâmicos, você tem acesso exclusivo a toda a propriedade: 2,6 hectares, piscina privativa, duas churrasqueiras, quadra esportiva, lareira, fogueira, sala de jogos, Wi-Fi e 3 quartos para até 6 hóspedes.
 
-Dividindo entre 6 pessoas, o custo por pessoa por noite fica extremamente acessível — e com muito mais privacidade e espaço do que qualquer hotel. Além disso, estadias mais longas são recompensadas: ${listingConfig.pricing.weeklyDiscountPercent}% de desconto para reservas semanais e ${listingConfig.pricing.monthlyDiscountPercent}% para reservas mensais. Para quem trabalha remotamente, a propriedade conta com espaço de trabalho dedicado e Wi-Fi, permitindo combinar trabalho e descanso em um ambiente natural.
+Dividindo entre 6 pessoas, o custo por pessoa por noite fica extremamente acessível — e com muito mais privacidade e espaço do que qualquer hotel. Além disso, estadias mais longas são recompensadas com descontos para reservas semanais e mensais. Para quem trabalha remotamente, a propriedade conta com espaço de trabalho dedicado e Wi-Fi, permitindo combinar trabalho e descanso em um ambiente natural.
 
 ## Como Reservar seu Retiro na Natureza
 
@@ -728,9 +726,9 @@ For families with children, the combination of a private pool, sports court, gam
 
 ## 7. Superior Value for Money
 
-The final reason — but no less important — is value for money. Farm hotels and wellness resorts in the São Paulo region easily charge over R$ 800 per person per night. At **Sítio Girassol**, rates starting at R$ ${listingConfig.pricing.nightlyRate}/night give exclusive access to the entire property: 2.6 hectares, private pool, two BBQ areas, sports court, fireplace, fire pit, game room, Wi-Fi, and 3 bedrooms for up to 6 guests.
+The final reason — but no less important — is value for money. Farm hotels and wellness resorts in the São Paulo region easily charge over R$ 800 per person per night. At **Sítio Girassol**, with dynamic pricing, you get exclusive access to the entire property: 2.6 hectares, private pool, two BBQ areas, sports court, fireplace, fire pit, game room, Wi-Fi, and 3 bedrooms for up to 6 guests.
 
-Split among 6 people, the per-person per-night cost is extremely affordable — and with far more privacy and space than any hotel. Additionally, longer stays are rewarded: ${listingConfig.pricing.weeklyDiscountPercent}% off for weekly bookings and ${listingConfig.pricing.monthlyDiscountPercent}% off for monthly bookings. For remote workers, the property features a dedicated workspace and Wi-Fi, allowing you to combine work and rest in a natural setting.
+Split among 6 people, the per-person per-night cost is extremely affordable — and with far more privacy and space than any hotel. Additionally, longer stays are rewarded with discounts for weekly and monthly bookings. For remote workers, the property features a dedicated workspace and Wi-Fi, allowing you to combine work and rest in a natural setting.
 
 ## How to Book Your Nature Retreat
 
@@ -793,9 +791,9 @@ Para familias con niños, la combinación de piscina privada, cancha deportiva, 
 
 ## 7. Costo-Beneficio Superior
 
-El último motivo — pero no menos importante — es el costo-beneficio. Hoteles-hacienda y resorts de bienestar en la región de São Paulo cobran fácilmente más de R$ 800 por persona por noche. En el **Sítio Girassol**, la tarifa desde R$ ${listingConfig.pricing.nightlyRate}/noche da acceso exclusivo a toda la propiedad: 2,6 hectáreas, piscina privada, dos parrillas, cancha deportiva, chimenea, fogata, sala de juegos, Wi-Fi y 3 dormitorios para hasta 6 huéspedes.
+El último motivo — pero no menos importante — es el costo-beneficio. Hoteles-hacienda y resorts de bienestar en la región de São Paulo cobran fácilmente más de R$ 800 por persona por noche. En el **Sítio Girassol**, con precios dinámicos, tienes acceso exclusivo a toda la propiedad: 2,6 hectáreas, piscina privada, dos parrillas, cancha deportiva, chimenea, fogata, sala de juegos, Wi-Fi y 3 dormitorios para hasta 6 huéspedes.
 
-Dividido entre 6 personas, el costo por persona por noche queda extremadamente accesible — y con mucha más privacidad y espacio que cualquier hotel. Además, las estadías más largas son recompensadas: ${listingConfig.pricing.weeklyDiscountPercent}% de descuento para reservas semanales y ${listingConfig.pricing.monthlyDiscountPercent}% para reservas mensuales. Para quienes trabajan remotamente, la propiedad cuenta con espacio de trabajo dedicado y Wi-Fi, permitiendo combinar trabajo y descanso en un entorno natural.
+Dividido entre 6 personas, el costo por persona por noche queda extremadamente accesible — y con mucha más privacidad y espacio que cualquier hotel. Además, las estadías más largas son recompensadas con descuentos para reservas semanales y mensuales. Para quienes trabajan remotamente, la propiedad cuenta con espacio de trabajo dedicado y Wi-Fi, permitiendo combinar trabajo y descanso en un entorno natural.
 
 ## Cómo Reservar tu Retiro en la Naturaleza
 
@@ -892,11 +890,11 @@ Junho e agosto oferecem as melhores oportunidades de preço. São Roque registra
 
 Os preços de casas de campo para aluguel de temporada no interior de SP variam enormemente. Propriedades simples (1-2 quartos, sem piscina) começam em torno de R$ 200-300 por noite. Propriedades premium (3+ quartos, piscina privativa, infraestrutura completa) vão de R$ 400 a R$ 1.500 por noite, dependendo da localização e das comodidades.
 
-O **Sítio Girassol** oferece diárias a partir de R$ ${listingConfig.pricing.nightlyRate}/noite para uma propriedade premium com 3 quartos, piscina privativa, duas churrasqueiras, quadra esportiva e 2,6 hectares — posicionando-se na faixa de melhor custo-benefício da região de São Roque.
+O **Sítio Girassol** oferece preços dinâmicos para uma propriedade premium com 3 quartos, piscina privativa, duas churrasqueiras, quadra esportiva e 2,6 hectares — posicionando-se na faixa de melhor custo-benefício da região de São Roque.
 
 ### Descontos por Estadia Prolongada
 
-Plataformas como o Airbnb permitem que anfitriões ofereçam descontos para estadias mais longas. No Sítio Girassol, por exemplo, estadias semanais têm ${listingConfig.pricing.weeklyDiscountPercent}% de desconto e estadias mensais ${listingConfig.pricing.monthlyDiscountPercent}% — uma economia significativa para quem pode ficar mais tempo ou combinar trabalho remoto com descanso.
+Plataformas como o Airbnb permitem que anfitriões ofereçam descontos para estadias mais longas. No Sítio Girassol, por exemplo, estadias semanais e mensais contam com descontos atrativos — uma economia significativa para quem pode ficar mais tempo ou combinar trabalho remoto com descanso.
 
 ### Reserve com Antecedência
 
@@ -917,7 +915,7 @@ Use esta lista para avaliar qualquer casa de campo antes de confirmar a reserva:
 - **Cozinha**: Equipada com todos os eletrodomésticos básicos
 - **Wi-Fi**: Velocidade adequada para streaming e trabalho remoto
 - **Pets**: Política clara, área cercada se necessário
-- **Limpeza**: Taxa de limpeza incluída ou separada (no Sítio Girassol, a taxa de limpeza é de R$ 180)
+- **Limpeza**: Taxa de limpeza incluída ou separada (consulte os detalhes no anúncio do Airbnb)
 - **Check-in/out**: Horários compatíveis com sua viagem (Sítio Girassol: check-in 12h, check-out 18h)
 - **Avaliações**: Mínimo de 4,5 estrelas e 10 avaliações recentes
 - **Fotos**: Reais e atualizadas (desconfie de fotos profissionais demais)
@@ -929,7 +927,7 @@ Para uma análise mais detalhada de cada critério, confira também nosso [guia 
 
 O **Sítio Girassol** em São Roque reúne todos os atributos de uma casa de campo premium para aluguel de temporada: localização a 60 km de SP com acesso pavimentado, 2,6 hectares totalmente cercados, 3 quartos e 3 banheiros para até 6 hóspedes, piscina 100% privativa, duas churrasqueiras equipadas, quadra de tênis e vôlei, lareira de pedra, fogueira, sala de jogos, trilhas offroad, Wi-Fi, Smart TV, espaço de trabalho dedicado e política pet-friendly.
 
-Diárias a partir de R$ ${listingConfig.pricing.nightlyRate}/noite, com ${listingConfig.pricing.weeklyDiscountPercent}% de desconto semanal e ${listingConfig.pricing.monthlyDiscountPercent}% mensal. Self check-in a partir das 12h, check-out até as 18h.
+Preços dinâmicos com descontos para estadias semanais e mensais. Self check-in a partir das 12h, check-out até as 18h.
 
 [Reserve no Airbnb](https://www.airbnb.com/rooms/1345960842338220775) e garanta sua casa de campo ideal para o próximo fim de semana no interior de São Paulo.`,
       en: `The vacation rental market in the São Paulo interior is experiencing rapid expansion. According to data from the São Paulo State Tourism Bureau, demand for countryside homes and farms for weekends grew 42% between 2022 and 2025, driven by the consolidation of remote work and the increasing value placed on outdoor experiences. Platforms like Airbnb recorded a 55% increase in searches for rural properties in São Paulo state during the same period.
@@ -998,11 +996,11 @@ June and August offer the best pricing opportunities. São Roque records lows of
 
 Prices for countryside vacation rentals in the SP interior vary enormously. Simple properties (1-2 bedrooms, no pool) start around R$ 200-300 per night. Premium properties (3+ bedrooms, private pool, complete infrastructure) range from R$ 400 to R$ 1,500 per night, depending on location and amenities.
 
-**Sítio Girassol** offers rates starting at R$ ${listingConfig.pricing.nightlyRate}/night for a premium property with 3 bedrooms, private pool, two BBQ areas, sports court, and 2.6 hectares — positioning it in the best value-for-money range in the São Roque region.
+**Sítio Girassol** offers dynamic pricing for a premium property with 3 bedrooms, private pool, two BBQ areas, sports court, and 2.6 hectares — positioning it in the best value-for-money range in the São Roque region.
 
 ### Extended Stay Discounts
 
-Platforms like Airbnb allow hosts to offer discounts for longer stays. At Sítio Girassol, for example, weekly stays receive ${listingConfig.pricing.weeklyDiscountPercent}% off and monthly stays ${listingConfig.pricing.monthlyDiscountPercent}% off — significant savings for those who can stay longer or combine remote work with rest.
+Platforms like Airbnb allow hosts to offer discounts for longer stays. At Sítio Girassol, for example, weekly and monthly stays receive attractive discounts — significant savings for those who can stay longer or combine remote work with rest.
 
 ### Book in Advance
 
@@ -1023,7 +1021,7 @@ Use this list to evaluate any countryside home before confirming your reservatio
 - **Kitchen**: Equipped with all basic appliances
 - **Wi-Fi**: Adequate speed for streaming and remote work
 - **Pets**: Clear policy, fenced area if needed
-- **Cleaning fee**: Included or separate (at Sítio Girassol, the cleaning fee is R$ 180)
+- **Cleaning fee**: Included or separate (check details on the Airbnb listing)
 - **Check-in/out**: Times compatible with your trip (Sítio Girassol: check-in 12 PM, check-out 6 PM)
 - **Reviews**: Minimum 4.5 stars and 10 recent reviews
 - **Photos**: Real and current (be wary of overly professional photos)
@@ -1035,7 +1033,7 @@ For a more detailed analysis of each criterion, also check our [guide to country
 
 **Sítio Girassol** in São Roque combines all the attributes of a premium countryside vacation rental: location 60 km from SP with paved access, 2.6 fully fenced hectares, 3 bedrooms and 3 bathrooms for up to 6 guests, 100% private pool, two equipped BBQ areas, tennis and volleyball court, stone fireplace, fire pit, game room, offroad trails, Wi-Fi, Smart TV, dedicated workspace, and a pet-friendly policy.
 
-Rates from R$ ${listingConfig.pricing.nightlyRate}/night, with ${listingConfig.pricing.weeklyDiscountPercent}% weekly discount and ${listingConfig.pricing.monthlyDiscountPercent}% monthly discount. Self check-in from 12 PM, check-out by 6 PM.
+Dynamic pricing with discounts for weekly and monthly stays. Self check-in from 12 PM, check-out by 6 PM.
 
 [Book on Airbnb](https://www.airbnb.com/rooms/1345960842338220775) and secure your ideal countryside home for the next weekend in the São Paulo interior.`,
       es: `El mercado de alquiler vacacional en el interior de São Paulo vive un momento de expansión acelerada. Según datos de la Secretaría de Turismo del Estado de São Paulo, la demanda de casas de campo y fincas para fines de semana creció un 42% entre 2022 y 2025, impulsada por la consolidación del trabajo remoto y la valorización de experiencias al aire libre. Plataformas como Airbnb registraron un aumento del 55% en búsquedas de propiedades rurales en el estado de São Paulo en el mismo período.
@@ -1104,11 +1102,11 @@ Junio y agosto ofrecen las mejores oportunidades de precio. São Roque registra 
 
 Los precios de casas de campo para alquiler vacacional en el interior de SP varían enormemente. Propiedades simples (1-2 dormitorios, sin piscina) comienzan alrededor de R$ 200-300 por noche. Propiedades premium (3+ dormitorios, piscina privada, infraestructura completa) van de R$ 400 a R$ 1.500 por noche, dependiendo de la ubicación y comodidades.
 
-El **Sítio Girassol** ofrece tarifas desde R$ ${listingConfig.pricing.nightlyRate}/noche para una propiedad premium con 3 dormitorios, piscina privada, dos parrillas, cancha deportiva y 2,6 hectáreas — posicionándose en la franja de mejor costo-beneficio de la región de São Roque.
+El **Sítio Girassol** ofrece precios dinámicos para una propiedad premium con 3 dormitorios, piscina privada, dos parrillas, cancha deportiva y 2,6 hectáreas — posicionándose en la franja de mejor costo-beneficio de la región de São Roque.
 
 ### Descuentos por Estadía Prolongada
 
-Plataformas como Airbnb permiten que los anfitriones ofrezcan descuentos para estadías más largas. En Sítio Girassol, por ejemplo, estadías semanales tienen ${listingConfig.pricing.weeklyDiscountPercent}% de descuento y estadías mensuales ${listingConfig.pricing.monthlyDiscountPercent}% — un ahorro significativo para quienes pueden quedarse más tiempo o combinar trabajo remoto con descanso.
+Plataformas como Airbnb permiten que los anfitriones ofrezcan descuentos para estadías más largas. En Sítio Girassol, por ejemplo, estadías semanales y mensuales cuentan con descuentos atractivos — un ahorro significativo para quienes pueden quedarse más tiempo o combinar trabajo remoto con descanso.
 
 ### Reserva con Anticipación
 
@@ -1129,7 +1127,7 @@ Usa esta lista para evaluar cualquier casa de campo antes de confirmar la reserv
 - **Cocina**: Equipada con todos los electrodomésticos básicos
 - **Wi-Fi**: Velocidad adecuada para streaming y trabajo remoto
 - **Mascotas**: Política clara, área cercada si es necesario
-- **Limpieza**: Tasa de limpieza incluida o separada (en Sítio Girassol, la tasa de limpieza es de R$ 180)
+- **Limpieza**: Tasa de limpieza incluida o separada (consulte los detalles en el anuncio de Airbnb)
 - **Check-in/out**: Horarios compatibles con tu viaje (Sítio Girassol: check-in 12h, check-out 18h)
 - **Reseñas**: Mínimo de 4,5 estrellas y 10 reseñas recientes
 - **Fotos**: Reales y actualizadas (desconfía de fotos demasiado profesionales)
@@ -1141,7 +1139,7 @@ Para un análisis más detallado de cada criterio, consulta también nuestra [gu
 
 El **Sítio Girassol** en São Roque reúne todos los atributos de una casa de campo premium para alquiler vacacional: ubicación a 60 km de SP con acceso pavimentado, 2,6 hectáreas totalmente cercadas, 3 dormitorios y 3 baños para hasta 6 huéspedes, piscina 100% privada, dos parrillas equipadas, cancha de tenis y voleibol, chimenea de piedra, fogata, sala de juegos, senderos offroad, Wi-Fi, Smart TV, espacio de trabajo dedicado y política pet-friendly.
 
-Tarifas desde R$ ${listingConfig.pricing.nightlyRate}/noche, con ${listingConfig.pricing.weeklyDiscountPercent}% de descuento semanal y ${listingConfig.pricing.monthlyDiscountPercent}% mensual. Self check-in desde las 12h, check-out hasta las 18h.
+Precios dinámicos con descuentos para estadías semanales y mensuales. Self check-in desde las 12h, check-out hasta las 18h.
 
 [Reserve en Airbnb](https://www.airbnb.com/rooms/1345960842338220775) y garantiza tu casa de campo ideal para el próximo fin de semana en el interior de São Paulo.`,
     },
@@ -1286,7 +1284,7 @@ Adolescentes valorizam autonomia e Wi-Fi. O Sítio Girassol oferece ambos: Wi-Fi
 
 ## Quanto Custa um Fim de Semana em Família
 
-O **Sítio Girassol** oferece diárias a partir de R$ ${listingConfig.pricing.nightlyRate}/noite para toda a propriedade (até 6 hóspedes). Para famílias que planejam estadias mais longas, os descontos são atrativos: ${listingConfig.pricing.weeklyDiscountPercent}% para reservas semanais e ${listingConfig.pricing.monthlyDiscountPercent}% para reservas mensais. A taxa de limpeza é de R$ 180 por estadia.
+O **Sítio Girassol** oferece preços dinâmicos para toda a propriedade (até 6 hóspedes). Para famílias que planejam estadias mais longas, há descontos atrativos para reservas semanais e mensais.
 
 Comparado a hotéis-fazenda que cobram por pessoa (facilmente R$ 400-600 por pessoa por diária com pensão completa), o aluguel de uma propriedade exclusiva como o Sítio Girassol oferece custo por pessoa significativamente menor, com a vantagem adicional de total privacidade e flexibilidade de horários.
 
@@ -1415,7 +1413,7 @@ Teenagers value autonomy and Wi-Fi. Sítio Girassol offers both: Wi-Fi to stay c
 
 ## How Much a Family Weekend Costs
 
-**Sítio Girassol** offers rates starting at R$ ${listingConfig.pricing.nightlyRate}/night for the entire property (up to 6 guests). For families planning longer stays, discounts are attractive: ${listingConfig.pricing.weeklyDiscountPercent}% for weekly bookings and ${listingConfig.pricing.monthlyDiscountPercent}% for monthly bookings. The cleaning fee is R$ 180 per stay.
+**Sítio Girassol** offers dynamic pricing for the entire property (up to 6 guests). For families planning longer stays, attractive discounts are available for weekly and monthly bookings.
 
 Compared to farm hotels that charge per person (easily R$ 400-600 per person per night with full board), renting an exclusive property like Sítio Girassol offers significantly lower per-person cost, with the added advantage of complete privacy and schedule flexibility.
 
@@ -1544,7 +1542,7 @@ Los adolescentes valoran la autonomía y el Wi-Fi. Sítio Girassol ofrece ambos:
 
 ## Cuánto Cuesta un Fin de Semana en Familia
 
-El **Sítio Girassol** ofrece tarifas desde R$ ${listingConfig.pricing.nightlyRate}/noche para toda la propiedad (hasta 6 huéspedes). Para familias que planean estadías más largas, los descuentos son atractivos: ${listingConfig.pricing.weeklyDiscountPercent}% para reservas semanales y ${listingConfig.pricing.monthlyDiscountPercent}% para reservas mensuales. La tasa de limpieza es de R$ 180 por estadía.
+El **Sítio Girassol** ofrece precios dinámicos para toda la propiedad (hasta 6 huéspedes). Para familias que planean estadías más largas, hay descuentos atractivos para reservas semanales y mensuales.
 
 Comparado con hoteles-hacienda que cobran por persona (fácilmente R$ 400-600 por persona por noche con pensión completa), el alquiler de una propiedad exclusiva como Sítio Girassol ofrece un costo por persona significativamente menor, con la ventaja adicional de total privacidad y flexibilidad de horarios.
 
@@ -1613,7 +1611,7 @@ Para aproveitar ao máximo o feriado prolongado, a melhor opção é alugar um s
 
 O **Sítio Girassol** é a escolha ideal para o feriadão de Tiradentes. A propriedade conta com 3 quartos (suíte king, quarto de casal e beliche), piscina privativa com deck, duas churrasqueiras (coberta e ao ar livre), quadra de tênis e vôlei, lareira de pedra, Wi-Fi de alta velocidade e 2,6 hectares de natureza preservada. A propriedade aceita pets e acomoda até 6 hóspedes com total conforto.
 
-As diárias são a partir de R$ ${listingConfig.pricing.nightlyRate}/noite, com ${listingConfig.pricing.weeklyDiscountPercent}% de desconto para estadias semanais e ${listingConfig.pricing.monthlyDiscountPercent}% para estadias mensais. Para o feriadão de 4 dias, você aproveita a estrutura completa pagando muito menos do que uma pousada no litoral.
+Com preços dinâmicos e descontos para estadias prolongadas, no feriadão de 4 dias você aproveita a estrutura completa pagando muito menos do que uma pousada no litoral.
 
 [Reserve no Airbnb](https://www.airbnb.com/rooms/1345960842338220775) e garanta sua estadia antes que as datas esgotem.
 
@@ -1682,7 +1680,7 @@ To make the most of the extended holiday, the best option is to rent a sítio or
 
 **Sítio Girassol** is the ideal choice for the Tiradentes holiday weekend. The property features 3 bedrooms (king suite, double room, and bunk bed room), a private pool with deck, two BBQ grills (covered and outdoor), tennis and volleyball court, stone fireplace, high-speed Wi-Fi, and 2.6 hectares of preserved nature. The property is pet-friendly and accommodates up to 6 guests in total comfort.
 
-Nightly rates start from R$ ${listingConfig.pricing.nightlyRate}/night, with a ${listingConfig.pricing.weeklyDiscountPercent}% discount for weekly stays and ${listingConfig.pricing.monthlyDiscountPercent}% for monthly stays. For the 4-day holiday break, you enjoy the complete facilities while paying much less than a coastal guesthouse.
+With dynamic pricing and discounts for extended stays, for the 4-day holiday break you enjoy the complete facilities while paying much less than a coastal guesthouse.
 
 [Book on Airbnb](https://www.airbnb.com/rooms/1345960842338220775) and secure your stay before the dates fill up.
 
@@ -1751,7 +1749,7 @@ Para aprovechar al máximo el feriado prolongado, la mejor opción es alquilar u
 
 El **Sítio Girassol** es la elección ideal para el feriado de Tiradentes. La propiedad cuenta con 3 dormitorios (suite king, habitación doble y litera), piscina privada con deck, dos parrillas (cubierta y al aire libre), cancha de tenis y voleibol, chimenea de piedra, Wi-Fi de alta velocidad y 2,6 hectáreas de naturaleza preservada. La propiedad acepta mascotas y acomoda hasta 6 huéspedes con total comodidad.
 
-Las tarifas son desde R$ ${listingConfig.pricing.nightlyRate}/noche, con ${listingConfig.pricing.weeklyDiscountPercent}% de descuento para estadías semanales y ${listingConfig.pricing.monthlyDiscountPercent}% para estadías mensuales. Para el feriado de 4 días, disfrutas de toda la estructura pagando mucho menos que una posada en la costa.
+Con precios dinámicos y descuentos para estadías prolongadas, para el feriado de 4 días disfrutas de toda la estructura pagando mucho menos que una posada en la costa.
 
 [Reserva en Airbnb](https://www.airbnb.com/rooms/1345960842338220775) y asegura tu estadía antes de que se agoten las fechas.
 

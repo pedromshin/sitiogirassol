@@ -29,7 +29,6 @@ const METRIC_KEYS = [
   "size",
   "pool",
   "nature",
-  "nightlyRate",
 ] as const;
 
 type MetricKey = (typeof METRIC_KEYS)[number];
@@ -50,8 +49,6 @@ function getMetricValue(key: MetricKey): string | number {
       return "check";
     case "nature":
       return "2.6 ha";
-    case "nightlyRate":
-      return `R$ ${listingConfig.pricing.nightlyRate}`;
     default:
       return "";
   }

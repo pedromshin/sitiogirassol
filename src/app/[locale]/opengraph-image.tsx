@@ -117,7 +117,7 @@ export default async function Image({
             {subtitle}
           </div>
 
-          {/* Price badge */}
+          {/* Book now badge */}
           <div
             style={{
               marginTop: "32px",
@@ -134,16 +134,10 @@ export default async function Image({
               style={{ fontSize: 22, color: "#e9c46a", display: "flex" }}
             >
               {locale === "pt"
-                ? "A partir de"
+                ? "Reserve agora no Airbnb"
                 : locale === "es"
-                  ? "Desde"
-                  : "From"}{" "}
-              R$ 170/
-              {locale === "pt"
-                ? "noite"
-                : locale === "es"
-                  ? "noche"
-                  : "night"}
+                  ? "Reserve ahora en Airbnb"
+                  : "Book now on Airbnb"}
             </div>
           </div>
         </div>

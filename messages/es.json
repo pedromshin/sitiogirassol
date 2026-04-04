@@ -16,7 +16,7 @@
     "home": "Inicio",
     "info": "Información",
     "blog": "Blog",
-    "bookOnAirbnb": "Reservar en Airbnb - 40% OFF",
+    "bookOnAirbnb": "Reservar en Airbnb",
     "language": "Idioma"
   },
   "Hero": {
@@ -91,6 +91,7 @@
     "nights": "noches",
     "total": "Total",
     "bookNow": "Reservar en Airbnb",
+    "checkPricesOnAirbnb": "Consulta precios y disponibilidad en Airbnb",
     "weeklyDiscount": "33% de descuento semanal",
     "monthlyDiscount": "50% de descuento mensual"
   },
@@ -120,7 +121,6 @@
     "size": "Tamaño",
     "pool": "Piscina",
     "nature": "Naturaleza",
-    "nightlyRate": "Desde / noche",
     "bedroomsDesc": "Suite con kingsize, cama de matrimonio y litera",
     "spareBedsDesc": "Colchones individuales extra",
     "balconyDesc": "Suites 1 y 2 con balcón, hamaca y vista al atardecer",
@@ -130,7 +130,6 @@
     "sizeDesc": "Área construida",
     "poolDesc": "Privada",
     "natureDesc": "Preservados",
-    "nightlyRateDesc": "Valor base",
     "taglinePart1": "Naturaleza. ",
     "taglineHighlight": "Confort."
   },
@@ -181,8 +180,7 @@
   },
   "StickyCTA": {
     "book": "Reservar",
-    "whatsapp": "WhatsApp",
-    "fromPerNight": "desde R$ {price}/noche"
+    "whatsapp": "WhatsApp"
   },
   "FAQ": {
     "title": "Preguntas ",

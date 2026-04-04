@@ -7,9 +7,8 @@ import { DateRange, Range, RangeKeyDict } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { listingConfig } from "@/data/listing.config";
-import { calculateTotalPrice } from "@/lib/pricing";
 import { trackEvent } from "@/lib/tracking";
-import { addDays, format } from "date-fns";
+import { addDays, differenceInDays, format } from "date-fns";
 
 const MOBILE_BREAKPOINT = 768;
 
@@ -45,11 +44,9 @@ export default function CalendarSection() {
     }
   }, []);
 
-  const price = calculateTotalPrice(
-    listingConfig.pricing,
-    dateRange.startDate!,
-    dateRange.endDate!
-  );
+  const nights = dateRange.startDate && dateRange.endDate
+    ? differenceInDays(dateRange.endDate, dateRange.startDate)
+    : 0;
 
   const formatPeriod = () => {
     if (dateRange.startDate && dateRange.endDate) {
@@ -120,21 +117,13 @@ export default function CalendarSection() {
             <div className="space-y-4">
               <div className="flex justify-between text-white/70">
                 <span>
-                  R$ {listingConfig.pricing.nightlyRate} x {price.nights} {t("nights")}
+                  {nights} {t("nights")}
                 </span>
-                <span>R$ {price.subtotal}</span>
               </div>
-              {price.discountApplied !== "none" && (
-                <div className="text-sm text-accent-gold">
-                  {price.discountApplied === "weekly" && t("weeklyDiscount")}
-                  {price.discountApplied === "monthly" && t("monthlyDiscount")}
-                </div>
-              )}
               <hr className="border-t border-white/10" />
-              <div className="flex justify-between font-bold text-lg text-white">
-                <span>{t("total")}</span>
-                <span>R$ {price.total}</span>
-              </div>
+              <p className="text-sm text-white/70">
+                {t("checkPricesOnAirbnb")}
+              </p>
             </div>
             <a
               href={listingConfig.airbnbUrl}

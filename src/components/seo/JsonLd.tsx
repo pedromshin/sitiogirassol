@@ -24,7 +24,7 @@ const faqItems: Record<Locale, Array<{ question: string; answer: string }>> = {
     },
     {
       question: "Qual o valor da diária?",
-      answer: `A diária a partir de R$ ${listingConfig.pricing.nightlyRate}. Oferecemos ${listingConfig.pricing.weeklyDiscountPercent}% de desconto para estadias semanais e ${listingConfig.pricing.monthlyDiscountPercent}% para mensais.`,
+      answer: "Os preços são dinâmicos e variam conforme a temporada e duração da estadia. Consulte a disponibilidade e valores atualizados diretamente no Airbnb.",
     },
     {
       question: "Tem churrasqueira?",
@@ -58,7 +58,7 @@ const faqItems: Record<Locale, Array<{ question: string; answer: string }>> = {
     },
     {
       question: "What is the nightly rate?",
-      answer: `Rates start at R$ ${listingConfig.pricing.nightlyRate} per night. We offer ${listingConfig.pricing.weeklyDiscountPercent}% weekly and ${listingConfig.pricing.monthlyDiscountPercent}% monthly discounts.`,
+      answer: "Prices are dynamic and vary by season and length of stay. Check availability and current rates directly on Airbnb.",
     },
     {
       question: "Is there a BBQ grill?",
@@ -92,7 +92,7 @@ const faqItems: Record<Locale, Array<{ question: string; answer: string }>> = {
     },
     {
       question: "¿Cuál es el valor de la estadía?",
-      answer: `Tarifas desde R$ ${listingConfig.pricing.nightlyRate} por noche. Ofrecemos ${listingConfig.pricing.weeklyDiscountPercent}% de descuento semanal y ${listingConfig.pricing.monthlyDiscountPercent}% mensual.`,
+      answer: "Los precios son dinámicos y varían según la temporada y la duración de la estadía. Consulta disponibilidad y tarifas actualizadas directamente en Airbnb.",
     },
     {
       question: "¿Tiene parrilla?",
@@ -214,55 +214,10 @@ export default function JsonLd({ locale }: { locale: string }) {
       },
     },
     offers: {
-      "@type": "AggregateOffer",
-      lowPrice: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100)),
-      highPrice: listingConfig.pricing.nightlyRate,
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      url: listingConfig.airbnbUrl,
       priceCurrency: "BRL",
-      offerCount: 3,
-      offers: [
-        {
-          "@type": "Offer",
-          name: loc === "pt" ? "Diária" : loc === "es" ? "Por noche" : "Nightly",
-          price: listingConfig.pricing.nightlyRate,
-          priceCurrency: "BRL",
-          priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: listingConfig.pricing.nightlyRate,
-            priceCurrency: "BRL",
-            unitText: "NIGHT",
-          },
-          availability: "https://schema.org/InStock",
-          url: listingConfig.airbnbUrl,
-        },
-        {
-          "@type": "Offer",
-          name: loc === "pt" ? "Semanal (33% desconto)" : loc === "es" ? "Semanal (33% descuento)" : "Weekly (33% off)",
-          price: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100)),
-          priceCurrency: "BRL",
-          priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100)),
-            priceCurrency: "BRL",
-            unitText: "NIGHT",
-          },
-          availability: "https://schema.org/InStock",
-          url: listingConfig.airbnbUrl,
-        },
-        {
-          "@type": "Offer",
-          name: loc === "pt" ? "Mensal (50% desconto)" : loc === "es" ? "Mensual (50% descuento)" : "Monthly (50% off)",
-          price: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100)),
-          priceCurrency: "BRL",
-          priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100)),
-            priceCurrency: "BRL",
-            unitText: "NIGHT",
-          },
-          availability: "https://schema.org/InStock",
-          url: listingConfig.airbnbUrl,
-        },
-      ],
     },
   };
 

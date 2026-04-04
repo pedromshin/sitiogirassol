@@ -16,7 +16,7 @@
     "home": "Home",
     "info": "Info",
     "blog": "Blog",
-    "bookOnAirbnb": "Book on Airbnb - 40% OFF",
+    "bookOnAirbnb": "Book on Airbnb",
     "language": "Language"
   },
   "Hero": {
@@ -91,6 +91,7 @@
     "nights": "nights",
     "total": "Total",
     "bookNow": "Book on Airbnb",
+    "checkPricesOnAirbnb": "Check exact prices and availability on Airbnb",
     "weeklyDiscount": "33% weekly discount",
     "monthlyDiscount": "50% monthly discount"
   },
@@ -120,7 +121,6 @@
     "size": "Size",
     "pool": "Pool",
     "nature": "Nature",
-    "nightlyRate": "From / night",
     "bedroomsDesc": "Kingsize, double, bunk",
     "spareBedsDesc": "Spare singles",
     "balconyDesc": "Suites 1 & 2 with balcony, hammock, sunset view",
@@ -130,7 +130,6 @@
     "sizeDesc": "Built area",
     "poolDesc": "Private",
     "natureDesc": "Preserved",
-    "nightlyRateDesc": "Base rate",
     "taglinePart1": "Nature. ",
     "taglineHighlight": "Comfort."
   },
@@ -181,8 +180,7 @@
   },
   "StickyCTA": {
     "book": "Book Now",
-    "whatsapp": "WhatsApp",
-    "fromPerNight": "from R$ {price}/night"
+    "whatsapp": "WhatsApp"
   },
   "FAQ": {
     "title": "Frequently Asked ",

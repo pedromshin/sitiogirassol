@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import { listingConfig } from "@/data/listing.config";
-
 type Locale = "en" | "pt" | "es";
 
 const faqItems: Record<Locale, Array<{ question: string; answer: string }>> = {
@@ -27,7 +25,7 @@ const faqItems: Record<Locale, Array<{ question: string; answer: string }>> = {
     },
     {
       question: "Qual o valor da diária?",
-      answer: `A diária no Sítio Girassol começa em R$ ${listingConfig.pricing.nightlyRate}/noite para estadias curtas. Para estadias semanais (7+ noites), oferecemos ${listingConfig.pricing.weeklyDiscountPercent}% de desconto, resultando em R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100))}/noite. Para estadias mensais (28+ noites), o desconto é de ${listingConfig.pricing.monthlyDiscountPercent}%, chegando a R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100))}/noite. Todos os preços incluem acesso a piscina privativa, churrasqueira, quadra esportiva, Wi-Fi, lareira e todas as comodidades da propriedade.`,
+      answer: "Os preços do Sítio Girassol são dinâmicos e variam conforme a temporada e duração da estadia. Oferecemos descontos para estadias semanais e mensais. Todos os preços incluem acesso a piscina privativa, churrasqueira, quadra esportiva, Wi-Fi, lareira e todas as comodidades da propriedade. Consulte valores atualizados no Airbnb.",
     },
     {
       question: "Tem churrasqueira?",
@@ -43,7 +41,7 @@ const faqItems: Record<Locale, Array<{ question: string; answer: string }>> = {
     },
     {
       question: "Quanto custa alugar o Sítio Girassol?",
-      answer: `O Sítio Girassol tem diárias a partir de R$ ${listingConfig.pricing.nightlyRate}/noite para a propriedade inteira (3 quartos, até 6 hóspedes). Estadias semanais têm ${listingConfig.pricing.weeklyDiscountPercent}% de desconto (R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100))}/noite), e mensais ${listingConfig.pricing.monthlyDiscountPercent}% (R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100))}/noite). O preço inclui todas as comodidades: piscina privativa, churrasqueira, quadra esportiva, Wi-Fi, lareira, jogos e 2,6 hectares de natureza. Não há taxas extras por pets ou estacionamento.`,
+      answer: "O Sítio Girassol oferece preços dinâmicos para a propriedade inteira (3 quartos, até 6 hóspedes), com descontos para estadias semanais e mensais. O preço inclui todas as comodidades: piscina privativa, churrasqueira, quadra esportiva, Wi-Fi, lareira, jogos e 2,6 hectares de natureza. Não há taxas extras por pets ou estacionamento. Consulte valores atualizados no Airbnb.",
     },
     {
       question: "Como chegar ao Sítio Girassol saindo de São Paulo?",
@@ -81,7 +79,7 @@ const faqItems: Record<Locale, Array<{ question: string; answer: string }>> = {
     },
     {
       question: "What is the nightly rate?",
-      answer: `Rates at Sítio Girassol start at R$ ${listingConfig.pricing.nightlyRate}/night (approximately US$ 65) for short stays. Weekly stays (7+ nights) receive a ${listingConfig.pricing.weeklyDiscountPercent}% discount at R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100))}/night. Monthly stays (28+ nights) get ${listingConfig.pricing.monthlyDiscountPercent}% off at R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100))}/night. All prices include access to the private pool, BBQ areas, sports court, Wi-Fi, fireplace, and every property amenity.`,
+      answer: "Sítio Girassol uses dynamic pricing that varies by season and length of stay. We offer discounts for weekly and monthly stays. All prices include access to the private pool, BBQ areas, sports court, Wi-Fi, fireplace, and every property amenity. Check current rates on Airbnb.",
     },
     {
       question: "Is there a BBQ grill?",
@@ -97,7 +95,7 @@ const faqItems: Record<Locale, Array<{ question: string; answer: string }>> = {
     },
     {
       question: "How much does it cost to rent Sítio Girassol?",
-      answer: `Sítio Girassol rates start at R$ ${listingConfig.pricing.nightlyRate}/night (approximately US$ 65) for the entire property (3 bedrooms, up to 6 guests). Weekly stays get ${listingConfig.pricing.weeklyDiscountPercent}% off (R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100))}/night), and monthly stays get ${listingConfig.pricing.monthlyDiscountPercent}% off (R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100))}/night). The price includes all amenities: private pool, BBQ areas, sports court, Wi-Fi, fireplace, games, and 2.6 hectares of nature. No extra fees for pets or parking.`,
+      answer: "Sítio Girassol offers dynamic pricing for the entire property (3 bedrooms, up to 6 guests), with discounts for weekly and monthly stays. The price includes all amenities: private pool, BBQ areas, sports court, Wi-Fi, fireplace, games, and 2.6 hectares of nature. No extra fees for pets or parking. Check current rates on Airbnb.",
     },
     {
       question: "How to get to Sítio Girassol from São Paulo?",
@@ -135,7 +133,7 @@ const faqItems: Record<Locale, Array<{ question: string; answer: string }>> = {
     },
     {
       question: "¿Cuál es el valor de la estadía?",
-      answer: `Las tarifas en Sítio Girassol comienzan en R$ ${listingConfig.pricing.nightlyRate}/noche para estadías cortas. Estadías semanales (7+ noches) tienen ${listingConfig.pricing.weeklyDiscountPercent}% de descuento a R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100))}/noche. Estadías mensuales (28+ noches) reciben ${listingConfig.pricing.monthlyDiscountPercent}% de descuento a R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100))}/noche. Todos los precios incluyen acceso a piscina privada, parrilla, cancha deportiva, Wi-Fi, chimenea y todas las comodidades de la propiedad.`,
+      answer: "Los precios de Sítio Girassol son dinámicos y varían según la temporada y duración de la estadía. Ofrecemos descuentos para estadías semanales y mensuales. Todos los precios incluyen acceso a piscina privada, parrilla, cancha deportiva, Wi-Fi, chimenea y todas las comodidades de la propiedad. Consulta tarifas actualizadas en Airbnb.",
     },
     {
       question: "¿Tiene parrilla?",
@@ -151,7 +149,7 @@ const faqItems: Record<Locale, Array<{ question: string; answer: string }>> = {
     },
     {
       question: "¿Cuánto cuesta alquilar el Sítio Girassol?",
-      answer: `Las tarifas de Sítio Girassol comienzan en R$ ${listingConfig.pricing.nightlyRate}/noche para la propiedad entera (3 dormitorios, hasta 6 huéspedes). Estadías semanales tienen ${listingConfig.pricing.weeklyDiscountPercent}% de descuento (R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.weeklyDiscountPercent / 100))}/noche), y mensuales ${listingConfig.pricing.monthlyDiscountPercent}% (R$ ${Math.round(listingConfig.pricing.nightlyRate * (1 - listingConfig.pricing.monthlyDiscountPercent / 100))}/noche). El precio incluye todas las comodidades: piscina privada, parrillas, cancha deportiva, Wi-Fi, chimenea, juegos y 2,6 hectáreas de naturaleza. Sin cargos extras por mascotas o estacionamiento.`,
+      answer: "Sítio Girassol ofrece precios dinámicos para la propiedad entera (3 dormitorios, hasta 6 huéspedes), con descuentos para estadías semanales y mensuales. El precio incluye todas las comodidades: piscina privada, parrillas, cancha deportiva, Wi-Fi, chimenea, juegos y 2,6 hectáreas de naturaleza. Sin cargos extras por mascotas o estacionamiento. Consulta tarifas actualizadas en Airbnb.",
     },
     {
       question: "¿Cómo llegar al Sítio Girassol desde São Paulo?",

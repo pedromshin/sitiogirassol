@@ -30,14 +30,6 @@ export default function StickyMobileCTA() {
     >
       <div className="bg-forest-dark/95 backdrop-blur-md border-t border-white/10 px-4 py-3 safe-area-bottom">
         <div className="flex items-center gap-3">
-          {/* Price indicator */}
-          <div className="flex-shrink-0 text-left">
-            <span className="text-warm-gold font-display text-lg font-bold">
-              R$ {listingConfig.pricing.nightlyRate}
-            </span>
-            <span className="text-white/70 text-xs block">/noite</span>
-          </div>
-
           {/* CTA buttons */}
           <div className="flex-1 flex gap-2">
             {whatsappUrl && (
