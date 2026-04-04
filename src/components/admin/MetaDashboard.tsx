@@ -15,6 +15,7 @@ import {
   Legend,
 } from "recharts";
 import { parseCampaignCsv, type CampaignRow, type BenchmarkKey } from "@/lib/admin/meta-csv-parser";
+import GraphBuilder from "@/components/admin/GraphBuilder";
 
 const TARGETS: Record<BenchmarkKey, { good: number | null; warning: number | null }> = {
   cpm_brl: { good: 0.8, warning: 2.0 },
@@ -338,6 +339,11 @@ export default function MetaDashboard({ seedRows }: MetaDashboardProps) {
             </LineChart>
           </ResponsiveContainer>
         </div>
+      </div>
+
+      <div className="mt-8">
+        <h3 className="text-xs font-semibold uppercase tracking-widest text-accent-gold/60 mb-4">Custom Graphs</h3>
+        <GraphBuilder rows={rows} />
       </div>
 
       <div className="mt-8 rounded-xl border border-white/[0.06] bg-white/[0.02] overflow-x-auto">
