@@ -56,15 +56,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {/* Preconnect to external origins for faster resource loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://connect.facebook.net" />
-        {/* Preload LCP hero image for faster first paint */}
-        <link
-          rel="preload"
-          as="image"
-          href="/_next/image?url=%2Fbg%2FDSC_0559.JPG&w=1080&q=40"
-          fetchPriority="high"
-        />
+{/* dns-prefetch for analytics deferred — resolved lazily with scripts */}
+{/* Hero image preload handled by Next.js Image priority prop */}
         {/* Preload Material Symbols — non-render-blocking via media swap */}
         <link
           rel="preload"
