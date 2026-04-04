@@ -240,18 +240,20 @@ export default function MetaDashboard({ seedRows }: MetaDashboardProps) {
             { label: "Clicks", val: latest.link_clicks },
             { label: "Landed", val: latest.landing_page_views },
           ];
-          const maxVal = Math.max(...steps.map((s) => s.val), 1);
+          // Use log scale so the funnel stepdown is visible
+          const logScale = (v: number) => v > 0 ? Math.log10(v + 1) : 0;
+          const maxLog = Math.max(...steps.map((s) => logScale(s.val)), 1);
           return (
-            <div className="flex items-end gap-1 h-28">
+            <div className="flex items-end gap-2 h-32">
               {steps.map(({ label, val }) => {
-                const pct = (val / maxVal) * 100;
+                const pct = val > 0 ? (logScale(val) / maxLog) * 100 : 0;
                 return (
                   <div key={label} className="flex-1 flex flex-col items-center gap-1">
-                    <span className="text-[9px] text-white/40">{val.toLocaleString()}</span>
-                    <div className="w-full bg-white/5 rounded-sm relative" style={{ height: "72px" }}>
-                      <div className="absolute bottom-0 w-full rounded-sm bg-accent-gold/60" style={{ height: `${Math.max(pct, 3)}%` }} />
+                    <span className="text-[10px] text-white/50 font-mono">{val.toLocaleString()}</span>
+                    <div className="w-full bg-white/5 rounded relative" style={{ height: "80px" }}>
+                      <div className="absolute bottom-0 w-full rounded bg-accent-gold/60" style={{ height: `${Math.max(pct, 2)}%` }} />
                     </div>
-                    <span className="text-[9px] text-white/40 text-center">{label}</span>
+                    <span className="text-[10px] text-white/40 text-center">{label}</span>
                   </div>
                 );
               })}
