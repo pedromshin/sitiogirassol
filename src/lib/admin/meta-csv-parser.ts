@@ -94,8 +94,22 @@ export function parseCampaignCsv(raw: string): CampaignRow[] {
     const thruplays = getNum(["thruplays"]);
     const lpv = getNum(["visualizações da página de destino", "landing page views", "visualiza"]);
     const spent = getNum(["valor usado", "amount spent"]);
+    const impressions = getNum(["impressões", "impressions"]);
+    const reach = getNum(["alcance", "reach"]);
 
-    // Derived metrics: prefer CSV custom columns, fall back to computing
+    // Derive metrics: prefer explicit CSV columns, fall back to computing
+    const rawCpm = getNum(["cpm"]);
+    const cpm = rawCpm > 0 ? rawCpm : impressions > 0 ? (spent / impressions) * 1000 : 0;
+
+    const rawFreq = getNum(["frequência", "frequency"]);
+    const frequency = rawFreq > 0 ? rawFreq : reach > 0 ? impressions / reach : 0;
+
+    const rawCtr = getNum(["ctr"]);
+    const ctr = rawCtr > 0 ? rawCtr : impressions > 0 ? (linkClicks / impressions) * 100 : 0;
+
+    const rawCpc = getNum(["cpc"]);
+    const cpc = rawCpc > 0 ? rawCpc : linkClicks > 0 ? spent / linkClicks : 0;
+
     const costPerVisitor = derivedIndices.length > 0
       ? getDerived(0)
       : lpv > 0 ? spent / lpv : 0;
@@ -112,14 +126,14 @@ export function parseCampaignCsv(raw: string): CampaignRow[] {
       reporting_start: get(["início dos relatórios", "reporting starts", "reporting_start"]),
       reporting_end: get(["término dos relatórios", "reporting ends", "reporting_end"]),
       campaign: get(["nome da campanha", "campaign name", "campaign"]),
-      impressions: getNum(["impressões", "impressions"]),
-      cpm_brl: getNum(["cpm"]),
-      reach: getNum(["alcance", "reach"]),
-      frequency: getNum(["frequência", "frequency"]),
+      impressions,
+      cpm_brl: cpm,
+      reach,
+      frequency,
       amount_spent_brl: spent,
       link_clicks: linkClicks,
-      ctr_pct: getNum(["ctr"]),
-      cpc_brl: getNum(["cpc"]),
+      ctr_pct: ctr,
+      cpc_brl: cpc,
       landing_page_views: lpv,
       cost_per_lpv_brl: lpv > 0 ? spent / lpv : 0,
       thruplays,
