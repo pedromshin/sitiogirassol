@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { listingConfig } from "@/data/listing.config";
+import { trackEvent } from "@/lib/tracking";
 
 const PILLARS = [
   {
@@ -109,6 +110,7 @@ export default function ThesisSection() {
           href={listingConfig.airbnbUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackEvent("airbnb_click", { location: "thesis_cta" })}
           className="inline-block px-14 py-6 rounded-full font-bold text-sm uppercase tracking-widest transition-all shadow-elevated hover:-translate-y-1 bg-forest-dark-btn text-white"
         >
           {t("ctaButton")}

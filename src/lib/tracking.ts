@@ -14,7 +14,13 @@ type TrackingEvent =
   | "whatsapp_click"
   | "airbnb_click"
   | "calendar_view"
-  | "cta_click";
+  | "cta_click"
+  | "date_selected"
+  | "map_click"
+  | "nearby_place_click"
+  | "faq_open"
+  | "gallery_filter"
+  | "amenity_search";
 
 interface EventParams {
   location?: string;
@@ -55,6 +61,21 @@ function sendToCAPI(eventName: string, eventId: string, customData?: Record<stri
   });
 }
 
+type FbEventConfig = { event: string; defaults: Record<string, string>; sendCAPI: boolean };
+
+const fbEventMap: Record<TrackingEvent, FbEventConfig> = {
+  whatsapp_click:     { event: "Contact",          defaults: { content_name: "Sítio Girassol" },               sendCAPI: true },
+  airbnb_click:       { event: "Schedule",          defaults: { content_name: "Sítio Girassol — Reserva" },     sendCAPI: true },
+  calendar_view:      { event: "ViewContent",       defaults: { content_name: "Sítio Girassol — Calendário" },  sendCAPI: true },
+  cta_click:          { event: "Lead",              defaults: { content_name: "Sítio Girassol" },               sendCAPI: true },
+  date_selected:      { event: "Search",            defaults: { content_name: "Sítio Girassol — Datas" },       sendCAPI: true },
+  map_click:          { event: "FindLocation",      defaults: { content_name: "Sítio Girassol — Mapa" },        sendCAPI: false },
+  nearby_place_click: { event: "FindLocation",      defaults: { content_name: "Sítio Girassol — Local" },       sendCAPI: false },
+  faq_open:           { event: "ViewContent",       defaults: { content_type: "faq" },                          sendCAPI: false },
+  gallery_filter:     { event: "CustomizeProduct",  defaults: { content_name: "Sítio Girassol — Galeria" },     sendCAPI: false },
+  amenity_search:     { event: "Search",            defaults: { content_name: "Sítio Girassol — Amenities" },   sendCAPI: false },
+};
+
 export function trackEvent(event: TrackingEvent, params: EventParams = {}): void {
   const eventId = generateEventId();
 
@@ -65,20 +86,16 @@ export function trackEvent(event: TrackingEvent, params: EventParams = {}): void
 
   // Meta Pixel — map to standard events for ad optimization
   if (typeof window !== "undefined" && window.fbq) {
-    const fbEventMap: Record<TrackingEvent, { event: string; defaults: Record<string, string> }> = {
-      whatsapp_click: { event: "Contact", defaults: { content_name: "Sítio Girassol" } },
-      airbnb_click: { event: "Schedule", defaults: { content_name: "Sítio Girassol — Reserva" } },
-      calendar_view: { event: "ViewContent", defaults: { content_name: "Sítio Girassol — Calendário" } },
-      cta_click: { event: "Lead", defaults: { content_name: "Sítio Girassol" } },
-    };
     const mapped = fbEventMap[event];
     const eventData = { ...mapped.defaults, ...params };
 
     // Pass event_id for deduplication with CAPI
     window.fbq("track", mapped.event, eventData, { eventID: eventId });
 
-    // Mirror to Conversions API
-    sendToCAPI(mapped.event, eventId, eventData);
+    // Mirror high-value events to Conversions API
+    if (mapped.sendCAPI) {
+      sendToCAPI(mapped.event, eventId, eventData);
+    }
   }
 }
 

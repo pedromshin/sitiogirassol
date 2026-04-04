@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { listingConfig } from "@/data/listing.config";
+import { trackEvent } from "@/lib/tracking";
 
 export default function LocationSection() {
   const t = useTranslations("Location");
@@ -70,6 +71,7 @@ export default function LocationSection() {
               href={generalAreaUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent("map_click", { location: "location_section" })}
               className="w-full md:w-auto inline-block py-4 px-8 border-2 border-accent-gold text-accent-gold rounded-xl font-bold text-sm uppercase tracking-wider transition-all text-center hover:bg-accent-gold hover:text-forest-mid"
             >
               {t("viewFullMap")}

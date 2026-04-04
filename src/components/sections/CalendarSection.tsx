@@ -93,9 +93,16 @@ export default function CalendarSection() {
           <div className="rounded-xl md:rounded-2xl overflow-hidden border border-white/10 bg-forest-mid [&_.rdrCalendarWrapper]:!max-w-full">
             <DateRange
               ranges={[dateRange]}
-              onChange={(r: RangeKeyDict) =>
-                setDateRange(r.selection as Range)
-              }
+              onChange={(r: RangeKeyDict) => {
+                const sel = r.selection as Range;
+                setDateRange(sel);
+                if (sel.startDate && sel.endDate && sel.startDate.getTime() !== sel.endDate.getTime()) {
+                  trackEvent("date_selected", {
+                    nights: differenceInDays(sel.endDate, sel.startDate),
+                    location: "calendar",
+                  });
+                }
+              }}
               disabledDates={disabledDates}
               minDate={new Date()}
               rangeColors={["var(--color-accent-gold)"]}

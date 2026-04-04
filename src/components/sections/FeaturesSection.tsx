@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo } from "react";
 import { AMENITY_CATEGORIES } from "@/data/amenities.config";
 import type { Locale } from "@/data/amenities.config";
+import { trackEvent } from "@/lib/tracking";
 
 export default function FeaturesSection() {
   const t = useTranslations("Amenities");
@@ -84,7 +85,12 @@ export default function FeaturesSection() {
               type="text"
               placeholder={t("searchPlaceholder")}
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                if (e.target.value.length === 3) {
+                  trackEvent("amenity_search", { search_string: e.target.value });
+                }
+              }}
               className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-forest-mid border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:border-accent-gold/50 transition-colors"
             />
           </div>
@@ -182,6 +188,7 @@ export default function FeaturesSection() {
         <div className="mt-12 flex justify-center">
           <a
             href="https://www.airbnb.com/rooms/1345960842338220775"
+            onClick={() => trackEvent("airbnb_click", { location: "features_cta" })}
             className="inline-flex items-center justify-center px-10 py-4 rounded-full font-bold text-sm tracking-widest uppercase transition-all shadow-xl bg-accent-gold text-forest-mid hover:bg-white"
           >
             {tCta("requestDetails")}

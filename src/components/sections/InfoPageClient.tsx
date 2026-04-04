@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { listingConfig } from "@/data/listing.config";
+import { trackEvent } from "@/lib/tracking";
 
 type Props = { locale: "en" | "pt" | "es" };
 
@@ -165,6 +166,7 @@ export default function InfoPageClient({ locale }: Props) {
                 href={place.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent("nearby_place_click", { place_name: place.name })}
                 className={`bg-[#1A2620] p-4 rounded-lg flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow group border border-white/5 ${i === nearbyPlaces.length - 1 ? "md:col-span-2" : ""
                   }`}
               >
@@ -200,6 +202,7 @@ export default function InfoPageClient({ locale }: Props) {
               href={listingConfig.airbnbUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent("airbnb_click", { location: "info_page_cta" })}
               className="inline-flex items-center gap-2 bg-accent-gold hover:bg-[#D9B954] text-[#141E19] px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-accent-gold/30"
             >
               {tCta("button")}

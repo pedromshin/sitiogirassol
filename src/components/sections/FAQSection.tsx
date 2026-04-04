@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
+import { trackEvent } from "@/lib/tracking";
 type Locale = "en" | "pt" | "es";
 
 const faqItems: Record<Locale, Array<{ question: string; answer: string }>> = {
@@ -195,7 +196,13 @@ export default function FAQSection({ locale }: { locale: Locale }) {
               className="border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm bg-white/[0.03]"
             >
               <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                onClick={() => {
+                  const opening = openIndex !== index;
+                  setOpenIndex(opening ? index : null);
+                  if (opening) {
+                    trackEvent("faq_open", { question: faq.question.slice(0, 50) });
+                  }
+                }}
                 className="w-full flex items-center justify-between px-6 py-5 text-left transition-colors hover:bg-white/[0.03]"
               >
                 <span className="text-white font-medium text-base md:text-lg pr-4">
