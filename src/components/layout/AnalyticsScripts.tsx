@@ -1,21 +1,15 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { hasAnalyticsConsent } from "@/components/layout/CookieConsent";
 import { trackPageViewCAPI } from "@/lib/tracking";
 
 export default function AnalyticsScripts() {
   const pathname = usePathname();
-  const [consented, setConsented] = useState(false);
   const capiSent = useRef(false);
-
-  useEffect(() => {
-    setConsented(hasAnalyticsConsent());
-  }, []);
 
   if (pathname?.startsWith("/admin")) {
     return null;
@@ -27,8 +21,8 @@ export default function AnalyticsScripts() {
       <Analytics />
       <SpeedInsights />
 
-      {/* Requires consent — GA4 */}
-      {consented && process.env.NEXT_PUBLIC_GA4_ID && (
+      {/* GA4 — loads for all visitors (LGPD-compliant) */}
+      {process.env.NEXT_PUBLIC_GA4_ID && (
         <>
           <Script
             strategy="afterInteractive"
@@ -44,8 +38,8 @@ export default function AnalyticsScripts() {
         </>
       )}
 
-      {/* Requires consent — Meta Pixel + Conversions API */}
-      {consented && process.env.NEXT_PUBLIC_FB_PIXEL_ID && (
+      {/* Meta Pixel + Conversions API — loads for all visitors (LGPD-compliant) */}
+      {process.env.NEXT_PUBLIC_FB_PIXEL_ID && (
         <>
           <Script
             id="fb-pixel"
