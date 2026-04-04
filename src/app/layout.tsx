@@ -58,14 +58,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 {/* dns-prefetch for analytics deferred — resolved lazily with scripts */}
 {/* Hero image preload handled by Next.js Image priority prop */}
-        {/* Preload Material Symbols — non-render-blocking via media swap */}
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
-          as="style"
-          crossOrigin="anonymous"
-        />
-        {/* Load Material Symbols asynchronously to avoid render-blocking */}
+        {/* Load Material Symbols lazily — icons are non-critical, CSS in
+            globals.css prevents CLS with fixed 1em box + overflow hidden */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap';document.head.appendChild(l)})()`,

@@ -4,6 +4,25 @@
 
 @import "./theme-vars.css";
 
+/* Prevent CLS from Material Symbols icon font loading — clip ligature
+   text to a 1em box so layout stays stable before/after font swap */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
 /* Semantic tokens - dark forest luxury theme (forest-dark #141E19, forest-mid #1A2620, accent-gold #d4af37) */
 :root {
   /* Forest theme - single source of truth */
