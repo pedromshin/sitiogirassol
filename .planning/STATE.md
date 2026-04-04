@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 Phase: 03
 Plan: Not started
 Status: Phase complete — ready for verification
-Last activity: 2026-03-28
+Last activity: 2026-04-04 - Completed quick task 260404-oib: Fix mobile Lighthouse performance score
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -95,6 +95,12 @@ None yet.
 - [Phase 1]: Booking.com registration takes 1-2 weeks for approval -- start registration in Phase 1 even though listing goes live in Phase 2
 - [Phase 2]: TemporadaLivre iCal support is LOW confidence -- may need manual blocking instead of sync
 - [Phase 2]: Meta Pixel cannot track Airbnb conversions -- manual "how did you hear about us?" attribution required
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260404-oib | Fix mobile Lighthouse performance score (57→80+) | 2026-04-04 | 261e9c2 | [260404-oib-improve-lighthouse-performance-score-fix](./quick/260404-oib-improve-lighthouse-performance-score-fix/) |
 
 ## Session Continuity
 
