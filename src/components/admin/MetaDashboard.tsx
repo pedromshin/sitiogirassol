@@ -161,10 +161,14 @@ export default function MetaDashboard({ seedRows }: MetaDashboardProps) {
     setRows((prev) => mergeRows(prev, newRows));
   }, []);
 
-  const latest = rows[rows.length - 1];
+  // Latest = row with the most recent reporting_end date
+  const latest = [...rows].sort((a, b) => b.reporting_end.localeCompare(a.reporting_end))[0];
 
-  const chartData = rows.map((r) => ({
-    date: r.reporting_end,
+  // Sort chart data by reporting_end so time axis is correct
+  const sortedRows = [...rows].sort((a, b) => a.reporting_end.localeCompare(b.reporting_end));
+
+  const chartData = sortedRows.map((r) => ({
+    date: r.reporting_start === r.reporting_end ? r.reporting_start : `${r.reporting_start}→${r.reporting_end}`,
     CPM: r.cpm_brl,
     CPC: r.cpc_brl,
     "Cost/Visitor": r.cost_per_site_visitor_brl,
