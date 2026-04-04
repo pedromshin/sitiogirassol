@@ -1,4 +1,5 @@
 import { readPlanningDocs, groupDocs } from "@/lib/admin/planning-reader";
+import { readAdReports } from "@/lib/admin/ad-reports-reader";
 import { notFound } from "next/navigation";
 import { headers } from "next/headers";
 import PlanningNav from "@/components/admin/PlanningNav";
@@ -25,6 +26,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
   const docs = readPlanningDocs();
   const groups = groupDocs(docs);
   const navDocs = docs.map(({ id, label, group }) => ({ id, label, group }));
+  const seedRows = readAdReports();
 
   const planningContent = (
     <>
@@ -86,7 +88,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
   return (
     <div className="flex">
       <PlanningNav docs={navDocs} />
-      <AdminTabs planningContent={planningContent} />
+      <AdminTabs planningContent={planningContent} seedRows={seedRows} />
     </div>
   );
 }

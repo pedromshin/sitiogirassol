@@ -14,14 +14,8 @@ import {
   ReferenceLine,
   Legend,
 } from "recharts";
-import { parseCampaignCsv, BENCHMARKS, type CampaignRow, type BenchmarkKey } from "@/lib/admin/meta-csv-parser";
+import { parseCampaignCsv, type CampaignRow, type BenchmarkKey } from "@/lib/admin/meta-csv-parser";
 
-// ─── Seed data from the two CSVs we already have ─────────────────────────────
-const SEED_CSV = `reporting_start,reporting_end,campaign,impressions,cpm_brl,reach,frequency,amount_spent_brl,link_clicks,ctr_pct,cpc_brl,landing_page_views,cost_per_lpv_brl,thruplays,video_plays_3s,cost_per_site_visitor_brl,video_to_click_pct,click_to_landing_pct,notes
-2026-04-03,2026-04-03,AWARE_Sitio_Girassol_Apr26,5510,0.520871,5496,1.002547,2.87,4,0.072595,0.7175,3,0.956667,66,1107,0.9567,0.0606,0.75,Day 1
-2026-04-02,2026-04-04,AWARE_Sitio_Girassol_Apr26,20473,0.560739,19947,1.02637,11.48,10,0.048845,1.148,6,1.913333,194,3294,1.9133,0.0515,0.6,Days 1-3 cumulative`;
-
-// ─── Benchmark targets ────────────────────────────────────────────────────────
 const TARGETS: Record<BenchmarkKey, { good: number | null; warning: number | null }> = {
   cpm_brl: { good: 0.8, warning: 2.0 },
   ctr_pct: { good: 0.1, warning: 0.05 },
@@ -32,10 +26,8 @@ const TARGETS: Record<BenchmarkKey, { good: number | null; warning: number | nul
   thruplays: { good: null, warning: null },
 };
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-function fmt(n: number, type: "brl" | "pct" | "num" = "num"): string {
+function fmt(n: number, type: "brl" | "num" = "num"): string {
   if (type === "brl") return `R$${n.toFixed(2)}`;
-  if (type === "pct") return `${(n * 100).toFixed(2)}%`;
   return n.toLocaleString("pt-BR");
 }
 
@@ -43,7 +35,6 @@ function statusColor(val: number, key: BenchmarkKey, showBenchmarks: boolean): s
   if (!showBenchmarks) return "text-white";
   const t = TARGETS[key];
   if (t.good === null || t.warning === null) return "text-white";
-  // For cost metrics: lower is better
   const lowerIsBetter = key.includes("cost") || key.includes("cpm") || key.includes("cpc");
   if (lowerIsBetter) {
     if (val <= t.good) return "text-emerald-400";
@@ -56,7 +47,6 @@ function statusColor(val: number, key: BenchmarkKey, showBenchmarks: boolean): s
   }
 }
 
-// ─── Stat card ────────────────────────────────────────────────────────────────
 type StatCardProps = {
   readonly label: string;
   readonly value: string;
@@ -79,7 +69,6 @@ function StatCard({ label, value, sub, colorClass, benchmark, showBenchmarks }: 
   );
 }
 
-// ─── CSV drop zone ────────────────────────────────────────────────────────────
 type DropZoneProps = {
   readonly onData: (rows: CampaignRow[]) => void;
 };
@@ -109,8 +98,7 @@ function CsvDropZone({ onData }: DropZoneProps) {
   }, [process]);
 
   const onPaste = useCallback((e: React.ClipboardEvent<HTMLTextAreaElement>) => {
-    const text = e.clipboardData.getData("text");
-    process(text);
+    process(e.clipboardData.getData("text"));
   }, [process]);
 
   return (
@@ -137,7 +125,6 @@ function CsvDropZone({ onData }: DropZoneProps) {
   );
 }
 
-// ─── Custom tooltip ───────────────────────────────────────────────────────────
 function ChartTooltip({ active, payload, label }: {
   active?: boolean;
   payload?: Array<{ name: string; value: number; color: string }>;
@@ -156,23 +143,24 @@ function ChartTooltip({ active, payload, label }: {
   );
 }
 
-// ─── Main dashboard ───────────────────────────────────────────────────────────
-export default function MetaDashboard() {
-  const [rows, setRows] = useState<CampaignRow[]>(() => parseCampaignCsv(SEED_CSV));
+function mergeRows(existing: CampaignRow[], incoming: CampaignRow[]): CampaignRow[] {
+  const map = new Map(existing.map((r) => [`${r.reporting_start}|${r.reporting_end}|${r.campaign}`, r]));
+  for (const r of incoming) map.set(`${r.reporting_start}|${r.reporting_end}|${r.campaign}`, r);
+  return Array.from(map.values()).sort((a, b) => a.reporting_start.localeCompare(b.reporting_start));
+}
+
+type MetaDashboardProps = {
+  readonly seedRows: CampaignRow[];
+};
+
+export default function MetaDashboard({ seedRows }: MetaDashboardProps) {
+  const [rows, setRows] = useState<CampaignRow[]>(seedRows);
   const [showBenchmarks, setShowBenchmarks] = useState(true);
 
   const addRows = useCallback((newRows: CampaignRow[]) => {
-    setRows((prev) => {
-      // Merge by reporting_start+campaign, new data wins
-      const map = new Map(prev.map((r) => [`${r.reporting_start}|${r.campaign}`, r]));
-      for (const r of newRows) map.set(`${r.reporting_start}|${r.campaign}`, r);
-      return Array.from(map.values()).sort((a, b) =>
-        a.reporting_start.localeCompare(b.reporting_start)
-      );
-    });
+    setRows((prev) => mergeRows(prev, newRows));
   }, []);
 
-  // Use last (most recent) row as the summary stats
   const latest = rows[rows.length - 1];
 
   const chartData = rows.map((r) => ({
@@ -193,14 +181,13 @@ export default function MetaDashboard() {
     return (
       <div className="p-8">
         <CsvDropZone onData={addRows} />
-        <p className="text-white/30 text-center">No data yet.</p>
+        <p className="text-white/30 text-center">No data yet. Drop a Meta CSV export above.</p>
       </div>
     );
   }
 
   return (
     <div className="p-6 max-w-6xl mx-auto">
-      {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-xl font-display font-bold text-accent-gold">Meta Ads Dashboard</h2>
@@ -220,93 +207,41 @@ export default function MetaDashboard() {
         </button>
       </div>
 
-      {/* CSV import */}
       <CsvDropZone onData={addRows} />
 
-      {/* KPI grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-        <StatCard
-          label="Amount Spent"
-          value={fmt(latest.amount_spent_brl, "brl")}
-          sub={`${latest.reporting_start} – ${latest.reporting_end}`}
-          colorClass="text-white"
-          showBenchmarks={showBenchmarks}
-        />
-        <StatCard
-          label="Reach"
-          value={fmt(latest.reach)}
-          sub={`Freq ${latest.frequency.toFixed(2)}x`}
-          colorClass="text-white"
-          showBenchmarks={showBenchmarks}
-        />
-        <StatCard
-          label="CPM"
-          value={fmt(latest.cpm_brl, "brl")}
-          colorClass={statusColor(latest.cpm_brl, "cpm_brl", showBenchmarks)}
-          benchmark="< R$0.80"
-          showBenchmarks={showBenchmarks}
-        />
+        <StatCard label="Amount Spent" value={fmt(latest.amount_spent_brl, "brl")} sub={`${latest.reporting_start} – ${latest.reporting_end}`} colorClass="text-white" showBenchmarks={showBenchmarks} />
+        <StatCard label="Reach" value={fmt(latest.reach)} sub={`Freq ${latest.frequency.toFixed(2)}x`} colorClass="text-white" showBenchmarks={showBenchmarks} />
+        <StatCard label="CPM" value={fmt(latest.cpm_brl, "brl")} colorClass={statusColor(latest.cpm_brl, "cpm_brl", showBenchmarks)} benchmark="< R$0.80" showBenchmarks={showBenchmarks} />
         <StatCard
           label="ThruPlays"
           value={fmt(latest.thruplays)}
-          sub={`of ${fmt(latest.video_plays_3s)} 3s plays (${((latest.thruplays / latest.video_plays_3s) * 100).toFixed(1)}%)`}
+          sub={latest.video_plays_3s > 0 ? `of ${fmt(latest.video_plays_3s)} 3s plays (${((latest.thruplays / latest.video_plays_3s) * 100).toFixed(1)}%)` : "no 3s data"}
           colorClass="text-white"
           showBenchmarks={showBenchmarks}
         />
-        <StatCard
-          label="Link Clicks"
-          value={fmt(latest.link_clicks)}
-          sub={`CTR ${fmt(latest.ctr_pct * 100, "num")}%`}
-          colorClass={statusColor(latest.ctr_pct, "ctr_pct", showBenchmarks)}
-          benchmark="> 0.10%"
-          showBenchmarks={showBenchmarks}
-        />
-        <StatCard
-          label="Video → Click %"
-          value={fmt(latest.video_to_click_pct * 100, "num") + "%"}
-          sub="of ThruPlays who clicked"
-          colorClass={statusColor(latest.video_to_click_pct, "video_to_click_pct", showBenchmarks)}
-          benchmark="> 8%"
-          showBenchmarks={showBenchmarks}
-        />
-        <StatCard
-          label="Click → Landing %"
-          value={fmt(latest.click_to_landing_pct * 100, "num") + "%"}
-          sub="site load success rate"
-          colorClass={statusColor(latest.click_to_landing_pct, "click_to_landing_pct", showBenchmarks)}
-          benchmark="> 80%"
-          showBenchmarks={showBenchmarks}
-        />
-        <StatCard
-          label="Cost / Site Visitor"
-          value={fmt(latest.cost_per_site_visitor_brl, "brl")}
-          sub="real cost to reach your site"
-          colorClass={statusColor(latest.cost_per_site_visitor_brl, "cost_per_site_visitor_brl", showBenchmarks)}
-          benchmark="< R$1.00"
-          showBenchmarks={showBenchmarks}
-        />
+        <StatCard label="Link Clicks" value={fmt(latest.link_clicks)} sub={`CTR ${(latest.ctr_pct * 100).toFixed(3)}%`} colorClass={statusColor(latest.ctr_pct, "ctr_pct", showBenchmarks)} benchmark="> 0.10%" showBenchmarks={showBenchmarks} />
+        <StatCard label="Video → Click %" value={`${(latest.video_to_click_pct * 100).toFixed(2)}%`} sub="of ThruPlays who clicked" colorClass={statusColor(latest.video_to_click_pct, "video_to_click_pct", showBenchmarks)} benchmark="> 8%" showBenchmarks={showBenchmarks} />
+        <StatCard label="Click → Landing %" value={`${(latest.click_to_landing_pct * 100).toFixed(1)}%`} sub="site load success rate" colorClass={statusColor(latest.click_to_landing_pct, "click_to_landing_pct", showBenchmarks)} benchmark="> 80%" showBenchmarks={showBenchmarks} />
+        <StatCard label="Cost / Site Visitor" value={fmt(latest.cost_per_site_visitor_brl, "brl")} sub="real cost to reach your site" colorClass={statusColor(latest.cost_per_site_visitor_brl, "cost_per_site_visitor_brl", showBenchmarks)} benchmark="< R$1.00" showBenchmarks={showBenchmarks} />
       </div>
 
-      {/* Funnel bar */}
       <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 mb-6">
         <h3 className="text-xs font-semibold uppercase tracking-widest text-accent-gold/60 mb-4">Funnel (latest period)</h3>
         <div className="flex items-end gap-1 h-20">
           {[
-            { label: "Reach", val: latest.reach, max: latest.reach },
-            { label: "3s Views", val: latest.video_plays_3s, max: latest.reach },
-            { label: "ThruPlays", val: latest.thruplays, max: latest.reach },
-            { label: "Clicks", val: latest.link_clicks, max: latest.reach },
-            { label: "Landed", val: latest.landing_page_views, max: latest.reach },
-          ].map(({ label, val, max }) => {
-            const pct = max > 0 ? (val / max) * 100 : 0;
+            { label: "Reach", val: latest.reach },
+            { label: "3s Views", val: latest.video_plays_3s },
+            { label: "ThruPlays", val: latest.thruplays },
+            { label: "Clicks", val: latest.link_clicks },
+            { label: "Landed", val: latest.landing_page_views },
+          ].map(({ label, val }) => {
+            const pct = latest.reach > 0 ? (val / latest.reach) * 100 : 0;
             return (
               <div key={label} className="flex-1 flex flex-col items-center gap-1">
                 <span className="text-[9px] text-white/40">{val.toLocaleString()}</span>
                 <div className="w-full bg-white/5 rounded-sm relative" style={{ height: "48px" }}>
-                  <div
-                    className="absolute bottom-0 w-full rounded-sm bg-accent-gold/60"
-                    style={{ height: `${Math.max(pct, 2)}%` }}
-                  />
+                  <div className="absolute bottom-0 w-full rounded-sm bg-accent-gold/60" style={{ height: `${Math.max(pct, 2)}%` }} />
                 </div>
                 <span className="text-[9px] text-white/40 text-center">{label}</span>
               </div>
@@ -315,9 +250,7 @@ export default function MetaDashboard() {
         </div>
       </div>
 
-      {/* Charts */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Cost over time */}
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
           <h3 className="text-xs font-semibold uppercase tracking-widest text-accent-gold/60 mb-4">Cost Metrics Over Time</h3>
           <ResponsiveContainer width="100%" height={200}>
@@ -327,9 +260,7 @@ export default function MetaDashboard() {
               <YAxis tick={{ fill: "rgba(255,255,255,0.3)", fontSize: 10 }} />
               <Tooltip content={<ChartTooltip />} />
               <Legend wrapperStyle={{ fontSize: 10, color: "rgba(255,255,255,0.4)" }} />
-              {showBenchmarks && (
-                <ReferenceLine y={1.0} stroke="rgba(52,211,153,0.4)" strokeDasharray="4 4" label={{ value: "target R$1", fill: "rgba(52,211,153,0.5)", fontSize: 9 }} />
-              )}
+              {showBenchmarks && <ReferenceLine y={1.0} stroke="rgba(52,211,153,0.4)" strokeDasharray="4 4" label={{ value: "target R$1", fill: "rgba(52,211,153,0.5)", fontSize: 9 }} />}
               <Line type="monotone" dataKey="CPM" stroke="#f59e0b" strokeWidth={2} dot={{ fill: "#f59e0b" }} />
               <Line type="monotone" dataKey="CPC" stroke="#60a5fa" strokeWidth={2} dot={{ fill: "#60a5fa" }} />
               <Line type="monotone" dataKey="Cost/Visitor" stroke="#f87171" strokeWidth={2} dot={{ fill: "#f87171" }} />
@@ -337,7 +268,6 @@ export default function MetaDashboard() {
           </ResponsiveContainer>
         </div>
 
-        {/* Funnel rates */}
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
           <h3 className="text-xs font-semibold uppercase tracking-widest text-accent-gold/60 mb-4">Funnel Rates % Over Time</h3>
           <ResponsiveContainer width="100%" height={200}>
@@ -357,7 +287,6 @@ export default function MetaDashboard() {
           </ResponsiveContainer>
         </div>
 
-        {/* Video views funnel */}
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
           <h3 className="text-xs font-semibold uppercase tracking-widest text-accent-gold/60 mb-4">Video Views Funnel</h3>
           <ResponsiveContainer width="100%" height={200}>
@@ -373,7 +302,6 @@ export default function MetaDashboard() {
           </ResponsiveContainer>
         </div>
 
-        {/* Reach & spend */}
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
           <h3 className="text-xs font-semibold uppercase tracking-widest text-accent-gold/60 mb-4">Reach & Spend</h3>
           <ResponsiveContainer width="100%" height={200}>
@@ -391,7 +319,6 @@ export default function MetaDashboard() {
         </div>
       </div>
 
-      {/* Raw data table */}
       <div className="mt-8 rounded-xl border border-white/[0.06] bg-white/[0.02] overflow-x-auto">
         <table className="w-full text-xs">
           <thead>

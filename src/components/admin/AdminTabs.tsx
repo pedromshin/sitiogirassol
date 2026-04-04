@@ -2,14 +2,16 @@
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import type { CampaignRow } from "@/lib/admin/meta-csv-parser";
 
 const MetaDashboard = dynamic(() => import("./MetaDashboard"), { ssr: false });
 
 type AdminTabsProps = {
   readonly planningContent: React.ReactNode;
+  readonly seedRows: CampaignRow[];
 };
 
-export default function AdminTabs({ planningContent }: AdminTabsProps) {
+export default function AdminTabs({ planningContent, seedRows }: AdminTabsProps) {
   const [tab, setTab] = useState<"planning" | "meta">("planning");
 
   return (
@@ -39,7 +41,7 @@ export default function AdminTabs({ planningContent }: AdminTabsProps) {
           {planningContent}
         </div>
       ) : (
-        <MetaDashboard />
+        <MetaDashboard seedRows={seedRows} />
       )}
     </div>
   );
