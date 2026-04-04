@@ -1,8 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createHash } from "crypto";
 
 const PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
 const ACCESS_TOKEN = process.env.META_CAPI_ACCESS_TOKEN;
 const API_VERSION = "v21.0";
+
+function sha256(value: string): string {
+  return createHash("sha256").update(value.trim().toLowerCase()).digest("hex");
+}
 
 interface CAPIEvent {
   event_name: string;
@@ -15,6 +20,8 @@ interface CAPIEvent {
     client_user_agent?: string;
     fbc?: string;
     fbp?: string;
+    external_id?: string;
+    country?: ReadonlyArray<string>;
   };
   custom_data?: Record<string, unknown>;
 }
@@ -48,6 +55,11 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     "";
   const userAgent = req.headers.get("user-agent") ?? "";
 
+  // Generate stable external_id from IP + UA for anonymous user matching
+  const externalId = clientIp && userAgent
+    ? sha256(`${clientIp}:${userAgent}`)
+    : undefined;
+
   const capiEvents: ReadonlyArray<CAPIEvent> = events.map((e) => ({
     event_name: e.event_name,
     event_id: e.event_id,
@@ -59,6 +71,9 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       client_user_agent: userAgent,
       ...(fbc ? { fbc } : {}),
       ...(fbp ? { fbp } : {}),
+      ...(externalId ? { external_id: externalId } : {}),
+      // Site targets Brazilian visitors
+      country: [sha256("br")],
     },
     ...(e.custom_data ? { custom_data: e.custom_data } : {}),
   }));
