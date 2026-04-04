@@ -232,26 +232,32 @@ export default function MetaDashboard({ seedRows }: MetaDashboardProps) {
 
       <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 mb-6">
         <h3 className="text-xs font-semibold uppercase tracking-widest text-accent-gold/60 mb-4">Funnel (latest period)</h3>
-        <div className="flex items-end gap-1 h-20">
-          {[
+        {(() => {
+          const steps = [
             { label: "Reach", val: latest.reach },
             { label: "3s Views", val: latest.video_plays_3s },
             { label: "ThruPlays", val: latest.thruplays },
             { label: "Clicks", val: latest.link_clicks },
             { label: "Landed", val: latest.landing_page_views },
-          ].map(({ label, val }) => {
-            const pct = latest.reach > 0 ? (val / latest.reach) * 100 : 0;
-            return (
-              <div key={label} className="flex-1 flex flex-col items-center gap-1">
-                <span className="text-[9px] text-white/40">{val.toLocaleString()}</span>
-                <div className="w-full bg-white/5 rounded-sm relative" style={{ height: "48px" }}>
-                  <div className="absolute bottom-0 w-full rounded-sm bg-accent-gold/60" style={{ height: `${Math.max(pct, 2)}%` }} />
-                </div>
-                <span className="text-[9px] text-white/40 text-center">{label}</span>
-              </div>
-            );
-          })}
-        </div>
+          ];
+          const maxVal = Math.max(...steps.map((s) => s.val), 1);
+          return (
+            <div className="flex items-end gap-1 h-28">
+              {steps.map(({ label, val }) => {
+                const pct = (val / maxVal) * 100;
+                return (
+                  <div key={label} className="flex-1 flex flex-col items-center gap-1">
+                    <span className="text-[9px] text-white/40">{val.toLocaleString()}</span>
+                    <div className="w-full bg-white/5 rounded-sm relative" style={{ height: "72px" }}>
+                      <div className="absolute bottom-0 w-full rounded-sm bg-accent-gold/60" style={{ height: `${Math.max(pct, 3)}%` }} />
+                    </div>
+                    <span className="text-[9px] text-white/40 text-center">{label}</span>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })()}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
