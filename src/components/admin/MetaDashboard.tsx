@@ -240,20 +240,29 @@ export default function MetaDashboard({ seedRows }: MetaDashboardProps) {
             { label: "Clicks", val: latest.link_clicks },
             { label: "Landed", val: latest.landing_page_views },
           ];
-          // Use log scale so the funnel stepdown is visible
-          const logScale = (v: number) => v > 0 ? Math.log10(v + 1) : 0;
-          const maxLog = Math.max(...steps.map((s) => logScale(s.val)), 1);
+          // Each bar is a fixed fraction of the previous step height
+          // so you see a clear staircase down even with huge magnitude differences
+          const barHeight = 100; // px
           return (
-            <div className="flex items-end gap-2 h-32">
-              {steps.map(({ label, val }) => {
-                const pct = val > 0 ? (logScale(val) / maxLog) * 100 : 0;
+            <div className="flex items-end gap-3" style={{ height: `${barHeight + 40}px` }}>
+              {steps.map(({ label, val }, idx) => {
+                const prev = idx === 0 ? val : steps[idx - 1].val;
+                const convRate = prev > 0 ? val / prev : 0;
+                // Height is cumulative product of conversion rates from step 0
+                let h = barHeight;
+                for (let j = 1; j <= idx; j++) {
+                  const p = steps[j - 1].val;
+                  h = p > 0 ? h * (steps[j].val / p) : 0;
+                }
+                const hPx = Math.max(Math.round(h), val > 0 ? 4 : 1);
                 return (
                   <div key={label} className="flex-1 flex flex-col items-center gap-1">
                     <span className="text-[10px] text-white/50 font-mono">{val.toLocaleString()}</span>
-                    <div className="w-full bg-white/5 rounded relative" style={{ height: "80px" }}>
-                      <div className="absolute bottom-0 w-full rounded bg-accent-gold/60" style={{ height: `${Math.max(pct, 2)}%` }} />
+                    <div className="w-full bg-white/5 rounded relative" style={{ height: `${barHeight}px` }}>
+                      <div className="absolute bottom-0 w-full rounded bg-accent-gold/60 transition-all" style={{ height: `${hPx}px` }} />
                     </div>
                     <span className="text-[10px] text-white/40 text-center">{label}</span>
+                    {idx > 0 && <span className="text-[8px] text-white/25">{(convRate * 100).toFixed(1)}%</span>}
                   </div>
                 );
               })}
