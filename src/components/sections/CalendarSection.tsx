@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { DateRange, Range, RangeKeyDict } from "react-date-range";
@@ -15,6 +15,7 @@ const MOBILE_BREAKPOINT = 768;
 export default function CalendarSection() {
   const t = useTranslations("Calendar");
   const [isMobile, setIsMobile] = useState(false);
+  const calendarRef = useRef<HTMLDivElement>(null);
   const [dateRange, setDateRange] = useState<Range>({
     startDate: new Date(),
     endDate: addDays(new Date(), 1),
@@ -42,6 +43,27 @@ export default function CalendarSection() {
         listingConfig.calendar.blockedDates.map((d) => new Date(d))
       );
     }
+  }, []);
+
+  // Patch react-date-range accessibility: add aria-labels to prev/next buttons and select elements
+  useEffect(() => {
+    const el = calendarRef.current;
+    if (!el) return;
+    const patch = () => {
+      const prev = el.querySelector<HTMLButtonElement>(".rdrPprevButton");
+      const next = el.querySelector<HTMLButtonElement>(".rdrNextButton");
+      if (prev && !prev.getAttribute("aria-label")) prev.setAttribute("aria-label", "Mês anterior");
+      if (next && !next.getAttribute("aria-label")) next.setAttribute("aria-label", "Próximo mês");
+      el.querySelectorAll<HTMLSelectElement>("select").forEach((sel) => {
+        if (!sel.getAttribute("aria-label")) {
+          sel.setAttribute("aria-label", sel.options[sel.selectedIndex]?.text ?? "Selecionar");
+        }
+      });
+    };
+    patch();
+    const observer = new MutationObserver(patch);
+    observer.observe(el, { childList: true, subtree: true });
+    return () => observer.disconnect();
   }, []);
 
   const nights = dateRange.startDate && dateRange.endDate
@@ -90,7 +112,7 @@ export default function CalendarSection() {
 
         {/* Right: Calendar + Pricing */}
         <div className="backdrop-blur-md p-4 sm:p-6 md:p-10 rounded-2xl md:rounded-3xl border border-white/10 shadow-2xl overflow-hidden" style={{ backgroundColor: "var(--color-calendar-backdrop)" }}>
-          <div className="rounded-xl md:rounded-2xl overflow-hidden border border-white/10 bg-forest-mid [&_.rdrCalendarWrapper]:!max-w-full">
+          <div ref={calendarRef} className="rounded-xl md:rounded-2xl overflow-hidden border border-white/10 bg-forest-mid [&_.rdrCalendarWrapper]:!max-w-full">
             <DateRange
               ranges={[dateRange]}
               onChange={(r: RangeKeyDict) => {

@@ -31,8 +31,15 @@ export default function CookieConsent() {
   const handleAccept = () => {
     localStorage.setItem(CONSENT_KEY, "accepted");
     setVisible(false);
-    // Reload to trigger analytics scripts
-    window.location.reload();
+    // Analytics scripts are already loaded (afterInteractive) — just send the events
+    if (typeof window !== "undefined") {
+      if (typeof (window as Window & { fbq?: (...args: unknown[]) => void }).fbq === "function") {
+        (window as Window & { fbq: (...args: unknown[]) => void }).fbq("track", "PageView");
+      }
+      if (typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === "function") {
+        (window as Window & { gtag: (...args: unknown[]) => void }).gtag("event", "page_view");
+      }
+    }
   };
 
   const handleDecline = () => {
