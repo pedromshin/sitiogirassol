@@ -55,10 +55,10 @@ function ChartPreview({ config, rows }: { readonly config: GraphConfig; readonly
   if (rows.length === 0) return <p className="text-white/30 text-xs text-center py-12">No data available.</p>;
   const chartData = buildChartData(rows, config.xAxis, config.series);
   const renderSeries = () => config.series.map((s) => {
-    const base = { key: s.label, dataKey: s.label, stroke: s.color, fill: s.color, strokeWidth: 2 };
-    if (config.chartType === "bar") return <Bar {...base} radius={[3, 3, 0, 0] as [number, number, number, number]} />;
-    if (config.chartType === "area") return <Area {...base} type="monotone" fillOpacity={0.2} dot={{ fill: s.color }} />;
-    return <Line {...base} type="monotone" dot={{ fill: s.color }} />;
+    const base = { dataKey: s.label, stroke: s.color, fill: s.color, strokeWidth: 2 };
+    if (config.chartType === "bar") return <Bar key={s.label} {...base} radius={[3, 3, 0, 0] as [number, number, number, number]} />;
+    if (config.chartType === "area") return <Area key={s.label} {...base} type="monotone" fillOpacity={0.2} dot={{ fill: s.color }} />;
+    return <Line key={s.label} {...base} type="monotone" dot={{ fill: s.color }} />;
   });
   const Chart = config.chartType === "bar" ? BarChart : config.chartType === "area" ? AreaChart : LineChart;
   return (
