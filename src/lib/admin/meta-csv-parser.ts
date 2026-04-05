@@ -145,7 +145,7 @@ export function parseCampaignCsv(raw: string): CampaignRow[] {
     rows.push({
       reporting_start: get(["início dos relatórios", "reporting starts", "reporting_start"]),
       reporting_end: get(["término dos relatórios", "reporting ends", "reporting_end"]),
-      campaign: get(["nome da campanha", "campaign name", "campaign"]),
+      campaign: get(["nome da campanha", "nome do anúncio", "campaign name", "ad name", "campaign"]),
       impressions,
       cpm_brl: cpm,
       reach,
